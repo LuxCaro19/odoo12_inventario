@@ -1,0 +1,192 @@
+Delivered-To: soporte@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp2012608otp;
+        Tue, 2 Apr 2019 12:26:36 -0700 (PDT)
+X-Received: by 2002:a2e:9d99:: with SMTP id c25mr39608847ljj.159.1554233196619;
+        Tue, 02 Apr 2019 12:26:36 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554233196; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ocg2g4HZ3Abfw9KBhACJEG05d7Zshr/ixGwttVB/D7rBhnEdHHWurwc/goeYQhDedS
+         bfoyI7Af65L7R8tsQyyGrDhM6hRwljp4d6+WiPwN+bOcj+N+JhxKZ66gPJ8NMEEuurqV
+         8Pkw+YIudv6ysp1AfPh2VF4KIDpXVrrF/0LnMKVHCIHIu7rxVPLBkCdNm61CTEX/yk09
+         +VuDnGsGp26Jez9BJhHEwCVQyp32AYWLc4KHYiReUTkE5oPG4+g/C8jNnulud/O0jejV
+         Q8WSPI9sArrJYkucZM6quHZ867lB2ECYQpMgZC0qcJpS7l1Ga9OfB8OZsAGArCKhwXtv
+         c0RA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=gI6cy2WI0IX+FyNFtCT1ABjMqzj/0CdY+IGWRSbx+CI=;
+        b=ROZ7Q+aTlc8of0zju9LgiHyqwywE60MHc9v1dPyZ3JFb+APc6QfD6sk7RMIMV8Bf82
+         bHdarce80nfWDH/Sy/y06+5Pjkry/fBxepzRWFI0oVId9CHtrVbo1OuytTbqBHxGieqh
+         nwXpgzLO/hyg5sjXjrARd9O2Dkx2oCnlzkgGE9Wz4Ffahj97SCaGP58mLB4LQfd4UXZH
+         hsKLuk5exq82181lBEE8MCe5vmjOIHNNeqFu/wAkFr9ibyS+rZTPN5vO69PF01PIApAG
+         atXhazBqq1njtA6kzHGhWJsRU8aGoPrlFmDtbDW1GB3lg+sAvdE8UDQOXYASiURaM6gq
+         CEWQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=VDyrcllz;
+       spf=pass (google.com: domain of clopez@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=clopez@galilea.cl
+Return-Path: <clopez@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id q19sor8450229ljj.27.2019.04.02.12.26.36
+        for <soporte@galilea.cl>
+        (Google Transport Security);
+        Tue, 02 Apr 2019 12:26:36 -0700 (PDT)
+Received-SPF: pass (google.com: domain of clopez@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=VDyrcllz;
+       spf=pass (google.com: domain of clopez@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=clopez@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc;
+        bh=gI6cy2WI0IX+FyNFtCT1ABjMqzj/0CdY+IGWRSbx+CI=;
+        b=VDyrcllzi+AriR5rscY/0ylmjKXyCo9L7DWRN2Zyr+u41xzioUwzDdEKl+N746XT4w
+         7iBOBfjdONMhPi88jxLx4/iSwliDvHjCaVJALCCNHjW8cfe/Fjjfb1lKO5vIRNZndZo6
+         u68TO7UvZK2WyQyAmoCq79zwqMaiV79HJ9hNuWo8vs2OwGmxt2wbsPK1A8HkrdhvFwpS
+         vhkUzff6VN7LiL+rKER1wJQP1/i62KLmerB2yvL9o73qV/JMLB1hA4BcyWr8hzw//1eU
+         RahjmImtn7MqxtoCFZ+EO/MUS+q9UQaBB2meeuajIZnVl3B2IoYwAd6RWKidw4lFCmTb
+         PLOg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc;
+        bh=gI6cy2WI0IX+FyNFtCT1ABjMqzj/0CdY+IGWRSbx+CI=;
+        b=KKKWqzD7Xg1d1TaFFGHJyaUUcrXEUvYjnGPjTEmxibVaMHU3ioL4NagTCRpLClUGLu
+         jDzE9bQLTcXS208qDzS8N23XWmKetaKag17yLn/oObuOMmvbSC8plB6BsA9RWSz/qLt6
+         hPL4tpcpirOO+vtMgLKKDWrAVJWzIALIEQ5aenhj7BNwmtHtkLlwYkQDPO8XtIoYnyyi
+         1XzhFYvWw5Hd2JdLmhi5mCSK1K/AkJ+xjqkG6Z4nUF+J9s9Au8JHKh9YXAfoMqaont0S
+         t34O6YvOV3APYqMgE2dbOiSLN4OIvBoQpAwlNlSnACt8baHU9YWbh3IF6hoXCs8ZfSeb
+         o3Hw==
+X-Gm-Message-State: APjAAAWNn5D5BJ3fRR7+CObafCNTpqrtxCWKVmrUTEGnTx6o3rWZyfx9
+	luONu+8lvd3njx06zpa0HkVikVUpOemgahvqiIFXfJ+G
+X-Google-Smtp-Source: APXvYqxP5VN6F1o+n8zN/WaHRvMxCT7TPSiOT5ZUFb6Cn5A2sSVUjrXyL5dUXygYJAO3CJo33l2uTiNPvZl5RTbaWo4=
+X-Received: by 2002:a2e:9d99:: with SMTP id c25mr39608832ljj.159.1554233196263;
+ Tue, 02 Apr 2019 12:26:36 -0700 (PDT)
+MIME-Version: 1.0
+References: <EEE29DB4-46A3-48DE-92DF-B79197DCD43F@galilea.cl>
+ <CAO8BLzBDoushKt9hW_XOOmeKwJnMiXEPU1aN0_Dpeh_G6e45Zw@mail.gmail.com> <C04208E3-458C-4946-ACC3-7405C0747270@galilea.cl>
+In-Reply-To: <C04208E3-458C-4946-ACC3-7405C0747270@galilea.cl>
+From: Carlos Lopez <clopez@galilea.cl>
+Date: Tue, 2 Apr 2019 16:26:24 -0300
+Message-ID: <CAO8BLzBTXY0oEYRYBx2HNQXAdS1643ZTOpx9tRN-aRsqPNwFyw@mail.gmail.com>
+Subject: Re: Entrega equipos
+To: JUAN PABLO URRUTIA MORAGA <jurrutia@galilea.cl>
+Cc: sistema ticket <soporte@galilea.cl>,
+	Andrea Alejandra Damianovic Momberg <andrea.damianovic@galilea.cl>, =?UTF-8?Q?Cristi=C3=A1n_Gothe?= <cgothe@galilea.cl>
+Content-Type: multipart/alternative; boundary="0000000000008fd3e10585911d74"
+
+--0000000000008fd3e10585911d74
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+No trabaj=C3=B3 en Abril entonces?
+
+
+El mar., 2 abr. 2019 a las 16:25, JUAN PABLO URRUTIA MORAGA (<
+jurrutia@galilea.cl>) escribi=C3=B3:
+
+> Jacob se encontraba con hito vencido desde la quincena de Marzo, reci=C3=
+=A9n
+> ayer le enviaron el contrato para que lo firmara, se finiquito con fecha =
+31
+> de Marzo. No presentar=C3=A1 carta de renuncia por lo que =C3=A9l expuso.
+>
+>
+> Saludos.
+>
+> Juan Pablo Urrutia.
+> Galilea S.A
+>
+>
+> El 02-04-2019, a la(s) 16:20, Carlos Lopez <clopez@galilea.cl> escribi=C3=
+=B3:
+>
+> Y la carta de Renuncia?
+>
+>
+>
+>
+> El mar., 2 abr. 2019 a las 14:35, JUAN PABLO URRUTIA MORAGA (<
+> jurrutia@galilea.cl>) escribi=C3=B3:
+>
+>> Estimados.
+>>
+>> Adjunto respaldo de entrega conforme equipos asignado a Jacob Villalobos
+>> quien ha presentado carta de renuncia a nuestra empresa.
+>>
+>> Computador y celular sin deterioro aparente.
+>>
+>> El celular asignado, correspond=C3=ADa a constructor obra Polo de Machal=
+=C3=AD,
+>> entregado por mano (Sebasti=C3=A1n Salas), sin accesorios.
+>>
+>>
+>>
+>> Saludos.
+>>
+>> Juan Pablo Urrutia.
+>> Galilea S.A
+>
+>
+
+--0000000000008fd3e10585911d74
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:verdana,=
+sans-serif">No trabaj=C3=B3 en Abril entonces?<br clear=3D"all"></div><div>=
+<div class=3D"gmail_signature" dir=3D"ltr" data-smartmail=3D"gmail_signatur=
+e"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div d=
+ir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr=
+"><div><div dir=3D"ltr"><div><div><img src=3D"https://docs.google.com/uc?ex=
+port=3Ddownload&amp;id=3D1WximpBFsbPVd8kLPIjdeqUtCcpBmDp9O&amp;revid=3D0Bzx=
+2oc-lEMHhOUV4OVNtME5TRkdkUFNTMTBnSjRLN051TFA0PQ"></div></div></div></div></=
+div></div></div></div></div></div></div></div></div></div></div></div></div=
+></div></div><br></div><br><div class=3D"gmail_quote"><div class=3D"gmail_a=
+ttr" dir=3D"ltr">El mar., 2 abr. 2019 a las 16:25, JUAN PABLO URRUTIA MORAG=
+A (&lt;<a href=3D"mailto:jurrutia@galilea.cl">jurrutia@galilea.cl</a>&gt;) =
+escribi=C3=B3:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0=
+px 0px 0px 0.8ex;padding-left:1ex;border-left-color:rgb(204,204,204);border=
+-left-width:1px;border-left-style:solid"><div dir=3D"auto">Jacob se encontr=
+aba con hito vencido desde la quincena de Marzo, reci=C3=A9n ayer le enviar=
+on el contrato para que lo firmara, se finiquito con fecha 31 de Marzo. No =
+presentar=C3=A1 carta de renuncia por lo que =C3=A9l expuso.<div><br><br><d=
+iv dir=3D"ltr">Saludos.<div><br></div><div>Juan Pablo Urrutia.</div><div>Ga=
+lilea S.A</div><div><br></div></div><div dir=3D"ltr"><br>El 02-04-2019, a l=
+a(s) 16:20, Carlos Lopez &lt;<a href=3D"mailto:clopez@galilea.cl" target=3D=
+"_blank">clopez@galilea.cl</a>&gt; escribi=C3=B3:<br><br></div><blockquote =
+type=3D"cite"><div dir=3D"ltr"><div dir=3D"ltr"><div class=3D"gmail_default=
+" style=3D"font-family:verdana,sans-serif">Y la carta de Renuncia?</div><di=
+v class=3D"gmail_default" style=3D"font-family:verdana,sans-serif"><br></di=
+v><div class=3D"gmail_default" style=3D"font-family:verdana,sans-serif"><br=
+ clear=3D"all"></div><div><div class=3D"gmail-m_-597462831186425780gmail_si=
+gnature" dir=3D"ltr"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">=
+<div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div><img src=3D"https://d=
+ocs.google.com/uc?export=3Ddownload&amp;id=3D1WximpBFsbPVd8kLPIjdeqUtCcpBmD=
+p9O&amp;revid=3D0Bzx2oc-lEMHhOUV4OVNtME5TRkdkUFNTMTBnSjRLN051TFA0PQ"></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div></div><br></div><br><div class=3D"gmail_quote"><=
+div class=3D"gmail_attr" dir=3D"ltr">El mar., 2 abr. 2019 a las 14:35, JUAN=
+ PABLO URRUTIA MORAGA (&lt;<a href=3D"mailto:jurrutia@galilea.cl" target=3D=
+"_blank">jurrutia@galilea.cl</a>&gt;) escribi=C3=B3:<br></div><blockquote c=
+lass=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;padding-left:1ex;bor=
+der-left-color:rgb(204,204,204);border-left-width:1px;border-left-style:sol=
+id">Estimados.<br>
+<br>
+Adjunto respaldo de entrega conforme equipos asignado a Jacob Villalobos qu=
+ien ha presentado carta de renuncia a nuestra empresa.<br>
+<br>
+Computador y celular sin deterioro aparente.<br>
+<br>
+El celular asignado, correspond=C3=ADa a constructor obra Polo de Machal=C3=
+=AD, entregado por mano (Sebasti=C3=A1n Salas), sin accesorios.<br>
+<br>
+<br>
+<br>
+Saludos.<br>
+<br>
+Juan Pablo Urrutia.<br>
+Galilea S.A</blockquote></div>
+</div></blockquote></div></div></blockquote></div>
+
+--0000000000008fd3e10585911d74--

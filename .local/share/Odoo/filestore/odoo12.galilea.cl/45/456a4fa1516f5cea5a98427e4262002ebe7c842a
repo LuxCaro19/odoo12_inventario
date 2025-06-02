@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PYVOBJECT//NONSGML Version 1//EN
+BEGIN:VEVENT
+UID:20200117T131021Z - 35386@soporte
+DTSTART:20200129T000000
+DTEND:20200129T235959
+ATTENDEE:MAILTO:christian.valdebenito@galilea.cl
+ATTENDEE:MAILTO:francisco.castro@galilea.cl
+ATTENDEE:MAILTO:jonatan.zapata@galilea.cl
+ATTENDEE:MAILTO:nicolas.guzman@galilea.cl
+CREATED:20200117T131021Z
+SUMMARY:Normalizar Rack Sala de Ventas Rancagua y recuperar antena en sv
+END:VEVENT
+END:VCALENDAR

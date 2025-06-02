@@ -1,0 +1,123 @@
+Delivered-To: soporte@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp813943otp;
+        Fri, 5 Apr 2019 13:06:55 -0700 (PDT)
+X-Received: by 2002:a67:e446:: with SMTP id n6mr9001960vsm.183.1554494814961;
+        Fri, 05 Apr 2019 13:06:54 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554494814; cv=none;
+        d=google.com; s=arc-20160816;
+        b=bal5S+mFSiH5+/IEI1Ar/COwV1mgSxw6yeqf7OvcbhK9G9UCinJ4oVA38YiXP1Cfbm
+         ptMU+z1ihkLE8sFQAH1++lih9sHdKELk4MeEyI1sJ8MhrtD5Dgk7YrEFlCw98mPQsnFJ
+         T2Xs0E1cx3j8WtJEKD/eeI9JdqwiIbLppwcCXYR1MEyInRfYdUaArHxfFiVJ7rBkktBQ
+         LvJHQZaPWgVRrsTqGpSxiKlAWqe6pSTI+76wIRKCJpGCpvho4Mwks9lmAWR2R30eSWSf
+         oOs0THnIfi2sQ70w7VK+qSl0bWhFhurEgJPpq05y5VeSwJm9hO5jbog0uCBh+bJ3EOXJ
+         XG1Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=wVHbnO/Wa9jsepFBDLWGnvIOvepxopKSZvxCe9ZSw3c=;
+        b=V5DHRKYCO65VBbqPc6BGNKDo9/KBdHS7URh5sHoF2GnRgWAsp2etFllugslYnl93yV
+         cImCSJL/VY0CBTyM47QgL5GvFolt+Ak84yYizNcnHr6uFaRkiUYKj4vLTA9eJyiTwI5y
+         l+fRgZZGEz+MUZSCRUsxnO9nXId9V+dVcBbeQkOXLtSbvyIPIFxum/26e4mptwZ/4pha
+         hHm2njTUad2YIuLMSz7o0C3r3qPo+jgO6KH7gz2ErKwsiMIupL4p+sEEja3GOZu/fJQL
+         ln6V+t7BRwebLPA75SGofqOHvScLiLaJNPFDk8Q7aKzCiem2n+cZ1j8JsBOXkw3tbQ0F
+         62yw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=Vjo10vnx;
+       spf=pass (google.com: domain of franco.rojas@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=franco.rojas@galilea.cl
+Return-Path: <franco.rojas@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id f7sor13906958uaf.2.2019.04.05.13.06.54
+        for <soporte@galilea.cl>
+        (Google Transport Security);
+        Fri, 05 Apr 2019 13:06:54 -0700 (PDT)
+Received-SPF: pass (google.com: domain of franco.rojas@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=Vjo10vnx;
+       spf=pass (google.com: domain of franco.rojas@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=franco.rojas@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=wVHbnO/Wa9jsepFBDLWGnvIOvepxopKSZvxCe9ZSw3c=;
+        b=Vjo10vnxrCaCLR/nHihYeLsi8lszGdbHsVVS20FSVVtDhdGgwnflOt1yb0+FGEiHHW
+         1BUEaIGnqJjfRbARaM0gi0zcpFHBpGq8eIAERleu+VgAYtPbhfsc8MvjQqQnsAjCiKk3
+         +aktiqMKhh7IRYpJpOoNE55BwmyKirEZ7ZRbOQ6WWlgP7D6ZbnGKGbgTfsjvnpjqRhFm
+         2dIY/QLbUoAVp8SxMPyJdpxYfTqY03jItcccbZkFnGAAXIMObt6PRrDrN5lGLGeUQjf+
+         EWDOnoEllYpAkdER7F0zwHXKnxKaW/+UqWI8BuTBvCPJtCDFzz6hAGdCH5X8ODDCOgPQ
+         UnEg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=wVHbnO/Wa9jsepFBDLWGnvIOvepxopKSZvxCe9ZSw3c=;
+        b=Od/gAAhVsi7A8R6/lIpr5YLOIMgtNzCeDR3vwHIc87bCahdD96RRtQR3NAzDR0tLFR
+         1TqAg9XpcoWq/NXXlA/CwcySZryvS3jIoIH1EgEh+YuruWsNpnkgLso1DtiG6JedIW7c
+         T3dom37MjpaBM0SLBv0S/TqLFhRSJCFe7Ec4oidRyB5/XXJDv7F7hBHoce9nAfWNvsZv
+         RYgM9ZGxXvw4eUKUo9R7tvY8WkceV1bwe8hsl/Ukyjs9k1/l8X9enPe/5EBOBhgDaAWa
+         dD9PictlQLLxJyjog97NKozknTLIXuI5zZiHocP5iLw+61LXiKdlBO4iivmVXOodhYNO
+         5bzQ==
+X-Gm-Message-State: APjAAAVIuJgDJCS9jlZButuoj/xkYX/7RtLj7Y0RPO7PKR9uazxjPY5N
+	abmj8hD2WkOMlUfyq4/G5Cl0XW4bT7nrOVyDt+Nn9QNkBQ0M1w==
+X-Google-Smtp-Source: APXvYqz+nOoFgJ6MsNAsOBKNcWI11gPuInArsRQ96bLrbbQCi6foAB90nlC7QrL2Bw8sSoMK8yX5FmG2jau0eLsZDYY=
+X-Received: by 2002:ab0:678d:: with SMTP id v13mr8693567uar.43.1554494814540;
+ Fri, 05 Apr 2019 13:06:54 -0700 (PDT)
+MIME-Version: 1.0
+From: FRANCO EDUARDO ROJAS GARCIA <franco.rojas@galilea.cl>
+Date: Fri, 5 Apr 2019 17:06:43 -0300
+Message-ID: <CAMcwkZgyu4i_4jX5uDrjVV+5QgaeLc-n_h0X6JYtf4cUpWhggg@mail.gmail.com>
+Subject: =?UTF-8?Q?BAJA_SE=C3=91AL_DE_WIFI?=
+To: Sistema Ticket <soporte@galilea.cl>
+Content-Type: multipart/alternative; boundary="00000000000039e9250585ce0759"
+
+--00000000000039e9250585ce0759
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Estimad@s  buen d=C3=ADa:
+
+Junto con saludar solicito asistencia, respecto a mi equipo ya que =C3=A9st=
+e
+recibe una muy d=C3=A9bil se=C3=B1al del WIFI de obras, lo cual me imposibi=
+lita
+muchas veces acceder a mi correo o trabajar en planillas Drive.
+
+- IP equipo: 192.168.22.135.
+
+--=20
+*Atte.*
+
+*Franco Rojas Garc=C3=ADa.*| Prevencionista de Riesgos Curic=C3=B3 | +56 (9=
+) 63101184
+|
+*CONSTRUCTORA PEHUENCHE LIMITADA*| 3 Oriente N=C2=BA 1424, Talca |
+
+--00000000000039e9250585ce0759
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div cl=
+ass=3D"gmail_default" style=3D"color:rgb(12,52,61)"><div class=3D"gmail_def=
+ault">Estimad@s =C2=A0buen d=C3=ADa:</div><div class=3D"gmail_default"><br>=
+</div><div class=3D"gmail_default">Junto con saludar solicito asistencia, r=
+especto a mi equipo ya que =C3=A9ste recibe una muy d=C3=A9bil se=C3=B1al d=
+el WIFI de obras, lo cual me imposibilita muchas veces acceder a mi correo =
+o trabajar en planillas Drive.</div><div class=3D"gmail_default"><br></div>=
+<div class=3D"gmail_default"><div class=3D"gmail_default"><div class=3D"gma=
+il_default">- IP equipo:=C2=A0192.168.22.135.</div></div><div class=3D"gmai=
+l-yj6qo gmail-ajU" style=3D"margin:2px 0px 0px;color:rgb(34,34,34)"></div><=
+/div></div><div><br></div>-- <br><div dir=3D"ltr" class=3D"gmail_signature"=
+><div dir=3D"ltr"><div><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><=
+div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=
+=3D"ltr"><div><div style=3D"text-align:left"><font color=3D"#0c343d"><b>Att=
+e.</b></font></div><div style=3D"text-align:left"><font color=3D"#0c343d"><=
+br></font></div><div style=3D"text-align:left"><div style=3D"font-size:12.8=
+px"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div>=
+<font color=3D"#0c343d"><font face=3D"tahoma, sans-serif"><b>Franco Rojas G=
+arc=C3=ADa.</b></font>| Prevencionista de Riesgos Curic=C3=B3 |=C2=A0<a val=
+ue=3D"+56992567002">+56 (9)=C2=A063101184=C2=A0</a>|<br></font></div><font =
+color=3D"#0c343d"><b>CONSTRUCTORA PEHUENCHE LIMITADA</b>| 3 Oriente N=C2=BA=
+ 1424, Talca=C2=A0|</font></div></div></div></div></div></div></div></div><=
+/div><div style=3D"text-align:center"><img src=3D"https://docs.google.com/u=
+c?export=3Ddownload&amp;id=3D0B_CRsdYSs63hU202dUlPUEM2OFU&amp;revid=3D0B_CR=
+sdYSs63hYnVTcGYrL2F2V3dkOU5rR3JpSkZkMHNxTUlRPQ" width=3D"200" height=3D"91"=
+><br></div></div></div></div></div></div></div></div></div></div></div></di=
+v></div></div></div></div>
+
+--00000000000039e9250585ce0759--

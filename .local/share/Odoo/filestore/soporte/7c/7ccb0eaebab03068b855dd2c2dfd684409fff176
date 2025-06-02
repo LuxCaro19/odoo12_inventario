@@ -1,0 +1,140 @@
+
+/**********************************************************************************
+*
+*    Copyright (c) 2017-2019 MuK IT GmbH.
+*
+*    This file is part of MuK Backend Theme 
+*    (see https://mukit.at).
+*
+*    This program is free software: you can redistribute it and/or modify
+*    it under the terms of the GNU Lesser General Public License as published by
+*    the Free Software Foundation, either version 3 of the License, or
+*    (at your option) any later version.
+*
+*    This program is distributed in the hope that it will be useful,
+*    but WITHOUT ANY WARRANTY; without even the implied warranty of
+*    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*    GNU Lesser General Public License for more details.
+*
+*    You should have received a copy of the GNU Lesser General Public License
+*    along with this program. If not, see <http://www.gnu.org/licenses/>.
+*
+**********************************************************************************/
+@media (max-width: 767.98px) {
+  .o_control_panel {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .o_control_panel .breadcrumb, .o_control_panel .o_cp_left, .o_control_panel .o_cp_right, .o_control_panel .o_cp_searchview {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 767.98px) and (min-width: 768px) {
+  .o_control_panel .breadcrumb, .o_control_panel .o_cp_left, .o_control_panel .o_cp_right, .o_control_panel .o_cp_searchview {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .o_control_panel .breadcrumb {
+    max-width: 80%;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .o_control_panel .o_cp_searchview {
+    overflow: hidden;
+    max-width: 20%;
+    min-width: 20%;
+    text-align: right;
+  }
+  .o_control_panel .o_cp_searchview .o_searchview {
+    border: none;
+    padding: 3.5px 5px;
+  }
+  .o_control_panel .o_cp_searchview .o_searchview .o_enable_searchview {
+    margin-left: 0;
+    box-shadow: none;
+  }
+  .o_control_panel .o_cp_searchview .o_searchview .o_enable_searchview:before {
+    padding-right: 5px;
+  }
+  .o_control_panel .o_cp_left {
+    flex-basis: 50%;
+    white-space: nowrap;
+  }
+  .o_control_panel .o_cp_left .o_cp_buttons, .o_control_panel .o_cp_left .o_cp_sidebar {
+    flex: 1 1 100%;
+  }
+  .o_control_panel .o_cp_right {
+    flex-basis: 10%;
+  }
+  .o_control_panel .o_cp_pager {
+    white-space: nowrap;
+  }
+  .o_control_panel .o_cp_pager .o_pager_counter {
+    max-width: 60px;
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+  }
+  .o_control_panel .o_cp_pager .o_pager_previous, .o_control_panel .o_cp_pager .o_pager_next {
+    border: none;
+  }
+  .o_control_panel .breadcrumb-item:not(.active) {
+    padding-left: 0;
+  }
+  .o_control_panel .breadcrumb-item::before {
+    content: none;
+    padding-right: 0;
+  }
+  .o_control_panel .breadcrumb-item:nth-last-of-type(1n+3) {
+    display: none;
+  }
+  .o_control_panel .breadcrumb-item:nth-last-of-type(2)::before {
+    content: "\f053";
+    cursor: pointer;
+    color: #5D8DA8;
+    font-family: FontAwesome;
+  }
+  .o_control_panel .breadcrumb-item:nth-last-of-type(2) a {
+    display: none;
+  }
+  .o_control_panel .o_cp_buttons .btn.d-block:not(.d-none) {
+    display: inline-block !important;
+  }
+  .o_control_panel .o_cp_switch_buttons.show .dropdown-menu {
+    display: -webkit-box; display: -webkit-flex; display: flex;
+    min-width: 0px;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    padding: 0;
+  }
+  .o_control_panel .o_cp_switch_buttons.show .dropdown-menu .btn {
+    margin: 5px;
+    border: none;
+    font-size: 1.25rem;
+  }
+}
+
+.o_modal_header .o_searchview, .o_modal_header .o_pager {
+  display: inline-block;
+}
+
+.o_modal_header .o_searchview {
+  padding: 0;
+  border: none;
+}
+
+.o_modal_header .o_searchview button {
+  background-color: #fff;
+  border-color: #dee2e6;
+  color: #6c757d;
+}
+

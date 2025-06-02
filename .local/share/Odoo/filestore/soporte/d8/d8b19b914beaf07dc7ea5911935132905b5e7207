@@ -1,0 +1,94 @@
+Delivered-To: soporte@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp2010825otp;
+        Tue, 2 Apr 2019 12:24:38 -0700 (PDT)
+X-Received: by 2002:a1f:56:: with SMTP id 83mr42711191vka.16.1554233077927;
+        Tue, 02 Apr 2019 12:24:37 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554233077; cv=none;
+        d=google.com; s=arc-20160816;
+        b=lzckLjPvjbvLk1Agg9Bfj0zrUrSJOIJutYqsBIpbZu4nTYVCEWWYkYnSVAKlkv6hjY
+         zgMPpZ5v/8sGI9iC9emdMMJLYiGay9Hx9US5PSzH4KyKygBOAOTCB+p8fhyXNkv2FgUr
+         1h11/bo2TYsD1lUAmNPJyxAeL+mEWRwoUgfwxX+gWhFme8eYXroKoQoysvcp1leQP+HH
+         NJdI4mYGECDlp8bD7K3YZC77bFkh4TtHh3xm6jDBK8jtbFTSIM5rcO14VyBYhtyzquKd
+         BiBE971yUxfNQ3fWY373UUikb1Tonj/FY8EhFwSAleclVB8/By9PB9ruyL7s5V7+Cuk1
+         ccxg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=rZ7rFns9SNZcBdIfgy0Y3yE3cPrUpAfLoRlHkjtbEJc=;
+        b=A9d4ErnViTz6Ydt/k8INBA51JLJZhpXqXxlxUgGxgFRxK3nQT2NhbUuOCMY0hKkOoD
+         lXa1ybAa/QQaKwc2bQPM+2CceVfhaxORWx2lDzUZvr9ZeV4d6FI5fyZCyw01kUXElAsC
+         PKDC3HYuz1p2urdneCEKiZPUFJ/fSaNfaNwD6RYv8CivTuH3Z5pO4UNExZ9wS4ZbllPY
+         Je/QR+TxEM8Ruy+oWPbUklxNbjUMYJglC4zU8+MvN0KHbkNzwtbSlGj2+Qi+sEAWnVPK
+         eSLi0j/7Z+uZCseBMgv8uZaF+hpNjtvBEBgQOqukK2yrThPGQbzl20ENh7l/8ouJmabr
+         GosA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=ce+zoXGz;
+       spf=pass (google.com: domain of efigueroa@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=efigueroa@galilea.cl
+Return-Path: <efigueroa@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id q102sor8665321uaq.1.2019.04.02.12.24.37
+        for <soporte@galilea.cl>
+        (Google Transport Security);
+        Tue, 02 Apr 2019 12:24:37 -0700 (PDT)
+Received-SPF: pass (google.com: domain of efigueroa@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=ce+zoXGz;
+       spf=pass (google.com: domain of efigueroa@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=efigueroa@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=rZ7rFns9SNZcBdIfgy0Y3yE3cPrUpAfLoRlHkjtbEJc=;
+        b=ce+zoXGzKlDEW4U3budLN+6halOklpEDVyFK5nVpjqiyY/bM0GqM6qCuIbW0YRVjll
+         FcZE99avLSGZRj1WHUy7BXPlDjh4IkIBe/HIYQVbp5gS1R+jk3rTdBEtw1mNxscVsrO8
+         CSdSl7BuqTL0SUeBTibY0VyyFbwR+7GgD1cGwbqsKUylbVkvErVfDghKrPmtd63xDG2A
+         /g6EFVTpD7r5ZOuIeks2eGbuC/8zZ58HvO9kRwHJ2joMCi0oLlDbxrwHg4MWdTIBO6kR
+         k0gjBVc9JaN1LoBXhCbuFmM15B5FQydZ3GMycOimeA3EdUgnmfyWsA8bX55/1xwLuleU
+         G0QA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=rZ7rFns9SNZcBdIfgy0Y3yE3cPrUpAfLoRlHkjtbEJc=;
+        b=gGAciZ+AtsvGaxk3Q8irJRUha8bFLbJokgHXZdp7/j9dwd2uhxmoBggC1QXX91n1WH
+         LGAbw9kX3cKgqNsOGubuM9hZEyUdVUGUIbPRzYqnPedDJ6gyQsHwChjiPhwOzpt/ghR3
+         muMrRuROelH0StgDeCrHzZUWPAscKeSBX3NK6Qn8tDPUlGrQ+gH4s/UZRqnxS9NbVVqE
+         TTmy+HuJ63f06kQ67+2asF8JD04zHnc8NPRQ5ah04PYlaVET3rwvVcFdVeLs/dm96vt3
+         f1xSpixNzHb5dUraXhym5TcYzP03ZnXIvW9p1GRtpuRF2AcWRWOIMSXl6urp3MHtTilf
+         P3/w==
+X-Gm-Message-State: APjAAAUCPkVq29NNpwli0jqV3/DE1/jPNtskw7p0NieLhjWsn0Xo3r8g
+	Y4+Il9oSujn+wQ576OXDdMxX9wwB5dI1415a8LHvMZxRxDo=
+X-Google-Smtp-Source: APXvYqxJM4jRaIlrBQMp5UtHP2ICURtVPS8ra0bwTD1Qz8uNc3CexakbSjj7eKEOu8USD0QxrDqz2mQrKc5CnrGNn0w=
+X-Received: by 2002:ab0:2f8:: with SMTP id 111mr2836621uah.123.1554233077458;
+ Tue, 02 Apr 2019 12:24:37 -0700 (PDT)
+MIME-Version: 1.0
+From: ERNESTO RAFAEL FIGUEROA VALDERRAMA <efigueroa@galilea.cl>
+Date: Tue, 2 Apr 2019 16:24:26 -0300
+Message-ID: <CAHh=dXXpt_zVzftAKqf8Jwaq0cF7+EYTxvf3QCS2bxY4Veh6pQ@mail.gmail.com>
+Subject: =?UTF-8?Q?Conexi=C3=B3n_impresora_Avellano?=
+To: sistema ticket <soporte@galilea.cl>
+Content-Type: multipart/alternative; boundary="0000000000007afee705859116e6"
+
+--0000000000007afee705859116e6
+Content-Type: text/plain; charset="UTF-8"
+
+Favor
+
+Conectar a impresora el Avellano, mi IP   192.168.2.110
+
+atte
+
+-- 
+Ernesto Figueroa Valderrama
+071 - 251 44 92
+92 20  28 90
+
+--0000000000007afee705859116e6
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Favor<div><br></div><div>Conectar a impresora el Avellano,=
+ mi IP=C2=A0 =C2=A0192.168.2.110</div><div><br></div><div>atte<br clear=3D"=
+all"><div><br></div>-- <br><div dir=3D"ltr" class=3D"gmail_signature" data-=
+smartmail=3D"gmail_signature"><div dir=3D"ltr"><div>Ernesto Figueroa Valder=
+rama<br></div>071 - 251 44 92<br>92 20=C2=A0 28 90<br></div></div></div></d=
+iv>
+
+--0000000000007afee705859116e6--

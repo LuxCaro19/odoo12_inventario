@@ -1,0 +1,1508 @@
+Delivered-To: soporte@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp1840179otp;
+        Tue, 2 Apr 2019 09:31:02 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqwwO2josGse9Gw1ckpjOsVJRIQYb/JR4P4O2C7buoJw+OWhuF5dmI1VyZpJjKprT/kRNFIM
+X-Received: by 2002:a05:620a:108f:: with SMTP id g15mr55105467qkk.61.1554222662366;
+        Tue, 02 Apr 2019 09:31:02 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554222662; cv=none;
+        d=google.com; s=arc-20160816;
+        b=m6eSjnwLN0lsD+MXDsDNCLb9QWx9eNRinSSaaY8ieb5OQP3fiFhihA0lFQSrU0TGiK
+         0lJzh01ddoS6T7LrLl7jChnK3SOolnqVn+gjBH9yunocAmHi8mWulkNcc10xnEKAeHvH
+         y8WH+HI+TLN194QUQe60iu0MFjUxzoOaNb8yT3H+uUBvgWQbq5TCqNoEjdkPG8b/QtDU
+         yBOoULMlMvSuMsKWR24ezuvM97DUy+w2qQQs3NlDpMIihIwwz2YkyvBWCHp8NwSE+dpR
+         BgFNOYDIwPauEbyOSHMOlAreiozN8VVfi0VykxpmiwzWfVmjNjP+SMu/dlMKWEtlKy5r
+         QpMw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:mime-version:subject:message-id:to:reply-to:from
+         :date:dkim-signature:dkim-signature;
+        bh=FpiwdPMNcBHMg5GCNDVimo8H+E9h0nlxSG5MHgZgEzA=;
+        b=HbA9pLq2REgvdi2jU1fmFn0DgDFfxPpA/9dMEGuFOULkTt2FBK5HxqeuTFMF97CgiU
+         flqG0RpPvcLATM4KzC71he5p8SexPg4wKoqFT1AbeKOLLITdyg0yCvXQ1fnrMQtJTmDp
+         +0mWpsQbrMzSB4geaRQYF10ZBKUnivpMv0wnIFHDfsYDgbiosNEIQsverqqcGSEpo+5j
+         wjdH2sykHi0y7QzCuYrFsqsc1mRapZXP8/rjx56kFQwimfYou1hSu7deNmQEWO7Pqc9i
+         eOPkFxswsEz0ogAlbowZCO06C5LLtOh5DPGXMyuXXG/+F0R5xkox9+D51KmPG1kQN7UQ
+         h6/Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@autodeskcommunications.com header.s=m1 header.b=kiqNMsne;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=UEIwC9Kf;
+       spf=pass (google.com: domain of 918-fod-433.0.1260741.0.0.127147.9.221941971@email.autodeskcommunications.com designates 199.15.213.183 as permitted sender) smtp.mailfrom=918-FOD-433.0.1260741.0.0.127147.9.221941971@email.autodeskcommunications.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=autodeskcommunications.com
+Return-Path: <918-FOD-433.0.1260741.0.0.127147.9.221941971@email.autodeskcommunications.com>
+Received: from email.autodeskcommunications.com (email.autodeskcommunications.com. [199.15.213.183])
+        by mx.google.com with ESMTPS id l28si3328889qve.85.2019.04.02.09.31.02
+        for <soporte@galilea.cl>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 02 Apr 2019 09:31:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 918-fod-433.0.1260741.0.0.127147.9.221941971@email.autodeskcommunications.com designates 199.15.213.183 as permitted sender) client-ip=199.15.213.183;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@autodeskcommunications.com header.s=m1 header.b=kiqNMsne;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=UEIwC9Kf;
+       spf=pass (google.com: domain of 918-fod-433.0.1260741.0.0.127147.9.221941971@email.autodeskcommunications.com designates 199.15.213.183 as permitted sender) smtp.mailfrom=918-FOD-433.0.1260741.0.0.127147.9.221941971@email.autodeskcommunications.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=autodeskcommunications.com
+Return-Path: <autodesk@autodeskcommunications.com>
+X-MSFBL: c29wb3J0ZUBnYWxpbGVhLmNsQGR2cC0xOTktMTUtMjEzLTE4M0BiZy1hYmQtOTVA
+	OTE4LUZPRC00MzM6NzA2MTU5OjkyNzAwOjU0OTMzODowOjEyNzE0Nzo5OjEyNjA3
+	NDE6MjIxOTQxOTcx
+Received: from [10.1.87.249] ([10.1.87.249:44309] helo=abmas01.marketo.org)
+	by abmta05.marketo.org (envelope-from <autodesk@autodeskcommunications.com>)
+	(ecelerity 3.6.8.47404 r(Core:3.6.8.0)) with ESMTP
+	id 3B/F1-45720-EDC83AC5; Tue, 02 Apr 2019 11:25:02 -0500
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1554222302;
+	s=m1; d=autodeskcommunications.com; i=@autodeskcommunications.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=FpiwdPMNcBHMg5GCNDVimo8H+E9h0nlxSG5MHgZgEzA=;
+	b=kiqNMsneUn9QZYC/xL1YlYhQ/7dtqEUvrdo9aGef6gz/mKrnTyg6OSRFx2hDocGO
+	iJpoqDAKczBXX/XYmVScOzY3d10plC3DDulv5O44KZQFpX4XbjEcdkombqh9Ihc89Ll
+	hKNBF2+dP0jsixQYpw05EhYWJbtpDcdW9RWlZddk=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1554222302;
+	s=m1; d=mktdns.com; i=@mktdns.com;
+	h=Date:From:To:Subject:MIME-Version:Content-Type;
+	bh=FpiwdPMNcBHMg5GCNDVimo8H+E9h0nlxSG5MHgZgEzA=;
+	b=UEIwC9KfnCMLmktgd1U7v0Y+xQZoeYY40Be2S5lA/9HrxDY0sKQ8AemNH9AJsflG
+	me7FljLsJfe5Bt0UgA2o9LfE8CZZSM+uT8LQdRhXhIgY3rVY3D5HSxM0iGt5RYc8VlZ
+	uhQW7TUkHd12A02jnIbkfgVxoipJcQG5qP7oCfWI=
+Date: Tue, 2 Apr 2019 11:25:02 -0500 (CDT)
+From: Autodesk <autodesk@autodeskcommunications.com>
+Reply-To: autodesk@autodeskcommunications.com
+To: soporte@galilea.cl
+Message-ID: <1011728115.1120445347.1554222302049.JavaMail.root@abmas01.marketo.org>
+Subject: =?UTF-8?Q?Preconstrucci=C3=B3n_perfecta_para_re?=
+ =?UTF-8?Q?sultados_rentables:_gu=C3=ADa_gratuita?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_Part_1120445346_311717156.1554222302049"
+X-PVIQ: mkto-918FOD433-000001-000001-260741
+X-Binding: bg-abd-95
+X-MarketoID: 918-FOD-433:706159:92700:549338:0:127147:9:1260741:221941971
+X-MktArchive: false
+List-Unsubscribe: <mailto:NN4G4ZKVMNMVGTTBMV4G4VTEMFRGKUDCJE2GGVZWG4ZEUMCRGREWI4SYO5GEQ43CJ55HGPI.1260741.127147.9@unsub-ab.mktomail.com>
+X-Mailfrom: 918-FOD-433.0.1260741.0.0.127147.9.221941971@email.autodeskcommunications.com
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+
+------=_Part_1120445346_311717156.1554222302049
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Los proyectos son exitosos cuando=20
+dominas la preconstrucci=C3=B3n
+Descargar Gu=C3=ADa
+=C2=BFDebes administrar fechas de entrega ajustadas y manejar varios proyec=
+tos a la vez que mantienes a las partes interesadas actualizadas con la inf=
+ormaci=C3=B3n correcta, sin importar cu=C3=A1ntas veces cambien los planos?=
+   &nbsp;   El software y los flujos de trabajo adecuados pueden ayudarte a=
+ planificar y trabajar de forma m=C3=A1s eficiente para mejorar los resulta=
+dos de los proyectos y lograr que obtengas un flujo recurrente de clientes.=
+&nbsp;
+Obt=C3=A9n flujos de trabajo conectados para viabilidad de construcci=C3=B3=
+n, administraci=C3=B3n de cambios, cuantificaci=C3=B3n y desarrollo de nego=
+cios. Nuestra gu=C3=ADa muestra como realizar proyectos de proyectos comple=
+jos a tiempo, dentro del presupuesto y con m=C3=A1s facilidad.
+Descargar Gu=C3=ADa
+Conecta la informaci=C3=B3n desde la etapa de dise=C3=B1o hasta la ejecuci=
+=C3=B3n.
+Soluciones de Preconstrucci=C3=B3n de Autodesk
+Desarrollo de Nuevos Negocios
+Logra tener un flujo de clientes recurrentes y crece r=C3=A1pidamente.
+Descubre c=C3=B3mo
+Gerentes de Preconstrucci=C3=B3n
+Entrega proyectos a tiempo y dentro del presupuesto.
+Descubre c=C3=B3mo
+Ejecutivos de=20
+ Proyecto
+Logra que todos tus proyectos sean predecibles.
+Descubre c=C3=B3mo
+
+Autodesk, Inc. =E2=80=A2 111 McInnis Parkway =E2=80=A2 San Rafael, CA 94903=
+ (Estados Unidos)
+Autodesk y el logotipo de Autodesk son marcas comerciales registradas o mar=
+cas comerciales de Autodesk, Inc. y/o de sus subsidiarias y/o filiales en l=
+os Estados Unidos y/o en otros pa=C3=ADses. Todas las dem=C3=A1s marcas, no=
+mbres de productos o marcas comerciales pertenecen a sus respectivos propie=
+tarios. Autodesk se reserva el derecho a modificar ofertas de productos y s=
+ervicios, especificaciones y precios en cualquier momento y sin previo avis=
+o. Adem=C3=A1s, no se hace responsable de los errores tipogr=C3=A1ficos o g=
+r=C3=A1ficos que pudiera contener este documento.=20
+
+
+-
+
+------=_Part_1120445346_311717156.1554222302049
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html;charset=3DUTF-8" />
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0" />
+<title>Preconstrucci=C3=B3n perfecta para resultados rentables: gu=C3=ADa g=
+ratuita</title>
+<style type=3D"text/css">
+body {
+    width: 100% !important;
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    margin: 0;
+    padding: 0;
+}
+
+td {
+    mso-line-height-rule: exactly;
+}
+
+.ExternalClass * {
+    line-height: 100%;
+}
+</style>
+<style media=3D"only screen and (max-width: 600px)" type=3D"text/css">
+@media only screen and (max-width: 600px) {
+.devicewidth {
+    min-width: 320px !important;
+    width: 100% !important;
+}
+.cellblocknopadding {
+    display: block !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+.cellblock {
+    display: block !important;
+    width: 100% !important;
+}
+.full-width {
+    width: 100% !important;
+}
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
+table.mobile-column,  td.mobile-column,  td.mobile-column-last {
+    display: block !important;
+    width: 100% !important;
+}
+table.mobile-column {
+    margin-bottom: 32px !important;
+}
+td.mobile-column {
+    padding-bottom: 32px !important;
+}
+img.fluid-img {
+    height: auto !important;
+    width: 100% !important;
+}
+div.img-container {
+    height: 150px;
+    overflow: hidden;
+}
+.adsk-logo_container, .secondary-logo_container {
+=09display: block !important;
+=09text-align: left !important;
+}
+img.adsk-logo_image {
+    height: auto !important;
+    width: 250px !important;
+}
+td.pad-032 {
+    padding: 0 32px 32px 32px !important;
+}
+td.pad-3232 {
+    padding: 32px 32px 32px 32px !important;
+}
+td.pad-0320 {
+    padding: 0px 32px 0px 32px !important;
+}
+td.pad-320 {
+    padding: 32px 32px 0px 32px !important;
+}
+td.pad-253232 {
+    padding: 25px 32px 32px !important;
+}
+.hideblock {
+    display: none !important;
+}
+table.image-credit-wrapper {
+    width: 100% !important;
+}
+td.preheader-container {
+    padding: 0 15px 5px 15px !important;
+}
+td.view-web-container {
+    padding: 0 15px 15px 15px !important;
+}
+/* Background Image Header | [Banner_2A] - Banner with 3/4 image - Right  *=
+/
+td.header-text-td-masthead {
+    background-position: top no-repeat;
+    background-size: 100%;
+    padding: 43% 32px 10% 32px !important;
+}
+/* Custom Examples | [Banner_2A] - Banner with 3/4 image - Right  */
+div.banner-image-container {
+    /*height: 150px;*/
+    overflow: hidden;
+}
+td.banner-headlines-container {
+    height: auto !important;
+    padding: 7% 32px !important;
+}
+td.header-text-bg {
+    background-repeat: no-repeat;
+    background-position: 48% 100%;
+    background-size: cover;
+    position: relative;
+}
+td.header-text-td-bg {
+    padding: 70px 32px 25px !important;
+}
+
+.mobile-left-align {
+=09background-repeat: no-repeat;
+=09background-position: 0% 100% !important;
+=09background-size:cover;
+}
+
+.mobile-left-align-center {
+=09background-repeat: no-repeat;
+=09background-position: 0% 50% !important;
+=09background-size: cover;
+}
+
+td.header-text-td-bg-banner-5 {
+    padding: 25px 32px 25px !important;
+}
+
+table.banner-3-left {
+    float: none !important;
+    width: 100% !important;
+}
+td.banner-3-credit-spacer {
+    display: none !important;
+}
+td.header-headline-bg,  td.header-subhead-bg {
+    line-height: 24px !important;
+    padding-left: 0 !important;
+}
+td.header-headline-bg {
+    font-size: 22px !important;
+    padding-bottom: 5px !important;
+}
+td.header-cta-bg {
+    padding-left: 0 !important;
+}
+td.header-subhead-bg {
+    font-size: 18px !important;
+}
+/* End Background Image Header */
+  /* Font Sizes */
+td.subhead_copy_wrapper, td.normal_copy_wrapper, td.column-copy, td.speaker=
+s-td-bottom {
+    font-size: 15px !important;
+    line-height: 22px !important;
+}
+td.column-copy {
+    padding: 0 !important;
+}
+td.pad-bottom-32 {
+    padding: 0 0 32px 0 !important;
+}
+td.header_headline {
+    font-size: 22px !important;
+    line-height: 28px !important;
+    padding-bottom: 5px !important;
+}
+td.header_subhead {
+    font-size: 18px !important;
+    line-height: 24px !important;
+}
+td.headline_padding,  td.headline_wrapper headline_padding {
+    padding-bottom: 20px !important;
+    font-size: 18px !important;
+    line-height: 24px !important;
+}
+td.headline_wrapper {
+    font-size: 18px !important;
+    line-height: 24px !important;
+}
+td.no-padding {
+    padding: 0 !important;
+}
+td.show-me {
+    display: block !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+td.content-td {
+    padding-bottom: 25px !important;
+}
+td.content-td,  table.content-td show-me {
+    padding: 25px 32px !important;
+    height: 100% !important;
+}
+td.content-td-primary {
+    padding: 32px !important;
+}
+td[id=3D"footer-container"] {
+    padding: 22px 32px 32px !important;
+}
+td.content-span2-right {
+    padding: 25px 0px !important;
+}
+table.medium-button {
+    max-width: 256px;
+    width: 100% !important;
+}
+img.social-icon {
+    width: 30px !important;
+    height: 30px !important;
+}
+td.social-first {
+    padding: 20px 5px 20px 0px !important;
+    width: 30px !important;
+    height: 30px !important;
+}
+td.social {
+    padding: 20px 5px 20px 20px !important;
+    width: 30px !important;
+    height: 30px !important;
+}
+td.button-text a {
+    text-transform: uppercase;
+    width: 100% !important;
+}
+td.sidebar-td-blue {
+    padding: 25px 32px;
+}
+td.message,  tr.message {
+    color: #0696D7 !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px !important;
+    line-height: 18px !important;
+    height: 18px !important;
+    padding-bottom: 24px !important;
+    display: block !important;
+    max-height: none !important;
+    font-weight: bold;
+}
+td.title-speakers-td-bottom {
+    padding-bottom: 20px !important;
+}
+td.speakers-td-bottom {
+    padding-bottom: 18px !important;
+}
+img.location-two-column image-fix {
+    margin-top: 15px;
+}
+img.location-two-column-l image-fix {
+    margin-top: 0px;
+}
+td.image-caption-img-l {
+    padding-bottom: 20px;
+}
+img.col-image,  img.sidebar-image,  img.location-two-column image-fix,  img=
+.location-two-column-l image-fix {
+    height: auto !important;
+    max-width: 256px !important;
+    width: 100% !important;
+}
+tr.hide-element {
+    display: block !important;
+    width: 100% !important;
+    max-height: 100% !important;
+}
+img.sidebar-image {
+    padding-bottom: 20px;
+}
+img.image-centered {
+    height: auto !important;
+    max-width: 270px !important;
+    width: 100% !important;
+}
+/* Text Link to Box CTA */
+td.box-cta_container {
+    padding: 15px 0px 32px !important;
+}
+a.box-cta {
+    background: #1858A8 url("https://pages.autodesk.com/rs/918-FOD-433/imag=
+es/autodesk-wireframes-button-arrow-icon-10x16.png") no-repeat 95% 50%;
+    color: #FFFFFF !important;
+    display: block;
+    font-size: 18px !important;
+    max-width: 241px !important;
+    width: 100% !important;
+    margin-top: 5px;
+    padding: 10px 0 10px 15px !important;
+    text-transform: uppercase;
+}
+td.social-large-image {
+    width: 100% !important;
+    display: inline-block !important;
+    border: none !important;
+    padding-bottom: 5px !important;
+}
+table.social-container-large {
+    width: 100% !important;
+}
+
+td.mobile-hide {
+    display: none !important;
+}
+td.mobile-show {
+    display: block !important;
+    max-height: none !important;
+}
+table.mobile-show {
+    display: block !important;
+    max-height: none !important;
+}
+div.mobile-show {
+    display: block !important;
+    max-height: none !important;
+    width: auto !important; /* for gmail + yahoo chrome T_T */
+}
+.width-auto {
+    width: auto !important;
+    height: auto !important;
+}
+td.mobile-padding {
+    padding: 15px 0 0 15px !important;
+}
+td.mb-headline-pad {
+    /* left padding =3D right padding - countdown width */
+    padding: 0px 14px 0 70px !important;
+}
+td.mobile-hr-pd {
+    padding: 0 30px 12px 15px !important;
+}
+td.mb-pr-15 {
+    padding-right: 15px !important;
+}
+.itm-countdown-mobile-pad {
+    padding-right: 0px !important;
+}
+}
+/* End Media Query */
+</style>
+<!--[if gt mso 15]>
+<style type=3D"text/css" media=3D"all">
+table, tr, td {
+    border-collapse: collapse;
+}
+tr {
+    font-size:0px;
+    line-height:0px;
+    border-collapse: collapse;
+}
+</style>
+<![endif]-->
+<!--[if gte mso 9]>
+    <style type=3D"text/css">
+        a.underline {
+         text-decoration: underline !important;
+        }
+    </style>
+<![endif]-->
+<!--[if gte mso 9]><xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+</xml><![endif]-->
+</head>
+<body bgcolor=3D"#DCDCDC" topmargin=3D"0" leftmargin=3D"0" marginheight=3D"=
+0" marginwidth=3D"0" mobile=3D"fix">=20
+<!-- This email's Draftr asset ID is 235099 -->=20
+<!-- This email's Marketo Activity ID (according to Draftr) is 1050473 -->=
+=20
+<span class=3D"preheader" style=3D"display: none; visibility: hidden; opaci=
+ty: 0; color: transparent; height: 0; width: 0;">Coloca los datos en el cen=
+tro de todos los proyectos</span>=20
+<span class=3D"preheader-whitespace" style=3D"display: none; visibility: hi=
+dden; opacity: 0; color: transparent; height: 0; width: 0;">=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;</span>=20
+<!-- Begin Body Table - 100% -->=20
+<table width=3D"100%" bgcolor=3D"#DCDCDC" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" style=3D"border-collapse: collapse; background-color: #DCDC=
+DC;">
+<tbody>
+<tr>
+<td style=3D"vertical-align: top;">=20
+<!-- Main Table Container - 670px -->=20
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"devicewidth" style=3D"border-collapse: collapse; margin: 0 auto; min=
+-width: 670px; width: 670px;">
+<tbody>
+<tr>
+<td style=3D"padding-top: 20px; vertical-align: top;" align=3D"left" valign=
+=3D"top">=20
+<!-- Content -->=20
+<table data-panel-index=3D"0" width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" style=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<td style=3D"vertical-align: top;" data-role=3D"boilerplate">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" styl=
+e=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<td class=3D"view-web-container_promo" style=3D"font-family: Arial, Helveti=
+ca, sans-serif; color: #666666; font-size: 11px; text-align: left;">=20
+<div class=3D"mktoSnippet" id=3D"viewAsWebpage" data-role=3D"boilerplate" s=
+tyle=3D"padding: 0px 0px 0px 0px;">
+<span style=3D"color: #666666;">Haz</span>=20
+<a href=3D"https://pages.autodesk.com/index.php/email/emailWebview?mkt_tok=
+=3DeyJpIjoiTXpGbU5qazFNVEU1WmpsaiIsInQiOiJ0SDU3V1RkOTJvcFhHL056bTlQc3dzN1hG=
+NExxcVRTRjVlaitQblBERTdZS2ZBeGo0aFBVVENuNndkSktVZEgrWktBWXRESUFZOExRNVVNRVV=
+zOUgxUGRRbWhZZ0FqVmM2NFBwbEJsTXJWc0FnLzlsR1JGWVNUZUtjdktETU5MYlF3VEtYcnlXVD=
+QxUkVOUHpQZU51U2c9PSJ9" style=3D"color: #666666; text-decoration: underline=
+;" target=3D"_blank">clic aqu=C3=AD</a>=20
+<span style=3D"color: #666666;">para ver este correo en un navegador.</span=
+>
+</div> </td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+<tr>
+<td height=3D"15" style=3D"mso-line-height-rule:exactly; line-height: 15px;=
+"><img src=3D"https://pages.autodesk.com/rs/918-FOD-433/images/autodesk-wir=
+eframes-spacer.gif" width=3D"10" height=3D"15" border=3D"0" style=3D"displa=
+y: block;" /></td>=20
+</tr>
+<tr>
+<td style=3D"background-color: #ffffff;">=20
+<!-- [Banner_0] - Banner with logo -->=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" styl=
+e=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<td>=20
+<table class=3D"mobile-column"></table></td>
+<td class=3D"adsk-logo_container full-width" style=3D"background-color: #ff=
+ffff; padding: 0px 0px 0px 0px;"> <a href=3D
+"http://click.autodesk.com/c01d3fdF0rVOf5QDR0fnU00" target=3D"_blank"
+><img class=3D"adsk-logo_image" src=3D"https://pages.autodesk.com/rs/918-FO=
+D-433/images/autodesk-logo-tagline-bleed250x50.png" style=3D"border: none; =
+display: block; -ms-interpolation-mode: bicubic; outline: none;" width=3D"2=
+50" height=3D"50" alt=3D"Autodesk" border=3D"0" /></a> </td>=20
+</tr>
+</tbody>
+</table>
+<!-- End [Banner_0] - Banner with logo --></td>=20
+</tr>
+</tbody>
+</table>
+<table data-panel-index=3D"1" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" class=3D"devicewidth" align=3D"center" style=3D"border-collapse: collap=
+se;">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" class=3D"devicewidth" style=3D"min-widt=
+h: 670px; width: 670px;">=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"devicewidt=
+h" style=3D"border-collapse: collapse; min-width: 670px; width: 670px;" ali=
+gn=3D"center">
+<tbody>
+<tr>
+<td>=20
+<table class=3D"full-width" width=3D"100%" cellpadding=3D"0" cellspacing=3D=
+"0" border=3D"0" style=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<td class=3D"header-text-bg mobile-left-align" width=3D"670" height=3D"250"=
+ valign=3D"top" background=3D"http://pages.autodesk.com/rs/autodeskglobal/i=
+mages/3981-Pre+con+top.png" style=3D"background-color: #6a6a6a; background-=
+image: url('http://pages.autodesk.com/rs/autodeskglobal/images/3981-Pre+con=
++top.png'); width: 670px;">=20
+<!--[if gte mso 9]>
+                                    <img src=3D"http://pages.autodesk.com/r=
+s/autodeskglobal/images/3981-Pre+con+top.png" width=3D"670" height=3D"250" =
+style=3D"width:670px; height:250px; display: block;" border=3D"0" />
+                                    <v:rect xmlns:v=3D"urn:schemas-microsof=
+t-com:vml" fill=3D"false" stroke=3D"false" style=3D"position: relative; top=
+: 0px; left: 0px; width:670px;height:250px;">
+                                        <v:textbox inset=3D"0,0,0,0">
+                                        <table align=3D"left" width=3D"100%=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+: collapse;">
+                                            <tr>
+                                                <td width=3D"100%" style=3D=
+"vertical-align: top;">
+                                    <![endif]-->=20
+<table class=3D"banner-3-left" align=3D"left" width=3D"100%" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<td class=3D"header-text-td-bg" style=3D"padding-top: 70px;" align=3D"left"=
+ valign=3D"top"> <a name=3D"panel-1"></a>=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" styl=
+e=3D"border-collapse: collapse; height: 100%;"></table></td>=20
+</tr>
+</tbody>
+</table>
+<!--[if gte mso 9]>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        </v:textbox>
+                                    </v:rect>
+                                    <![endif]--></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table>
+<table data-panel-index=3D"2" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" class=3D"devicewidth" align=3D"center" style=3D"border-collapse: collap=
+se;">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" class=3D"devicewidth" style=3D"min-widt=
+h: 670px; width: 670px;">=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"devicewidt=
+h" style=3D"border-collapse: collapse; min-width: 670px; width: 670px;" ali=
+gn=3D"center">
+<tbody>
+<tr>
+<td>=20
+<table class=3D"full-width" width=3D"100%" cellpadding=3D"0" cellspacing=3D=
+"0" border=3D"0" style=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<td class=3D"header-text-bg" width=3D"670" height=3D"250" valign=3D"top" ba=
+ckground=3D"http://pages.autodesk.com/rs/autodeskglobal/images/3981-Pre+con=
+-bottom-2.png" style=3D"background-color: #6a6a6a; background-image: url('h=
+ttp://pages.autodesk.com/rs/autodeskglobal/images/3981-Pre+con-bottom-2.png=
+'); width: 670px;">=20
+<!--[if gte mso 9]>
+                                    <img src=3D"http://pages.autodesk.com/r=
+s/autodeskglobal/images/3981-Pre+con-bottom-2.png" width=3D"670" height=3D"=
+250" style=3D"width:670px; height:250px; display: block;" border=3D"0" />
+                                    <v:rect xmlns:v=3D"urn:schemas-microsof=
+t-com:vml" fill=3D"false" stroke=3D"false" style=3D"position: relative; top=
+: 0px; left: 0px; width:670px;height:250px;">
+                                        <v:textbox inset=3D"0,0,0,0">
+                                        <table align=3D"left" width=3D"100%=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+: collapse;">
+                                            <tr>
+                                                <td width=3D"100%" style=3D=
+"vertical-align: top;">
+                                    <![endif]-->=20
+<table class=3D"banner-3-left" align=3D"left" width=3D"100%" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<td class=3D"header-text-td-bg" style=3D"padding-top: 70px;" align=3D"left"=
+ valign=3D"top"> <a name=3D"panel-2"></a>=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" styl=
+e=3D"border-collapse: collapse; height: 100%;">
+<tbody>
+<tr>
+<td colspan=3D"2" class=3D"header-headline-bg mktoText" style=3D"font-size:=
+ 22px; color: #ffffff; font-family: Arial, Helvetica, sans-serif; mso-line-=
+height-rule:exactly; line-height: normal; padding: 0 0 5px 35px; " align=3D=
+"left" id=3D"mkto-editable-1">Los proyectos son exitosos cuando <br />domin=
+as la preconstrucci=C3=B3n</td>=20
+</tr>
+<!-- CTA -->
+<tr>
+<td height=3D"20" style=3D"mso-line-height-rule:exactly; line-height: 10px;=
+"><img src=3D"https://pages.autodesk.com/rs/918-FOD-433/images/autodesk-wir=
+eframes-spacer.gif" width=3D"10" height=3D"20" border=3D"0" style=3D"displa=
+y: block;" /></td>=20
+</tr>
+<tr>
+<td class=3D"hideblock" height=3D"10" width=3D"35" style=3D"mso-line-height=
+-rule:exactly; line-height: 10px; width: 35px;"><img src=3D"https://pages.a=
+utodesk.com/rs/918-FOD-433/images/autodesk-wireframes-spacer.gif" width=3D"=
+35" height=3D"10" border=3D"0" style=3D"display: block;" /></td>=20
+<td width=3D"100%">=20
+<table class=3D"medium-button" width=3D"222" cellpadding=3D"8" cellspacing=
+=3D"0" border=3D"0" style=3D"background-color: #1858A8; border-collapse: co=
+llapse; width: 222px;">
+<tbody>
+<tr>
+<td height=3D"22" class=3D"button-text" style=3D"font-family: Arial, Helvet=
+ica, sans-serif; font-size: 16px; height: 22px; padding-left: 15px; text-tr=
+ansform: uppercase; width: 100%;"><a class=3D"mktoText" href=3D
+"http://click.autodesk.com/dc/AexvR2J5I4BZIwFZ3JJhMDmh8chwgbV1eN47WGAeUkpgH=
+7tdMop0L2P94ujqOqmpQhcHwLz78XfOV9vQNvP3bLGUUwKtlk3LB-qgRTdIg4jryzF9b3QwiWo7=
+vYru2wQb2fIsPOtkRizpVMO8WuvIUeo85ZugAmiRCExVjgncS6gWvuwZ5e-Pr5TOSt7ibxbIyB_=
+xzH-yv0QE6qSL6c2nHlAAJxb3aKGsfAfhngUXf308K9auPaPevHtT1xBK0cyNAPG_RKjBkhzBFm=
+Hf_rwAoVml43o3bucutQQk-aUQzLbnQlBDSfohJ0ZqCkRtDAqp/vf1f0VUo0QrDFdS5O03f00d"=
+ style=3D"color: #ffffff; display: inline-block; text-decoration: none; wid=
+th: 100%;" target=3D"_blank" id=3D"mkto-editable-2"
+>Descargar Gu=C3=ADa</a></td>=20
+<td style=3D"padding-right: 15px; width: 10px; "> <a href=3D
+"http://click.autodesk.com/dc/AexvR2J5I4BZIwFZ3JJhMDmh8chwgbV1eN47WGAeUkpgH=
+7tdMop0L2P94ujqOqmpQhcHwLz78XfOV9vQNvP3bLGUUwKtlk3LB-qgRTdIg4jryzF9b3QwiWo7=
+vYru2wQb2fIsPOtkRizpVMO8WuvIUeo85ZugAmiRCExVjgncS6gWvuwZ5e-Pr5TOSt7ibxbIyB_=
+xzH-yv0QE6qSL6c2nHlAAJxb3aKGsfAfhngUXf308K9auPaPevHtT1xBK0cyNAPG_RKjBkhzBFm=
+Hf_rwAoVml43o3bucutQQk-aUQzLbnQlBDSfohJ0ZqCkRtDAqp/z0ff3Qr00f1OVpU5FdTdD00"=
+ target=3D"_blank"
+><img src=3D"https://pages.autodesk.com/rs/918-FOD-433/images/autodesk-wire=
+frames-button-arrow-icon-10x16.png" style=3D"border: none; display: block; =
+-ms-interpolation-mode: bicubic; outline: none;" width=3D"10" height=3D"16"=
+ border=3D"0" /></a> </td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+<!-- End CTA -->
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table>
+<!--[if gte mso 9]>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        </v:textbox>
+                                    </v:rect>
+                                    <![endif]--></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table>
+<!-- [Body_2] - Single column text only -->
+<table data-panel-index=3D"3" width=3D"100%" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" class=3D"devicewidth" align=3D"center" style=3D"border-c=
+ollapse: collapse;">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" class=3D"devicewidth" style=3D"min-widt=
+h: 670px; width: 670px;">=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"devicewidt=
+h" style=3D"min-width: 670px; width: 670px;" align=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" style=3D"background-color: #FFFFFF;" align=3D"left"=
+ valign=3D"top"> <a name=3D"panel-3"></a>=20
+<table class=3D"full-width" width=3D"100%" cellpadding=3D"0" cellspacing=3D=
+"0" border=3D"0" style=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<td class=3D"full-width" style=3D"padding-top: 28px;" align=3D"left" valign=
+=3D"top">=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"devicewidt=
+h" style=3D"min-width: 670px; width: 670px; border-collapse: collapse;">
+<tbody>
+<tr>
+<td class=3D"pad-032" style=3D"vertical-align: top; text-align: left; paddi=
+ng: 0px 32px 32px 32px;">=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" styl=
+e=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<td class=3D"normal_copy_wrapper mktoText" style=3D"font-size: 15px; color:=
+  #666666 ; font-family: Arial, Helvetica, sans-serif; font-weight: normal;=
+ text-align: left;  line-height: 22px;" id=3D"mkto-editable-3">
+<div>=20
+<span lang=3D"en-us" xml:lang=3D"en-us">=C2=BFDebes administrar fechas de e=
+ntrega ajustadas y manejar varios proyectos a la vez que mantienes a las pa=
+rtes interesadas actualizadas con la informaci=C3=B3n correcta, sin importa=
+r cu=C3=A1ntas veces cambien los planos?</span>=20
+</div>=20
+<div>
+ &nbsp;=20
+</div>=20
+<div>
+ El software y los flujos de trabajo adecuados pueden ayudarte a planificar=
+ y trabajar de forma m=C3=A1s eficiente para mejorar los resultados de los =
+proyectos y lograr que obtengas un flujo recurrente de clientes.&nbsp;=20
+</div></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table>
+<!-- End [Body_2] - Single column text only -->
+<table data-panel-index=3D"4" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" align=3D"center" style=3D"border-collapse: collapse; width: 100%;">
+<!-- [Body_14] - Two column with image on right -->
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" class=3D"center devicewidth" style=3D"m=
+in-width: 670px; width: 670px;">=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"devicewidt=
+h" style=3D"min-width: 670px; width: 670px;" align=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" style=3D"background-color: #FFFFFF;" align=3D"left"=
+ valign=3D"top"> <a name=3D"panel-4"></a>=20
+<table class=3D"row no-padding" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td align=3D"left" style=3D"vertical-align: top;">=20
+<!--[if (gte mso 9)|(IE)]>
+                                    <table align=3D"center" width=3D"100%" =
+cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse: =
+collapse;">
+                                        <tr>
+                                            <td width=3D"380" style=3D"vert=
+ical-align: top; width: 380px;">
+                                    <![endif]-->=20
+<!-- Start Text Column -->=20
+<table align=3D"left" width=3D"380" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" class=3D"full-width" style=3D"border-collapse: collapse; width: 3=
+80px;">
+<tbody>
+<tr>
+<td class=3D"content-td" style=3D"padding: 32px 32px 0px 32px;" align=3D"le=
+ft" valign=3D"top">=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-col=
+lapse: collapse;">
+<tbody>
+<tr>
+<td class=3D"normal_copy_wrapper mktoText" style=3D"font-size: 15px; color:=
+ #666666 ; font-family: Arial, Helvetica, sans-serif; font-weight: normal; =
+text-align: left; line-height: 22px; padding: 0;" align=3D"left" id=3D"mkto=
+-editable-4">Obt=C3=A9n flujos de trabajo conectados para viabilidad de con=
+strucci=C3=B3n, administraci=C3=B3n de cambios, cuantificaci=C3=B3n y desar=
+rollo de negocios. Nuestra gu=C3=ADa muestra como realizar proyectos de pro=
+yectos complejos a tiempo, dentro del presupuesto y con m=C3=A1s facilidad.=
+</td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table>
+<!-- End Text Column -->
+<!--[if (gte mso 9)|(IE)]>
+                                            </td>
+                                    <![endif]-->
+<!--[if (gte mso 9)|(IE)]>
+                                            <td width=3D"290" style=3D"vert=
+ical-align: top; width: 290px;">
+                                    <![endif]-->
+<!-- Start Image Column -->
+<table align=3D"left" width=3D"290" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" class=3D"full-width" style=3D"border-collapse: collapse; width: 2=
+90px;">
+<tbody>
+<tr>
+<td class=3D"pad-032" align=3D"left" valign=3D"top"> <a href=3D
+"http://click.autodesk.com/NO00qFfQ00f5dUDdUV10f3r" target=3D"_blank"
+><img class=3D"image-centered" src=3D"http://pages.autodesk.com/rs/autodesk=
+global/images/3999-cropped-1532080360.jpg" style=3D"outline: none; text-dec=
+oration: none; -ms-interpolation-mode: bicubic; max-width: 100%; display: b=
+lock; border: none;" width=3D"290" height=3D"190" alt=3D"Texto alternativo =
+de ejemplo" /></a> </td>=20
+</tr>
+</tbody>
+</table>
+<!-- End Image Column -->
+<!--[if (gte mso 9)|(IE)]>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <![endif]--></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+<!-- End [Body_14] - Two column with image on right -->
+</tbody>
+</table>
+<!-- [Body_13] - CTA button -->
+<table data-panel-index=3D"5" width=3D"100%" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" class=3D"devicewidth" align=3D"center" style=3D"border-c=
+ollapse: collapse;">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" class=3D"devicewidth" style=3D"min-widt=
+h: 670px; width: 670px;">=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"devicewidt=
+h" style=3D"min-width: 670px; width: 670px; border-collapse: collapse;" ali=
+gn=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#0696D7" style=3D"background-color: #0696D7; padding: 24px 3=
+2px 24px 32px;" align=3D"left" valign=3D"top"> <a name=3D"panel-5"></a>=20
+<table class=3D"full-width" width=3D"100%" cellpadding=3D"0" cellspacing=3D=
+"0" border=3D"0" style=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<td class=3D"full-width" align=3D"left" valign=3D"top">=20
+<!-- column 1-->=20
+<table class=3D"full-width" align=3D"left" width=3D"222" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" style=3D"border-collapse: collapse; width: 2=
+22px;">
+<tbody>
+<tr>
+<td>=20
+<!-- Primary CTA -->=20
+<table align=3D"left" width=3D"222" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" class=3D"medium-button" style=3D"border-collapse: collapse; width=
+: 222px;">
+<tbody>
+<tr>
+<td height=3D"22" width=3D"100%" style=3D"background-color: #0696D7; height=
+: 22px; padding: 8px 15px; vertical-align: top;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" styl=
+e=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<td class=3D"button-text" style=3D"font-family: Arial, Helvetica, sans-seri=
+f; font-size: 16px; mso-line-height-rule: exactly; line-height: 22px; text-=
+transform: uppercase; width: 100%;"><a class=3D"mktoText" href=3D
+"http://click.autodesk.com/dc/AexvR2J5I4BZIwFZ3JJhMDmh8chwgbV1eN47WGAeUkpgH=
+7tdMop0L2P94ujqOqmpQhcHwLz78XfOV9vQNvP3bLGUUwKtlk3LB-qgRTdIg4jryzF9b3QwiWo7=
+vYru2wQb2fIsPOtkRizpVMO8WuvIUeo85ZugAmiRCExVjgncS6gWvuwZ5e-Pr5TOSt7ibxbIyB_=
+xzH-yv0QE6qSL6c2nHlAAJxb3aKGsfAfhngUXf308K9auPaPevHtT1xBK0cyNAPG_RKjBkhzBFm=
+Hf_rwAoVml43o3bucutQQk-aUQzLbnQlBDSfohJ0ZqCkRtDAqp/urVf00fO1r0QdV03UdfFD50"=
+ style=3D"color: #ffffff; display: inline-block; text-decoration: none; wid=
+th: 100%;" target=3D"_blank" id=3D"mkto-editable-5"
+>Descargar Gu=C3=ADa</a></td>=20
+<td style=3D"width: 10px;"> <a href=3D
+"http://click.autodesk.com/dc/AexvR2J5I4BZIwFZ3JJhMDmh8chwgbV1eN47WGAeUkpgH=
+7tdMop0L2P94ujqOqmpQhcHwLz78XfOV9vQNvP3bLGUUwKtlk3LB-qgRTdIg4jryzF9b3QwiWo7=
+vYru2wQb2fIsPOtkRizpVMO8WuvIUeo85ZugAmiRCExVjgncS6gWvuwZ5e-Pr5TOSt7ibxbIyB_=
+xzH-yv0QE6qSL6c2nHlAAJxb3aKGsfAfhngUXf308K9auPaPevHtT1xBK0cyNAPG_RKjBkhzBFm=
+Hf_rwAoVml43o3bucutQQk-aUQzLbnQlBDSfohJ0ZqCkRtDAqp/z0ff3Qr00f1OVpU5FdTdD00"=
+ target=3D"_blank"
+><img src=3D"https://pages.autodesk.com/rs/918-FOD-433/images/autodesk-wire=
+frames-button-arrow-icon-10x16.png" style=3D"border: none; display: block; =
+-ms-interpolation-mode: bicubic; outline: none;" width=3D"10" height=3D"16"=
+ alt=3D"" border=3D"0" /></a> </td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table>
+<!-- column 2 -->
+<table class=3D"full-width" align=3D"left" width=3D"367" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" style=3D"border-collapse: collapse; width: 3=
+67px;">
+<tbody>
+<tr>
+<td>=20
+<table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"full-width" align=3D"left" style=3D"border-collapse: collapse">
+<tbody>
+<tr>
+<td class=3D"column-copy mktoText" style=3D"line-height: 1.2; font-size: 15=
+px; text-align: left; color: #ffffff; font-family: Arial, Helvetica, sans-s=
+erif; font-weight: bold; height: 38px; vertical-align: middle; padding: 0px=
+ 0px 0px 16px;" align=3D"left" id=3D"mkto-editable-6">Conecta la informaci=
+=C3=B3n desde la etapa de dise=C3=B1o hasta la ejecuci=C3=B3n.</td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table>
+<!-- End [Body_13] - CTA button -->
+<!-- [Body_7] - Three column with images -->
+<table data-panel-index=3D"6" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" class=3D"devicewidth" align=3D"center" style=3D"border-collapse: collap=
+se;">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" class=3D"devicewidth" style=3D"min-widt=
+h: 670px; width: 670px;">=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"devicewidt=
+h" style=3D"min-width: 670px; width: 670px; border-collapse: collapse;" ali=
+gn=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#FFFFFF" style=3D"vertical-align: top;" align=3D"left" valig=
+n=3D"top"> <a name=3D"panel-6"></a>=20
+<table class=3D"full-width" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" style=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<td class=3D"full-width" style=3D"vertical-align: top;" align=3D"left" vali=
+gn=3D"top">=20
+<table border=3D"0" cellpadding=3D"0" class=3D"devicewidth" cellspacing=3D"=
+0" style=3D"min-width: 670px; width: 670px; border-collapse: collapse;">
+<tbody>
+<tr>
+<td class=3D"content-td" colspan=3D"2" style=3D"padding: 28px 32px 22px 32p=
+x;" align=3D"left" valign=3D"top">=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"content-ti=
+tle-icon" style=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<td class=3D"title-text mktoText" style=3D"font-size: 24px; color: #0696D7;=
+ font-family: Arial, Helvetica, sans-serif; line-height:24px; padding: 2px =
+0px 10px 0px;" align=3D"left" valign=3D"top" id=3D"mkto-editable-7">Solucio=
+nes de Preconstrucci=C3=B3n de Autodesk</td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+<tr>
+<td class=3D"pad-0320" style=3D"padding: 0 32px 0px 32px;" align=3D"left" v=
+align=3D"top">=20
+<!--[if (gte mso 9)|(IE)]>
+                                                <table align=3D"center" wid=
+th=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"borde=
+r-collapse: collapse;">
+                                                    <tr>
+                                                <![endif]-->=20
+<!--[if (gte mso 9)|(IE)]>
+                                                        <td width=3D"202" s=
+tyle=3D"vertical-align: top; width: 202px;">
+                                                <![endif]-->=20
+<!-- Start Column -->=20
+<table align=3D"left" class=3D"full-width" width=3D"202" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" style=3D"border-collapse: collapse; width: 2=
+02px;">
+<tbody>
+<tr>
+<td>=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"full-width=
+" style=3D"border-collapse: collapse; width:180px;">
+<tbody>
+<tr>
+<td class=3D"title-speakers-td-top mktoText" style=3D"font-size: 15px; vert=
+ical-align: top; text-align: left; color: #0696D7; font-family: Arial, Helv=
+etica, sans-serif; font-weight: bold; line-height:20px; padding: 0px 0px 15=
+px 0px;" align=3D"left" valign=3D"top" id=3D"mkto-editable-8">Desarrollo de=
+ Nuevos Negocios</td>=20
+</tr>
+<tr>
+<td class=3D"mktoText" style=3D"font-size: 15px; vertical-align: top; text-=
+align: left; color:  #666666 ; font-family: Arial, Helvetica, sans-serif; f=
+ont-weight: normal; line-height:22px; padding: 0px 0px 25px 0px;" align=3D"=
+left" valign=3D"top" id=3D"mkto-editable-9">Logra tener un flujo de cliente=
+s recurrentes y crece r=C3=A1pidamente.</td>=20
+</tr>
+<tr>
+<td style=3D"padding: 0px 0px 32px 0px; vertical-align: top;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" styl=
+e=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<!-- Pointer -->
+<td width=3D"30" style=3D"padding-right: 10px; width: 30px;"> <a href=3D
+"http://click.autodesk.com/dc/AexvR2J5I4BZIwFZ3JJhMDmh8chwgbV1eN47WGAeUkqCL=
+2CQqo6Fcc9-bEYjnzx3epVe10BcMK6_rKQ81TzYpQPOQr0j3kan1j_piEs6gEGovXyvwcumGV57=
+DPCU9HNP-bJXeFM1VN2DB63hFSE_rj14ehQ4a9VFiyrfj7HYvTG4IXWCI1FqCrp7f5CklLg-Urj=
+y_cWs7eY-Rn0Fub3UOrLJDwqGsHPfCfFZ_qPg9vN0r41y1tqR-sgyrsu8xzUmX_ZXFWr6wpe0l1=
+LtymxXmvuFzmLvccmvMVHAvgIqkeT-7iIfG23ohnwQhdGKn4dpsrMVkMmKmoUi-5K3jcXomIJDB=
+DEKtDGCkM1HaRB64As=3D/z0ff3Qr00f1OVpU5FdTdD00" target=3D"_blank"
+><img src=3D"https://pages.autodesk.com/rs/918-FOD-433/images/icon-cta-circ=
+le-40x40-gray.png" style=3D"border: none; display: block; -ms-interpolation=
+-mode: bicubic; outline: none;" width=3D"20" height=3D"20" alt=3D"" border=
+=3D"0" /></a> </td>=20
+<!-- Text Link -->=20
+<td width=3D"100%" style=3D"font-size: 16px; font-family: Arial, Helvetica,=
+ sans-serif; font-weight: normal; text-align: left; width: 100%"> <a class=
+=3D"mktoText" href=3D
+"http://click.autodesk.com/dc/AexvR2J5I4BZIwFZ3JJhMDmh8chwgbV1eN47WGAeUkqCL=
+2CQqo6Fcc9-bEYjnzx3epVe10BcMK6_rKQ81TzYpQPOQr0j3kan1j_piEs6gEGovXyvwcumGV57=
+DPCU9HNP-bJXeFM1VN2DB63hFSE_rj14ehQ4a9VFiyrfj7HYvTG4IXWCI1FqCrp7f5CklLg-Urj=
+y_cWs7eY-Rn0Fub3UOrLJDwqGsHPfCfFZ_qPg9vN0r41y1tqR-sgyrsu8xzUmX_ZXFWr6wpe0l1=
+LtymxXmvuFzmLvccmvMVHAvgIqkeT-7iIfG23ohnwQhdGKn4dpsrMVkMmKmoUi-5K3jcXomIJDB=
+DEKtDGCkM1HaRB64As=3D/ZOV1d05WQ0d0ff0fs30rDFU" target=3D"_blank" style=3D" =
+color: #666666;  text-decoration: underline;" id=3D"mkto-editable-10"
+>Descubre c=C3=B3mo</a> </td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table>
+<!-- End Column -->
+<!--[if (gte mso 9)|(IE)]>
+                                                        </td>
+                                                <![endif]-->
+<!--[if (gte mso 9)|(IE)]>
+                                                        <td width=3D"202" s=
+tyle=3D"vertical-align: top; width: 202px;">
+                                                <![endif]-->
+<!-- Start Column -->
+<table align=3D"left" class=3D"full-width" width=3D"202" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" style=3D"border-collapse: collapse; width: 2=
+02px;">
+<tbody>
+<tr>
+<td>=20
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"full-width" style=3D"border-collapse: collapse; width:180px;">
+<tbody>
+<tr>
+<td class=3D"title-speakers-td-top mktoText" style=3D"font-size: 15px; vert=
+ical-align: top; text-align: left; color: #0696D7; font-family: Arial, Helv=
+etica, sans-serif; font-weight: bold; line-height:20px; padding: 0px 0px 15=
+px 0px;" align=3D"left" valign=3D"top" id=3D"mkto-editable-11">Gerentes de =
+Preconstrucci=C3=B3n</td>=20
+</tr>
+<tr>
+<td class=3D"mktoText" style=3D"font-size: 15px; vertical-align: top; text-=
+align: left; color:  #666666 ; font-family: Arial, Helvetica, sans-serif; f=
+ont-weight: normal; line-height:22px; padding: 0px 0px 25px 0px;" align=3D"=
+left" valign=3D"top" id=3D"mkto-editable-12">Entrega proyectos a tiempo y d=
+entro del presupuesto.</td>=20
+</tr>
+<tr>
+<td style=3D"padding: 0px 0px 32px 0px; vertical-align: top;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" styl=
+e=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<!-- Pointer -->
+<td width=3D"30" style=3D"padding-right: 10px; width: 30px;"> <a href=3D
+"http://click.autodesk.com/dc/AexvR2J5I4BZIwFZ3JJhMDmh8chwgbV1eN47WGAeUkqCL=
+2CQqo6Fcc9-bEYjnzx3epVe10BcMK6_rKQ81TzYpbSviOcoXrNie7eEpDKy6fyLKlM-UrxEWqtD=
+2260NMa-hTd-bRje2SFl1c1Jr0hduem7FYbNIZDwUkCfLF8cbfPeeVe3WyWYaIVyzrSft6UJFmW=
+GJZUgyEzN2Lf5NCu0ct0aYCrOx28NKTWKZrJ_lF1jJKgDjbhD68uqe1HykH4T5wqml1I3hN3kdO=
+mzp-1R74o-6gop3XTLnRlpiXzCBODRh_22jWmm3bY5hXmiR29ghpGbBj937d81O8LCizPPXg=3D=
+=3D/z0ff3Qr00f1OVpU5FdTdD00" target=3D"_blank"
+><img src=3D"https://pages.autodesk.com/rs/918-FOD-433/images/icon-cta-circ=
+le-40x40-gray.png" style=3D"border: none; display: block; -ms-interpolation=
+-mode: bicubic; outline: none;" width=3D"20" height=3D"20" alt=3D"" border=
+=3D"0" /></a> </td>=20
+<!-- Text Link -->=20
+<td width=3D"100%" style=3D"font-size: 16px; font-family: Arial, Helvetica,=
+ sans-serif; font-weight: normal; text-align: left; width: 100%"> <a class=
+=3D"mktoText" href=3D
+"http://click.autodesk.com/dc/AexvR2J5I4BZIwFZ3JJhMDmh8chwgbV1eN47WGAeUkqCL=
+2CQqo6Fcc9-bEYjnzx3epVe10BcMK6_rKQ81TzYpbSviOcoXrNie7eEpDKy6fyLKlM-UrxEWqtD=
+2260NMa-hTd-bRje2SFl1c1Jr0hduem7FYbNIZDwUkCfLF8cbfPeeVe3WyWYaIVyzrSft6UJFmW=
+GJZUgyEzN2Lf5NCu0ct0aYCrOx28NKTWKZrJ_lF1jJKgDjbhD68uqe1HykH4T5wqml1I3hN3kdO=
+mzp-1R74o-6gop3XTLnRlpiXzCBODRh_22jWmm3bY5hXmiR29ghpGbBj937d81O8LCizPPXg=3D=
+=3D/DFt1d0X0DOf00Uf5rV3d0Qf" target=3D"_blank" style=3D" color: #666666;   =
+text-decoration: underline;" id=3D"mkto-editable-13"
+>Descubre c=C3=B3mo</a> </td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table>
+<!-- End Column -->
+<!--[if (gte mso 9)|(IE)]>
+                                                        </td>
+                                                <![endif]-->
+<!--[if (gte mso 9)|(IE)]>
+                                                        <td width=3D"202" s=
+tyle=3D"vertical-align: top; width: 202px;">
+                                                <![endif]-->
+<!-- Start Column -->
+<table align=3D"left" class=3D"full-width" width=3D"202" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" style=3D"border-collapse: collapse; width: 2=
+02px;">
+<tbody>
+<tr>
+<td>=20
+<table align=3D"right" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cla=
+ss=3D"full-width" style=3D"border-collapse: collapse; width:180px;">
+<tbody>
+<tr>
+<td class=3D"title-speakers-td-top mktoText" style=3D"font-size: 15px; vert=
+ical-align: top; text-align: left; color: #0696D7; font-family: Arial, Helv=
+etica, sans-serif; font-weight: bold; line-height: 20px; padding: 0px 0px 1=
+5px 0px;" align=3D"left" valign=3D"top" id=3D"mkto-editable-14">Ejecutivos =
+de <br /> Proyecto</td>=20
+</tr>
+<tr>
+<td class=3D"mktoText" style=3D"font-size: 15px; vertical-align: top; text-=
+align: left; color:  #666666 ; font-family: Arial, Helvetica, sans-serif; f=
+ont-weight: normal; line-height: 22px; padding: 0px 0px 25px 0px;" align=3D=
+"left" valign=3D"top" id=3D"mkto-editable-15">Logra que todos tus proyectos=
+ sean predecibles.</td>=20
+</tr>
+<tr>
+<td style=3D"padding: 0px 0px 32px 0px; vertical-align: top;">=20
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" styl=
+e=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<!-- Pointer -->
+<td width=3D"30" style=3D"padding-right: 10px; width: 30px;"> <a href=3D
+"http://click.autodesk.com/dc/AexvR2J5I4BZIwFZ3JJhMDmh8chwgbV1eN47WGAeUkqCL=
+2CQqo6Fcc9-bEYjnzx3epVe10BcMK6_rKQ81TzYpQPOQr0j3kan1j_piEs6gEEs54-AbFKaN8dk=
+6oR6OAt-6IaipjFKLZfFPwYuUfTu9cnG7AGn-7BV22bE-VCnmOvLElgVdtjXsBQoufb4TrABcnh=
+VkM4vuOcdILgQB55j4Mqz6Q-DforuC6Iv9SvpeX8Xpv_I6sBEjDs-bchh7b-Qr4DtAB6gKGVSx0=
+Mtf6uF7Fma4ylRbhaUdSzri0lT1pZ9WWtEZqyhhT_3i6L4Vhl8vQi_Qd4hR6VyBQ568JKq7g=3D=
+=3D/z0ff3Qr00f1OVpU5FdTdD00" target=3D"_blank"
+><img src=3D"https://pages.autodesk.com/rs/918-FOD-433/images/icon-cta-circ=
+le-40x40-gray.png" style=3D"border: none; display: block; -ms-interpolation=
+-mode: bicubic; outline: none;" width=3D"20" height=3D"20" alt=3D"" border=
+=3D"0" /></a> </td>=20
+<!-- Text Link -->=20
+<td width=3D"100%" style=3D"font-size: 16px; font-family: Arial, Helvetica,=
+ sans-serif; font-weight: normal; text-align: left; width: 100%"> <a class=
+=3D"mktoText" href=3D
+"http://click.autodesk.com/dc/AexvR2J5I4BZIwFZ3JJhMDmh8chwgbV1eN47WGAeUkqCL=
+2CQqo6Fcc9-bEYjnzx3epVe10BcMK6_rKQ81TzYpQPOQr0j3kan1j_piEs6gEEs54-AbFKaN8dk=
+6oR6OAt-6IaipjFKLZfFPwYuUfTu9cnG7AGn-7BV22bE-VCnmOvLElgVdtjXsBQoufb4TrABcnh=
+VkM4vuOcdILgQB55j4Mqz6Q-DforuC6Iv9SvpeX8Xpv_I6sBEjDs-bchh7b-Qr4DtAB6gKGVSx0=
+Mtf6uF7Fma4ylRbhaUdSzri0lT1pZ9WWtEZqyhhT_3i6L4Vhl8vQi_Qd4hR6VyBQ568JKq7g=3D=
+=3D/n0Fd0uY03fVr0DO0f5fdQU1" target=3D"_blank" style=3D" color: #666666;  t=
+ext-decoration: underline;" id=3D"mkto-editable-16"
+>Descubre c=C3=B3mo</a> </td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table>
+<!-- End Column -->
+<!--[if (gte mso 9)|(IE)]>
+                                                        </td>
+                                                <![endif]-->
+<!--[if (gte mso 9)|(IE)]>
+                                                    </tr>
+                                                </table>
+                                                <![endif]--></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table>
+<!-- End [Body_7] - Three column with images -->
+<!-- [Footer] - Footer -->
+<table data-panel-index=3D"7" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" width=3D"100%" style=3D"background-color: #F6F5F2; border-collapse: col=
+lapse;">
+<tbody>
+<tr>
+<td id=3D"footer-container" style=3D"padding: 22px 32px 32px 32px; vertical=
+-align: top;">=20
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" styl=
+e=3D"border-collapse: collapse;">
+<tbody>
+<tr>
+<td class=3D"no-padding" style=3D"font-size: 18px; color: #666666; font-fam=
+ily: Arial, Helvetica, sans-serif; font-weight: normal; text-align: left; l=
+ine-height: 18px; padding: 0px 0px 16px 0px;" align=3D"left">
+<div class=3D"mktoSnippet" id=3D"follow-text-snippet-1" style=3D"padding: 0=
+px 0px 0px 0px;">
+Sigue a Autodesk
+</div></td>=20
+</tr>
+<tr>
+<td class=3D"mktoText" id=3D"mkto-editable-17">
+<!-- Begin Social Media Icons -->=20
+<table class=3D"social-container" cellpadding=3D"0" cellspacing=3D"0" borde=
+r=3D"0">=20
+<tbody>=20
+<tr>=20
+<td class=3D"social-first" style=3D"padding: 0px 15px 20px 0px;" align=3D"l=
+eft" valign=3D"top"> <a href=3D
+"http://click.autodesk.com/p0100Fd5ZD0ffvVOQr0dfU3" target=3D"_blank"
+><img src=3D"https://pages.autodesk.com/rs/918-FOD-433/images/facebook-30px=
+-gray-v2.png" class=3D"social-icon" style=3D"width: 20px; height: 20px; bor=
+der: none;display:block;" height=3D"20" width=3D"20" alt=3D"Facebook" /></a=
+> </td>=20
+<td class=3D"social" style=3D"padding: 0px 15px 20px 0px; " valign=3D"top" =
+align=3D"left"> <a href=3D
+"http://click.autodesk.com/uwVf00fO1r0Qd003UdfFD50" target=3D"_blank"
+><img src=3D"https://pages.autodesk.com/rs/918-FOD-433/images/twitter-30px-=
+gray-v2.png" class=3D"social-icon" style=3D"text-decoration: none;  width: =
+20px; height: 20px; border: none; display:block;" height=3D"20" width=3D"20=
+" alt=3D"Twitter" /></a> </td>=20
+<td class=3D"social" style=3D"padding: 0px 15px 20px 0px;" align=3D"left" v=
+align=3D"top"> <a href=3D
+"http://click.autodesk.com/i1UF0VO5dxr00Q0fdff3D01" target=3D"_blank"
+><img src=3D"https://pages.autodesk.com/rs/918-FOD-433/images/linkedin-30px=
+-gray-v2.png" class=3D"social-icon" style=3D"width: 20px; height: 20px; bor=
+der: none;display:block;" height=3D"20" width=3D"20" alt=3D"LinkedIn" /></a=
+> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<!-- End Social Media Icons --></td>=20
+</tr>
+<tr>
+<td class=3D"mktoText" style=3D"font-size: 10px; color: #666666; font-famil=
+y: Arial, Helvetica, sans-serif; font-weight: normal; text-align: left; lin=
+e-height:14px; padding-bottom: 10px;" align=3D"left" id=3D"mkto-editable-18=
+">Autodesk, Inc. =E2=80=A2 111 McInnis Parkway =E2=80=A2 San Rafael, CA 949=
+03 (Estados Unidos)</td>=20
+</tr>
+<tr>
+<td>=20
+<div class=3D"mktoSnippet" id=3D"legal-copy">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" styl=
+e=3D"border-collapse: collapse;">=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-size: 10px; color: #666666; font-family: Arial, Helvetica=
+, sans-serif; font-weight: normal; text-align: left; line-height:14px; padd=
+ing-bottom: 10px;" align=3D"left">=C2=A9 Autodesk, Inc. Todos los derechos =
+reservados. <a href=3D
+"http://click.autodesk.com/lUOf2000r5fddD3Q10V0yfF" target=3D"_blank" style=
+=3D"color:#666666;text-decoration:underline;" rel=3D"noreferrer noopener"
+>Avisos legales y marcas registradas</a>. <a href=3D
+"http://click.autodesk.com/o03zV003U005dFd1fDOQfrf" target=3D"_blank" style=
+=3D"color:#666666;text-decoration:underline;" rel=3D"noreferrer noopener"
+>Pol=C3=ADtica de privacidad</a></td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 10px; color: #666666; font-family: Arial, Helvetica=
+, sans-serif; font-weight: normal; text-align: left; line-height:14px; padd=
+ing-bottom: 10px;" align=3D"left"></td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 10px; color: #666666; font-family: Arial, Helvetica=
+, sans-serif; font-weight: normal; text-align: left; line-height:14px; padd=
+ing-bottom: 10px;" align=3D"left">Si no quiere recibir correos electr=C3=B3=
+nicos publicitarios de Autodesk, haga clic <a style=3D"color:#666666;text-d=
+ecoration:underline;" href=3D
+"http://click.autodesk.com/c01d3fdF0rVOf5QD40fAU00" target=3D"_blank" rel=
+=3D"noreferrer noopener"
+>aqu=C3=AD </a>para cancelar su suscripci=C3=B3n.</td>=20
+</tr>=20
+<tr>=20
+<td style=3D"font-size: 10px; color: #666666; font-family: Arial, Helvetica=
+, sans-serif; font-weight: normal; text-align: left; line-height:14px; padd=
+ing-bottom: 10px;" align=3D"left">No respondas a este mensaje de correo ele=
+ctr=C3=B3nico. No se leer=C3=A1n ni contestar=C3=A1n las respuestas a este =
+mensaje.</td>=20
+</tr>=20
+</tbody>=20
+</table>
+</div> </td>=20
+</tr>
+<tr>
+<td class=3D"mktoText" style=3D"font-size: 10px; color: #666666; font-famil=
+y: Arial, Helvetica, sans-serif; font-weight: normal; text-align: left; lin=
+e-height:14px;" align=3D"left" id=3D"mkto-editable-19">Autodesk y el logoti=
+po de Autodesk son marcas comerciales registradas o marcas comerciales de A=
+utodesk, Inc. y/o de sus subsidiarias y/o filiales en los Estados Unidos y/=
+o en otros pa=C3=ADses. Todas las dem=C3=A1s marcas, nombres de productos o=
+ marcas comerciales pertenecen a sus respectivos propietarios. Autodesk se =
+reserva el derecho a modificar ofertas de productos y servicios, especifica=
+ciones y precios en cualquier momento y sin previo aviso. Adem=C3=A1s, no s=
+e hace responsable de los errores tipogr=C3=A1ficos o gr=C3=A1ficos que pud=
+iera contener este documento. <br /></td>=20
+</tr>
+</tbody>
+</table></td>=20
+</tr>
+</tbody>
+</table>
+<!-- End [Footer] - Footer -->
+<!-- End Content --></td>=20
+</tr>
+</tbody>
+</table>
+<!-- End Main Table Container - 670px --></td>=20
+</tr>
+</tbody>
+</table>
+<!-- End Body Table - 100% -->=20
+<a href=3D
+"http://click.autodesk.com/tQDd3ffUFf0r50dVO10005B"
+></a>
+<img src=3D"http://click.autodesk.com/trk?t=3D1&mid=3DOTE4LUZPRC00MzM6NzA2M=
+TU5OjkyNzAwOjU0OTMzODowOjEyNzE0Nzo5OjEyNjA3NDE6MjIxOTQxOTcxOnNvcG9ydGVAZ2Fs=
+aWxlYS5jbA%3D%3D" width=3D"1" height=3D"1" style=3D"display:none !important=
+;" alt=3D"" />
+
+&nbsp;
+</body>
+</html>
+------=_Part_1120445346_311717156.1554222302049--

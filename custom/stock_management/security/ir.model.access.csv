@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_inventory,component_stuft,model_maintenance_equipment,maintenance.group_equipment_manager,1,1,1,1
+access_inventory,component_stuft,model_component_stuft,base.group_user,1,0,0,0
+access_inventory,component_stuft,model_component_stuft,maintenance.group_equipment_manager,1,1,1,1
+access_component,component_component,model_component_component,maintenance.group_equipment_manager,1,1,1,1
+access_type,component_type,model_component_type,maintenance.group_equipment_manager,1,1,1,1
+access_model,component_model,model_component_model,maintenance.group_equipment_manager,1,1,1,1
+access_manufacturer,component_manufacturer,model_component_manufacturer,maintenance.group_equipment_manager,1,1,1,1
+access_type_maintenance,equipment_type,model_maintenance_type,maintenance.group_equipment_manager,1,1,1,1
+access_factura_maintenance,equipment_factura,model_maintenance_factura,maintenance.group_equipment_manager,1,1,1,1
+access_equipment,component_equipment,model_maintenance_equipment,base.group_user,1,0,0,0
+access_owner,res_users,model_res_users,maintenance.group_equipment_manager,1,1,1,1
+access_so,system_op,model_system_op,maintenance.group_equipment_manager,1,1,1,1
+access_historial,component_historial,model_component_historial,maintenance.group_equipment_manager,1,1,1,1

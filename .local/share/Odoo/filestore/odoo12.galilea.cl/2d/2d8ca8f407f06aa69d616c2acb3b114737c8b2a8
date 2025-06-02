@@ -1,0 +1,102 @@
+Delivered-To: sistemas@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp3726733otp;
+        Mon, 8 Apr 2019 08:58:19 -0700 (PDT)
+X-Received: by 2002:ac8:344a:: with SMTP id v10mr26676249qtb.9.1554739099018;
+        Mon, 08 Apr 2019 08:58:19 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554739099; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Yg0I3USwxNjW+TIYL2XJBYKCGf52vuB4ugpKu1ocHPexjnR7FIWsQAs+90XWSm0L7w
+         uoTvqtZwVl3iZE3Wp35FoSg+bQ9k/0dqx2VjRQ+2uzPugQnNEkWz6Yq+4mfwliMm5UIc
+         f9D1jMTuJy8WpfgIM59bNCiJvEg4hk8d0mwsEBtrzkb7dmWQFbj0p8OzXRADf2Lg9MgA
+         7UXl47w3NWM6ihl1kjBBeCjEoVoIVfZXwfrjCvx68bbQP892ibfJF/NmuoYoHBuy05lq
+         LbKwArigk0lNQqI9t8kyijqcBk6Ugbf+2ya7jRJWWsyw0gl4NN/RtXWqBY4ngGsVFhhg
+         Dseg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-language:mime-version:user-agent:date:message-id:subject
+         :from:to:dkim-signature;
+        bh=rivTlapdJPijV43+oBHlyz3Q8c1HL81cjJZ8bc8bWO8=;
+        b=DWAKigFgUxONmQYDMHehST/M/2cre0NM6RyS5iGDgcAYWImii0xBpeTkb8L/0akhoo
+         AnySpVuTMYBEQ7foCpgF0fsgeqF+KfDl+Di0e5BVEntzxcHwRlDaepslB0iz1TOHQLdm
+         WAubD8sC9nWc4cTDuxnhQtjjYxN7d454onhRKB+Y3ZVpz6kZnUzqFl+82CbCfGlAPh8N
+         AmOE5SOrtgRcHnYJlZCHFalX2WkX6OFOVoZ2ZqYDmJxQLg6YhOYEcO7VgDKzCFFEjI/R
+         Sscwp3O9yQ1dQHhteqJ5Vd0NI8QqFcS9XozAtBg7MjPTr+SmajxAenyTEfggIKANI2hc
+         I3uQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=AxnLjf1j;
+       spf=pass (google.com: domain of jgomez@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=jgomez@galilea.cl
+Return-Path: <jgomez@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id h32sor40957640qtc.3.2019.04.08.08.58.18
+        for <sistemas@galilea.cl>
+        (Google Transport Security);
+        Mon, 08 Apr 2019 08:58:19 -0700 (PDT)
+Received-SPF: pass (google.com: domain of jgomez@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=AxnLjf1j;
+       spf=pass (google.com: domain of jgomez@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=jgomez@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=to:from:subject:message-id:date:user-agent:mime-version
+         :content-language;
+        bh=rivTlapdJPijV43+oBHlyz3Q8c1HL81cjJZ8bc8bWO8=;
+        b=AxnLjf1jHUx7TOW7QunddQLjM/iCs0hLdBkY1DAZw+28uBAsHGV3FaVpJBFT02i0cI
+         5eQ1V4g5Ecm4j0mKGQoybfvrn9WZGT/btnFO08m6Z+KwpeSE6lxURJr3wWpzxjqu4/22
+         wZ0uxwDbR40fLQWIE3NlkEfcaz7W5OzOpu4hc6cpL2btyxzPSQp912SkUHpO/MXOOzDT
+         ewVcX2Qtgb/1OPCbNwA4nhBWB8GZpBQIfJe5MC4vg9WAcZ6hTs7Z/gm5lwwrV7AqGcJp
+         xHNQxCk7Mn7NVwsebp+0txu/wO9mc5VrEUkH8bxUhaCCBax0ZyE+FHzTT5xyHuMweD8r
+         qlXA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:to:from:subject:message-id:date:user-agent
+         :mime-version:content-language;
+        bh=rivTlapdJPijV43+oBHlyz3Q8c1HL81cjJZ8bc8bWO8=;
+        b=g2hkPxx9+Q8MnVTKbA4Yxkn01s/UpwjNxg0eCIlPUImMRRiBGa9a996AwGjhsqIEpq
+         HUZKJoETxaMT3zb5iDWTKyaHsXOWRaWXyn/SMNB4bEjcnKRVQ77BbevO+8wiYc284qM/
+         n/UYrBrpYmNbFX+LZk5IoqjtfzxcAaL9A+yKsZ2KSENEuQxUZiX6T6rU9qrftCzvOirx
+         wNwUeEeuMq6hmL/TiI+rMw8JyjHESszadXJPyFIDlXTwSp898VNYydKjfZLfQ753BGlr
+         lvFJVdkXnMMidb5f8bse8jmyaKCCKmO4PQHo+GOAX62mbORAXa5Eo6V607TxOrP+R8VA
+         T12g==
+X-Gm-Message-State: APjAAAWgJ86CtoB0rUqFBdYfvKUu6l8m2KMBAu8xIMYtHkNRnpfMiaXp
+	EPy++68QeRWt/KajP/kVqPBS5aFq
+X-Google-Smtp-Source: APXvYqzcdbVYIKJnG9aNBprzbu3WX4Nh6K1EsEIA3gR8m70INzYr+Q2cZan1BPcGZbWgTQWFwLMmdw==
+X-Received: by 2002:ac8:13c3:: with SMTP id i3mr25646156qtj.211.1554739098792;
+        Mon, 08 Apr 2019 08:58:18 -0700 (PDT)
+Return-Path: <jgomez@galilea.cl>
+Received: from [192.168.9.123] ([200.54.241.130])
+        by smtp.gmail.com with ESMTPSA id m41sm19070501qtb.58.2019.04.08.08.58.17
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 08 Apr 2019 08:58:18 -0700 (PDT)
+To: sistemas@galilea.cl, Cristian Gothe <cgothe@galilea.cl>
+From: JOHANNA GOMEZ <jgomez@galilea.cl>
+Subject: Consulta cta cte Proveedores
+Message-ID: <2cbf8e8f-c396-0e3a-30c7-2722c742c090@galilea.cl>
+Date: Mon, 8 Apr 2019 11:58:12 -0400
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:60.0) Gecko/20100101
+ Thunderbird/60.6.1
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="------------8D6AC380C13947678BE162D1"
+Content-Language: es-ES
+
+This is a multi-part message in MIME format.
+--------------8D6AC380C13947678BE162D1
+Content-Type: text/plain; charset="utf-8"; format="flowed"
+Content-Transfer-Encoding: base64
+
+RXN0aW1hZG9zDQoNClNvbGljaXRvwqAgcHVlZGFuIGluY29ycG9yYXLCoCBhIGNvbnN1bHRhICpj
+dGEgY3RlIHByb3ZlZWRvcmVzIGRlIA0KcHJvdmVlZG9yZXMqLMKgIGxhwqAgY29sdW1uYSBkZcKg
+IGltcG9ydGUgcGVuZGllbnRlIG/CoCBzYWxkbyBwZW5kaWVudGUuDQoNCkdyYWNpYXMuDQoNCg==
+
+--------------8D6AC380C13947678BE162D1
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+PGh0bWw+DQogIDxoZWFkPg0KDQogICAgPG1ldGEgaHR0cC1lcXVpdj0iY29udGVudC10eXBlIiBj
+b250ZW50PSJ0ZXh0L2h0bWw7IGNoYXJzZXQ9VVRGLTgiPg0KICA8L2hlYWQ+DQogIDxib2R5IHRl
+eHQ9IiMwMDAwMDAiIGJnY29sb3I9IiNGRkZGRkYiPg0KICAgIDxwPkVzdGltYWRvczwvcD4NCiAg
+ICA8cD5Tb2xpY2l0b8KgIHB1ZWRhbiBpbmNvcnBvcmFywqAgYSBjb25zdWx0YcKgIDxiPmN0YSBj
+dGUgcHJvdmVlZG9yZXMNCiAgICAgICAgZGUgcHJvdmVlZG9yZXM8L2I+LMKgIGxhwqAgY29sdW1u
+YSBkZcKgIGltcG9ydGUgcGVuZGllbnRlIG/CoCBzYWxkbw0KICAgICAgcGVuZGllbnRlLjwvcD4N
+CiAgICA8cD5HcmFjaWFzLjxicj4NCiAgICA8L3A+DQogIDwvYm9keT4NCjwvaHRtbD4NCg==
+
+--------------8D6AC380C13947678BE162D1--

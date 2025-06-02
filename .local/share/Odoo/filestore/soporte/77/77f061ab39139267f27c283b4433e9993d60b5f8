@@ -1,0 +1,109 @@
+Delivered-To: sistematicket@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp833857otp;
+        Fri, 5 Apr 2019 13:28:54 -0700 (PDT)
+X-Received: by 2002:aca:af49:: with SMTP id y70mr7959074oie.168.1554496134446;
+        Fri, 05 Apr 2019 13:28:54 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554496134; cv=none;
+        d=google.com; s=arc-20160816;
+        b=vIH52GGrgZnOBpVQJzvyi7+0SqsrX8AkKipufXj1jdaLZ8zEf2yTL/rFq9oHMqh7lF
+         dIFa0q2yeSkPxwWKCP+PLQ6OdwR2u/tAaXKiJPQ/MK21Ko+uZnP4Xr9/NfVdTaTmCMS/
+         spwQZzpOp7pBL5WMzaaVDCvPHpt6rN0Y/msRpXE8YEEDuAhPCwNLWK6nkq4ljGowJbsQ
+         wqX66eFuCOlZp9Tn9ljYCPi8fugPdkOqdbDolsFN0UuXS41+pv5P3yor3jRbDbW32zoW
+         QdYBMJsnOfdWz0+F34JhlCWNg88uMcYtkMS2OAqN0URDJl42sKdrJ8PrdCxQsTb8Rdxr
+         MceA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=exW1VZWRP20q18P4DNWY6zWzXarAyVD3gyWisbBmWv0=;
+        b=KYAnjYr/7TWZ++ByJza4H3X8TLHrh5Fw/AxeEXbdEnS6Zsal24Ff/tgCZrMkn751eB
+         NDdWSS2kAUJfaKfL2uZ2EXfhOkyU8xmt/VVUyxQPzvMALOvnI8NFGmE+jbf9D8WvW04r
+         NikhPY3zNHDURX8LFnC7jDC/z2Odzu3p6ZtrgRX1wOID2sLip/ZqhG/ChoYzkYET7A/5
+         gkNUPEklw2C4BIKFAYZJRVrXf9GFfyGzOdX8+DsKGcRalLccHMwD/vBJh/rzTZJNT/LH
+         7t2EdGRO/kUFSMh6w0lJQjJGYWdSG8ys11q5yEQ+9B+c3SBIul9fMLXLiiqjiMoDOd8n
+         AmzA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=C0BPfP9g;
+       spf=pass (google.com: domain of juan.irarrazaval@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=juan.irarrazaval@galilea.cl
+Return-Path: <juan.irarrazaval@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id r25sor13636405ota.78.2019.04.05.13.28.54
+        for <sistematicket@galilea.cl>
+        (Google Transport Security);
+        Fri, 05 Apr 2019 13:28:54 -0700 (PDT)
+Received-SPF: pass (google.com: domain of juan.irarrazaval@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=C0BPfP9g;
+       spf=pass (google.com: domain of juan.irarrazaval@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=juan.irarrazaval@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=exW1VZWRP20q18P4DNWY6zWzXarAyVD3gyWisbBmWv0=;
+        b=C0BPfP9g0VP1D4k2jdWRMmnQhwqm3FrJgGgaxEbfCawoG1oR3BIvO/OYp8zrQgEc4U
+         mfEzGVZZK0iOXWFxO0uAygmekSphIc9hwELoQCltOwei8l+zj9EP0+mhGYD0W4Oph7Nm
+         CRk3u0340R5KiH8xn9XL2xxbEsV6EXdzFKtxBCdfGFBY9E5cL+yAV8MoyUpJxAbCmFoj
+         lS1d7EeTZEDaSF6GKcQeB5w6EjR7svntvDzdX0sHqAFGOMX7oUOvcV6PHNOjTDMdHLHd
+         FGtaMeD67427e+4QLPDyCjnzUPeagQfqru6KZfK2IpBbDeMM+Am4uWXJbCKuBOslNG6S
+         f2eQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=exW1VZWRP20q18P4DNWY6zWzXarAyVD3gyWisbBmWv0=;
+        b=t7k+2TLum+IF4ibV/H/LLfzqTGsZQ2HWjMncg2ZxS9fDfCktrE8pKXnQ7pnqQaNmyp
+         GPmvpzQOYQ2hduA77kl5Jo9omCnTJmwSK+L1U54OSPU2BO8nlcNbA0BSjYRge9IpqzXm
+         YnACfEBYE4VQ5E4yX36G3mWkdZm6oDmubCw7dq0StBydFZNZ18GbqoQeAF31qdsN6UsP
+         WHCdM8Hb/lIgRhOPe3ROjsMrWDniaGzmIHJZ3BELmViYSUD27wr890joOchgzoLpD2Bb
+         ZDa0lem34ur+qqFdJmG/5P09MI/GOrZ1v5FQEfXbX5CXStV9gZzDml5RolQ249HATirN
+         Ycug==
+X-Gm-Message-State: APjAAAVGumzfn3vGHf00ZpAI1YBFdABdefjNUPlUiXL8c0OlFA1PoTQf
+	JhwG+mU6pTXU/PglbtrIxpK7cIzSOxRsQXvZskGlPzH8z6jozg==
+X-Google-Smtp-Source: APXvYqy4x5MZ9ykAFfUdVN7razI5S5PsefyJCijOblGr0rnNa8H6UV+2bxzkuY4dI1RuCuy8VlquwbisFqGJ96EabdM=
+X-Received: by 2002:a9d:7516:: with SMTP id r22mr9967254otk.166.1554496134263;
+ Fri, 05 Apr 2019 13:28:54 -0700 (PDT)
+MIME-Version: 1.0
+From: JUAN JOSE IRARRAZAVAL <juan.irarrazaval@galilea.cl>
+Date: Fri, 5 Apr 2019 17:28:43 -0300
+Message-ID: <CAPaHLnF6vMWN6YHLzjUqofgecgXeya4MPLg2i5W3WbdoY+VHbQ@mail.gmail.com>
+Subject: =?UTF-8?Q?Solicitud_de_vinculaci=C3=B3n_de_vendedor_a_cliente_en_s?=
+	=?UTF-8?Q?istema?=
+To: Sistema Ticket <sistemas@galilea.cl>, Sistema Ticket <sistematicket@galilea.cl>
+Cc: JAVIER IGNACIO RODRIGUEZ AREVALO <javier.rodriguez@galilea.cl>
+Content-Type: multipart/alternative; boundary="000000000000e349510585ce553d"
+
+--000000000000e349510585ce553d
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Estimado(a),
+
+Por favor vincular en sistema la siguiente venta a la vendedora Jimena
+Acu=C3=B1a:
+Cliente: NORMA ORFILIA LOPEZ URRA N=C2=B0 cliente: 6798808 lote 267 proyect=
+o
+Rancagua Galilea 2 Rancagua
+
+Por favor vincular en sistema la siguiente venta a la vendedora Paula
+Irarrazaval:
+Cliente VICTOR GONZALO MEZA MENESES N=C2=B0 cliente: 6917791 lote 164 proye=
+cto
+Madero Rancagua
+
+Slds,
+Juan Jos=C3=A9
+
+--000000000000e349510585ce553d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr">Estimado(a),<div><br></d=
+iv><div>Por favor vincular en sistema la siguiente venta a la vendedora Jim=
+ena Acu=C3=B1a:</div><div>Cliente: NORMA ORFILIA LOPEZ URRA=C2=A0N=C2=B0 cl=
+iente: 6798808 lote 267 proyecto Rancagua Galilea 2 Rancagua</div><div><br>=
+</div><div><div>Por favor vincular en sistema la siguiente venta a la vende=
+dora Paula Irarrazaval:</div><div>Cliente VICTOR GONZALO MEZA MENESES N=C2=
+=B0 cliente: 6917791 lote 164 proyecto Madero Rancagua</div><div><br></div>=
+<div>Slds,</div><div>Juan Jos=C3=A9</div><div><div dir=3D"ltr" class=3D"gma=
+il_signature"><div dir=3D"ltr"><img src=3D"https://docs.google.com/uc?expor=
+t=3Ddownload&amp;id=3D1HbMPdMgSFB4wxhNyLs1ml-GcTGzEe937&amp;revid=3D0Bxz0uD=
+k4Qd7gU0xEL2paVUxnN0s0bHhlczdPRFJhbjNCcHpnPQ"><br></div></div></div></div><=
+/div></div></div>
+
+--000000000000e349510585ce553d--

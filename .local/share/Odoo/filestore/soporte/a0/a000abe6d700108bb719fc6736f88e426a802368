@@ -1,0 +1,83 @@
+Delivered-To: redes@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp4001488otp;
+        Mon, 8 Apr 2019 13:46:46 -0700 (PDT)
+X-Received: by 2002:ac8:29f1:: with SMTP id 46mr27134142qtt.126.1554756406622;
+        Mon, 08 Apr 2019 13:46:46 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554756406; cv=none;
+        d=google.com; s=arc-20160816;
+        b=iMnjx2ukpYW9AdK/Si7Y48B7To4EB1r/WyJ1mBcnJHA7zDp606czW3tuXFKSQuao5V
+         yp45YACYHG+MqSNdJGjjWP/z9l0nnFQhs/joUk18GQO89lDfVX3UDCLm1GB+R3IPwfeJ
+         HJZxBtj3O9BamGdcaqUyhD1xTmFm4w6SO0zAX+7tSHcD1bbrJRjkMMHaofw5F+dSCX6r
+         BqsY0dBUQB5ygtlOpT7hJnuCoXxdFZplMTGo2/F0jtUtUrvoEJS2AeQqPjbpYxXBsOcK
+         WodD+hgbJN+ZW0yRzSEHAy+oFcjmgyYm3WitfqriHfQ60ibDQ3j+8F2GTCU6RD2JG/oo
+         7fMw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:subject:message-id:to:from
+         :date:dkim-signature;
+        bh=zYGqI8h+fFIX9AhuP4xRdqyTSKva1NZNhx9WAudkrWk=;
+        b=HktV47MAcMy4/qjbuWunVRko+Iyl7SIJBVrCCq1taxoQvtIpEaeNb81vUqIEwOorEB
+         YexH8bB/7BxXLuapyeNa7Xv1VxDvMdoqa3yQpeGVv5tLuhtKq7dw45lwmyt2giKQkgzC
+         43dNusf/w8Me2f/F5nemS6LJ3LrBJpGnIkkPfJPPokByrRJELMEP8sqQTaDwDDAY2x4I
+         LDd79es2+CkmpiuuU56xw8gBjJKQbhbtDVKnaphdkdss3eez+gHv2ww7vLgOOoNzTPT/
+         s41db4fiBKmTqFpQ6sW3p/Y95075jDHboeohgf7hfVDO8WLJ9sSu3KGv5Rhf4m1x1FNa
+         B09A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=e2z7VYmn;
+       spf=pass (google.com: domain of aircontrolgsa@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=aircontrolgsa@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <aircontrolgsa@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 55sor42325079qtu.34.2019.04.08.13.46.46
+        for <redes@galilea.cl>
+        (Google Transport Security);
+        Mon, 08 Apr 2019 13:46:46 -0700 (PDT)
+Received-SPF: pass (google.com: domain of aircontrolgsa@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=e2z7VYmn;
+       spf=pass (google.com: domain of aircontrolgsa@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=aircontrolgsa@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=date:from:to:message-id:subject:mime-version
+         :content-transfer-encoding;
+        bh=zYGqI8h+fFIX9AhuP4xRdqyTSKva1NZNhx9WAudkrWk=;
+        b=e2z7VYmnZYSEC3o+pQkEBDLuSpfQjLUU4KVa6cqpGd/UpK8ww9TptUdQJWJ51hteUl
+         Z6QexmhkqUWwAqgPPomW04zIIo0MVCLRSZpdFpVIPrEELP4fbsvoL/MlsGyg78dBY+T1
+         rZr9qD5k41MA9ecLqcYP63BJ9dEctQ2ruWTqdxXLqNvsud7FbQxw5fCJi7I//9LlQ9Qg
+         2XXtxEYqLUeC73NdxfY2Tq+qtK3Gh9S6ayg4tpFcModuaOILBNGUj1vAmvUgNT0N9oSE
+         SYEvmIYMHTFrLAONbQ53DrQt7x9+zVutr4UnTu+h0ewA6yHroMgGBb5G7wFhaYxy1B5h
+         irDA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:date:from:to:message-id:subject:mime-version
+         :content-transfer-encoding;
+        bh=zYGqI8h+fFIX9AhuP4xRdqyTSKva1NZNhx9WAudkrWk=;
+        b=CyNCuw6sfujGqQ7bqLgB9fBA19tJrgIgnLC15ykzvbOvBPwpNyvU5qli/Tyb7k2IWX
+         mgsULZJZi9DX+97Y+gRk83gEffL3G3qv6m+JzOV61Q/9ORIbBE65Z65Ukj/vXjWcWq+9
+         9RVp30zGrVUrCrl9ivVUPM8U7u7vCk0sfPadYavHAS88VUv4JZNCEHlcN2bIXweQ3eZ8
+         1/IbAEu1FrXfWS07TOmPtCp3is26S0rn8ThXitDJpA8gYWHjczgIWwMd/BLHl6DEcpZb
+         QgRdnusj1EbKRl8cH45ghs5mLANo/7y5FBTEKwaKQWGIVgitO6QHFPhw4iQahHrY62g+
+         EvMQ==
+X-Gm-Message-State: APjAAAV8n936YEM6alKB7ouaguk4KpPZ2jrO5totJdb0eP5F/RXntgZA
+	yRf40K+FOVnj8PbkucBYxQlTM72K
+X-Google-Smtp-Source: APXvYqxhGsDmHYvoGAYUgrv5tywQzUqAiy1l5R0Y9WNZ8Xf1+WETpGaRzvOG2Qj0G82oBJBioRfg5Q==
+X-Received: by 2002:ac8:2dc3:: with SMTP id q3mr26214695qta.19.1554756406236;
+        Mon, 08 Apr 2019 13:46:46 -0700 (PDT)
+Return-Path: <aircontrolgsa@gmail.com>
+Received: from unifi4 ([200.54.241.130])
+        by smtp.gmail.com with ESMTPSA id t69sm16422686qke.38.2019.04.08.13.46.44
+        for <redes@galilea.cl>
+        (version=TLS1 cipher=ECDHE-RSA-AES128-SHA bits=128/128);
+        Mon, 08 Apr 2019 13:46:45 -0700 (PDT)
+Date: Mon, 8 Apr 2019 17:46:43 -0300 (CLST)
+From: aircontrolgsa@gmail.com
+To: redes@galilea.cl
+Message-ID: <926149887.253.1554756403634.JavaMail.root@unifi4>
+Subject: [AIRCONTROL] caida on Rocket 5AC 233 (192.168.42.233)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Rule 'caida' has been triggered by the following device(s)
+
+   Rocket 5AC 233 (192.168.42.233) status offline

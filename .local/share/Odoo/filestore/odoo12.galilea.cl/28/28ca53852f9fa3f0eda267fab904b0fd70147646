@@ -1,0 +1,113 @@
+Delivered-To: redes@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp1964596otp;
+        Tue, 2 Apr 2019 11:34:56 -0700 (PDT)
+X-Received: by 2002:a5b:f0c:: with SMTP id x12mr24367776ybr.19.1554230096353;
+        Tue, 02 Apr 2019 11:34:56 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554230096; cv=none;
+        d=google.com; s=arc-20160816;
+        b=UuEGVDxUqSQJ4XNnUArLfMHJB/f+fy9zX/Il2f/T9YlS/Baiw//Ul/OGWVzOaDHsUk
+         d9EAx0oLxTcEZgjPjWDttHUrmyQb2pZgPknyfJ71EQYn6ZxIDdLDlTDJYU93+Tse4evJ
+         x50V0yziEf1EQXAgooKYAxt8OCaN7GiNZ6UWfFCFkFmheJlir3Vgwy70VBA81mHtL+HD
+         GZnuXogDIqyXRCv5uFjoKb0orAvIW/Lrpn/FcRbNsUwnkmtuPrDAfWIC5vVa49UJDLX/
+         MHVM4QPVWn8F6PKd9wHwMpD45IkWuvADHgcu4GXmxbGxJIHQagl9TSU3p+GjcGEH0/v8
+         yKeQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=/IIHet3YqaWOsJp16bESiv0o9WMqvBFSR67CbDdmTDE=;
+        b=Heq45IRxt2pOt9i52cwZF+YV8Hd2plP4uBxnoezlfO8wpKlm6n1dkwvYVkvHD/kazA
+         wfx38LYMKQsfSVlAzkQhIF/0H3mJ03ELjiwvaAbcsbSdeBspBmHWOlebLT2XrdnOjfgS
+         0jUu26Z/U+xE4xVEtnMy3CzRAjfaRw1DaelmVkJ3oIwQ0kbHMTh0qy30DdE5NBmy/Szl
+         wM4S2c+i4DKQkCzpABZrPJw4W/fhnTkaoLrLsxFqYat51LhElEQIr4QlgtQxjYkuPHD1
+         dbd2ez6dzdxL3N4h5ObGGPtybQCpjBnqvJnr4RDasqFZoF3exyOaGEmkipiDptJx3aEe
+         n2Gg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=PiP7fHaW;
+       spf=pass (google.com: domain of snmartin@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=snmartin@galilea.cl
+Return-Path: <snmartin@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id q198sor5083142ybq.6.2019.04.02.11.34.55
+        for <redes@galilea.cl>
+        (Google Transport Security);
+        Tue, 02 Apr 2019 11:34:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of snmartin@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=PiP7fHaW;
+       spf=pass (google.com: domain of snmartin@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=snmartin@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=/IIHet3YqaWOsJp16bESiv0o9WMqvBFSR67CbDdmTDE=;
+        b=PiP7fHaWudqUNmzrqslpc1Hqsd2BW0+SI3Sa5l3x4TamzjukSJdZwpgM6tdeiZOsxo
+         u2DtuknXUleUfGAziftE8MqLArIhACuK2ol2b5ZJ6dJlfur+m79WobD302nKey3ChbeI
+         0ylLbSze9nZs5wjQSqY0WGOAOfDlZ+/QrZ3HRocTIiR7YcLY7NUlEY0xaNprNo4ygDv5
+         EeFO9FJbSSXtkT4sMXlELzyCnRLz7lS+vs6dyYM3BmaZQxvO0KKAUat4MpbY3zTq2VP7
+         5iKGGLnmvommuvA8FZNG/nd82dSE5O7aiHtQHb6jNMYgVi4cQXW89K21Y+FMMG849Crj
+         s4Bw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=/IIHet3YqaWOsJp16bESiv0o9WMqvBFSR67CbDdmTDE=;
+        b=RPP68ho+HpatumfkU2iaHm1cJLnf/elZqsyXgdiQ9zqWtIkalUgTzrcYRO6JgQCTz6
+         X6D00pbbnzG1XPxEop46Fdj0BqT0VqqGAFqYPceypdCZq7Yq4OfjFvGSesSQfE4dZj9C
+         glFiIpp/GZZeJK4nYD9vMLkZafaEqcpvr6Es+VtEuZIhWVd2S9o972G6/ap3fwLFqiog
+         DpENXfZJw+9P0jAqt65IrGJMIovaHHSEjcGTC2bw4Ch1jyxurRHJATMFn2fOY0syYHQv
+         kY/lYgJfHMUQ9ovgrb6DyLQ8CwtZHcgH9jEMIfjGtEi7n8GzvTfgq4OL6dTaTZcT0kuc
+         0cFw==
+X-Gm-Message-State: APjAAAWIB1WMToJxzlxmCr342IBDHY+MVoNMyV7biUy5t/j8ioj2VpHb
+	THdnZqAuEAk43fVyDVcxmoKMoRMQAGikwo0fI5i9I+gvxOM=
+X-Google-Smtp-Source: APXvYqyE2OvEo54FH3VM89mptapc0LUpqOtJcsaO59VQ5bgcjR0qq7W5ZB+2DBfChTfuuLViuVT/5hTWEcwxZxW6tLY=
+X-Received: by 2002:a25:217:: with SMTP id 23mr15926808ybc.298.1554230095516;
+ Tue, 02 Apr 2019 11:34:55 -0700 (PDT)
+MIME-Version: 1.0
+From: =?UTF-8?Q?Fernando_San_Mart=C3=ADn_Woerner?= <snmartin@galilea.cl>
+Date: Tue, 2 Apr 2019 15:34:43 -0300
+Message-ID: <CALc_Zm539Ro9spx7JxLH8Mb-UzAvQukX1xGTP+DvO8krXTQeVQ@mail.gmail.com>
+Subject: redes test....
+To: Sistema Ticket <redes@galilea.cl>
+Content-Type: multipart/alternative; boundary="000000000000be2d2a05859064e3"
+
+--000000000000be2d2a05859064e3
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*Fernando San Mart=C3=ADn Woerner*
+
+Subgerente de Procesos y Tecnolog=C3=ADas
+
+Celular: +56 9 93224814
+
+Fijo: (71) 2514400 anexo: 22
+
+www.galilea.cl
+
+--000000000000be2d2a05859064e3
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br clear=3D"all"><div><div dir=3D"ltr" class=3D"gmail_sig=
+nature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr=
+"><pre cols=3D"72"><br><table border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" style=3D"font-family:arial,sans-serif;font-size:12.8px;white-space:norm=
+al;border-collapse:collapse"><tbody><tr style=3D"height:104.25pt"><td width=
+=3D"189" valign=3D"top" style=3D"width:5cm;padding:0cm 5.4pt;height:104.25p=
+t"><p style=3D"margin:0cm 0cm 0.0001pt;text-align:justify"><span style=3D"f=
+ont-size:11pt;font-family:Calibri,sans-serif"><img src=3D"https://drive.goo=
+gle.com/a/galilea.cl/uc?id=3D0B8gZZ5PoRoD5aDB3cGpUN1Y0eGtGeEctZ1EyR1pUUUdjX=
+zFv&amp;export=3Ddownload"><br><br></span><u></u></p></td><td width=3D"335"=
+ valign=3D"top" style=3D"width:251.35pt;padding:0cm 5.4pt;height:104.25pt">=
+<p style=3D"margin:0cm 0cm 0.0001pt"><b><span style=3D"font-family:Arial,sa=
+ns-serif">Fernando San Mart=C3=ADn Woerner</span></b><u></u></p><p style=3D=
+"margin:0cm 0cm 0.0001pt"><span style=3D"font-family:Arial,sans-serif;color=
+:rgb(127,127,127)">Subgerente de Procesos y Tecnolog=C3=ADas</span><u></u><=
+/p><p style=3D"margin:0cm 0cm 0.0001pt;line-height:14.65pt"><span style=3D"=
+font-family:Arial,sans-serif">Celular: +56 9 93224814</span><u></u><u></u><=
+/p><p style=3D"margin:0cm 0cm 0.0001pt"><span style=3D"font-family:Arial,sa=
+ns-serif">Fijo: (71) 2514400 anexo: 22</span><u></u></p><p style=3D"margin:=
+0cm 0cm 0.0001pt"><span style=3D"font-family:Arial,sans-serif"><a href=3D"h=
+ttp://www.galilea.cl/" style=3D"color:rgb(17,85,204)" target=3D"_blank"><sp=
+an style=3D"color:rgb(5,99,193)">www.galilea.cl</span></a></span></p></td><=
+/tr></tbody></table></pre></div></div></div></div></div></div></div></div><=
+/div></div>
+
+--000000000000be2d2a05859064e3--

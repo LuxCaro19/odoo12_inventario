@@ -1,0 +1,153 @@
+
+/**********************************************************************************
+*
+*    Copyright (c) 2017-2019 MuK IT GmbH.
+*
+*    This file is part of MuK Web Utils 
+*    (see https://mukit.at).
+*
+*    This program is free software: you can redistribute it and/or modify
+*    it under the terms of the GNU Lesser General Public License as published by
+*    the Free Software Foundation, either version 3 of the License, or
+*    (at your option) any later version.
+*
+*    This program is distributed in the hope that it will be useful,
+*    but WITHOUT ANY WARRANTY; without even the implied warranty of
+*    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*    GNU Lesser General Public License for more details.
+*
+*    You should have received a copy of the GNU Lesser General Public License
+*    along with this program. If not, see <http://www.gnu.org/licenses/>.
+*
+**********************************************************************************/
+.mk_field_color_picker .o_opacity_slider {
+  display: none !important;
+}
+
+.mk_field_color_picker input#opacity {
+  display: none !important;
+}
+
+.mk_field_color_picker label[for="opacity"] {
+  display: none !important;
+}
+
+.o_field_widget.mk_field_color .mk_field_color_input {
+  width: auto;
+  display: inline-block;
+}
+
+.o_field_widget.mk_field_color .mk_field_color_button {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  line-height: 1.42rem;
+}
+
+span.mk_field_color_index.mk_color_index_0 {
+  color: #777777;
+}
+
+span.mk_field_color_index.mk_color_index_1 {
+  color: #F06050;
+}
+
+span.mk_field_color_index.mk_color_index_2 {
+  color: #F4A460;
+}
+
+span.mk_field_color_index.mk_color_index_3 {
+  color: #F7CD1F;
+}
+
+span.mk_field_color_index.mk_color_index_4 {
+  color: #6CC1ED;
+}
+
+span.mk_field_color_index.mk_color_index_5 {
+  color: #814968;
+}
+
+span.mk_field_color_index.mk_color_index_6 {
+  color: #EB7E7F;
+}
+
+span.mk_field_color_index.mk_color_index_7 {
+  color: #2C8397;
+}
+
+span.mk_field_color_index.mk_color_index_8 {
+  color: #475577;
+}
+
+span.mk_field_color_index.mk_color_index_9 {
+  color: #D6145F;
+}
+
+span.mk_field_color_index.mk_color_index_10 {
+  color: #30C381;
+}
+
+span.mk_field_color_index.mk_color_index_11 {
+  color: #9365B8;
+}
+
+select.mk_field_color_index.mk_color_index_0, select.mk_field_color_index .mk_color_index_0 {
+  background-color: #fff !important;
+  color: #777777 !important;
+}
+
+select.mk_field_color_index.mk_color_index_1, select.mk_field_color_index .mk_color_index_1 {
+  background-color: #F06050 !important;
+  color: #fff !important;
+}
+
+select.mk_field_color_index.mk_color_index_2, select.mk_field_color_index .mk_color_index_2 {
+  background-color: #F4A460 !important;
+  color: #fff !important;
+}
+
+select.mk_field_color_index.mk_color_index_3, select.mk_field_color_index .mk_color_index_3 {
+  background-color: #F7CD1F !important;
+  color: #fff !important;
+}
+
+select.mk_field_color_index.mk_color_index_4, select.mk_field_color_index .mk_color_index_4 {
+  background-color: #6CC1ED !important;
+  color: #fff !important;
+}
+
+select.mk_field_color_index.mk_color_index_5, select.mk_field_color_index .mk_color_index_5 {
+  background-color: #814968 !important;
+  color: #fff !important;
+}
+
+select.mk_field_color_index.mk_color_index_6, select.mk_field_color_index .mk_color_index_6 {
+  background-color: #EB7E7F !important;
+  color: #fff !important;
+}
+
+select.mk_field_color_index.mk_color_index_7, select.mk_field_color_index .mk_color_index_7 {
+  background-color: #2C8397 !important;
+  color: #fff !important;
+}
+
+select.mk_field_color_index.mk_color_index_8, select.mk_field_color_index .mk_color_index_8 {
+  background-color: #475577 !important;
+  color: #fff !important;
+}
+
+select.mk_field_color_index.mk_color_index_9, select.mk_field_color_index .mk_color_index_9 {
+  background-color: #D6145F !important;
+  color: #fff !important;
+}
+
+select.mk_field_color_index.mk_color_index_10, select.mk_field_color_index .mk_color_index_10 {
+  background-color: #30C381 !important;
+  color: #fff !important;
+}
+
+select.mk_field_color_index.mk_color_index_11, select.mk_field_color_index .mk_color_index_11 {
+  background-color: #9365B8 !important;
+  color: #fff !important;
+}
+

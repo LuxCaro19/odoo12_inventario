@@ -1,0 +1,96 @@
+Delivered-To: soporte@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp432377otp;
+        Fri, 5 Apr 2019 06:59:41 -0700 (PDT)
+X-Received: by 2002:a9d:5c86:: with SMTP id a6mr8479774oti.118.1554472781549;
+        Fri, 05 Apr 2019 06:59:41 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554472781; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ns7pH+3Mf5lwUvdK7T9VCpM469qTDBNHP8DlIDLHd4dgzSYgHFhqXq15oxHLn6XHZF
+         MmVox1rc4kGIpxXY6M5pVHzF8NXvV+J5IAT9LZuA4map+HB66PFri5EnPcb7zOPw++rx
+         YtFeVojqJJcyCbiLgQdVDMuQaXwjcvaKTDPURKXFadhsgfRizJyxEwQGSu1OqBlEmp+t
+         idpvglE12EqCDiQ1z/ZAIU7sSOTSP/Ew4JK/BHfOY0ef9YI578XWRSV4ZupKOq7VWygA
+         finvKrnEx1d11siihGZk4beQfj+X3IOeNjb9+Xbt5WqLv6FVaTI6jcTMo8+BDNeu19DB
+         Qq0w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=tB1fE7JBvNG+ATOyaHLHN5yoyHksgwzWI3sfIc7HQnQ=;
+        b=j3Ic83ZsYoBhFAf7Xfyf1gnIxGSCLt+KJ4a5Dc3mZBLHqvEfAuB0qa/BY2oHFmZskO
+         dlvy33iuWGfJlcUv7RZARImF+Ah90j1yYRKLcm+eM/dVZxMFbTaS/AK8KuT2sphnoCdD
+         WCIAoK7mVHq9P2at+ypDNI4p6LlYPku1oCVyFJDakGJP00A/x1N3PXEuigeJn9Cp+tPR
+         ZgVq6VSbTpnRWkvIsRig3d6ehz4n5HO2rDYsBunw1RPVtmD77ORQtA/OFxV0UEcHCsoX
+         Fetg4cbDSvyhSG0mRKZYxTJEuRzYfLgUaJ2pp9b2eaLJZb+VXqS3njuxEF/UA3+tyJCp
+         ASuA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=cYCiDYl7;
+       spf=pass (google.com: domain of alejandra.munoz@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=alejandra.munoz@galilea.cl
+Return-Path: <alejandra.munoz@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id w2sor14154824ote.13.2019.04.05.06.59.41
+        for <soporte@galilea.cl>
+        (Google Transport Security);
+        Fri, 05 Apr 2019 06:59:41 -0700 (PDT)
+Received-SPF: pass (google.com: domain of alejandra.munoz@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=cYCiDYl7;
+       spf=pass (google.com: domain of alejandra.munoz@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=alejandra.munoz@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=tB1fE7JBvNG+ATOyaHLHN5yoyHksgwzWI3sfIc7HQnQ=;
+        b=cYCiDYl7349BJrBCFjtFsTsz3QvAPj+zrf6PrttJA9qOrqzdIj3L2a0V9J6h9LBxPS
+         zEh75uKWKwxIME9HgNHwS4JLp67Ah+9ZJi0w/dF9unUwuMrxmKB1PgVUOI1woJx2Ac7h
+         kAFADRM0FSZ5SxGDBAbPbon9HNI3ATDNnuVI+CdkXpjkLimlzJoaSWQApK6A1w6YmHfW
+         nyzdg8YO1tb2yEHSYef6wH288GHCbsLh7iFn45yOkjJy0ESgoqo+04yBAMAI7ZV+xsUP
+         x8a6vYpmHKn2oaFTbEy4CEKgFhd32aUrgDQW+GyJIexe6auprrh7bv3om06HL0hAJgRx
+         cnyA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=tB1fE7JBvNG+ATOyaHLHN5yoyHksgwzWI3sfIc7HQnQ=;
+        b=IC1zJvpQPCQV5wS8X9CFTA9fRWl6wG7FHOm/98MmcWSjhEDeZU5plthxx4dGemThTQ
+         qk05gmEmCXyKm9aMqKBQOimIrx6bKrRfiuu5+v9YpUYEU0OX6w1uf+JHh/lR8j6DKjHY
+         kxOUsrciFhfGjBcMWtpl07LsmvmQmv6y/yrpRTsCO6QhrtWuRGzPp+D2qL5xK9Lu6AN0
+         R0CSlB2U44043VbkFC2jRE8d5dA+GPg/FO6VCXdcR5VjzZASFU9oKX6D0NYc0L+BQ84C
+         1Z9YwFn8fS+qTs3MgQNQBaQH1TtLG+dEX75g8mVD/aXS5ksN2t5l+5tSZi9zhQxE4sGm
+         es7A==
+X-Gm-Message-State: APjAAAVgM0ALhKKfcb4tywAGlLCUwmfds1FPu4zn1Kmom9HWg8OOnvu9
+	MdUPMrM8+QAhP2yvnD4O8yeb67wy/CKpmyAixTz2mhf9Dfw=
+X-Google-Smtp-Source: APXvYqz4U8VJ08b2cNe4D/vezQ+0Rl8CStrP/pw6qMc9YsunQLQnbbfmZoq3neFf0703QYDqD4ugJrbxRYEJHQbPQEw=
+X-Received: by 2002:a9d:3ba1:: with SMTP id k30mr8978274otc.171.1554472781208;
+ Fri, 05 Apr 2019 06:59:41 -0700 (PDT)
+MIME-Version: 1.0
+From: =?UTF-8?Q?Alejandra_Jesarela_Mu=C3=B1oz_Loyola?= <alejandra.munoz@galilea.cl>
+Date: Fri, 5 Apr 2019 10:59:30 -0300
+Message-ID: <CA+DBjDbN_4cZJ2=fXqWnS69XA7VgGC=t4Haa1bujaEKKWV9hRw@mail.gmail.com>
+Subject: Impresora Parque el Avellano
+To: Sistema Ticket <soporte@galilea.cl>
+Content-Type: multipart/alternative; boundary="000000000000efe96d0585c8e531"
+
+--000000000000efe96d0585c8e531
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Estimados, buenos dias, junto con saludar les comento que mi PC no logra
+imprimir en la impresora Parque el Avellano... los archivos son rechazados.
+Agradecere vuestra ayuda.
+
+--=20
+*Saludos Cordiales:*
+*Alejandra Jesarela Mu=C3=B1oz Loyola*
+*Asesor Prevenci=C3=B3n de Riesgos*
+*Celular: 991849655*
+
+--000000000000efe96d0585c8e531
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Estimados, buenos dias, junto con saludar les comento que =
+mi PC no logra imprimir en la impresora Parque el Avellano... los archivos =
+son rechazados.<div>Agradecere vuestra ayuda.<br clear=3D"all"><div><br></d=
+iv>-- <br><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmai=
+l_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><b><i>Saludos Cordiales=
+:</i></b><div><b><i>Alejandra Jesarela Mu=C3=B1oz Loyola</i></b></div><div>=
+<b><i>Asesor Prevenci=C3=B3n de Riesgos</i></b></div><div><b><i>Celular: 99=
+1849655</i></b></div></div></div></div></div></div></div>
+
+--000000000000efe96d0585c8e531--

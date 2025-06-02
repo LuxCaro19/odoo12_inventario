@@ -1,0 +1,150 @@
+Delivered-To: soporte@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp431928otp;
+        Fri, 5 Apr 2019 06:59:07 -0700 (PDT)
+X-Received: by 2002:a9d:3de5:: with SMTP id l92mr8972171otc.200.1554472747616;
+        Fri, 05 Apr 2019 06:59:07 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554472747; cv=none;
+        d=google.com; s=arc-20160816;
+        b=wwaUtGwqvlFsjLLkNXOj4/hPXzwUwwrwp+0rLFYUauq1RrGbNa8gK+vL6Lb97koGR1
+         XMS5/MY5OLAMO1Ay933rL/+xdpTL/qdIJklSOgqTp7T6pD663OUJNj1zDdTQtxfOmSD4
+         sSMPeIWUDb9MRtsJQbqTVvRwrIVRPAGFJbxae7QRWY1sxXT7896Xrw1HnP5XZ5aT2YgS
+         /k48/iCM4p6K3CnZL3gDc05qJWcq4wFEpENg/rEu0UtA2WMnnaEMQIrHstcPCi891t2N
+         pYw70XQSGCcbwt/9llY8JCAX2VK98e4JH2VBFK2lt5BsnyTSf++ZhoI4Nq5wRBLmq/Wk
+         zl8w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=vN88q95Kf4FbQlojUzyFxUUgxREpSru6fp7rixcwXNU=;
+        b=KqcRyQmy+o5z+0eKqV5kEWu8V5j0++//veUW/3RvV+YGey4PCOHKlNdYGVYaDpqvKi
+         gOHCMzAwg7YLx5sCANs5Y8wMrQ4onXTGwgaF+nx15neRKfoWB4ebkcXuzvILuRDvdPh5
+         Fl7+fwcqm5r4SMWt+RJYabQbjOdfP1gv7JzgnvqBgq8zaRmN5DSWZyUVmst0oj5WX9vD
+         9c/+c/1u4D6zkrWio5XhEXoEKgt6PYFtXCc0z4l67TzL7kBFB8xXlhhiItdfxgBJ7NRk
+         Sdsr6ybYzXotWyIeHap4uzx856S7eIQC8gf6J6pa42eZ3Sm4+t2OFYMczkhmH12/pdCP
+         uC7A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=DcXSnV7f;
+       spf=pass (google.com: domain of monica.venegas@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=monica.venegas@galilea.cl
+Return-Path: <monica.venegas@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id x204sor12097920oix.76.2019.04.05.06.59.07
+        for <SOPORTE@galilea.cl>
+        (Google Transport Security);
+        Fri, 05 Apr 2019 06:59:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of monica.venegas@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=DcXSnV7f;
+       spf=pass (google.com: domain of monica.venegas@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=monica.venegas@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=vN88q95Kf4FbQlojUzyFxUUgxREpSru6fp7rixcwXNU=;
+        b=DcXSnV7f1Sbu8n7WWelXFeXOHCsCEp3F5HK3KHC7uHSR+MZYnHymbpyr7pNch82wCM
+         ROkdyx9oCeo1DJu7qRsncLOrmf16gpe0qmm2LG/xsuV1cuzHPoPUt0j6ZIwihry7E4/6
+         UJ65lwp/GlepLAcy0HGehqGgawWRhhx/Hjn/RCaMVIF09VWkl37WCD9pO/rhgS02Punx
+         CVXOAhLtWyEJKHZ5Ic0IUCMeiMZoEsxAA8ACVi2rHp/iPTXnolVnPm0E8NZKIhbweYOQ
+         f+KKjCkJtAruLKheXOsi4BGluYBA2WnCa2PTkEkvR00e7V1M3Akzf0Mn5Wkge7YvhSwm
+         7sGA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=vN88q95Kf4FbQlojUzyFxUUgxREpSru6fp7rixcwXNU=;
+        b=PYlLC6sHMx64YNypGaebijwcE8fngDi0TKOd4CHrdnZFFRnd65OuPeY0YJvNQ6OTJZ
+         PgA32UP1lEpNLNJleb272ccdRLOk84o96+LqK/lB6zxueo6K03RGaktF5ASf6jlORDVT
+         TH+RGDZiX7JswPnyanUabiKA1z9Jvhhge44QP7go6dTDO4WlidIa79O5EfSw/Xi6vivg
+         Scwco43NhMwKtmnrqcuNTNbw1SvBqkULLmYHIRSVzyn0PLtaxE0ipRJL4Ow6KBZ4tDp/
+         vqHUe8hH8bArzydK8opwCDZsZZS9iagVeiLCICwUZrlJatzGIHSDK+ULbN4fOWg40BzC
+         oqmA==
+X-Gm-Message-State: APjAAAUkJwYKTZC8EzXqMhl9K68aC5cZwbEZr7RlFfFrtTyJdLEgRnWO
+	qYX3hAH5j4+ka+Cp4DlYk0wJ78Fr+54bA8MBY3p1s0KLlXQ=
+X-Google-Smtp-Source: APXvYqyl8izzhfl/5diyj5qpNEnlixOxkXByST+xpaKMTYKWjsdzZ0kw2O38RO3af7futXUMc1VI1L3GyJ6MFmDtR4o=
+X-Received: by 2002:aca:3746:: with SMTP id e67mr7156869oia.37.1554472747121;
+ Fri, 05 Apr 2019 06:59:07 -0700 (PDT)
+MIME-Version: 1.0
+From: MONICA ELIZABETH VENEGAS VILLAGRAN <monica.venegas@galilea.cl>
+Date: Fri, 5 Apr 2019 10:58:52 -0300
+Message-ID: <CAPC9+8Ez4axUorOvWenvHSjXpQO2ZJFWYMG1LNFK8SePCLGObg@mail.gmail.com>
+Subject: Pagina Posventa Galilea
+To: sistema ticket <SOPORTE@galilea.cl>,
+	DOMINIQUE KAREN WOLOSZYN SEPULVEDA <dominique.woloszyn@galilea.cl>
+Cc: HECTOR PABLO MALDONADO MENDEZ <hector.maldonado@galilea.cl>,
+	Angel Rodrigo Linay Romero <angel.linay@galilea.cl>,
+	Luis Alberto Fuentealba Suazo <luis.fuentealba@galilea.cl>, OSCAR NOVA <oscar.nova@galilea.cl>,
+	FELIPE ANDRES FLORES GATICA <felipe.flores@galilea.cl>, Nelson Baeza <nelson.baeza@galilea.cl>,
+	Cristian Galleguillos <cristian.galleguillos@galilea.cl>
+Content-Type: multipart/alternative; boundary="000000000000e7d5440585c8e339"
+
+--000000000000e7d5440585c8e339
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Estimados,
+       Junto con saludar, escribo para consultar si la pagina WEB de
+servicio de posventa de galilea esta funcionando como corresponde, porque
+he ingresado y desde el mi=C3=A9rcoles que no hay requerimiento nuevos, en =
+mi
+Zona Sur eso es muy extra=C3=B1o, y adem=C3=A1s me han comentado mis encarg=
+ados de
+posventa que propietario si han elevado requerimiento en estos d=C3=ADas y =
+no se
+ve reflejado en el sistema.
+
+Esperando su respuesta, se despide
+
+--=20
+*M=C3=B3nica Venegas Villagr=C3=A1n* | Supervisor de Post Venta, Zona Sur |
+
+Galilea S.A. de Ingenier=C3=ADa y Construcci=C3=B3n | +569 9448 5049
+<+56%209%209448%205049>
+
+3 Oriente # 1424, Talca, Chile | www.galilea.cl
+
+--000000000000e7d5440585c8e339
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Estimados,<div>=C2=A0 =C2=A0 =C2=A0 =C2=A0Junto con saluda=
+r, escribo para consultar si la pagina WEB de servicio de posventa de galil=
+ea esta funcionando como corresponde, porque he ingresado y desde el mi=C3=
+=A9rcoles que no hay requerimiento nuevos, en mi Zona Sur eso es muy extra=
+=C3=B1o, y adem=C3=A1s me han comentado mis encargados de posventa que prop=
+ietario si han elevado requerimiento en estos d=C3=ADas y no se ve reflejad=
+o en el sistema.</div><div><br></div><div>Esperando su respuesta, se despid=
+e<br clear=3D"all"><div><br></div>-- <br><div dir=3D"ltr" class=3D"gmail_si=
+gnature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div dir=3D"ltr"><b><span style=3D"color:rgb(116,27,71)"><i><font =
+size=3D"2"><span style=3D"font-family:verdana,sans-serif"><span><span><font=
+ color=3D"#888888"><span><font color=3D"#888888"><font size=3D"2"><font sty=
+le=3D"color:rgb(136,136,136)"><span style=3D"color:rgb(102,102,102);font-fa=
+mily:Tahoma,sans-serif;background-image:initial;background-position:initial=
+;background-repeat:initial"></span></font></font></font></span></font></spa=
+n></span></span></font></i></span></b><font size=3D"2"><font style=3D"color=
+:rgb(136,136,136)"><span style=3D"color:rgb(102,102,102);font-family:Tahoma=
+,sans-serif;background-image:initial;background-position:initial;background=
+-repeat:initial"><font color=3D"#000000"><font face=3D"Calibri"><b>M=C3=B3n=
+ica Venegas Villagr=C3=A1n</b></font></font> </span></font><font style=3D"c=
+olor:rgb(136,136,136)"><font color=3D"#000000"><font face=3D"Calibri"><span=
+ style=3D"background-image:initial;background-position:initial;background-r=
+epeat:initial">| Supervisor de Post Venta, Zona Sur |=C2=A0</span></font></=
+font></font><br></font></div><span><font color=3D"#888888"><div><div dir=3D=
+"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><span><font color=3D"#888=
+888"><div dir=3D"ltr"><p style=3D"color:rgb(136,136,136);margin:0cm 0cm 0pt=
+"><font size=3D"2"><span style=3D"color:rgb(0,0,0);font-family:Calibri">Gal=
+ilea S.A. de Ingenier=C3=ADa y Construcci=C3=B3n</span><font color=3D"#0000=
+00"><font face=3D"Calibri"><span style=3D"background-image:initial;backgrou=
+nd-position:initial;background-repeat:initial">=C2=A0| <font color=3D"#8888=
+88"><a href=3D"tel:+56%209%209448%205049" value=3D"+56994485049" target=3D"=
+_blank">+569 9448 5049</a></font></span></font></font><span style=3D"color:=
+rgb(0,0,0);font-family:Calibri"></span><span style=3D"color:rgb(0,0,0);font=
+-family:Calibri"></span></font></p><p style=3D"color:rgb(136,136,136);margi=
+n:0cm 0cm 0pt"><font size=3D"2"><span style=3D"background-image:initial;bac=
+kground-position:initial;background-repeat:initial"><font color=3D"#000000"=
+ face=3D"Calibri">3 Oriente # 1424, Talca, Chile |</font></span><span style=
+=3D"color:rgb(102,102,102);font-family:Tahoma,sans-serif;background-image:i=
+nitial;background-position:initial;background-repeat:initial">=C2=A0</span>=
+<font><font color=3D"#000000"><font face=3D"Calibri"><span style=3D"backgro=
+und-image:initial;background-position:initial;background-repeat:initial"><a=
+ href=3D"http://www.galilea.cl/" style=3D"color:rgb(17,85,204)" target=3D"_=
+blank">www.galilea.cl</a></span></font></font></font></font></p></div></fon=
+t></span></div></div></div></div></div></div></font></span></div></div></di=
+v></div></div></div>
+
+--000000000000e7d5440585c8e339--

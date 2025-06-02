@@ -1,0 +1,46 @@
+Error:
+Odoo Server Error
+
+Traceback (most recent call last):
+  File "/opt/odoo12/odoo/odoo/tools/jdbc_services.py", line 222, in do_query
+    ora_cursor.execute(query)
+cx_Oracle.DatabaseError: ORA-00905: missing keyword
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/odoo12/odoo/odoo/http.py", line 656, in _handle_exception
+    return super(JsonRequest, self)._handle_exception(exception)
+  File "/opt/odoo12/odoo/odoo/http.py", line 314, in _handle_exception
+    raise pycompat.reraise(type(exception), exception, sys.exc_info()[2])
+  File "/opt/odoo12/odoo/odoo/tools/pycompat.py", line 87, in reraise
+    raise value
+  File "/opt/odoo12/odoo/odoo/http.py", line 698, in dispatch
+    result = self._call_function(**self.params)
+  File "/opt/odoo12/odoo/odoo/http.py", line 346, in _call_function
+    return checked_call(self.db, *args, **kwargs)
+  File "/opt/odoo12/odoo/odoo/service/model.py", line 97, in wrapper
+    return f(dbname, *args, **kwargs)
+  File "/opt/odoo12/odoo/odoo/http.py", line 339, in checked_call
+    result = self.endpoint(*a, **kw)
+  File "/opt/odoo12/odoo/odoo/http.py", line 941, in __call__
+    return self.method(*args, **kw)
+  File "/opt/odoo12/odoo/odoo/http.py", line 519, in response_wrap
+    response = f(*args, **kw)
+  File "/opt/odoo12/odoo/addons/web/controllers/main.py", line 966, in call_button
+    action = self._call_kw(model, method, args, {})
+  File "/opt/odoo12/odoo/addons/web/controllers/main.py", line 954, in _call_kw
+    return call_kw(request.env[model], method, args, kwargs)
+  File "/opt/odoo12/odoo/odoo/api.py", line 759, in call_kw
+    return _call_kw_multi(method, model, args, kwargs)
+  File "/opt/odoo12/odoo/odoo/api.py", line 746, in _call_kw_multi
+    result = method(recs, *args, **kwargs)
+  File "/opt/odoo12/gsa-addons/cobranza/models/wizard_reconocer.py", line 30, in reconocer
+    cheque.reconocer(self.fecha_reconocimiento, self.identificador, self.cuenta)
+  File "/opt/odoo12/gsa-addons/cobranza/models/cheques.py", line 661, in reconocer
+    jde.insert_z_pagos(sql_insert)
+  File "/opt/odoo12/gsa-addons/cobranza/servicios/servicios.py", line 455, in insert_z_pagos
+    self.ora_cursor.do_query('INSERT ALL %s select * from dual'%(' '.join(sqls)), no_fetch=True, connection=connection)
+  File "/opt/odoo12/odoo/odoo/tools/jdbc_services.py", line 233, in do_query
+    ora_cursor.execute(query)
+cx_Oracle.DatabaseError: ORA-00905: missing keyword

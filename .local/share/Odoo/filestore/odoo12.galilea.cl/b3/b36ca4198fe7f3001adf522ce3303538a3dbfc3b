@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PYVOBJECT//NONSGML Version 1//EN
+BEGIN:VEVENT
+UID:20200117T130211Z - 57184@soporte
+DTSTART:20200123T000000
+DTEND:20200123T235959
+ATTENDEE:MAILTO:christian.valdebenito@galilea.cl
+ATTENDEE:MAILTO:francisco.castro@galilea.cl
+ATTENDEE:MAILTO:jonatan.zapata@galilea.cl
+ATTENDEE:MAILTO:nicolas.guzman@galilea.cl
+CREATED:20200117T130211Z
+SUMMARY:Mantención sistema seguridad Huertos de Chillan
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,116 @@
+Delivered-To: soporte@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp3662383otp;
+        Mon, 8 Apr 2019 08:00:34 -0700 (PDT)
+X-Received: by 2002:a5d:9914:: with SMTP id x20mr18889717iol.257.1554735634908;
+        Mon, 08 Apr 2019 08:00:34 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554735634; cv=none;
+        d=google.com; s=arc-20160816;
+        b=klxCeAmaY5DPlh1jGdXbIB/nF4M6E4OoqaTS8W2DXzX81BUVFO3GQAwPQjYs6W2gMl
+         MlGOQDkBMuPGRJqk5Bw/dxgd3b4MEWF5SqjbBhT/O8xWQL86JCYJYlq/CEm6cbZ0vg6W
+         3oDTnI4pg89cwhZCVmSf0L0cG5kwmw3bmTgyAs4PcMYdRzum/JM4fKalT5QWKOg/1Csu
+         /wZ9sH5HjfvGGOimAIL7pnQvcveXzYSp2oBPGhKR46KgmHLMljFv6eaUOH0pL/PKrKNx
+         7aqbh4iUWf3W7AnDJBm7kLZRggbzgJIx06uR3VKXuumyIlQ0F7AVaLyGVv7kldGmTndB
+         pgsQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=t1lUiL2c5s5gWy7rDyIcGy+cx+knMbLrAzNPrq61Hy0=;
+        b=WRmh/mXYrJrD370NZraTbcLYWZFgMEgpac9dLDp3NWukJWmOtaV9Ip+2scc4XiXKoh
+         U7c9mpz9x+ATsX3LQtGSEpfv6L7GJgIYlOVB/+58qt722ELkNOlmwkJP6BQrEeZioTsR
+         PumOR2XECvKAuh6pmbeG5WZtG09wRzn67gFxqMcdKPJOixZS/91JUxI7O2ZCuAcOVNTL
+         qPceZ5IpaDHrvXTzZIsLotKor3iXVl0gM1mI1wQ+4sBWxxekF+C4qnDbYUD6TSQa6MMH
+         /GzW/yij3CwIHz1GiBKwgTsMmPe+TLr3ytb9K8GuwrU7b1pm3bdyuL/lanmTsFYfIech
+         25GQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=cfbvcAC4;
+       spf=pass (google.com: domain of karina.tereucan@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=karina.tereucan@galilea.cl
+Return-Path: <karina.tereucan@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id n17sor18374801iom.112.2019.04.08.08.00.34
+        for <soporte@galilea.cl>
+        (Google Transport Security);
+        Mon, 08 Apr 2019 08:00:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of karina.tereucan@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=cfbvcAC4;
+       spf=pass (google.com: domain of karina.tereucan@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=karina.tereucan@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=t1lUiL2c5s5gWy7rDyIcGy+cx+knMbLrAzNPrq61Hy0=;
+        b=cfbvcAC46JR2Liak5pvelH9FNYFw/vlatV4UR01zxsgLBNI/Otd0ic55KxPqsw9f1P
+         i5bhqacLcoGOqLTL1yA3cBwucnCcBJPF5MlS+4qWjOOlcSi9BE27OSfoxSqcrdyz+xU/
+         dJJwOWn7zkMKdJOw+E+SyChHSzt4k5g45QCZdp0QPPrtRX1TFVHJ+r9/ukAA0wIJfUWD
+         jGW242Zaer7kDMnr3PbO/1t7q1uViJXewaaEfgqFqKcW7GGwSI4UrZKy/UA6kA1NDBi9
+         zzUAGJhYP7OKlypjSWsbqqPGMHA56kfApTjvU02H3rRGKQ8aR3qSzKG9yc+JWpGfOqYG
+         MIdw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=t1lUiL2c5s5gWy7rDyIcGy+cx+knMbLrAzNPrq61Hy0=;
+        b=QU/f/bw7h9X2a8F/1kwjxbGrZrhJVwjRCl7pBzyBuXRnNNLLzBcYp7idC/XHSXO8I3
+         eeu3+wZlhD3kYA9t+QY5XjEu0HpJlJOs1M/ofaiMzYZgS0CIYIBtWk0ZWKk9JpoTDD3/
+         HXxUfqnZWWuxVtPsIUFdWxagRdH4hg7vq+H3msIaXHQ/m6t5I4XTALZcPyGOg/+tpfi8
+         JEXLRF39YbZ77hbf2c/5opxKWXfrPPwF7wEuTRdw4nVnQqeVoJTH+bDif+xA/kXtPIhO
+         COYhx8VryFruwl+Bvys2fi5dpJ2H403ZeIMnf9JrT2OgeQRZZ2sfSlMORT6zwftDPlr6
+         Z5Wg==
+X-Gm-Message-State: APjAAAUr9Zos6bdJuEwDPmRRNh16CrUXJkpdVyFsE+hPCKnPEQq1IM03
+	0jqGCDlIOqksGfk0conxa9ipt83u6UVcW4gbMqxTYI46qVpW4g==
+X-Google-Smtp-Source: APXvYqwRTGrEvyvNoAuaxFkb71noqFknr9GNSExqR6NiBtBysiPw6LisBZQi4Asyu5DZIZnvmboBvWI+ZuRjGqL28hg=
+X-Received: by 2002:a6b:6410:: with SMTP id t16mr17672017iog.65.1554735634576;
+ Mon, 08 Apr 2019 08:00:34 -0700 (PDT)
+MIME-Version: 1.0
+From: KARINA YOHANA TEREUCAN SOTO <karina.tereucan@galilea.cl>
+Date: Mon, 8 Apr 2019 11:00:23 -0400
+Message-ID: <CAJc=CgdMtfi29i4Q=Vquen0ZtWMHWGm6vCnho556rEijbtHK5A@mail.gmail.com>
+Subject: SOLICITUD DRUM
+To: Sistema Ticket <soporte@galilea.cl>
+Content-Type: multipart/alternative; boundary="0000000000003826cb0586061994"
+
+--0000000000003826cb0586061994
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Buenos dias
+favor solicito env=C3=ADo de drum para impresora brother HL-2270DW, obra Pu=
+erto
+Montt
+ atte
+
+
+--=20
+
+*Karina Tereucan Soto*
+
+*Adm. Obra Puerto Montt*
+*Fono : 968398903 *
+
+--0000000000003826cb0586061994
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><span style=3D"font-family:arial,sans-serif;font-size:12.8=
+px">Buenos dias</span><br style=3D"font-family:arial,sans-serif;font-size:1=
+2.8px"><span style=3D"font-family:arial,sans-serif;font-size:12.8px">favor =
+solicito env=C3=ADo de=C2=A0<span class=3D"gmail-m_717769949181678233gmail-=
+m_-4136179900180397318gmail-m_7774191447532546669gmail-m_115827105546465802=
+1gmail-il"><span class=3D"gmail-m_717769949181678233gmail-m_-41361799001803=
+97318gmail-m_7774191447532546669gmail-il"><span class=3D"gmail-m_7177699491=
+81678233gmail-m_-4136179900180397318gmail-il"><span class=3D"gmail-m_717769=
+949181678233gmail-il"><span class=3D"gmail-il">drum</span></span></span></s=
+pan></span></span><span style=3D"font-family:arial,sans-serif;font-size:12.=
+8px">=C2=A0para impresora brother=C2=A0<span style=3D"font-size:12.8px">HL-=
+2270DW</span>, obra Puerto Montt</span><br style=3D"font-family:arial,sans-=
+serif;font-size:12.8px"><span style=3D"font-family:arial,sans-serif;font-si=
+ze:12.8px">=C2=A0atte</span><div class=3D"gmail-yj6qo gmail-ajU" style=3D"o=
+utline:none;padding:10px 0px;width:22px;margin:2px 0px 0px"><br class=3D"gm=
+ail-Apple-interchange-newline"></div><div><br></div>-- <br><div dir=3D"ltr"=
+ class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"l=
+tr"><div><div dir=3D"ltr"><div><div><b><font face=3D"trebuchet ms, sans-ser=
+if" style=3D"background-color:rgb(238,238,238)" color=3D"#0b5394">Karina Te=
+reucan Soto<br></font></b></div><b><font face=3D"trebuchet ms, sans-serif" =
+style=3D"background-color:rgb(238,238,238)" color=3D"#0b5394">Adm. Obra Pue=
+rto Montt<br></font></b></div><b><font face=3D"trebuchet ms, sans-serif" st=
+yle=3D"background-color:rgb(238,238,238)" color=3D"#0b5394">Fono : 96839890=
+3=C2=A0</font></b><br></div></div></div></div></div>
+
+--0000000000003826cb0586061994--

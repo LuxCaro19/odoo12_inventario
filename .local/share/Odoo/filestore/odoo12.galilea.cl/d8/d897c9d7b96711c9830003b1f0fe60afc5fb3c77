@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<DTE version="1.0" xmlns="http://www.sii.cl/SiiDte">
+<Documento ID="S20191002T061F0012754128"><Encabezado><IdDoc><TipoDTE>61</TipoDTE><Folio>0012754128</Folio><FchEmis>2019-10-02</FchEmis><FmaPago>2</FmaPago><FchVenc>2019-11-16</FchVenc></IdDoc>			<Emisor>
+				<RUTEmisor>96511460-2</RUTEmisor>
+				<RznSoc>CONSTRUMART S A</RznSoc>
+				<GiroEmis>Distribuidora de materiales de construccion</GiroEmis>
+				<Telefono>4276000</Telefono>
+				<Acteco>466302</Acteco>
+				<Sucursal>Casa Matriz</Sucursal>
+				<DirOrigen>Avda. Las Americas 707</DirOrigen>
+				<CmnaOrigen>Conchali</CmnaOrigen>
+				<CiudadOrigen>SANTIAGO</CiudadOrigen>
+			</Emisor>
+<Receptor><RUTRecep>78246760-3</RUTRecep><CdgIntRecep>0078246760</CdgIntRecep><RznSocRecep>CONSTRUCTORA PEHUENCHE LTDA.</RznSocRecep><GiroRecep>CONSTRUCCION DE EDIFICIOS PARA USO RESID</GiroRecep><DirRecep>3 ORIENTE No1424</DirRecep><CmnaRecep>TALCA</CmnaRecep><CiudadRecep>Talca</CiudadRecep></Receptor><Transporte><DirDest>CAMINO A CORONEL KM 20  SECTOR ESCUADRON</DirDest><CmnaDest>CORONEL</CmnaDest></Transporte><Totales><MntNeto>94163</MntNeto><TasaIVA>19.00</TasaIVA><IVA>17891</IVA><MntTotal>112054</MntTotal></Totales></Encabezado><Detalle><NroLinDet>1</NroLinDet><CdgItem><TpoCodigo>CM</TpoCodigo><VlrCodigo>24550</VlrCodigo></CdgItem><NmbItem>PERFIL ANGULO DOBLADO 50 X 50 3 MM</NmbItem><QtyItem>27.000</QtyItem><UnmdItem>C/U</UnmdItem><PrcItem>3487.519</PrcItem><MontoItem>94163</MontoItem></Detalle><Referencia><NroLinRef>01</NroLinRef><TpoDocRef>33</TpoDocRef><FolioRef>0016468078</FolioRef><FchRef>2019-01-31</FchRef><CodRef>3</CodRef></Referencia>
+<TED version="1.0"><DD><RE>96511460-2</RE><TD>61</TD><F>0012754128</F><FE>2019-10-02</FE><RR>78246760-3</RR><RSR>CONSTRUCTORA PEHUENCHE LTDA.</RSR><MNT>112054</MNT><IT1>PERFIL ANGULO DOBLADO 50 X 50 3 MM</IT1><CAF version="1.0"><DA><RE>96511460-2</RE><RS>CONSTRUMART S A</RS><TD>61</TD><RNG><D>12749723</D><H>12759722</H></RNG><FA>2019-07-15</FA><RSAPK><M>xBDDImbfDSD73vUGADnUzvFGnw4Jl5eiL8MuT/cDQmLjnexJUwLbIfNE/sR/fa2DWmaPhqj4Sd5IjGbWxcDdLQ==</M><E>Aw==</E></RSAPK><IDK>300</IDK></DA><FRMA algoritmo="SHA1withRSA">BUTMvjQYBA8+qcK50ypuIitXI8zjFBb3D/AmdSTJB2qPhxKCUkuLPPtAWeK1ynUDvXJbJ1DvwU2rdHCFhaNs0A==</FRMA></CAF><TSTED>2019-10-02T10:03:55</TSTED></DD><FRMT algoritmo="SHA1withRSA">ZhdA2CmkIxDKZjdWkRNf0ev7l+PVZK9PpyqvB2FFJ2sHGlrzbHMHsg5Q2xcBQo5E4rhoK59Sm4/X
+A4d5GAYJcQ==
+</FRMT></TED>
+<TmstFirma>2019-10-02T10:03:55</TmstFirma>
+</Documento>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+  <SignedInfo>
+    <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+    <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+    <Reference URI="#S20191002T061F0012754128">
+      <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <DigestValue>QUF8o1WhCCPkDmjWZeTjlU2JF28=</DigestValue>
+    </Reference>
+  </SignedInfo>
+  <SignatureValue>
+    pfcF4TwyDy6hb/9Py3IyixIBm6Ng/DItQr9w+lF/cjzWetIWTRrQB74MDXtM1+Vf
+    fTXRMOZ5QuKxPcuLjFJyyML5L4PAIpbRxkDohm/Y0ahm3m8nrR7pzHnfrgadl3m4
+    sD9lTEWOYn11fqa9uY9+pSfe/+sYgsDGETVsRHRnVUk=
+  </SignatureValue>
+  <KeyInfo>
+    <KeyValue>
+      <RSAKeyValue>
+        <Modulus>
+          rlP7b+oV9LiSA19+JikhvL3++r8GzaON088NAy8P/ROHinYBElFdnSiAnu7TWtmi
+          1FpXjB3SUHMVpKR7MqRnztd5oq9absVWXLH85zM0jSRItUcVQ8kZ9OUSgFPh8YIu
+          Lt9Puc707LklYKXaIHGDd63ebXVOOVFALlzI6t28GJE=
+        </Modulus>
+        <Exponent>AQAB</Exponent>
+      </RSAKeyValue>
+    </KeyValue>
+    <X509Data>
+      
+      <X509Certificate>
+        MIIGRzCCBS+gAwIBAgIKQsYoJwAAAAhtmDANBgkqhkiG9w0BAQUFADCB0jELMAkG
+        A1UEBhMCQ0wxHTAbBgNVBAgTFFJlZ2lvbiBNZXRyb3BvbGl0YW5hMREwDwYDVQQH
+        EwhTYW50aWFnbzEUMBIGA1UEChMLRS1DRVJUQ0hJTEUxIDAeBgNVBAsTF0F1dG9y
+        aWRhZCBDZXJ0aWZpY2Fkb3JhMTAwLgYDVQQDEydFLUNFUlRDSElMRSBDQSBGSVJN
+        QSBFTEVDVFJPTklDQSBTSU1QTEUxJzAlBgkqhkiG9w0BCQEWGHNjbGllbnRlc0Bl
+        LWNlcnRjaGlsZS5jbDAeFw0xNzA3MjAxMzQyMTlaFw0yMDA3MTkxMzQyMTlaMIHK
+        MQswCQYDVQQGEwJDTDEjMCEGA1UECBMaTUVUUk9QT0xJVEFOQSBERSBTQU5USUFH
+        TyAxETAPBgNVBAcTCFNhbnRpYWdvMRgwFgYDVQQKEw9DT05TVFJVTUFSVCBTLkEx
+        FTATBgNVBAsTDENPTlRBQklMSURBRDErMCkGA1UEAxMiR1VJTExFUk1PIEFOVE9O
+        SU8gIEVMR1VFVEEgU0FOQ0hFWjElMCMGCSqGSIb3DQEJARYWanZhbGRlc0Bjb25z
+        dHJ1bWFydC5jbDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEArlP7b+oV9LiS
+        A19+JikhvL3++r8GzaON088NAy8P/ROHinYBElFdnSiAnu7TWtmi1FpXjB3SUHMV
+        pKR7MqRnztd5oq9absVWXLH85zM0jSRItUcVQ8kZ9OUSgFPh8YIuLt9Puc707Lkl
+        YKXaIHGDd63ebXVOOVFALlzI6t28GJECAwEAAaOCAqcwggKjMD0GCSsGAQQBgjcV
+        BwQwMC4GJisGAQQBgjcVCILcgy+Fk4xmhdWdF4Li3CeB7+w8YYHLnhSGqIJYAgFk
+        AgEEMB0GA1UdDgQWBBR60DWTBzeTLnQdEV8awTtyNxk6NjALBgNVHQ8EBAMCBPAw
+        HwYDVR0jBBgwFoAUeOE+n9ISs3o8jc0wDlOzQykHs1UwPgYDVR0fBDcwNTAzoDGg
+        L4YtaHR0cDovL2NybC5lLWNlcnRjaGlsZS5jbC9lY2VydGNoaWxlY2FGRVMuY3Js
+        MDoGCCsGAQUFBwEBBC4wLDAqBggrBgEFBQcwAYYeaHR0cDovL29jc3AuZWNlcnRj
+        aGlsZS5jbC9vY3NwMCMGA1UdEQQcMBqgGAYIKwYBBAHBAQGgDBYKMTA0MDc5MDAt
+        ODAjBgNVHRIEHDAaoBgGCCsGAQQBwQECoAwWCjk2OTI4MTgwLTUwggFNBgNVHSAE
+        ggFEMIIBQDCCATwGCCsGAQQBw1IFMIIBLjAtBggrBgEFBQcCARYhaHR0cDovL3d3
+        dy5lLWNlcnRjaGlsZS5jbC9DUFMuaHRtMIH8BggrBgEFBQcCAjCB7x6B7ABDAGUA
+        cgB0AGkAZgBpAGMAYQBkAG8AIABGAGkAcgBtAGEAIABTAGkAbQBwAGwAZQAuACAA
+        SABhACAAcwBpAGQAbwAgAHYAYQBsAGkAZABhAGQAbwAgAGUAbgAgAGYAbwByAG0A
+        YQAgAHAAcgBlAHMAZQBuAGMAaQBhAGwALAAgAHEAdQBlAGQAYQBuAGQAbwAgAGgA
+        YQBiAGkAbABpAHQAYQBkAG8AIABlAGwAIABDAGUAcgB0AGkAZgBpAGMAYQBkAG8A
+        IABwAGEAcgBhACAAdQBzAG8AIAB0AHIAaQBiAHUAdABhAHIAaQBvMA0GCSqGSIb3
+        DQEBBQUAA4IBAQAIVEaWHkQ+LXWT6BeRCYHcS/27zuVFgOLASAZtW1WQNK2gdId+
+        u6Z/NRvqsrt1LOkmmwYIICCufQygGtlxpvAagOBkliGmcEc5OzeNc/1gAGHf0cRu
+        HZFoEA0hpSAXXnV9Ifnyml8kkqgf/zU/zjnMOgy+1DRBsaSJ5aPq79Nvs7LX567m
+        VhxGfbl22ycee2dLdpeaeOD7b4j4e1nM4hNgRBO3afcWUbakx7VjEMqOSodWJfWh
+        FY/Y2wQYEtxad60bBeFVeUt/Yvqfca1/D8K4wY51zuMPRmLdKLokGDM+MUohSoV8
+        p/mXgGGnLgt/RLPziOh1xLcoHZvfMTF3W3rt
+      </X509Certificate>
+    </X509Data>
+  </KeyInfo>
+</Signature>
+<Personalizados>
+<DocPersonalizado xmlns="http://www.sii.cl/SiiDte" dteID="S20191002T061F0012754128">
+<campoString name="LocalOT">0</campoString>
+<campoString name="LocalVersion">0</campoString>
+<campoString name="LocalDocid">4601867</campoString>
+<campoString name="LocalFolioInt">0</campoString>
+<campoString name="PPLOnline">true</campoString>
+<campoString name="PersNroSap"> 9336823305</campoString><campoString name="PersVendedor"> 06041131 GONZALEZ MIGUEL ALBERTO</campoString><campoString name="PersDocBase"> Factura Calzada C.D.</campoString><campoString name="PersNroDocBase"> 0016468078</campoString><campoString name="PersLocal"> U16 - Corp.Concep. Paicavi</campoString><campoString name="PersCobrador"> 06041131 GONZALEZ MIGUEL ALBERTO</campoString><campoString name="PersGlosa1">  TIPO NCR : ZDIF - N.CREDITO DIF.PRECIO ; RAZON NCR : Z08 - N.CREDITO DIFERENCIA DE PRECIOS</campoString><campoString name="PersObra"> ZDIF - N.Credito Dif.Precio</campoString><campoString name="PersObra"> LA POSADA</campoString><campoString name="PersDirObra"> CAMINOA CORONEL KM 20  SECTOR ESCU CONCEPCION Coronel</campoString><campoString name="PersTelefono"> 72-241630</campoString><campoString name="PersFechRef"> 2019-01-31</campoString><campoString name="PersImpresoraVirtual"> concep_fac2</campoString></DocPersonalizado>
+</Personalizados>
+</DTE>

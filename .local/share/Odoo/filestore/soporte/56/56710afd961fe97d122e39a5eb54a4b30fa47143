@@ -1,0 +1,104 @@
+Delivered-To: sistemas@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp1754794otp;
+        Thu, 4 Apr 2019 09:25:34 -0700 (PDT)
+X-Received: by 2002:a63:b305:: with SMTP id i5mr6475048pgf.274.1554395134175;
+        Thu, 04 Apr 2019 09:25:34 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554395134; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Hbw3/dgzNKkS2fmPl8B8dcT1JNyocQw3PNX+i7RxVUEVFRw10W+6akmBVo63KJ7uQ0
+         i75TpSh+13htpbK+vFuYLCbK3HOSKE4ZRWCwXVdIdIcXREi9qw3GppJad8mKRCGiXsxf
+         ve19bEExSU9Ug/Q5baAxXkdBkz00hACXMw3nGIF2eAIGUEzUE8jo7m2aug34dFlSLCJG
+         G/ApO5dGA+ZPB+ZI9Fpnnk6uMabQmQjNx+5dZxgY9ILbvBwW8T3ACl6KSuV7F9F/2OHF
+         GtpZjeQwy7xN/Uqfztu51Cjah24zvXiMcwZrKgIR2VUlc0CIKPh2tf1cXOgL2Kl0YNnm
+         0vbg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=wBIrAeze+hTJUOxpRk6tAsUWG14oCXfDVS8Wo1wnmiQ=;
+        b=YYhpSfgxnxyU10F9zJcZ9WkSwoafvyCo0OPAHVHuVMxkUpzgpMcRLlnrIR7BKkGLN2
+         /CAk4xs1xhVKuO4jwrg/Sgp8UR5MCUrjWmO8Dy9CzxwmDFeMgWTOPfbt5Ura/hMdLdoC
+         e6VoQvsWsumyOKu76vUQYEgboSzca75Me11n4xvneENB+vUhwy/tFKIpfPJFUJzSXTnM
+         MF42TSC77ACD1v3b4xNUphuGoRlU2RJuL2rIbRgNF9jUJQExMYni0f/yVIE8zr2bvYHI
+         FIBPs2uVfCA5Ndq+Z2ku7/hcshTG0mLhBbSRkH8KcSjiLIiw8b1Dmxs9PxDvo2NY/JBU
+         wA4g==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=TS8tIE1A;
+       spf=pass (google.com: domain of dominique.woloszyn@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=dominique.woloszyn@galilea.cl
+Return-Path: <dominique.woloszyn@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id g63sor20297787pfg.58.2019.04.04.09.25.33
+        for <sistemas@galilea.cl>
+        (Google Transport Security);
+        Thu, 04 Apr 2019 09:25:33 -0700 (PDT)
+Received-SPF: pass (google.com: domain of dominique.woloszyn@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=TS8tIE1A;
+       spf=pass (google.com: domain of dominique.woloszyn@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=dominique.woloszyn@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=wBIrAeze+hTJUOxpRk6tAsUWG14oCXfDVS8Wo1wnmiQ=;
+        b=TS8tIE1AHJPtE6myfs4gFeV6wNwcWa1ZAZn1ARe7mCR4HtdpCoA/pu4FG3ZQjPrmh3
+         +wbJV3S0jCZyLYb4E84qP5rM1/3AzklYhTDd7l+UbIB5jZLVOQGyU8SWyNBaX/VrVxcl
+         VLHRmMjGsMg5oWk1mrcVt7lxRVDU1coPB6sAY23LqJUK7JLkVbiTBdgK5M81alW4l2Ga
+         8ELrSj3jYooVZruTpBBfzhN5syhdPrMaW6AsD8X5QQBzdT3ffqVRi5ssZwFYU93SGe2O
+         z8NX0WNt5sQ2/2/zoO3sxA8y4hSFI0T1aLr8C7jzc/RTEG3ksentNrOqd666YKnvhfA1
+         fFzg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=wBIrAeze+hTJUOxpRk6tAsUWG14oCXfDVS8Wo1wnmiQ=;
+        b=g/tdV/VBJNnvmHQuLZdXcHo6CYDbQD6ACA131ppcp75PlZtfYa1mg8j3DnlW7NZ1nk
+         uXeNGt9kCRMCN+NV1Y9ajG83NjEkauZAqh71r/nTYOWnhhWwlmduXWNPl2RCXIu7ReMK
+         RKzVc+SrzY/ORlnTWr4PowqJXqPvqcnH1wfRenLsGYu8zsRirVgrEfd43I8fkZgoQu5W
+         BIjpcwj5drb1kYrOBjwjJry9pQ2vBNR7tdSYfUlW8t6mnxokysuBTT9lR+rfMnbSt3Tl
+         9uyaQhAvsAgbZhnF1IhLev9Z3JFDeXAn2LtauNDOJ+HhF7FGvEKphFWyvBhCzM7uqa6U
+         TLaA==
+X-Gm-Message-State: APjAAAUqtoweZX2XITCvy2k00b3o2r3F8vcp+4sZiJ+tmhUjx2J6ee5U
+	/8mYFtKCch7ljvdWQBuCO6IeFjeeKwk16MAlCc4RITdMuyw=
+X-Google-Smtp-Source: APXvYqyrM6HoJEK1vFB6noRE5Lnu3pjug/t2huBh6TDefD9BQ6wqwb3Cqf3BlPrSaL0xdmeeD4ZQlLqpoBQYaj9N8gw=
+X-Received: by 2002:aa7:884b:: with SMTP id k11mr6859830pfo.49.1554395133137;
+ Thu, 04 Apr 2019 09:25:33 -0700 (PDT)
+MIME-Version: 1.0
+From: =?UTF-8?Q?Dominique_Karen_Woloszyn_Sep=C3=BAlveda?= <dominique.woloszyn@galilea.cl>
+Date: Thu, 4 Apr 2019 13:25:22 -0300
+Message-ID: <CAD6PtS+heZ2BLSXFTbR_6=FvEGS_bm6MwAkL=7QzndxyyYs7mA@mail.gmail.com>
+Subject: =?UTF-8?Q?Agregar_N=C2=B0_Lote_a_Informe_=22D=C3=ADas_Solicitud_y_Cierre?=
+To: Sistema Ticket <sistemas@galilea.cl>
+Content-Type: multipart/alternative; boundary="000000000000c066a40585b6d13f"
+
+--000000000000c066a40585b6d13f
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Estimados,
+
+Favor su ayuda con lo siguiente: Necesitamos agregar el n=C3=BAmero de lote
+asociado al caso postventa en el informe llamado "D=C3=ADas Solicitud y Cie=
+rre"
+ubicado en la carpeta de Control de Gesti=C3=B3n en BIP.
+
+Saludos,
+
+--000000000000c066a40585b6d13f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Estimados,=C2=A0<div><br></div><div>Favor su ayuda con lo =
+siguiente: Necesitamos agregar el n=C3=BAmero de lote asociado al caso post=
+venta en el informe llamado &quot;D=C3=ADas Solicitud y Cierre&quot; ubicad=
+o en la carpeta de Control de Gesti=C3=B3n en BIP.</div><div><br></div><div=
+>Saludos,=C2=A0<br clear=3D"all"><div><div dir=3D"ltr" class=3D"gmail_signa=
+ture" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"=
+ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><d=
+iv dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div styl=
+e=3D"margin:0px;padding:0px 0px 20px;width:958px;font-family:Roboto,RobotoD=
+raft,Helvetica,Arial,sans-serif;font-size:medium"><div style=3D"font-size:1=
+2.8px;margin:8px 0px 0px;padding:0px"><div style=3D"outline:none"><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><div dir=3D"ltr"><img src=3D"https://docs.go=
+ogle.com/uc?export=3Ddownload&amp;id=3D1MJhPYemq5qZjnohjm7Gz9F_x36umEV8l&am=
+p;revid=3D0B9XHPCU23TTzSE95U0d3QVluRlJBeHVTRkx5VzIxTUFVaDZRPQ"><br></div></=
+div></div><div></div><div></div></div><div></div></div></div><div></div></d=
+iv></div></div></div></div></div></div></div></div></div></div></div></div>=
+</div></div></div>
+
+--000000000000c066a40585b6d13f--

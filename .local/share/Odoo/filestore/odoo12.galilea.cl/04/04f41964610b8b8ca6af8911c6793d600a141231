@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PYVOBJECT//NONSGML Version 1//EN
+BEGIN:VEVENT
+UID:20200210T132534Z - 25003@soporte
+DTSTART:20200125T080000
+DTEND:20200125T180000
+ATTENDEE:MAILTO:christian.valdebenito@galilea.cl
+ATTENDEE:MAILTO:francisco.castro@galilea.cl
+ATTENDEE:MAILTO:jonatan.zapata@galilea.cl
+ATTENDEE:MAILTO:nicolas.guzman@galilea.cl
+CREATED:20200210T132534Z
+SUMMARY:Apoyo a soporte y compra de equipos y suministros.
+END:VEVENT
+END:VCALENDAR

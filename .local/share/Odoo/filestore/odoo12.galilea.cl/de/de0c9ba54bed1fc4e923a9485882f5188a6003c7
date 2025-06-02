@@ -1,0 +1,96 @@
+Delivered-To: sistemas@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp202024otp;
+        Wed, 3 Apr 2019 04:57:56 -0700 (PDT)
+X-Received: by 2002:aa7:8615:: with SMTP id p21mr50838027pfn.98.1554292676294;
+        Wed, 03 Apr 2019 04:57:56 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554292676; cv=none;
+        d=google.com; s=arc-20160816;
+        b=VhkUWFPXeO/6ZmTzifpTcdV1ZpRNbjfXwbmPaIPVSiowd+6tNJBgC1Y4iODFijAMGf
+         N4dvYJ5ecFlhsa3ag0ea69fFDGLqMOZohF4oF6k/w7PiPheBmWDt61M4gbu2QHYqDiXh
+         vma+h9TDPryyLdHCRaLezXL/VPKbLW8xKgo+Y6AXmDen7fzHU+jrSUA/uWiyaA9H2ICT
+         ZdbaGB/NTWzpxjzzBobmT2VacxH+G3zD/C3RgFs4aQ5yyIYUo+gDGr2BA289McJ12Fsy
+         2XPZRX/sWPWIBrr+U2lIEqvPH/6/QkUskqcUO6/Zil1ECBt54cuzyIZVI3LkKUvacfgJ
+         od6A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=8lgm3b5YZTQp66DVFMf0wm2r99nqATYjaFNyvi2OSP8=;
+        b=tQ3sKKUcjZ9e/WiaF7y0fR9g73GRWevBVVSpJ7rtWKSI3SyI7iDoajqvC4mHbD7i/P
+         hDvdFuNFe/OctH/1qt8boAcxfiYGP1ZvCfvrU05jbdSCuxq1L7lp5wzhZNbTtHFGMIDh
+         Em9iSYd4nbT5d3pKkxrihNgIcGMmcBUnx1gfQNj8cnugdlWpp96ned6jYlxwAuOz6IVD
+         W23SAD4hr8mcKB5+tkvJxo6JDly5p0PDO3LObTcvAjPGLLges7J6GYd93FEnYDiLCWBG
+         fqZexk0m9U2YM+BqAHDuqv9B/IsW8u8IGAQ1N4AAaFN9HEpk86dJczJ6+V89WOj/5fo+
+         IWwA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=diB0IR5a;
+       spf=pass (google.com: domain of pabla.obreque@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=pabla.obreque@galilea.cl
+Return-Path: <pabla.obreque@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id k184sor8509774pgd.4.2019.04.03.04.57.56
+        for <sistemas@galilea.cl>
+        (Google Transport Security);
+        Wed, 03 Apr 2019 04:57:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of pabla.obreque@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=diB0IR5a;
+       spf=pass (google.com: domain of pabla.obreque@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=pabla.obreque@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=8lgm3b5YZTQp66DVFMf0wm2r99nqATYjaFNyvi2OSP8=;
+        b=diB0IR5aW4/18qBxC7tGuVwZjkpObby38L5/esWhxKZ1Ed4SAqkhE92jsn6ySITnO1
+         UsXTUUY02yMw0iRDapcwz4R7R0/VrgWlaELboO1PdmVT/Zx0oSTJb7fnJtwHm1CUNuSK
+         lqav6FbrcHZ5EFRaPbxBH8XwY2vhlKPqBvcIK417hXpkohc6kTA5iVjpcWDir4MtcfkT
+         gmQDTkkQG8UX1ITFmPNKfCC7hNNY7Ncun+/+ApZVz3wENEqVPszYksjCaDqLVVdSFnmi
+         Xk0DWfQ07kC+ea0ibXPvxeLsTtW2RYmr2Gm/TQVdkgIKNtmjGfmKUrJeyWDh6rxYJ3aL
+         s+Dg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=8lgm3b5YZTQp66DVFMf0wm2r99nqATYjaFNyvi2OSP8=;
+        b=Wn9nHB1xG9YB5WiEZsBd1QjpwpYXRl0lozq/jGtyi2Ts0OCVKAibSBPe3I2JwOCPWh
+         t0QHlA4PK3InyTCIwkTdC2GxqUOmC/cCDrWGa2UHE4fuHAzHAWqlrvx1Y3S4/KADhvqM
+         p+zO+uuTwTYCwIMoNSQwzEthNUg+/E4lKkpmdkMx2xioqgq8jR3lCFmAyy1+u7NAVsOr
+         pG04LFrvA3Nilca7SsOy5nL+qtFk3okXYbD8GMvxcWVUGjTKKUCo8V0Y11FgBgdkA+U4
+         b3UZw42tVQkzLScn8+ktmVylF2EuGA5HuLqPQFpZiGDSDl6qzFuJCoDHL/qA2VzdLP+i
+         NqhQ==
+X-Gm-Message-State: APjAAAVR4Rx+e+h20NmWMK0muB01OjKXjNyNVazxbcncMYATtVb/snE7
+	EiyGhqxrBTH7W2JdXv1Tdfde5vH5CBD17sl2LHCVYwmLM0wx2A==
+X-Google-Smtp-Source: APXvYqxI66Ph49v6oGtf7gEiG/ymi+5Um7av8NJIoWffzNx91Qt8T3P1Yw/h0iRI2XP52rifq+9ECVZgju9DLM4NL6g=
+X-Received: by 2002:a63:e554:: with SMTP id z20mr68194867pgj.234.1554292675596;
+ Wed, 03 Apr 2019 04:57:55 -0700 (PDT)
+MIME-Version: 1.0
+From: PABLA ROXANA OBREQUE MORALES <pabla.obreque@galilea.cl>
+Date: Wed, 3 Apr 2019 08:57:44 -0300
+Message-ID: <CAAMM1xOfcU_rUEfn9kymmGymh+zcTZN2G6h9=Sr4j5fDsbPX+Q@mail.gmail.com>
+Subject: Cuentas CLIN de las Facturas
+To: Sistema Ticket <sistemas@galilea.cl>,
+	Constanza Andrea Rojas Corvalan <constanza.rojas@galilea.cl>
+Content-Type: multipart/alternative; boundary="000000000000ce6a2a05859ef66d"
+
+--000000000000ce6a2a05859ef66d
+Content-Type: text/plain; charset="UTF-8"
+
+Estimados
+Necesito que la Factura vuelva a aparecer con sus saldos pendientes en las
+cuentas CLIN.
+
+Batch  1861277    Cliente 5564111
+
+Gracias, saludos,
+
+--000000000000ce6a2a05859ef66d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><span style=3D"font-size:12.8px">Estimados</span><div styl=
+e=3D"font-size:12.8px">Necesito que la Factura vuelva a aparecer con sus sa=
+ldos pendientes en las cuentas CLIN.</div><div style=3D"font-size:12.8px"><=
+br></div><div style=3D"font-size:12.8px">Batch=C2=A0 1861277=C2=A0 =C2=A0 C=
+liente 5564111</div><div><br></div><div>Gracias, saludos,=C2=A0=C2=A0</div>=
+<div><br></div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D=
+"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><br></div><di=
+v><img src=3D"https://docs.google.com/uc?export=3Ddownload&amp;id=3D0B8TJeu=
+XcUeOLTGExekVBb0xNNWM&amp;revid=3D0B8TJeuXcUeOLUHZzSjc1ZXo2Wk1TU1ZKTjc5TGRV=
+ZFg5UjQ4PQ"><br></div></div></div></div></div></div>
+
+--000000000000ce6a2a05859ef66d--

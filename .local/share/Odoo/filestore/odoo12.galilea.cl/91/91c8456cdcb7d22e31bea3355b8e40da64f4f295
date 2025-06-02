@@ -1,0 +1,147 @@
+Delivered-To: sistemas@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp436300otp;
+        Wed, 3 Apr 2019 08:28:22 -0700 (PDT)
+X-Received: by 2002:aed:39c6:: with SMTP id m64mr436527qte.239.1554305301953;
+        Wed, 03 Apr 2019 08:28:21 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554305301; cv=none;
+        d=google.com; s=arc-20160816;
+        b=bBMI52udTTSYotSYI4Gqi/3oGbbCPYVvxaj6EBrT4OLTA4XIQc+2ygNURYesmsdqsg
+         xg5Mt7J04tCAcOunh+tixP4noe5JU/g0caB7w7KF7PuruHgd8DiRgPtEJL5rxIT62mj3
+         CVogxX/JXOpQNsIOopneEPkpxCWu0b+uhNUSqe8+8+2350zDFTDRjSsTp6ixfROFij0Z
+         O8kUQvaN9gd24LFu6rLIhy3OopLlw7k0bihpFnpTTAkANhZdlPc6Fr7zPohGofWa2Cy8
+         GW17iFbNWwbufLJA51jqTvqOZALRROKFY9RBDkSTOsa8v5gBKeW/SwidC5G4wEcTDC88
+         2TMQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=65+0gM/+d9wRfzwPs/EMKHp1wv9cJJ06Jr+zkkbWnK8=;
+        b=gg+I2gUFaZU2WhqrzefQKE5MmeOLhifIclbc9VTrgdbjMFpkHqUGO02svp6oDE6zAq
+         QD8HYmXb8P129yLsRMWap9xzc7C7Ln2nQ7H7g3AJGJXzafZOnmXMGJA9LdzT1Z7w3Gnf
+         hQQC/wxRgAslIrIA6mebaW5UPpP/j09CAIdlVtV8jGaCNNuf62MdpKZbW1Lk4Zh06hU2
+         HnPQQ772ezHq0lHiND9RkyuRhou7ZZJQc/xWwvMayldnk8tnRCKYp7XwPiUaBsUlhA3Z
+         0DkuW/INvCiUA9NjIv6nhxi5B/1uhUu8J7h+nooPBlI90daelySzyoNa9jsBV36ak0fU
+         lc/A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=V4jYuc1I;
+       spf=pass (google.com: domain of pamela.munoz@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=pamela.munoz@galilea.cl
+Return-Path: <pamela.munoz@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id h3sor2888720qkg.136.2019.04.03.08.28.21
+        for <sistemas@galilea.cl>
+        (Google Transport Security);
+        Wed, 03 Apr 2019 08:28:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of pamela.munoz@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=V4jYuc1I;
+       spf=pass (google.com: domain of pamela.munoz@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=pamela.munoz@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=65+0gM/+d9wRfzwPs/EMKHp1wv9cJJ06Jr+zkkbWnK8=;
+        b=V4jYuc1IucXnZYzxz2qP5m60z87MxU2NCHi05rrkucgauTLQgvzsE089h+jjs876dD
+         zENcMTSqrPsPUCMTHpEDmfrNBg3dWU+HC13YtgmqeNQlNWCMkBNBJ00NJk6J6kP+lzwf
+         Ku4CRU+85bSkPZneVrIBBBXFtxRCouc96QJUNP/NRYMhjzRwR93DKD9yYJNy5y1hyDnP
+         e4OpHzXOU3Kwdi08dZEVu/fkk0yPehz/UZ3q3MTeoziK4t3XXyGQ1cL7RIe94XL/HzvI
+         7D5KOSNHBM2JpYWFEireM5JiiYw/Iyz6L/kXLTRxSaib8G+Ez3Zes+SdHRVwalE8QL4X
+         92/w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=65+0gM/+d9wRfzwPs/EMKHp1wv9cJJ06Jr+zkkbWnK8=;
+        b=QnuY+qMucU1dEq8yqNhENSTOSTq4QgAGGxUfigAQZq8FgFyIKMiqxeh2EaGgY9koPp
+         jzOd0YErQUnoIz6QcNMEwVYbngiokL5yas3OQw59aUjlS9muE5FFaRjNQtIlHa92qT5E
+         wenkVqjtsO4kUQYJhhR9IQVncv1vUc8B43uUjfBHrZZWdnhsjxfsdNTmSVuCXzEHPVo2
+         J+D5Ukq0O4mNgRLs/h3SA7goB0VSOU3oIomDPDj/RJldgEu/suniX8N9+0yEMsVLSyfS
+         21iQuoFgL5ADLXRXnN7/hRDI+wpVc27+WciAJNimMmYfBRbJ3JjvRm3Qm4kjh+WnicwI
+         prlQ==
+X-Gm-Message-State: APjAAAUsNVESdsC4yWJV2nTGmeyQQMdOvwXpxO9AMpFyljeV3gafT8v4
+	jjoskBDRp8kiXAYC0ZfZRrCdQxjggbQB9ASisi8U1RlcxgA=
+X-Google-Smtp-Source: APXvYqzP7kp+UteJv7yNvgSBSSluV/hXAUZ7m2D5ZFcDtQys3oavQeFKGnxtFwhXo2aN2KuEyg4cC+Dugo7JZ0H8y+M=
+X-Received: by 2002:a37:670a:: with SMTP id b10mr529601qkc.97.1554305301573;
+ Wed, 03 Apr 2019 08:28:21 -0700 (PDT)
+MIME-Version: 1.0
+From: =?UTF-8?Q?Pamela_Andrea_Mu=C3=B1oz_Mendoza?= <pamela.munoz@galilea.cl>
+Date: Wed, 3 Apr 2019 12:28:10 -0300
+Message-ID: <CAPpBMCy8zJ+cqbSag1HrZkhy40kEmEFHMtSjoKenxXjfVf8bVg@mail.gmail.com>
+Subject: Solicito correccion de fechas en Odoo
+To: Sistema Ticket <sistemas@galilea.cl>
+Content-Type: multipart/alternative; boundary="0000000000005f85bd0585a1e7eb"
+
+--0000000000005f85bd0585a1e7eb
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Estimada, seg=C3=BAn lo conversado solicito de su ayuda con los siguientes
+cambios en Odoo.
+
+- Kelly Olivares Oviedo se debe corregir fecha de escritura, esta debe
+decir lo siguiente, fecha escritura 27-03-2019.
+
+- Guillermo Fernandez Torres, se debe corregir fecha de escritura
+fecha correcta 27-03-2019
+
+- Carlos Garrido Cerda se debe corregir fechas de escritura y fecha de uf,
+esta debe decir:
+ fecha escritura: 27-03-2019.
+  fecha valor UF: 26-03-2019.
+
+Saludos cordiales,
+
+
+--=20
+*Pamela Mu=C3=B1oz Mendoza*
+Administrativo / Sucursal Concepci=C3=B3n
+Celular: +569 4442806
+Fijo: (41) 2106401
+O=E2=80=9Dhiggins 1107 Concepci=C3=B3n
+www.galilea.cl
+
+--0000000000005f85bd0585a1e7eb
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Estimada, seg=C3=BAn lo conversado solicito de su ayuda co=
+n los siguientes cambios en Odoo.<div><br></div><div>- Kelly Olivares Ovied=
+o se debe corregir fecha de escritura, esta debe decir lo siguiente, fecha =
+escritura 27-03-2019.</div><div><br></div><div>- Guillermo Fernandez Torres=
+, se debe corregir fecha de escritura</div><div>fecha correcta 27-03-2019</=
+div><div><br></div><div>- Carlos Garrido Cerda se debe corregir fechas de e=
+scritura y fecha de uf, esta debe decir:</div><div>=C2=A0fecha escritura: 2=
+7-03-2019.</div><div>=C2=A0 fecha valor UF: 26-03-2019.</div><div><br></div=
+><div>Saludos cordiales,</div><div><br clear=3D"all"><div><br></div>-- <br>=
+<div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signatur=
+e"><div dir=3D"ltr"><b><span style=3D"font-family:Arial,sans-serif;backgrou=
+nd-image:initial;background-position:initial;background-repeat:initial">Pam=
+ela Mu=C3=B1oz Mendoza</span></b><br><span style=3D"color:rgb(127,127,127);=
+font-family:Arial,sans-serif">Administrativo / Sucursal Concepci=C3=B3n</sp=
+an><div><span style=3D"font-family:Arial,sans-serif">Celular: +569 4442806<=
+/span></div><div><span style=3D"font-family:Arial,sans-serif">Fijo: (41) 21=
+06401</span><br><span style=3D"font-family:Arial,sans-serif">O=E2=80=9Dhigg=
+ins 1107=C2=A0</span><font face=3D"Arial, sans-serif">Concepci=C3=B3n</font=
+><br><span style=3D"font-family:Arial,sans-serif;color:rgb(5,99,193)"><a hr=
+ef=3D"http://www.galilea.cl/" style=3D"font-family:Arial,sans-serif" target=
+=3D"_blank">www.galilea.cl</a></span></div><div><font color=3D"#0563c1" fac=
+e=3D"Arial, sans-serif"><br></font><span style=3D"font-size:x-small;font-fa=
+mily:Cambria,serif">=C2=A0</span></div><span style=3D"font-family:Arial,san=
+s-serif;font-size:12pt"><img src=3D"https://drive.google.com/a/galilea.cl/u=
+c?id=3D0B1dVqnl54GNuaDB3cGpUN1Y0eGtGeEctZ1EyR1pUUUdjXzFv&amp;export=3Ddownl=
+oad"></span><div><div><div><p style=3D"text-align:left;margin:0cm 0cm 0.000=
+1pt"><span style=3D"font-family:Cambria,serif;font-size:16pt">=C2=A0</span>=
+<br></p></div><div><p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;l=
+ine-height:normal">
+
+<span style=3D"font-size:12pt;font-family:&quot;Times New Roman&quot;,serif=
+"><span></span></span></p>
+
+
+
+
+
+
+
+
+
+
+
+</div></div></div></div></div></div></div>
+
+--0000000000005f85bd0585a1e7eb--

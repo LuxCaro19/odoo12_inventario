@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+  <data>
+  <!-- View Form Inherit Equipo -->
+    <record model="ir.ui.view" id="inventory_manager_form_inherit">
+      <field name="name">maintenance.equipment.form.inherit</field>
+      <field name="model">maintenance.equipment</field>
+      <field name="inherit_id" ref="maintenance.hr_equipment_view_form"/>
+      <field name="arch" type="xml">
+        <!-- <xpath expr="//field[@name='partner_ref']" position="after">
+          <field name="invoice_id" groups="maintenance.group_equipment_manager"/>
+        </xpath> -->
+        <!-- <xpath expr="//field[@name='maintenance_team_id']" position="attributes" >
+          <attribute name="domain">[('name', '!=', 'Internal Maintenance')]</attribute>
+        </xpath> -->
+        <xpath expr="//field[@name='assign_date']" position="attributes" >
+          <attribute name="groups">maintenance.group_equipment_manager</attribute>
+        </xpath>
+        <xpath expr="//field[@name='scrap_date']" position="attributes" >
+          <attribute name="groups">maintenance.group_equipment_manager</attribute>
+        </xpath>
+        <!-- <xpath expr="//group[1]/group[1]" position="after">
+          <field name="uuid"/>
+        </xpath> -->
+        <!-- <xpath expr="//field[@name='warranty_date']" position="after">
+          <field name="address_ip"/>
+          <field name="address_mac"/>
+          <field name="benchmark"/>
+          <field name="system_id"/>
+        </xpath> -->
+        <!-- <xpath expr="//page[1]" position="after">
+          <page string="Other Owners">
+            <field name="owner_user_ids"/>
+          </page>
+        </xpath> -->
+        <xpath expr="//page[3]" position="after">
+          <page string="Componentes">
+            <field name="component_ids" widget="many2many" options="{'no_create': True}"/>
+          </page>
+        </xpath>
+      </field>
+    </record>
+
+<!-- View Kanban Inherit Equipo -->
+    <record model="ir.ui.view" id="inventory_manager_kanban_inherit">
+      <field name="name">maintenance.equipment.kanban.inherit</field>
+      <field name="model">maintenance.equipment</field>
+      <field name="inherit_id" ref="maintenance.hr_equipment_view_kanban"/>
+      <field name="arch" type="xml">
+        <xpath expr="//div[@class='oe_kanban_content']" position="after">
+          <br/>
+          <div class="row">
+            <div class="col-xs-6 o_kanban_primary_left">
+                <div t-if="!record.category_id.raw_value"><em>Category Unassigned</em></div>
+                <div t-if="record.category_id.raw_value"><field name="category_id"/></div>
+                <!-- <div t-if="!record.address_ip.raw_value"><em>IP/Phone Unassigned</em></div> -->
+                <!-- <div t-if="record.address_ip.raw_value"><field name="address_ip"/></div> -->
+            </div>
+            <div class="col-xs-6 o_kanban_primary_left">
+                <div class="row">
+                    <!-- <div class="col-xs-9"> -->
+                      <!-- <a href="#">
+                            Owners
+                      </a>
+                    </div>
+                    <div class="col-xs-3">
+                        <t t-if="!record.todo_equip_count.raw_value">0</t>
+                        <t t-if="record.todo_equip_count.raw_value"><field name="todo_equip_count"/></t>
+                    </div> -->
+                    <div class="col-xs-9">
+                         <a href="#"> Componentes
+                        </a>
+                    </div>
+                    <div class="col-xs-3">
+                        <t t-if="!record.todo_comp_count.raw_value">0</t>
+                        <t t-if="record.todo_comp_count.raw_value"><field name="todo_comp_count"/></t>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </xpath>
+      </field>
+    </record>
+
+<!-- View Form List Components -->
+    <record model="ir.ui.view" id="system_faster_form">
+      <field name="name">system.op.form</field>
+      <field name="model">system.op</field>
+      <field name="arch" type="xml">
+        <form string="Operative System">
+          <sheet>
+            <group>
+                <group>
+                  <field name="name" string="Operative System" required="True"/>
+                </group>
+                <group>
+                  <field name="version_so" string="Version" required="True"/>
+                </group>
+            </group>
+            <notebook>
+              <page string="Description">
+                <field name="descript"/>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+  <!-- View Form Components -->
+    <record model="ir.ui.view" id="component_faster_form">
+      <field name="name">component.component.form</field>
+      <field name="model">component.component</field>
+      <field name="arch" type="xml">
+
+        <form string="Componentes">
+          <sheet>
+            <div class="oe_title">
+                <label for="name" class="oe_edit_only"/>
+                <h1><field name="name" placeholder="Componente" required="True"/></h1>
+            </div>
+            <group>
+                <group>
+                  <field name="serial" string="Serial" required="True"/>
+                  <field name="status_id" string="Estado" required="False"/>
+                  <field name="obsolete" string="Obsoleto" />
+                  <field name="speed" string="Velocidad" required="False"/>
+                  <field name="capacity" string="Capacidad" required="False"/>
+                  
+                </group>
+                <group>
+                  <field name="type_comp_id" string="Tipo" required="True"/>
+                  <field name="comp_model_id" string="Modelo" required="False"/>
+                  <field name="equipment_id" string="Equipo" required="False" onchange="filtro(type_comp_id)"/>
+                  <field name="assign_date" string="Fecha Asignación" required="False"/>
+                  <field name="scrap_date" string="Fecha de Desecho" required="False"/>
+                  <field name="bodega" string="Bodega" required="False"/>
+                    <!--<field name="description_text" string="Technical Description" required="True"/> -->
+                </group>
+               
+            </group>
+            <notebook>
+              <page string="Factura">
+                <field name="factura_id" string="Factura"/>
+              </page>
+              <page string="Historial">
+               <field name="historial_ids" >
+                  <tree create='false' edit="false" editable="bottom">
+                   <field name="equipment_id" readonly="1" string="Equipo"/>
+                   <field name="ubicacion" readonly="1" string="Ubicación"/>
+                   <field name="fecha" readonly="1" string="Fecha asignación"/>  
+                   <field name="fecha_desecho" readonly="1" string="Fecha desecho"/>  
+                   <field name="bodega_a" readonly="1" string="Bodega"/>              
+                </tree>              
+               </field>
+              </page>
+            </notebook>
+            <div class="oe_chatter">
+                  <field name="message_follower_ids" widget="mail_followers"/>
+                  <field name="message_ids" widget="mail_thread"/>
+            </div>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+<!-- View Tree Components -->
+    <record model="ir.ui.view" id="component_manager_tree">
+      <field name="name">component.component.tree</field>
+      <field name="model">component.component</field>
+      <field name="arch" type="xml">
+        <tree string="Components">
+          <field name="serial"/>
+          <field name="name"/>
+          <field name="capacity" />
+          <field name="speed" />
+          <field name="obsolete" string="Obsoleto" />
+          <field name="type_comp_id"/>
+          <field name="descript"/>
+          <field name="comp_model_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_filter_component" model="ir.ui.view">
+            <field name="name">component_filter</field>
+            <field name="model">component.component</field>
+            <field name="arch" type="xml">
+                  <search>
+                    <field name="name" string="Nombre"/> 
+                    <field name="serial" string="Serial"/>
+                    <field name="type_comp_id" string="Tipo"/>
+                    <field name="capacity" string="Capacidad"/>
+                    <field name="speed" string="Velocidad"/>
+                    <field name="comp_model_id" string="Modelo"/>
+                    <filter string='Equipos' name="equipment_id" domain="[]" context="{'group_by': 'equipment_id'}"/>
+                    <filter string='Tipo' name="type_comp_id" domain="[]" context="{'group_by': 'type_comp_id'}"/>
+                    <filter string='Estado' name="status" domain="[]" context="{'group_by': 'status_id'} "/>
+                    <filter string='Modelo' name="comp_model_id" domain="[]" context="{'group_by': 'comp_model_id'} "/>
+             
+                    <filter string="Asignados" name="assigned" domain="[('equipment_id', '!=', False)]"/>
+              
+                    <filter string="Sin Asignar" name="available" domain="[('equipment_id', '=', False)]"/> 
+
+                  </search>
+            
+            </field>
+      </record>
+
+
+<!-- View Form System Operative -->
+    <record model="ir.ui.view" id="system_management_form">
+      <field name="name">system.op.form</field>
+      <field name="model">system.op</field>
+      <field name="arch" type="xml">
+        <form string="Components">
+          <sheet>
+            <div class="oe_title">
+                <label for="name" class="oe_edit_only"/>
+                <h1><field name="name" placeholder="Operative System"/></h1>
+            </div>
+            <group>
+              <field name="version_so" string="Version"/>
+            </group>
+            <notebook>
+              <page string="Description">
+                <field name="descript"/>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <!--View Graph Equipment-->
+    <record id="hr_maintenance_equipment_view_graph" model="ir.ui.view">
+        <field name="name">maintenance.equipment.graph</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="arch" type="xml">
+            <graph string="Equipments">
+                <field name="category_id"/>
+            </graph>
+        </field>
+    </record>
+
+      <!--View Pivot Equipment-->
+    <record id="hr_maintenance_equipment_view_pivot" model="ir.ui.view">
+        <field name="name">maintenance.equipment.pivot</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="arch" type="xml">
+            <pivot string="Equipments" display_quantity="true">
+                <field name="category_id"/>
+                <field name="owner_user_id"/>
+                <field name="assign_date" type="col"/>
+            </pivot>
+        </field>
+    </record>
+
+<!--Action Component-->
+    <record id="action_component_from" model="ir.actions.act_window">
+        <field name="name">Components</field>
+        <field name="res_model">component.component</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <record id="maintenance.hr_equipment_action" model="ir.actions.act_window">
+      <field name="view_mode">kanban,tree,graph,pivot,form</field>
+    </record>
+
+  
+
+<!--Menu item inherit-->
+  <menuitem id="menu_component_management" name="Componentes" parent="maintenance.menu_maintenance_title" action="action_component_from" groups="maintenance.group_equipment_manager" sequence="3"/>
+  <menuitem name="Componentes Informáticos"
+              id="component_component"
+              parent="menu_component_management"
+              action="action_component_from" sequence="1"/>
+
+
+  </data>
+</odoo>

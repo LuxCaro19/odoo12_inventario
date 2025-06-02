@@ -1,0 +1,301 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20190207\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-03 15:07+0000\n"
+"PO-Revision-Date: 2020-03-03 15:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_management
+#: model:ir.ui.view,arch_db:stock_management.inventory_manager_kanban_inherit
+msgid "<em>Category Unassigned</em>"
+msgstr "<em>Categoria no asignada</em>"
+
+#. module: stock_management
+#: model:ir.ui.view,arch_db:stock_management.inventory_manager_kanban_inherit
+msgid "<em>IP/Phone Unassigned</em>"
+msgstr "<em>IP/Telefono no asignado</em>"
+
+#. module: stock_management
+#: model:ir.model,name:stock_management.model_component_component
+#: model:ir.model,name:stock_management.model_component_stuft
+#: model:ir.model.fields,field_description:stock_management.field_component_stuft_component_id
+#: model:ir.model.fields,field_description:stock_management.field_component_stuft_components_id
+#: model:ir.ui.view,arch_db:stock_management.component_faster_form
+msgid "Component"
+msgstr "Componentes"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_component_component_name
+#: model:ir.model.fields,field_description:stock_management.field_component_stuft_name
+msgid "Component Name"
+msgstr "Nombre componente"
+
+#. module: stock_management
+#: model:ir.ui.view,arch_db:stock_management.component_component_search
+msgid "Component Search"
+msgstr "Búsqueda componentes"
+
+#. module: stock_management
+#: model:ir.actions.act_window,name:stock_management.action_component_from
+#: model:ir.model.fields,field_description:stock_management.field_component_component_stuft_id
+#: model:ir.model.fields,field_description:stock_management.field_maintenance_equipment_component_ids
+#: model:ir.ui.menu,name:stock_management.menu_component_management
+#: model:ir.ui.view,arch_db:stock_management.component_component_search
+#: model:ir.ui.view,arch_db:stock_management.component_faster_form
+#: model:ir.ui.view,arch_db:stock_management.component_manager_tree
+#: model:ir.ui.view,arch_db:stock_management.inventory_manager_form_inherit
+#: model:ir.ui.view,arch_db:stock_management.inventory_manager_kanban_inherit
+#: model:ir.ui.view,arch_db:stock_management.system_management_form
+msgid "Components"
+msgstr "Componentes"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_component_component_create_uid
+#: model:ir.model.fields,field_description:stock_management.field_component_stuft_create_uid
+#: model:ir.model.fields,field_description:stock_management.field_system_op_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_component_component_create_date
+#: model:ir.model.fields,field_description:stock_management.field_component_stuft_create_date
+#: model:ir.model.fields,field_description:stock_management.field_system_op_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_system_op_descript
+#: model:ir.ui.view,arch_db:stock_management.component_faster_form
+#: model:ir.ui.view,arch_db:stock_management.system_faster_form
+#: model:ir.ui.view,arch_db:stock_management.system_management_form
+msgid "Description"
+msgstr "Descripción"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_component_component_display_name
+#: model:ir.model.fields,field_description:stock_management.field_component_stuft_display_name
+#: model:ir.model.fields,field_description:stock_management.field_system_op_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: stock_management
+#: model:ir.model,name:stock_management.model_maintenance_equipment
+msgid "Equipment"
+msgstr "Equipo"
+
+#. module: stock_management
+#: model:ir.ui.view,arch_db:stock_management.hr_maintenance_equipment_view_graph
+#: model:ir.ui.view,arch_db:stock_management.hr_maintenance_equipment_view_pivot
+msgid "Equipments"
+msgstr "Equipos"
+
+#. module: stock_management
+#: selection:component.component,type_comp:0
+#: selection:component.stuft,type_comp:0
+#: model:ir.ui.view,arch_db:stock_management.component_component_search
+msgid "Graphic Card"
+msgstr "Tarjeta grafica"
+
+#. module: stock_management
+#: model:ir.ui.view,arch_db:stock_management.component_component_search
+msgid "Group by..."
+msgstr "Agrupar por..."
+
+#. module: stock_management
+#: selection:component.component,type_comp:0
+#: selection:component.stuft,type_comp:0
+#: model:ir.ui.view,arch_db:stock_management.component_component_search
+msgid "Hard Disk Drive"
+msgstr "Disco duro"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_component_component_id
+#: model:ir.model.fields,field_description:stock_management.field_component_stuft_id
+#: model:ir.model.fields,field_description:stock_management.field_system_op_id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_maintenance_equipment_address_ip
+msgid "IP/Terminal Number"
+msgstr "Numero IP/Terminal"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_component_component___last_update
+#: model:ir.model.fields,field_description:stock_management.field_component_stuft___last_update
+#: model:ir.model.fields,field_description:stock_management.field_system_op___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_component_component_write_uid
+#: model:ir.model.fields,field_description:stock_management.field_component_stuft_write_uid
+#: model:ir.model.fields,field_description:stock_management.field_system_op_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_component_component_write_date
+#: model:ir.model.fields,field_description:stock_management.field_component_stuft_write_date
+#: model:ir.model.fields,field_description:stock_management.field_system_op_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_maintenance_equipment_address_mac
+msgid "MAC"
+msgstr "MAC"
+
+#. module: stock_management
+#: sql_constraint:maintenance.equipment:0
+msgid "MAC already exists."
+msgstr "MAC ya existe."
+
+#. module: stock_management
+#: model:maintenance.equipment.category,name:stock_management.category_2
+msgid "Mobile"
+msgstr "Movil"
+
+#. module: stock_management
+#: selection:component.component,type_comp:0
+#: selection:component.stuft,type_comp:0
+#: model:ir.ui.view,arch_db:stock_management.component_component_search
+msgid "Motherboard"
+msgstr "Motherboard"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_maintenance_equipment_version_os
+msgid "OS Version"
+msgstr "Version SO"
+
+#. module: stock_management
+#: model:ir.model,name:stock_management.model_system_op
+#: model:ir.model.fields,field_description:stock_management.field_maintenance_equipment_sistema_operativo
+#: model:ir.model.fields,field_description:stock_management.field_maintenance_equipment_system_id
+#: model:ir.model.fields,field_description:stock_management.field_system_op_name
+#: model:ir.ui.view,arch_db:stock_management.system_faster_form
+#: model:ir.ui.view,arch_db:stock_management.system_management_form
+msgid "Operative System"
+msgstr "Sistema operativo"
+
+#. module: stock_management
+#: selection:component.component,type_comp:0
+#: selection:component.stuft,type_comp:0
+#: model:ir.ui.view,arch_db:stock_management.component_component_search
+msgid "Other Components"
+msgstr "Otros componentes"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_maintenance_equipment_owner_user_ids
+#: model:ir.ui.view,arch_db:stock_management.inventory_manager_form_inherit
+msgid "Other Owners"
+msgstr "Otros propietarios"
+
+#. module: stock_management
+#: model:ir.ui.view,arch_db:stock_management.inventory_manager_kanban_inherit
+msgid "Owners"
+msgstr "Propietarios"
+
+#. module: stock_management
+#: model:maintenance.equipment.category,name:stock_management.category_0
+msgid "PC"
+msgstr "PC"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_maintenance_equipment_benchmark
+msgid "Performance"
+msgstr "Performance"
+
+#. module: stock_management
+#: model:maintenance.equipment.category,name:stock_management.category_1
+msgid "Portatil"
+msgstr "Portatil"
+
+#. module: stock_management
+#: selection:component.component,type_comp:0
+#: selection:component.stuft,type_comp:0
+#: model:ir.ui.view,arch_db:stock_management.component_component_search
+msgid "Processor"
+msgstr "Procesador"
+
+#. module: stock_management
+#: selection:component.component,type_comp:0
+#: selection:component.stuft,type_comp:0
+#: model:ir.ui.view,arch_db:stock_management.component_component_search
+msgid "RAM Module"
+msgstr "Módulo RAM"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_maintenance_equipment_invoice_id
+msgid "Ref. Invoice"
+msgstr "Ref. factura"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_component_component_descript
+#: model:ir.model.fields,field_description:stock_management.field_component_component_description_text
+#: model:ir.model.fields,field_description:stock_management.field_component_stuft_descript
+#: model:ir.model.fields,field_description:stock_management.field_component_stuft_description_text
+#: model:ir.ui.view,arch_db:stock_management.component_faster_form
+msgid "Technical Description"
+msgstr "Descripcion tecnica"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_maintenance_equipment_todo_comp_count
+msgid "Todo comp count"
+msgstr "Contador componentes"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_maintenance_equipment_todo_comp_ids
+msgid "Todo comp ids"
+msgstr "Total componentes"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_maintenance_equipment_todo_equip_count
+msgid "Todo equip count"
+msgstr "Contador equipos"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_maintenance_equipment_todo_equip_ids
+msgid "Todo equip ids"
+msgstr "Total equipos"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_component_component_type_comp
+#: model:ir.model.fields,field_description:stock_management.field_component_stuft_type_comp
+#: model:ir.ui.view,arch_db:stock_management.component_faster_form
+msgid "Type"
+msgstr "Tipo"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_maintenance_equipment_uuid
+msgid "UUID"
+msgstr "UUID"
+
+#. module: stock_management
+#: model:ir.model.fields,help:stock_management.field_maintenance_equipment_uuid
+msgid "Unique codes GLPI System"
+msgstr "Codigo unico del sistema GLPI"
+
+#. module: stock_management
+#: model:ir.model,name:stock_management.model_res_users
+#: model:ir.model.fields,field_description:stock_management.field_res_users_equipment_ids
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: stock_management
+#: model:ir.model.fields,field_description:stock_management.field_system_op_version_so
+#: model:ir.ui.view,arch_db:stock_management.system_faster_form
+#: model:ir.ui.view,arch_db:stock_management.system_management_form
+msgid "Version"
+msgstr "Versión"
+

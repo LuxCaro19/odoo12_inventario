@@ -1,0 +1,65 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="component_type_list">
+      <field name="name">Tipo de Componentes</field>
+      <field name="model">component.type</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="id"/>
+          <field name="name"/>
+          <field name="type_maintenance_ids"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="maintenance_type_form">
+      <field name="name">component.type.form</field>
+      <field name="model">component.type</field>
+      <field name="arch" type="xml">
+        <form string = "Tipo">
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="descript"/>
+              <field name="type_maintenance_ids"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="component_type_action_window">
+      <field name="name">Registro de tipos</field>
+      <field name="res_model">component.type</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+
+    <record model="ir.actions.server" id="component_type_action_server">
+      <field name="name">type component server</field>
+      <field name="model_id" ref="model_component_type"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+
+    <!-- actions -->
+
+    <menuitem name="Tipo de Componentes Informáticos"
+              id="component_type"
+              parent="menu_component_management"
+              action="component_type_action_window" sequence="3"/>
+              
+  </data>
+</odoo>

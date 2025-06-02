@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Standard categories for Maintenance Request -->
+    <record id="category_0" model="maintenance.equipment.category">
+        <field name="name">PC</field>
+        <field name="sequence" eval="1" />
+    </record>
+    <record id="category_1" model="maintenance.equipment.category">
+        <field name="name">Portatil</field>
+        <field name="sequence" eval="2" />
+    </record>
+     <record id="category_2" model="maintenance.equipment.category">
+        <field name="name">Mobile</field>
+        <field name="sequence" eval="3" />
+    </record>
+
+    <record id="equipment_team_maintenance01" model="maintenance.team">
+        <field name="name">Support Central</field>
+        <field name="alias_model_id" ref="maintenance.model_maintenance_request"/>
+    </record>
+</odoo>

@@ -1,0 +1,124 @@
+
+Sergio García Collao
+Jefe de Maquinarias
+56992214891
+________________________________
+De: SERGIO ANDRES GARCIA COLLAO <sergio.garcia@galilea.cl>
+Enviado: Friday, August 7, 2020 12:30:45 PM
+Para: Sistematicket Galilea <sistematicket@galilea.cl>
+Asunto: RV: Compra de computador
+
+
+
+[cid:e4ed65e6-8fd5-4b67-9df4-4450aeb122be]
+________________________________
+De: Microsoft Outlook <MicrosoftExchange329e71ec88ae4615bbc36ab6ce41109e@galileacl.onmicrosoft.com>
+Enviado: viernes, 7 de agosto de 2020 12:28
+Para: SoporteGalilea <SoporteGalileaSA@galilea.cl>
+Asunto: No se puede entregar: Compra de computador
+
+[http://products.office.com/en-us/CMSImages/Office365Logo_Orange.png?version=b8d100a9-0a8b-8e6a-88e1-ef488fee0470]
+No se pudo entregar el mensaje a SoporteGalileaSA@galilea.cl.
+No se encontró SoporteGalileaSA en galilea.cl.
+sergio.garcia   Office 365      SoporteGalileaSA
+Acción necesaria                Destinatario
+Dirección Para desconocida
+
+Solución
+La dirección puede estar mal escrita o no existir. Pruebe una o varias de las acciones siguientes:
+
+  *   Envíe el mensaje otra vez siguiendo estos pasos: en Outlook, abra este informe de no entrega (NDR) y elija Enviar de nuevo en la cinta de opciones Informe. En Outlook en la web, seleccione este NDR y luego elija el vínculo "Haga clic aquí para enviar este mensaje otra vez.". Después, elimine y vuelva a escribir la dirección completa del destinatario. Si se le ofrece una sugerencia de la lista de Autocompletar, no la seleccione. Después de escribir la dirección completa, haga clic en Enviar.
+  *   Póngase en contacto con el destinatario (por teléfono, por ejemplo) para comprobar que la dirección existe y es correcta.
+  *   El destinatario puede haber establecido una dirección de reenvío de correo incorrecta. Pídale que compruebe que el reenvío que ha configurado funciona correctamente.
+  *   Borre la lista de Autocompletar destinatarios en Outlook o Outlook en la web siguiendo los pasos del artículo Solucionar problemas de entrega para el código de error de correo electrónico 5.1.10 en Office 365<https://go.microsoft.com/fwlink/?LinkId=532972> y después vuelva a enviar el mensaje. Escriba de nuevo la dirección completa del destinatario antes de seleccionar Enviar.
+
+Si el problema persiste, reenvíe este mensaje a su administrador de correo electrónico. Si usted es administrador de correo electrónico, consulte la sección Más información para los administradores de correo electrónico, a continuación.
+
+¿Le resultó útil esta información? Envíe sus comentarios a Microsoft<https://go.microsoft.com/fwlink/?LinkId=525921>.
+________________________________
+
+Más información para los administradores de correo electrónico
+Código de estado: 550 5.1.10
+
+Este error se produce porque el remitente envió un mensaje a una dirección de correo alojada en Office 365, pero la dirección es incorrecta o no existe en el dominio de destino. Del error informa el servidor de correo del dominio del destinatario, pero lo habitual es que deba arreglarlo la persona que envió el mensaje. Si los pasos descritos en la sección Cómo corregirlo anterior no solucionan el problema y usted es el administrador de correo del destinatario, pruebe una o varias de las siguientes acciones:
+
+La dirección de correo existe y es correcta: confirme que la dirección del destinatario existe, es correcta y acepta mensajes.
+
+Sincronice sus directorios: si su entorno es híbrido y usa sincronización de directorios, asegúrese de que la dirección de correo del destinatario esté correctamente sincronizada tanto en Office 365 como en el directorio local.
+
+Regla de reenvío errónea: compruebe si alguna regla de reenvío no se comporta del modo esperado. El reenvío puede configurarlo un administrador mediante reglas de flujo de correo o la configuración de dirección de reenvío del buzón, o un destinatario mediante la característica Reglas de bandeja de entrada.
+
+El destinatario tiene una licencia válida: asegúrese de que el destinatario tiene asignada una licencia de Office 365. El administrador de correo del destinatario puede usar el centro de administración de Office 365 para asignar una licencia (Usuarios > Usuarios activos > seleccione el destinatario > Licencia asignada > Editar).
+
+La configuración del flujo del correo y los registros MX no son correctos: este error puede estar causado por una configuración incorrecta del flujo del correo o de los registros MX. Compruebe la configuración del flujo del correo de Office 365 y asegúrese de que el dominio y los conectores del flujo del correo estén configurados correctamente. Además, trabaje con su registrador de dominios para comprobar que los registros MX del dominio están configurados correctamente.
+
+Para obtener más información y sugerencias adicionales para solucionar este problema, vea Solucionar problemas de entrega para el código de error de correo electrónico 5.1.10 en Office 365<https://go.microsoft.com/fwlink/?LinkId=532972>.
+
+Detalles del mensaje original
+Fecha de creación:      07/08/2020 16:28:41
+Dirección del remitente:        sergio.garcia@galilea.cl
+Dirección del destinatario:     SoporteGalileaSA@galilea.cl
+Asunto: Compra de computador
+
+Detalles del error
+Error detectado:        550 5.1.10 RESOLVER.ADR.RecipientNotFound; Recipient SoporteGalileaSA@galilea.cl not found by SMTP address lookup
+DSN generado por:       SC1P152MB2687.LAMP152.PROD.OUTLOOK.COM
+
+Saltos del mensaje
+SALTO   HORA (UTC)      DE      PARA    CON     TIEMPO DE RETRANSMISIÓN
+1       07/08/2020
+16:28:41        SC1P152MB1807.LAMP152.PROD.OUTLOOK.COM  SC1P152MB1807.LAMP152.PROD.OUTLOOK.COM  mapi    *
+2       07/08/2020
+16:28:42        SC1P152MB1807.LAMP152.PROD.OUTLOOK.COM  SC1P152MB2687.LAMP152.PROD.OUTLOOK.COM  Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384)    1 s
+
+Encabezados del mensaje original
+
+Authentication-Results: galilea.cl; dkim=none (message not signed)
+ header.d=none;galilea.cl; dmarc=none action=none header.from=galilea.cl;
+Received: from SC1P152MB1807.LAMP152.PROD.OUTLOOK.COM (2603:10d6:1:19::8) by
+ SC1P152MB2687.LAMP152.PROD.OUTLOOK.COM (2603:10d6:1:19::19) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.3239.21; Fri, 7 Aug 2020 16:28:42 +0000
+Received: from SC1P152MB1807.LAMP152.PROD.OUTLOOK.COM
+ ([fe80::c44a:38e7:b06b:4069]) by SC1P152MB1807.LAMP152.PROD.OUTLOOK.COM
+ ([fe80::c44a:38e7:b06b:4069%11]) with mapi id 15.20.3239.024; Fri, 7 Aug 2020
+ 16:28:41 +0000
+Content-Type: application/ms-tnef; name="winmail.dat"
+Content-Transfer-Encoding: binary
+From: SERGIO ANDRES GARCIA COLLAO <sergio.garcia@galilea.cl>
+To: SoporteGalilea <SoporteGalileaSA@galilea.cl>
+CC: SERGIO ANDRES GARCIA COLLAO <sergio.garcia@galilea.cl>
+Subject: Compra de computador
+Thread-Topic: Compra de computador
+Thread-Index: AQHWbNeCKe80aXsXj0yrleQsMDvrTw==
+Date: Fri, 7 Aug 2020 16:28:41 +0000
+Message-ID: <SC1P152MB18072581B9A05199FA3BD17984490@SC1P152MB1807.LAMP152.PROD.OUTLOOK.COM>
+Accept-Language: es-ES, en-US
+Content-Language: es-ES
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator: <SC1P152MB18072581B9A05199FA3BD17984490@SC1P152MB1807.LAMP152.PROD.OUTLOOK.COM>
+MIME-Version: 1.0
+X-Originating-IP: [200.54.96.106]
+X-MS-PublicTrafficType: Email
+Return-Path: sergio.garcia@galilea.cl
+X-MS-Office365-Filtering-Correlation-Id: 93a8fa9e-e22d-4fb5-83e3-08d83aeef28b
+X-MS-TrafficTypeDiagnostic: SC1P152MB2687:
+X-MS-Oob-TLC-OOBClassifiers: OLM:1051;
+X-Microsoft-Antispam: BCL:0;
+X-Microsoft-Antispam-Message-Info:
+        XY9ZUcPwX2CK7I6LyV1f3/8HZbzgfltlJI8B97+LOeazb6xQtnHGhJcTNmeCXPLyzhUGD2hgx0GLfJmMHTkYgUXGxrW6MilipUCcz7I5iZfInC9dQad/+pDn9A8ml2y/cn/JWCZyKcuiX4wbsZNhLJeFBSFCNiHT+7aNKL2rXbtMuTPaHObF0JoNRrF6JpsVhowJMy8YZU6WmkBFVNtuNM1uvpre8PpWbj4w9KZsevufZ3zo5dX/tIPnDNhSw59AeNqrs8IN3JN4hXgdNYVhpA==
+X-Forefront-Antispam-Report:
+        CIP:255.255.255.255;CTRY:;LANG:es;SCL:-1;SRV:;IPV:NLI;SFV:SKI;H:SC1P152MB1807.LAMP152.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFTY:;SFS:;DIR:INB;SFP:;
+X-MS-Exchange-AntiSpam-MessageData:
+        z+8gMGkN8LboP+IyNfvBDN5mS1Kzs4E1zGNTrKkfqK1dHe0xnPNJ7NrEQTgFoTwe9yuqMa68UJGByLUW1J0yjEJ+UD0DsgA8xt2PbWLPDMYynUpEb740NNRwvrUZiJUxzRDTu1cnau6QlkRHDiMZFP651kK2RNnLt5s2/UFglyUOGXvaS8XFrlHHOGnCdcpHCvvuhX+4W9fBn7aOwPinddvkQwcno98UvnGN5dj60sTN80H6wCeXIkTLfUY5JerAyLoiuWu03OwFcpvBwc+RGsBANY5Zh3QlIYp2euj1q6dXqtWCYuR8BC1ouFIuNiRulW59CbFFYUtolM6kGc1MRoKsed6G6Vb0nP6ibXSyjhUG31KM8fjN09AlKtBbtTwq9ohGFVmHi7gTqP6bycXfLZcUSR+tGzq/V2cLGbH8A6eD/GrFSLd9lcN0VZ83YMha2JtYTSUkcL9yYNWYvgdsNYuNENQTzApEgZ5cHgMqD9a1lI1742PArFpceCKwJOYElaLi0ds5wE/PjmnfrgGNil7hsru6kM8IIFym6qbWuW1LWuTOqT57DpA0ItQJYXTFp7QPMRAOMrZFUBKh/QVyriah7WHTXRykkJ+/IisqJXq7zi6CB1oQ2wXTzoG+8wj89nX89LDe91zuXpxbQS9N+Q==
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 07 Aug 2020 16:28:41.5723
+ (UTC)
+X-MS-Exchange-CrossTenant-FromEntityHeader: Hosted
+X-MS-Exchange-CrossTenant-Id: e973e9c8-b59e-49c2-a2fb-bbcd79d5df41
+X-MS-Exchange-CrossTenant-AuthSource: SC1P152MB1807.LAMP152.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-Network-Message-Id: 93a8fa9e-e22d-4fb5-83e3-08d83aeef28b
+X-MS-Exchange-CrossTenant-MailboxType: HOSTED
+X-MS-Exchange-CrossTenant-UserPrincipalName: e7FGCxj+eKFq4XyjkbAfB5OS/OtnIGYzgGxAtzWDB13+QJR15rC00rupwn3/4wEthazZsAtke+de+1tGyoUcus1rcuKft2XMScKZsH0JluM=
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SC1P152MB2687
+

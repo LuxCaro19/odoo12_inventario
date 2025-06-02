@@ -1,0 +1,88 @@
+Delivered-To: soporte@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp376581otp;
+        Fri, 5 Apr 2019 06:06:41 -0700 (PDT)
+X-Received: by 2002:a24:260d:: with SMTP id v13mr8861442itv.148.1554469601680;
+        Fri, 05 Apr 2019 06:06:41 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554469601; cv=none;
+        d=google.com; s=arc-20160816;
+        b=DistvW36mwJUpYsjCiZP2J1CZVGg5FTfbBUOI767pwr6Tl+RQ5zhEq53Eg2az9I5oR
+         Mkhwf7tngBnbo1bGfpL/zHlrsmzjs0YUl/7Z4SS8aV3D4gfrD7M0ixRRPVXlFWRcdZ12
+         MgrH0x6MbU3I3ZIER/pHLqvHhtb1U+w9vRRqL3t5yR/f7r7ifGQ646onAPmamuH21qYQ
+         oKktsWFeah9jNE+i7OyHc7VQ1LDZWcnJxu9C+52JzQdmAGuFf6YfIjW1X+oNeYP58UG0
+         aZOpE7iViA6R//gusdL9LUPt1vU5mJ2RIjCdgcRKDHRVvoVpqG0Y6nP2cydPswUN7UGb
+         u2Nw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=K/OfLu1AtxfI40wdHM03RvjWCArKYyh0KpycylFMIsA=;
+        b=no2uL3Na1bMZ2YVL6VNNffNz6LtYZNwBCHsbc0dSQ+9dg3xpaF7TweSDc5HGXa3dpe
+         mkaLZiQU0Yp/syGFODbJeocJjgnbvr3ZGYUC/tPSQh+ST1Q/HcPEb8DWqC15ATMa+6sy
+         VCpGgVcmR9z/WnmUeviNzxjrI9fS/ihoV09iasWjUzIA9Hrgw+kztiQkTYjZDfpYCzUX
+         j5sfQpNz7P7ByLFsYe0+WP7xIY6g7UfYpaixBrkDwTD+9HuKcbbv2gGMusiUE/nGYEwI
+         PJgT8tvfGEbJ0OxQrb6N02MArJ+xaY0eyB/aLERccGrJn8TknSCEhQJrMUwUCv4nHQzp
+         l7UA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b="OsPW/uO3";
+       spf=pass (google.com: domain of roberto.vasquez@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=roberto.vasquez@galilea.cl
+Return-Path: <roberto.vasquez@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 142sor3493008itx.32.2019.04.05.06.06.41
+        for <soporte@galilea.cl>
+        (Google Transport Security);
+        Fri, 05 Apr 2019 06:06:41 -0700 (PDT)
+Received-SPF: pass (google.com: domain of roberto.vasquez@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b="OsPW/uO3";
+       spf=pass (google.com: domain of roberto.vasquez@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=roberto.vasquez@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=K/OfLu1AtxfI40wdHM03RvjWCArKYyh0KpycylFMIsA=;
+        b=OsPW/uO3n9nn6yNKFvsV1Ulu+c+ClJwJ8KzYWIt6tDK1AAleXMScnkHzuT7Uoe1BH3
+         bDwnvN00JbQtx8ygsxUsBtGEhV+H647CAMX4J/6eTjr4hjxLkU75zG93LHcolE0w+xP0
+         1WiEDDT22AhKudynV9gNrYAGXyKw0l5Asyn5TtuDQgN89+Q6JHgdnSAe+qPBEB/e7Y02
+         4eaCEpoib3zLn64VfZVCADGCg0w+nHPMyja5m1hO7C9EoYHEyccbDMAxrO+BuAqWImog
+         xYPuswtt84k4QI1GR9DrFNr2Yo7qBviZpl0MJSvMhrgzbChLIPdzRjeK1qfxBfDUdviz
+         m3XA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=K/OfLu1AtxfI40wdHM03RvjWCArKYyh0KpycylFMIsA=;
+        b=Cz+HI6zm/ivpwCpMTKqII5de7+nB17msX5uEwzb4fuNafAc65oip/YNMrEFI/eCyXa
+         J95dwZ1XYklAgr/ecPF2LLgjFq6AxItGsFwFz5R5D2gI+nwA7uevy8dIy9MkrfM+HP/8
+         huVOz+E3aA0UdWryxYtuolXMbtaLipL6BGhinH/OrfxYqiFVhCmc0ssQNtPuul7KsHvU
+         5QXmFzr+FZ0jDK6lRwc8F8rmLNhDdWHVNnntcAhgTBF2kqkWZphYcEodCJqi5/DSCn2o
+         Kx+IiWXAG1EKGSQe//y5On7OThg4lBXKP0J4aM+hJ50CuUm29fM6V9bNssBOvCtb6YJ3
+         GYrA==
+X-Gm-Message-State: APjAAAWe+vDT4RR+r5p3BpM60yPsLq11/XyWZ21uGjrDohfm5u0RrffC
+	NUDzNWMi8TBqqnuMt7WWRJD9XSscH0lRxRJBbNJ27VRNS8zKRg==
+X-Google-Smtp-Source: APXvYqxT1B8RxBlt2qJiE7x7Q7UGch6j/zdT9tlAYcGgGnqudbt1EeuvySZH1mgBrmB9e4YuvoNt5LnexRObvwlaXe4=
+X-Received: by 2002:a24:9b8b:: with SMTP id o133mr9475633itd.74.1554469600996;
+ Fri, 05 Apr 2019 06:06:40 -0700 (PDT)
+MIME-Version: 1.0
+From: ROBERTO ANTONIO VASQUEZ MEJIAS <roberto.vasquez@galilea.cl>
+Date: Fri, 5 Apr 2019 10:06:27 -0300
+Message-ID: <CAEuZEjDnVq7TuzH0VF=pfQDR+mXt21PZ=tXiGkWRi9Rq-3eE+w@mail.gmail.com>
+Subject: test respuesta ticket
+To: Sistema Ticket <soporte@galilea.cl>
+Content-Type: multipart/alternative; boundary="00000000000061c5dc0585c828ba"
+
+--00000000000061c5dc0585c828ba
+Content-Type: text/plain; charset="UTF-8"
+
+Prueba 1
+
+--00000000000061c5dc0585c828ba
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Prueba 1<br clear=3D"all"><div><div dir=3D"ltr" class=3D"g=
+mail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><d=
+iv dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div dir=3D"ltr"=
+><div dir=3D"ltr"><div dir=3D"ltr"><p style=3D"font-size:12.8px;background-=
+image:initial;background-position:initial;background-repeat:initial"><span>=
+</span><span></span><img src=3D"https://docs.google.com/uc?export=3Ddownloa=
+d&amp;id=3D0B-64VzzaHUDIYjVJZWxIajhfWnM&amp;revid=3D0B-64VzzaHUDIUms3dnNweD=
+cyRTJJOVFhbDBMQ0I0eVdHVmhJPQ"><br></p><div><br></div></div></div></div></di=
+v></div></div></div></div></div></div></div></div></div>
+
+--00000000000061c5dc0585c828ba--

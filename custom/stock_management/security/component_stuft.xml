@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="component_stuft_rule_admin_user" model="ir.rule">
+        <field name="name">Equipments administrator</field>
+        <field name="model_id" ref="model_maintenance_equipment"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <!-- <record id="component_stuft_read" model="ir.rule">
+        <field name="name">Base users</field>
+        <field name="model_id" ref="model_component_stuft"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record> -->
+
+    <record id="component_stuft_admin" model="ir.rule">
+        <field name="name">Equipments administrator</field>
+        <field name="model_id" ref="model_component_stuft"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="component_component_admin" model="ir.rule">
+        <field name="name">Equipments administrator</field>
+        <field name="model_id" ref="model_component_component"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="equipment_user" model="ir.rule">
+        <field name="name">Base users</field>
+        <field name="model_id" ref="model_maintenance_equipment"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record> 
+
+    <record id="owner_admin" model="ir.rule">
+        <field name="name">Equipments administrator</field>
+        <field name="model_id" ref="model_res_users"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="so_admin" model="ir.rule">
+        <field name="name">Equipments administrator</field>
+        <field name="model_id" ref="model_system_op"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+</odoo>

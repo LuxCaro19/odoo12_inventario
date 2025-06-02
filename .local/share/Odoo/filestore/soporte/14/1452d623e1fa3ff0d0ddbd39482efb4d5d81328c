@@ -1,0 +1,138 @@
+Delivered-To: redes@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp457407otp;
+        Fri, 5 Apr 2019 07:18:40 -0700 (PDT)
+X-Received: by 2002:a37:624e:: with SMTP id w75mr10091135qkb.11.1554473920649;
+        Fri, 05 Apr 2019 07:18:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554473920; cv=none;
+        d=google.com; s=arc-20160816;
+        b=LZqgG42oEtWZxdpfmFggM/L6FOxvyhs2FfMzzcOAjJTg7FqHoAkaqq+TI3XQVVnw8g
+         IIlfIZL5oYbLupIl2AsmqJ0Rt3Z/LtXnK7aRCCUPgd0bRtGbkgm6CjHHeTwtXgApoTeH
+         jX1PBG+dquI6VoZBThd9fq3RT26oSOUrZdhiesLtqa3RECf0sdpgMLOMmF/3RNUBxJz7
+         oispq8huOBZIv4K7Wvq/KQB5Y4CjfWfNyw6tIkG37Ktsck1JDAYX6nYeM2FjT9X3RAJM
+         bkocjBV2ZGD8ErGpsy2NbsyEK+tP/R5dty19DfEyI2dqF3vHX5cQQEpT4W18QxAYjtza
+         N0gg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:date:message-id:subject:to:from:dkim-signature;
+        bh=jmVfFPdHxrkexmrQ/r9rxQi2Mo8fixdpc2Nx+GnjDok=;
+        b=RD1zxDlVQ9fb10OERxfHjrrl9E8qzm8ygx9zbJ7LNxtK4QLskz4PbkaoL5bI5gL5tT
+         KxIUw5mZuQhLP2IK0VO/ue350Gul+1T5souHDXh/hptZ3Qatmz7AL0+6doITFWlVIxxz
+         GsJ16eSHU9HdnRulsD4OoIOU6dYbDdtxv8mU12TUKWbRMWguRf3gmYvi9Qni13GMD6UA
+         dtfPyaNHo5cikLbudzr5oD8L4EI/5urrV4r2pHrlF8pF/PioLkC+hLUryXYs+cQOHtZd
+         8u0L5GP0OCrzDHGIOVTjQAxjjx+axxEWVXEgFLSo0vKQJdq+lkxMxfmk5jYH4OWIyo2X
+         oz8g==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=N3kmwuAc;
+       spf=pass (google.com: best guess record for domain of postmaster@mail-sor-f65.google.com designates 209.85.220.65 as permitted sender) smtp.helo=mail-sor-f65.google.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id r62sor13076776qke.40.2019.04.05.07.18.40
+        for <redes@galilea.cl>
+        (Google Transport Security);
+        Fri, 05 Apr 2019 07:18:40 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of postmaster@mail-sor-f65.google.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=N3kmwuAc;
+       spf=pass (google.com: best guess record for domain of postmaster@mail-sor-f65.google.com designates 209.85.220.65 as permitted sender) smtp.helo=mail-sor-f65.google.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=from:to:subject:message-id:date:mime-version;
+        bh=jmVfFPdHxrkexmrQ/r9rxQi2Mo8fixdpc2Nx+GnjDok=;
+        b=N3kmwuAcpgsdigFDgZL7FLUMSSZtsybfXe+L9Yi7jHY2dPhL7Fs7QLZje0H5S1Uzgj
+         2XO2QB2xsYRtAPtBxkwjpVACKiXoG8NbSk0yp7oRFCrTIYxhIImCZRJou422rLGYxxX8
+         zyIMe8Pc4sVEssmVKlG1GefKF22az/y96AOJca4FuGukKNd+BD9KK2hx7oCr0749FpiK
+         HahtmjJ+JlIdRL3LwsqNva1iuisWOCbyRwEHZYv40m9DrzjaxeMsU4a98mzr02jZf1Yf
+         IdT/OL6rQy4jRAfcWV81zXr0EUz28tn6Dj80libFXGIqBMj7bQdxLVeTGE4oXy1IFPCx
+         qveQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:to:subject:message-id:date:mime-version;
+        bh=jmVfFPdHxrkexmrQ/r9rxQi2Mo8fixdpc2Nx+GnjDok=;
+        b=DROkvBBOhbS33fMHpJiJ36AOYf9sFkb/CCFzMFhVyzhlm9H56chb8O5ZFQodHyED+k
+         ijZ7JF0icXR172qF1RVDfPykljnednrwLqD7gfvMvkd5XPHefWFJHvkEsGO4nmPsfkx+
+         3PtpgcMntZWQi1+Io+8EtObTZIfWyruRzHv+OsEZDPmvNRLpiyYc1zBKj8klrNBADQ14
+         fo827GAwRaojnQG13oy0BzQNiNnFbxMQy+Z9lmwmAPdFGw1UeSdxGrJikP9nvxGzBJ6u
+         DbTqG1FhnDtJ9TVodRZwzek7R9PwRIMyMpfMUfhoS/npimpNV0TTBnU2HnMWpn8SQWIH
+         ORnQ==
+X-Gm-Message-State: APjAAAULTokpmxGUxOl7VSqiX5eGgU3gfkZwyROUqmf8rYBF828ei34x
+	N4+3Dl0m2Eu6I6JYbOoWtfWsTCeG
+X-Google-Smtp-Source: APXvYqyuWbHAT8loGkLSCfQ0VrkP5CBzJJNv1lq4EJl0ffiJbevJtZLnnre4d9gHWDyCiGDOQEFq0g==
+X-Received: by 2002:a37:9186:: with SMTP id t128mr10066193qkd.326.1554473920113;
+        Fri, 05 Apr 2019 07:18:40 -0700 (PDT)
+Return-Path: <>
+Received: from [127.0.0.1] ([200.54.241.130])
+        by smtp.gmail.com with ESMTPSA id b24sm11267858qtr.51.2019.04.05.07.18.38
+        for <redes@galilea.cl>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 05 Apr 2019 07:18:39 -0700 (PDT)
+From: unmsgsa@gmail.com
+Content-Type: multipart/alternative;
+ boundary="----sinikael-?=_1-15544739181320.0855159490411952"
+To: redes@galilea.cl
+Subject: UNMS notifications (5 Apr 2019 11:18) 
+Message-ID: <62d243e7-04b1-7a56-75cb-892c67d94837@f372878a2cb6>
+X-Mailer: nodemailer (2.6.0; +http://nodemailer.com/;
+ SMTP/2.7.2[client:2.12.0])
+Date: Fri, 05 Apr 2019 14:18:38 +0000
+MIME-Version: 1.0
+
+------sinikael-?=_1-15544739181320.0855159490411952
+Content-Type: text/plain
+Content-Transfer-Encoding: 7bit
+
+Hi admin,
+
+you may want to see the following report on recent outages
+(5 Apr 2019 11:18, latest first):
+
+
+SalaventasMatriz has connected back to UNMS at 11:18 after 40s.
+
+
+For login into UNMS proceed to: https://unms.galilea.cl
+
+UNMS
+
+------sinikael-?=_1-15544739181320.0855159490411952
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UNMS notifications</title>
+  </head>
+  <body>
+    <div>
+      <p style=3D"padding: 0.3em">
+        Hi admin,
+      </p>
+      <p style=3D"padding: 0.3em">
+        you may want to see the following report on recent outages from 5 =
+Apr 2019 11:18. Latest outages are first:
+      </p>
+      <p style=3D"padding: 0.3em">
+       =20
+       =20
+          <a href=3D"https://unms.galilea.cl/devices/airmax/ac/9323f8db-10e=
+c-4278-8196-dbf0affb3998/statistics">SalaventasMatriz</a>
+         =20
+            has <span style=3D"color: #13bb72">connected</span> back to =
+UNMS at 11:18 after 40s.
+         =20
+          <br />
+       =20
+       =20
+      </p>
+      <p style=3D"padding: 0.3em">
+        For login into UNMS proceed to: https://unms.galilea.cl
+      </p>
+      <p style=3D"padding: 0.3em">
+        UNMS
+      </p>
+    </div>
+  </body>
+</html>
+
+------sinikael-?=_1-15544739181320.0855159490411952--

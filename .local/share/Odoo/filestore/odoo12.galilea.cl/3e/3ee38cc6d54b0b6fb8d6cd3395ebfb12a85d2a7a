@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<EnvioDTE xmlns="http://www.sii.cl/SiiDte" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sii.cl/SiiDte EnvioDTE_v10.xsd" version="1.0">
+	<SetDTE ID="EnvioDTEXML_ESIIAUT_033_0000004277_60803000-K_10352881-K">
+		<Caratula version="1.0">
+			<RutEmisor>76017407-6</RutEmisor>
+			<RutEnvia>10352881-K</RutEnvia>
+			<RutReceptor>60803000-K</RutReceptor>
+			<FchResol>2014-08-22</FchResol>
+			<NroResol>80</NroResol>
+			<TmstFirmaEnv>2019-09-06T16:09:13</TmstFirmaEnv>
+			<SubTotDTE>
+				<TpoDTE>33</TpoDTE>
+				<NroDTE>1</NroDTE>
+			</SubTotDTE>
+		</Caratula>
+		<DTE xmlns="http://www.sii.cl/SiiDte" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sii.cl/SiiDte DTE_v10.xsd" version="1.0">
+	<Documento ID="T33F4277">
+		<Encabezado>
+			<IdDoc>
+				<TipoDTE>33</TipoDTE>
+				<Folio>4277</Folio>
+				<FchEmis>2019-08-31</FchEmis>
+				<FmaPago>2</FmaPago>
+				<MedioPago>OT</MedioPago>
+				<FchVenc>2019-09-30</FchVenc>
+			</IdDoc>
+			<Emisor>
+				<RUTEmisor>76017407-6</RUTEmisor>
+				<RznSoc>JOSE CONSTANZO URRUTIA COMERCIAL Y SERVICIOS E.I.R.L</RznSoc>
+				<GiroEmis>REP Y ARRIEND MAQUIN CONSTR CONSTR COMER ARTS FERRET Y TRANSP CARGA</GiroEmis>
+				<Telefono>200045</Telefono>
+				<Acteco>712200</Acteco>
+				<DirOrigen>ERRAZURIZ 1877</DirOrigen>
+				<CmnaOrigen>VALDIVIA</CmnaOrigen>
+			</Emisor>
+			<Receptor>
+				<RUTRecep>78246760-3</RUTRecep>
+				<RznSocRecep>CONSTRUCTORA PEHUENCHE LIMITADA</RznSocRecep>
+				<GiroRecep>CONSTRUCTORA</GiroRecep>
+				<DirRecep>3 ORIENTE 1424</DirRecep>
+				<CmnaRecep>TALCA</CmnaRecep>
+				<CiudadRecep>TALCA</CiudadRecep>
+			</Receptor>
+			<Transporte>
+				<CiudadDest>TEMUCO</CiudadDest>
+			</Transporte>
+			<Totales>
+				<MntNeto>422500</MntNeto>
+				<TasaIVA>19.00</TasaIVA>
+				<IVA>80275</IVA>
+				<MntTotal>502775</MntTotal>
+			</Totales>
+		</Encabezado>
+		<Detalle>
+			<NroLinDet>1</NroLinDet>
+			<CdgItem>
+				<TpoCodigo>INT1</TpoCodigo>
+				<VlrCodigo>ARRIENDO</VlrCodigo>
+			</CdgItem>
+			<NmbItem>BOMBA SUMERGIBLE 3" TSURUMI HS3, G 29919</NmbItem>
+			<DscItem/>
+			<QtyItem>8.000000</QtyItem>
+			<UnmdItem>DIAS</UnmdItem>
+			<PrcItem>7000.000000</PrcItem>
+			<MontoItem>56000</MontoItem>
+		</Detalle>
+		<Detalle>
+			<NroLinDet>2</NroLinDet>
+			<CdgItem>
+				<TpoCodigo>INT1</TpoCodigo>
+				<VlrCodigo>ARRIENDO</VlrCodigo>
+			</CdgItem>
+			<NmbItem>BOMBA SUMERGIBLE 3" TSURUMI HS3, G 30003</NmbItem>
+			<DscItem/>
+			<QtyItem>8.000000</QtyItem>
+			<UnmdItem>DIAS</UnmdItem>
+			<PrcItem>7000.000000</PrcItem>
+			<MontoItem>56000</MontoItem>
+		</Detalle>
+		<Detalle>
+			<NroLinDet>3</NroLinDet>
+			<CdgItem>
+				<TpoCodigo>INT1</TpoCodigo>
+				<VlrCodigo>ARRIENDO</VlrCodigo>
+			</CdgItem>
+			<NmbItem>BOMBA SUMERGIBLE 2" TSURUMI HS2, G 30005</NmbItem>
+			<DscItem/>
+			<QtyItem>8.000000</QtyItem>
+			<UnmdItem>DIAS</UnmdItem>
+			<PrcItem>5000.000000</PrcItem>
+			<MontoItem>40000</MontoItem>
+		</Detalle>
+		<Detalle>
+			<NroLinDet>4</NroLinDet>
+			<CdgItem>
+				<TpoCodigo>INT1</TpoCodigo>
+				<VlrCodigo>ARRIENDO</VlrCodigo>
+			</CdgItem>
+			<NmbItem>BOMBA SUMERGIBLE 2" TSURUMI HS2, G 30039</NmbItem>
+			<DscItem/>
+			<QtyItem>9.000000</QtyItem>
+			<UnmdItem>DIAS</UnmdItem>
+			<PrcItem>5000.000000</PrcItem>
+			<MontoItem>45000</MontoItem>
+		</Detalle>
+		<Detalle>
+			<NroLinDet>5</NroLinDet>
+			<CdgItem>
+				<TpoCodigo>INT1</TpoCodigo>
+				<VlrCodigo>ARRIENDO</VlrCodigo>
+			</CdgItem>
+			<NmbItem>BOMBA SUMERGIBLE 2" TSURUMI HS2, G 30039</NmbItem>
+			<DscItem/>
+			<QtyItem>8.000000</QtyItem>
+			<UnmdItem>DIAS</UnmdItem>
+			<PrcItem>5000.000000</PrcItem>
+			<MontoItem>40000</MontoItem>
+		</Detalle>
+		<Detalle>
+			<NroLinDet>6</NroLinDet>
+			<CdgItem>
+				<TpoCodigo>INT1</TpoCodigo>
+				<VlrCodigo>ARRIENDO</VlrCodigo>
+			</CdgItem>
+			<NmbItem>DEMOLEDOR 5,1 KILOS H41MB SDS MA G 30169</NmbItem>
+			<DscItem/>
+			<QtyItem>4.000000</QtyItem>
+			<UnmdItem>DIAS</UnmdItem>
+			<PrcItem>5000.000000</PrcItem>
+			<MontoItem>20000</MontoItem>
+		</Detalle>
+		<Detalle>
+			<NroLinDet>7</NroLinDet>
+			<CdgItem>
+				<TpoCodigo>INT1</TpoCodigo>
+				<VlrCodigo>ARRIENDO</VlrCodigo>
+			</CdgItem>
+			<NmbItem>CORTADORA PAVIMENTO FS125 GOLZ G 30204</NmbItem>
+			<DscItem/>
+			<QtyItem>1.000000</QtyItem>
+			<UnmdItem>DIA</UnmdItem>
+			<PrcItem>15000.000000</PrcItem>
+			<MontoItem>15000</MontoItem>
+		</Detalle>
+		<Detalle>
+			<NroLinDet>8</NroLinDet>
+			<CdgItem>
+				<TpoCodigo>INT1</TpoCodigo>
+				<VlrCodigo>ARRIENDO</VlrCodigo>
+			</CdgItem>
+			<NmbItem>RODILLO COMPACT. BOMAG 75 P/MANU G 30267</NmbItem>
+			<DscItem/>
+			<QtyItem>1.000000</QtyItem>
+			<UnmdItem>DIA</UnmdItem>
+			<PrcItem>20000.000000</PrcItem>
+			<MontoItem>20000</MontoItem>
+		</Detalle>
+		<Detalle>
+			<NroLinDet>9</NroLinDet>
+			<CdgItem>
+				<TpoCodigo>INT1</TpoCodigo>
+				<VlrCodigo>ARRIENDO</VlrCodigo>
+			</CdgItem>
+			<NmbItem>BOMBA SUMERGIBLE 3" TSURUMI HS3, G 30304</NmbItem>
+			<DscItem/>
+			<QtyItem>7.000000</QtyItem>
+			<UnmdItem>DIAS</UnmdItem>
+			<PrcItem>7000.000000</PrcItem>
+			<MontoItem>49000</MontoItem>
+		</Detalle>
+		<Detalle>
+			<NroLinDet>10</NroLinDet>
+			<CdgItem>
+				<TpoCodigo>INT1</TpoCodigo>
+				<VlrCodigo>ARRIENDO</VlrCodigo>
+			</CdgItem>
+			<NmbItem>BOMBA SUMERGIBLE 3" TSURUMI HS3, G 30304</NmbItem>
+			<DscItem/>
+			<QtyItem>7.000000</QtyItem>
+			<UnmdItem>DIAS</UnmdItem>
+			<PrcItem>7000.000000</PrcItem>
+			<MontoItem>49000</MontoItem>
+		</Detalle>
+		<Detalle>
+			<NroLinDet>11</NroLinDet>
+			<CdgItem>
+				<TpoCodigo>INT1</TpoCodigo>
+				<VlrCodigo>ARRIENDO</VlrCodigo>
+			</CdgItem>
+			<NmbItem>GENERADOR 3,1 KVA LONCIN G 30340</NmbItem>
+			<DscItem/>
+			<QtyItem>1.000000</QtyItem>
+			<UnmdItem>DIA</UnmdItem>
+			<PrcItem>7000.000000</PrcItem>
+			<MontoItem>7000</MontoItem>
+		</Detalle>
+		<Detalle>
+			<NroLinDet>12</NroLinDet>
+			<CdgItem>
+				<TpoCodigo>INT1</TpoCodigo>
+				<VlrCodigo>ARRIENDO</VlrCodigo>
+			</CdgItem>
+			<NmbItem>DEMOLEDOR H65SD2 18 KILOS HITACH G 30341</NmbItem>
+			<DscItem/>
+			<QtyItem>1.000000</QtyItem>
+			<UnmdItem>DIA</UnmdItem>
+			<PrcItem>11000.000000</PrcItem>
+			<MontoItem>11000</MontoItem>
+		</Detalle>
+		<Detalle>
+			<NroLinDet>13</NroLinDet>
+			<CdgItem>
+				<TpoCodigo>INT1</TpoCodigo>
+				<VlrCodigo>ARRIENDO</VlrCodigo>
+			</CdgItem>
+			<NmbItem>DEMOLEDOR HK55 18 KILOS KOTHMAN G 30341</NmbItem>
+			<DscItem/>
+			<QtyItem>1.000000</QtyItem>
+			<UnmdItem>DIA</UnmdItem>
+			<PrcItem>11000.000000</PrcItem>
+			<MontoItem>11000</MontoItem>
+		</Detalle>
+		<Detalle>
+			<NroLinDet>14</NroLinDet>
+			<CdgItem>
+				<TpoCodigo>INT1</TpoCodigo>
+				<VlrCodigo>ARRIENDO</VlrCodigo>
+			</CdgItem>
+			<NmbItem>ESMERIL ANGULAR 9" GA9020 MAKITA G 30412</NmbItem>
+			<DscItem/>
+			<QtyItem>1.000000</QtyItem>
+			<UnmdItem>DIA</UnmdItem>
+			<PrcItem>3500.000000</PrcItem>
+			<MontoItem>3500</MontoItem>
+		</Detalle>
+		<TED version="1.0">
+			<DD>
+				<RE>76017407-6</RE>
+				<TD>33</TD>
+				<F>4277</F>
+				<FE>2019-08-31</FE>
+				<RR>78246760-3</RR>
+				<RSR>CONSTRUCTORA PEHUENCHE LIMITADA</RSR>
+				<MNT>502775</MNT>
+				<IT1>BOMBA SUMERGIBLE 3" TSURUMI HS3, G 29919</IT1>
+				<CAF version="1.0">
+					<DA>
+						<RE>76017407-6</RE>
+						<RS>JOSE CONSTANZO URRUTIA, COMERCIAL Y SERV</RS>
+						<TD>33</TD>
+						<RNG>
+							<D>4001</D>
+							<H>4500</H>
+						</RNG>
+						<FA>2019-07-02</FA>
+						<RSAPK>
+							<M>0Tb/oZPDje7MUPTV9el6cte9OE8H3jmJeqHrsiwTL92WUvYD+0FoxejSXr3G5Y1zuV0nACJkn2fQYO9JLR8/ww==</M>
+							<E>Aw==</E>
+						</RSAPK>
+						<IDK>300</IDK>
+					</DA>
+					<FRMA algoritmo="SHA1withRSA">L0+qv6/a9ew1EXX1eaTQ+ddZU/7nRnfNDQmkN9cWsnwUhJ2YpVPlfjVmuwTE21iM8Ahdtj1eYjFrPxfuXkXzRA==</FRMA>
+				</CAF>
+				<TSTED>2019-09-06T16:09:13</TSTED>
+			</DD>
+			<FRMT algoritmo="SHA1withRSA">KY47/H/ZNe0T6CEcQi27RGl6G70BHSok3n/bDnO+hk1FtsFix6ll5w2OzP1JNtp8F6Fqm0yfnr1t48UzeLVCVw==</FRMT>
+		</TED>
+		<TmstFirma>2019-09-06T16:09:13</TmstFirma>
+	</Documento>
+	<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+		<SignedInfo>
+			<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+			<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+			<Reference URI="#T33F4277">
+				<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+				<DigestValue>goFpbsaapPAZ0sXXWFYIwdi2v88=</DigestValue>
+			</Reference>
+		</SignedInfo>
+		<SignatureValue>AVMnmfY+ibyWArsRoyhM1PWl0zZuo95X9gNuqQOS6fOFGT6OncaqYYjEnu85q6rM
+joeMUb3uU6DU2MXN8r3GOI0Os7VMfBzfZcN+o834qpUhpVSZnig4kx+51IqPQWC7
+EduWDvuKtjna7QUcKG5xqU+0KQifvVww73+3cjR5hpI=</SignatureValue>
+		<KeyInfo>
+			<KeyValue>
+<RSAKeyValue>
+<Modulus>
+wrytMc5GPEwG/eq9xpF5HUfdEXC4/DWkqlTyZGUpGQ2wdJGNHvK1jaTi+JmJ7t8A
+AsMOx4p14mZnxYXv1gUkJeqUjpFFbPKAyl5Pw/bOaXrc8/tE3w6OPoYoRXEVOtot
+Gn96lxqKlrZFB5rear6z8WCo4RI/ywPx7Jtb4/nUIas=
+</Modulus>
+<Exponent>
+AQAB
+</Exponent>
+</RSAKeyValue>
+</KeyValue>
+			<X509Data>
+				
+			<X509Certificate>MIIGYDCCBUigAwIBAgIKRJIBEwAAAAuYvDANBgkqhkiG9w0BAQUFADCB0jELMAkG
+A1UEBhMCQ0wxHTAbBgNVBAgTFFJlZ2lvbiBNZXRyb3BvbGl0YW5hMREwDwYDVQQH
+EwhTYW50aWFnbzEUMBIGA1UEChMLRS1DRVJUQ0hJTEUxIDAeBgNVBAsTF0F1dG9y
+aWRhZCBDZXJ0aWZpY2Fkb3JhMTAwLgYDVQQDEydFLUNFUlRDSElMRSBDQSBGSVJN
+QSBFTEVDVFJPTklDQSBTSU1QTEUxJzAlBgkqhkiG9w0BCQEWGHNjbGllbnRlc0Bl
+LWNlcnRjaGlsZS5jbDAeFw0xODA3MjMyMjM1NDJaFw0yMTA3MjIyMjM1NDJaMIHh
+MQswCQYDVQQGEwJDTDEUMBIGA1UECBMLREUgTE9TIFJJT1MxETAPBgNVBAcTCFZh
+bGRpdmlhMTowOAYDVQQKEzFqb3NlIGNvbnN0YW56byB1cnJ1dGlhIGNvbWVyY2lh
+bCB5IHNlcnZpY2lvcyBlaXJsMR8wHQYDVQQLExZBUlJJRU5ETyBERSBNQVFVSU5B
+UklBMSYwJAYDVQQDEx1Kb3NlIERhbmllbCBDb25zdGFuem8gVXJydXRpYTEkMCIG
+CSqGSIb3DQEJARYVamRjb25zdGFuem9AZ21haWwuY29tMIGfMA0GCSqGSIb3DQEB
+AQUAA4GNADCBiQKBgQDCvK0xzkY8TAb96r3GkXkdR90RcLj8NaSqVPJkZSkZDbB0
+kY0e8rWNpOL4mYnu3wACww7HinXiZmfFhe/WBSQl6pSOkUVs8oDKXk/D9s5petzz
++0TfDo4+hihFcRU62i0af3qXGoqWtkUHmt5qvrPxYKjhEj/LA/Hsm1vj+dQhqwID
+AQABo4ICqTCCAqUwggFPBgNVHSAEggFGMIIBQjCCAT4GCCsGAQQBw1IFMIIBMDAt
+BggrBgEFBQcCARYhaHR0cDovL3d3dy5lLWNlcnRjaGlsZS5jbC9DUFMuaHRtMIH+
+BggrBgEFBQcCAjCB8R6B7gBFAGwAIAByAGUAcwBwAG8AbgBkAGUAcgAgAGUAcwB0
+AGUAIABmAG8AcgBtAHUAbABhAHIAaQBvACAAZQBzACAAdQBuACAAcgBlAHEAdQBp
+AHMAaQB0AG8AIABpAG4AZABpAHMAcABlAG4AcwBhAGIAbABlACAAcABhAHIAYQAg
+AGQAYQByACAAaQBuAGkAYwBpAG8AIABhAGwAIABwAHIAbwBjAGUAcwBvACAAZABl
+ACAAYwBlAHIAdABpAGYAaQBjAGEAYwBpAPMAbgAuACAAUABvAHMAdABlAHIAaQBv
+AHIAbQBlAG4AdABlACwwHQYDVR0OBBYEFDIEoHUYlKcLhGJZqd+kjN0SVmf9MAsG
+A1UdDwQEAwIE8DAjBgNVHREEHDAaoBgGCCsGAQQBwQEBoAwWCjEwMzUyODgxLUsw
+HwYDVR0jBBgwFoAUeOE+n9ISs3o8jc0wDlOzQykHs1UwPgYDVR0fBDcwNTAzoDGg
+L4YtaHR0cDovL2NybC5lLWNlcnRjaGlsZS5jbC9lY2VydGNoaWxlY2FGRVMuY3Js
+MDoGCCsGAQUFBwEBBC4wLDAqBggrBgEFBQcwAYYeaHR0cDovL29jc3AuZWNlcnRj
+aGlsZS5jbC9vY3NwMD0GCSsGAQQBgjcVBwQwMC4GJisGAQQBgjcVCILcgy+Fk4xm
+hdWdF4Li3CeB7+w8YYHLnhSGqIJYAgFkAgEEMCMGA1UdEgQcMBqgGAYIKwYBBAHB
+AQKgDBYKOTY5MjgxODAtNTANBgkqhkiG9w0BAQUFAAOCAQEAt0B4qu+3b1Uu7ScC
+wR+tjIPOfypVx/UherICcDAUZ7lCj1FnSPOGcNnntfowTWJb35xwgbFs9K75QnvC
+66nOYvJJHcd5SQlRJQYE9YvIU0o/tjHnYZofv+1G6DyQPc1ESX65WbbvTvwUdwu0
+Xm9GUzhU1onhB6BIZDA+tMbl5YmNTKCfN0oDxsGv68vJAdHJUnWsQ4FIcnZZN3eC
+LOItNOXagVm3vEAcpLgusvuvDCmG3d8lvFUXbZiA7NNdXT6zqJbmO7X5vQF2Ot+c
+3M6ZXvyCutYrpTRKJc0OKpXWKt/rojTwLkpTR/GVdFWA8LdigH3AnAesxCvSmWt/
+/5RJHg==</X509Certificate>
+</X509Data>
+		</KeyInfo>
+	</Signature>
+</DTE>
+	</SetDTE>
+	<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+		<SignedInfo>
+			<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+			<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+			<Reference URI="#EnvioDTEXML_ESIIAUT_033_0000004277_60803000-K_10352881-K">
+				<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+				<DigestValue>c6NfyCPCl1fcXPAUIXdsBSJtdyE=</DigestValue>
+			</Reference>
+		</SignedInfo>
+		<SignatureValue>Yl6mJG9pAulqr20plX+/ZeMmJusj3wnlz1Bvczt9hGBUenn/Ghuro2WI4E3BdkvG
+MDGtPYMNMARgPj0UEI9ZQAc/53xx6GUPH6oNICV3BEpZE49SO4EsdRp07s1lXskJ
+nwWVJZbiCSh0kRLkP3rCgYqRnx/O2zA5WiMTJ0jeOek=</SignatureValue>
+		<KeyInfo>
+			<KeyValue>
+<RSAKeyValue>
+<Modulus>
+wrytMc5GPEwG/eq9xpF5HUfdEXC4/DWkqlTyZGUpGQ2wdJGNHvK1jaTi+JmJ7t8A
+AsMOx4p14mZnxYXv1gUkJeqUjpFFbPKAyl5Pw/bOaXrc8/tE3w6OPoYoRXEVOtot
+Gn96lxqKlrZFB5rear6z8WCo4RI/ywPx7Jtb4/nUIas=
+</Modulus>
+<Exponent>
+AQAB
+</Exponent>
+</RSAKeyValue>
+</KeyValue>
+			<X509Data>
+				
+			<X509Certificate>MIIGYDCCBUigAwIBAgIKRJIBEwAAAAuYvDANBgkqhkiG9w0BAQUFADCB0jELMAkG
+A1UEBhMCQ0wxHTAbBgNVBAgTFFJlZ2lvbiBNZXRyb3BvbGl0YW5hMREwDwYDVQQH
+EwhTYW50aWFnbzEUMBIGA1UEChMLRS1DRVJUQ0hJTEUxIDAeBgNVBAsTF0F1dG9y
+aWRhZCBDZXJ0aWZpY2Fkb3JhMTAwLgYDVQQDEydFLUNFUlRDSElMRSBDQSBGSVJN
+QSBFTEVDVFJPTklDQSBTSU1QTEUxJzAlBgkqhkiG9w0BCQEWGHNjbGllbnRlc0Bl
+LWNlcnRjaGlsZS5jbDAeFw0xODA3MjMyMjM1NDJaFw0yMTA3MjIyMjM1NDJaMIHh
+MQswCQYDVQQGEwJDTDEUMBIGA1UECBMLREUgTE9TIFJJT1MxETAPBgNVBAcTCFZh
+bGRpdmlhMTowOAYDVQQKEzFqb3NlIGNvbnN0YW56byB1cnJ1dGlhIGNvbWVyY2lh
+bCB5IHNlcnZpY2lvcyBlaXJsMR8wHQYDVQQLExZBUlJJRU5ETyBERSBNQVFVSU5B
+UklBMSYwJAYDVQQDEx1Kb3NlIERhbmllbCBDb25zdGFuem8gVXJydXRpYTEkMCIG
+CSqGSIb3DQEJARYVamRjb25zdGFuem9AZ21haWwuY29tMIGfMA0GCSqGSIb3DQEB
+AQUAA4GNADCBiQKBgQDCvK0xzkY8TAb96r3GkXkdR90RcLj8NaSqVPJkZSkZDbB0
+kY0e8rWNpOL4mYnu3wACww7HinXiZmfFhe/WBSQl6pSOkUVs8oDKXk/D9s5petzz
++0TfDo4+hihFcRU62i0af3qXGoqWtkUHmt5qvrPxYKjhEj/LA/Hsm1vj+dQhqwID
+AQABo4ICqTCCAqUwggFPBgNVHSAEggFGMIIBQjCCAT4GCCsGAQQBw1IFMIIBMDAt
+BggrBgEFBQcCARYhaHR0cDovL3d3dy5lLWNlcnRjaGlsZS5jbC9DUFMuaHRtMIH+
+BggrBgEFBQcCAjCB8R6B7gBFAGwAIAByAGUAcwBwAG8AbgBkAGUAcgAgAGUAcwB0
+AGUAIABmAG8AcgBtAHUAbABhAHIAaQBvACAAZQBzACAAdQBuACAAcgBlAHEAdQBp
+AHMAaQB0AG8AIABpAG4AZABpAHMAcABlAG4AcwBhAGIAbABlACAAcABhAHIAYQAg
+AGQAYQByACAAaQBuAGkAYwBpAG8AIABhAGwAIABwAHIAbwBjAGUAcwBvACAAZABl
+ACAAYwBlAHIAdABpAGYAaQBjAGEAYwBpAPMAbgAuACAAUABvAHMAdABlAHIAaQBv
+AHIAbQBlAG4AdABlACwwHQYDVR0OBBYEFDIEoHUYlKcLhGJZqd+kjN0SVmf9MAsG
+A1UdDwQEAwIE8DAjBgNVHREEHDAaoBgGCCsGAQQBwQEBoAwWCjEwMzUyODgxLUsw
+HwYDVR0jBBgwFoAUeOE+n9ISs3o8jc0wDlOzQykHs1UwPgYDVR0fBDcwNTAzoDGg
+L4YtaHR0cDovL2NybC5lLWNlcnRjaGlsZS5jbC9lY2VydGNoaWxlY2FGRVMuY3Js
+MDoGCCsGAQUFBwEBBC4wLDAqBggrBgEFBQcwAYYeaHR0cDovL29jc3AuZWNlcnRj
+aGlsZS5jbC9vY3NwMD0GCSsGAQQBgjcVBwQwMC4GJisGAQQBgjcVCILcgy+Fk4xm
+hdWdF4Li3CeB7+w8YYHLnhSGqIJYAgFkAgEEMCMGA1UdEgQcMBqgGAYIKwYBBAHB
+AQKgDBYKOTY5MjgxODAtNTANBgkqhkiG9w0BAQUFAAOCAQEAt0B4qu+3b1Uu7ScC
+wR+tjIPOfypVx/UherICcDAUZ7lCj1FnSPOGcNnntfowTWJb35xwgbFs9K75QnvC
+66nOYvJJHcd5SQlRJQYE9YvIU0o/tjHnYZofv+1G6DyQPc1ESX65WbbvTvwUdwu0
+Xm9GUzhU1onhB6BIZDA+tMbl5YmNTKCfN0oDxsGv68vJAdHJUnWsQ4FIcnZZN3eC
+LOItNOXagVm3vEAcpLgusvuvDCmG3d8lvFUXbZiA7NNdXT6zqJbmO7X5vQF2Ot+c
+3M6ZXvyCutYrpTRKJc0OKpXWKt/rojTwLkpTR/GVdFWA8LdigH3AnAesxCvSmWt/
+/5RJHg==</X509Certificate>
+</X509Data>
+		</KeyInfo>
+	</Signature>
+</EnvioDTE>

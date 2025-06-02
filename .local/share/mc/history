@@ -1,0 +1,15 @@
+[cmdline]
+0=
+
+[save-as]
+0=/opt/odoo12/custom/website_support/views/menus.xml
+
+[Dir Hist New Right Panel]
+0=/home/galilea
+1=/opt/odoo12/custom
+
+[Dir Hist New Left Panel]
+0=/home/galilea
+1=/opt/odoo12/custom
+2=/opt/odoo12/custom/mantencion
+3=/opt/odoo12/custom/mantencion/views

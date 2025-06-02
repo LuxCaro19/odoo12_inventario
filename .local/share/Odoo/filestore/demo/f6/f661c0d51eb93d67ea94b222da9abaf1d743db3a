@@ -1,0 +1,23 @@
+Resultado de Validacion de Envio de DTE
+=======================================
+
+Rut de Empresa Emisora   : 78246760-3
+Rut que Realizo el Envio : 13504871-2
+Identificador de Envio   : 3480199076
+Fecha de Recepcion       : 30/01/2019 13:21:36
+Estado del Envio         : EPR - Envio Procesado
+
+Estadisticas del Envio
+======================
+Tipo DTE  Informados  Rechazos  Reparos  Aceptados
+--------------------------------------------------
+   46              1         1        0          0
+
+Detalle de Rechazos y Reparos de DTE
+====================================
+
+ Folio       Tipo  Estado
+ ------------------------------------------------------------------------------
+ 77195        46   RCH - DTE Rechazado
+     (DTE-3-100) DTE Repetido (TipDoc, Folio, FchEmis, IVA, MntTot, RUTRecep)
+

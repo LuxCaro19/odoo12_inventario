@@ -1,0 +1,69 @@
+
+.o_graph .o_graph_container {
+  height: 100%;
+  overflow: auto;
+}
+
+.o_graph .o_graph_container .o_graph_svg_container {
+  direction: ltr/*rtl:ignore*/;
+  height: 100%;
+  overflow: auto;
+  /* Use less than 50% of the screen area for tooltip and show legends in 3 column of 33% each */
+}
+
+.o_graph .o_graph_container .o_graph_svg_container svg {
+  background-color: white;
+}
+
+.o_graph .o_graph_container .o_graph_svg_container svg .nv-y path.domain, .o_graph .o_graph_container .o_graph_svg_container svg .nv-y g.tick.zero {
+  display: none;
+}
+
+.o_graph .o_graph_container .o_graph_svg_container svg .nv-axis.nv-x path.domain {
+  stroke-opacity: 0.2;
+}
+
+.o_graph .o_graph_container .o_graph_svg_container svg .nv-groups g.nv-group {
+  stroke-width: 10px;
+}
+
+.o_graph .o_graph_container .o_graph_svg_container svg .nv-groups path.nv-area {
+  fill-opacity: 0.1;
+}
+
+.o_graph .o_graph_container .o_graph_svg_container svg .nv-lineChart .nv-x.nv-axis .nv-axisMaxMin-x.nv-axisMin-x text {
+  text-anchor: start !important;
+}
+
+.o_graph .o_graph_container .o_graph_svg_container svg .nv-lineChart .nv-x.nv-axis .nv-axisMaxMin-x.nv-axisMax-x text {
+  text-anchor: end !important;
+}
+
+.o_graph .o_graph_container .o_graph_svg_container.o_tooltip_split_in_columns .nvtooltip {
+  max-width: 48%;
+}
+
+.o_graph .o_graph_container .o_graph_svg_container.o_tooltip_split_in_columns .nvtooltip tbody {
+  display: -webkit-box; display: -webkit-flex; display: flex;
+  flex-flow: wrap;
+}
+
+.o_graph .o_graph_container .o_graph_svg_container.o_tooltip_split_in_columns .nvtooltip tbody tr {
+  width: 33%;
+}
+
+.o_graph .o_graph_container .o_graph_svg_container.o_tooltip_split_in_columns .nvtooltip tbody tr td {
+  display: inline-block;
+}
+
+.o_graph .o_graph_container .o_graph_svg_container.o_tooltip_split_in_columns .nvtooltip tbody tr td.key {
+  min-width: 160px;
+  max-width: 70%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.nvtooltip thead {
+  background-color: transparent;
+}
+

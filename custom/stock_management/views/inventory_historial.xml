@@ -1,0 +1,54 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="component_historial_list">
+      <field name="name">Historial de Componentes</field>
+      <field name="model">component.historial</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="id"/>
+          <field name="equipment_id" readonly="1" string="Equipo"/>
+          <field name="ubicacion" readonly="1" string="Ubicación"/>
+          <field name="fecha" readonly="1" string="Fecha asignación"/>  
+          <field name="fecha_desecho" readonly="1" string="Fecha desecho"/>  
+          <field name="bodega_a" readonly="1" string="Bodega"/>         
+        </tree>
+      </field>
+    </record>
+
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="component_historial_action_window">
+      <field name="name">Historial de Componentes</field>
+      <field name="res_model">component.historial</field>
+      <field name="view_mode">tree</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+
+    <record model="ir.actions.server" id="component_historial_action_server">
+      <field name="name">historial component server</field>
+      <field name="model_id" ref="model_component_historial"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+
+    <!-- actions -->
+
+    <menuitem name="Historial de Componentes Informáticos"
+              id="component_historial"
+              parent="menu_component_management"
+              action="component_historial_action_window" sequence="4"/>
+              
+  </data>
+</odoo>

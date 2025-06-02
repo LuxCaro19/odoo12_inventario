@@ -1,0 +1,161 @@
+Delivered-To: sistemas@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp1921011otp;
+        Thu, 4 Apr 2019 12:08:01 -0700 (PDT)
+X-Received: by 2002:a5d:9045:: with SMTP id v5mr5416703ioq.177.1554404881207;
+        Thu, 04 Apr 2019 12:08:01 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554404881; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Z2tcu8ncMaW89tD997DjdCrLLhzk6CoSzlZ1i4XPP/ncYceHF8KnbX7uMkwJvlsafi
+         0bpM/o+hb1oEIxNEtmlN1tn1AvF+phERbvcpK8ReMqdUAcbQuKmsmHfrqlGvYG8+eIwX
+         rkeDOhR8uF8WsHGWXcxtWXUR9z5vkVaZ7/TzlcLzENWM8+q0XSZ6JBq/4owIU8EN9zkq
+         PwRfcYM9AfLMykYGfjJtoCYsSv6IxQ5WnWw/f/J2t06jrU3WKN4fXnrV51T8vyPwCg3n
+         CGqNbHMDCDPtH1sjY0czq2050QKY27dPmy9LFr/6GxYmkzO2bVNnB9oBDjzmKbmPSfU+
+         tF/g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=gCM5BLr/GfamefmuXuxn4g+lqOt01zgH1pyw/hFvY1Y=;
+        b=oipHmVl/sFcHH3VcgjyIyYMKgyzPaMVBIFpfIS3LpiXS2J7D58QOHO1bNKtG6R1xGL
+         hU99yG53sK8aCdigjB2fsUYP8KShxaALiXJERT+pMeol3H8OHLy+ol+hi8amwSiR7D1x
+         LyftbJmV3Fei9s5wiWPIxibBOC5g3RExvmFFAgGWI8G4Ok2rWvQ4GVh0Wpg3FPdp1tp8
+         zI+rCwrhMROkqMr8qpfKvrSaN0YG6hmPD8r6ymdi+6HyWO08nNepjolPN0pWlR2k9C+S
+         gfQASX9Hr9G5twaxAeDZyGYStXGJVLQUi+99bDCDHlW4+5kMZb9XYTzSm7fnXCJcVEz1
+         pajw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=JSnYvq7z;
+       spf=pass (google.com: domain of constanza.rojas@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=constanza.rojas@galilea.cl
+Return-Path: <constanza.rojas@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id h12sor52167766jaj.5.2019.04.04.12.08.00
+        for <sistemas@galilea.cl>
+        (Google Transport Security);
+        Thu, 04 Apr 2019 12:08:01 -0700 (PDT)
+Received-SPF: pass (google.com: domain of constanza.rojas@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=JSnYvq7z;
+       spf=pass (google.com: domain of constanza.rojas@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=constanza.rojas@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=gCM5BLr/GfamefmuXuxn4g+lqOt01zgH1pyw/hFvY1Y=;
+        b=JSnYvq7zPCp9OxhfhDSD8F1tW3IVpn3lL3X1FtUayIoLK18RIIj2Z6F9X2uvktFyhQ
+         /JjQUQvxloLdP22WVO3HrdCRKL7vDpHWtWHZjTxve8gBJcU2SAahVwB+iMeqDOHC6V9s
+         ImNJruvI1vmpUhiHVHvdE/+Ah3l5EovdN+Ap5AuGdhx+fyuwnQsXJuVUwcey88p2GX+K
+         FwGI95k2oVzsD89hOEJ/NthiuTDV8cLsYDVVT3QQwX1pEfPUekFfU3S0im/yVXVFIv+D
+         qb8X28QP9bLSlqmg9sxcB+yxQ0YXDXfgAYH1V7hdQ953y4ccIJ1xbyX53Q6dR4AAL2Xd
+         ScVw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=gCM5BLr/GfamefmuXuxn4g+lqOt01zgH1pyw/hFvY1Y=;
+        b=W7OKa0i6ARZqJyg1e2J22AH1sLNn51sBxD9VdwWyXuKUaRb+eUI2Ba0jkSJA++Tfas
+         OENHgBnTDtoNOVgH2XRAhSAyCB1bxIbn21iS1HxZNuo7TcyOTGDDbVEl36Ko01HGEM1q
+         Ve0iA+ovWdknnQUeQPl5eq45ePff0J1r1bZ5m/nYRVOT91EX1ONNeT8Lmf+/QjpN0/x7
+         1JcQdZ0VXmkScPsCDky+R55hgnlxJ4zYAxTuT9zLFlY5aCQgomzAn3vAMLLiT3bPXtQq
+         tEcb5cjRsOCYeNxm1870+PJiBcM01mc7UYyq6OfK28zEx3K2hp8ZQPQ5P14sEtXqewe8
+         YUBA==
+X-Gm-Message-State: APjAAAVeLReAA5/G5MAYudvk+aaRyQQ8fTjLlRjdM4FrODUBBNX3LeGi
+	P1e3EqLZchS/ZvQI23RKVCJBr4epewFRC7nWBPhLfdFTg30=
+X-Google-Smtp-Source: APXvYqwc+o2/waE/f1GcIWRWNorMjGvPnpNz6G3tHWCkGxTL8pWlv9QMFrHG6qcOdWunKMQWy87vEzIDyZMiuPVHuLM=
+X-Received: by 2002:a02:c6d8:: with SMTP id r24mr6385987jan.93.1554404880610;
+ Thu, 04 Apr 2019 12:08:00 -0700 (PDT)
+MIME-Version: 1.0
+References: <CAFT7CHS4z5q9KsNd9d-oF0+LNyZoUi+E_gSdLOHM+cgq0vVG-w@mail.gmail.com>
+In-Reply-To: <CAFT7CHS4z5q9KsNd9d-oF0+LNyZoUi+E_gSdLOHM+cgq0vVG-w@mail.gmail.com>
+From: Constanza Andrea Rojas Corvalan <constanza.rojas@galilea.cl>
+Date: Thu, 4 Apr 2019 16:07:49 -0300
+Message-ID: <CAAXFYgVKTFE2jxj+2dC+b0BpCn4rv+nUTNRgkZa0Zw1KXamPTg@mail.gmail.com>
+Subject: Fwd: Favor ayuda.
+To: Sistema Ticket <sistemas@galilea.cl>
+Content-Type: multipart/alternative; boundary="000000000000bf08600585b91698"
+
+--000000000000bf08600585b91698
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+fyi
+
+---------- Forwarded message ---------
+De: evasquez <evasquez@galilea.cl>
+Date: jue., 4 de abr. de 2019 a la(s) 15:59
+Subject: Favor ayuda.
+To: Constanza Andrea Rojas Corvalan <constanza.rojas@galilea.cl>
+Cc: Susana Moraga <smoraga@galilea.cl>
+
+
+Estimada Constanza, mis saludos.
+
+Favor su ayuda a que cliente aparezca en odoo, esta en estado 510.-
+
+*TOLEDO ORTIZ HECTOR RODOLFO N=C2=B0 contrato **80345639*
+
+Saludos,
+
+
+
+
+
+*Elliot V=C3=A1squez M.*
+
+Fijo: (72) 2957782
+
+Rancagua
+
+www.galilea.cl
+
+
+
+
+
+
+
+
+
+
+
+--=20
+Constanza Rojas Corval=C3=A1n
+Analista de Sistemas
+Sub gerencia Procesos y Tecnolog=C3=ADas
+Galilea S.A.
+
+--000000000000bf08600585b91698
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">fyi<br><br><div class=3D"gmail_quote"><div dir=3D"ltr" cla=
+ss=3D"gmail_attr">---------- Forwarded message ---------<br>De: <strong cla=
+ss=3D"gmail_sendername" dir=3D"auto">evasquez</strong> <span dir=3D"ltr">&l=
+t;<a href=3D"mailto:evasquez@galilea.cl">evasquez@galilea.cl</a>&gt;</span>=
+<br>Date: jue., 4 de abr. de 2019 a la(s) 15:59<br>Subject: Favor ayuda.<br=
+>To: Constanza Andrea Rojas Corvalan &lt;<a href=3D"mailto:constanza.rojas@=
+galilea.cl">constanza.rojas@galilea.cl</a>&gt;<br>Cc: Susana Moraga &lt;<a =
+href=3D"mailto:smoraga@galilea.cl">smoraga@galilea.cl</a>&gt;<br></div><br>=
+<br><div dir=3D"ltr"><div dir=3D"ltr"><div style=3D"font-family:arial,helve=
+tica,sans-serif;font-size:small">Estimada Constanza, mis saludos.</div><div=
+ style=3D"font-family:arial,helvetica,sans-serif;font-size:small"><br></div=
+><div style=3D"font-family:arial,helvetica,sans-serif;font-size:small">Favo=
+r su ayuda a que cliente aparezca en odoo, esta en estado 510.-</div><div s=
+tyle=3D"font-family:arial,helvetica,sans-serif;font-size:small"><br></div><=
+div><span id=3D"m_7492456889979992631gmail-outer0_43" style=3D"font-family:=
+arial,helvetica,sans-serif;font-size:small;width:947px"><span id=3D"m_74924=
+56889979992631gmail-outer0_69" style=3D"width:204px"><font style=3D"font-si=
+ze:11px;color:rgb(51,51,51)"><i>TOLEDO ORTIZ HECTOR RODOLFO N=C2=B0 contrat=
+o=C2=A0</i></font></span></span><font color=3D"#333333" face=3D"arial, helv=
+etica, sans-serif"><span style=3D"font-size:11px"><i>80345639</i></span></f=
+ont></div><div style=3D"font-family:arial,helvetica,sans-serif;font-size:sm=
+all"><span style=3D"width:947px"><span style=3D"width:204px"><font style=3D=
+"font-size:11px;color:rgb(51,51,51)"><i><br></i></font></span></span></div>=
+<div><div dir=3D"ltr" class=3D"m_7492456889979992631gmail_signature">Saludo=
+s,<br><br><br><br><br><br>*Elliot V=C3=A1squez M.*<br><br>Fijo: (72) 295778=
+2<br><br>Rancagua<br><br><a href=3D"http://www.galilea.cl" target=3D"_blank=
+">www.galilea.cl</a><br><br><br><br><br><br><br><br><br><br></div></div></d=
+iv></div>
+</div><br clear=3D"all"><div><br></div>-- <br><div dir=3D"ltr" class=3D"gma=
+il_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div=
+ dir=3D"ltr">Constanza Rojas Corval=C3=A1n<div>Analista de Sistemas=C2=A0</=
+div><div>Sub gerencia Procesos y Tecnolog=C3=ADas</div><div>Galilea S.A.</d=
+iv></div></div></div></div></div>
+
+--000000000000bf08600585b91698--

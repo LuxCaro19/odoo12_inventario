@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PYVOBJECT//NONSGML Version 1//EN
+BEGIN:VEVENT
+UID:20200117T130808Z - 62544@soporte
+DTSTART:20200127T080000
+DTEND:20200127T180000
+ATTENDEE:MAILTO:christian.valdebenito@galilea.cl
+ATTENDEE:MAILTO:francisco.castro@galilea.cl
+ATTENDEE:MAILTO:jonatan.zapata@galilea.cl
+ATTENDEE:MAILTO:nicolas.guzman@galilea.cl
+CREATED:20200117T130808Z
+SUMMARY:Preparación equipos a instalar y apoyo a soporte
+END:VEVENT
+END:VCALENDAR

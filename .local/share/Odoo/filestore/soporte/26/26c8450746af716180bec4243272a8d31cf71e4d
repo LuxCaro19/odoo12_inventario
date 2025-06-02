@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PYVOBJECT//NONSGML Version 1//EN
+BEGIN:VEVENT
+UID:20200124T211225Z - 1043@soporte
+DTSTART:20200127T000000
+DTEND:20200127T235959
+ATTENDEE:MAILTO:francisco.castro@galilea.cl
+ATTENDEE:MAILTO:christian.valdebenito@galilea.cl
+ATTENDEE:MAILTO:jonatan.zapata@galilea.cl
+ATTENDEE:MAILTO:nicolas.guzman@galilea.cl
+CREATED:20200124T211225Z
+SUMMARY:retirar en chillan soportes para antenas
+END:VEVENT
+END:VCALENDAR

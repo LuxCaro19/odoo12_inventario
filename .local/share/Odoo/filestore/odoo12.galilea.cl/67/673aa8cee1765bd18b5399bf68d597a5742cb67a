@@ -1,0 +1,145 @@
+Delivered-To: soporte@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp495229otp;
+        Fri, 5 Apr 2019 07:52:59 -0700 (PDT)
+X-Received: by 2002:a62:4610:: with SMTP id t16mr12857993pfa.217.1554475979529;
+        Fri, 05 Apr 2019 07:52:59 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554475979; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Rq5QjMwjxWJMs5a4uAGw2HLd5cfGLd/wc0GCy95AHe4qqN1TrfV34FNiTDjWioxNi+
+         logA1ivj9pZcn1qdoM+RPXxtgBW5m4ZPO8eRFYaR25reRmviI6+4u45bhXjUtkZ4Zc+h
+         +rgXRLz5IzIXt3o5LLDykZUqkHKY86W4NWL+U7oR9P5z0d3UKEgOjUlKTIo/68Vfm7wM
+         iHfvSjVLgowQiR4MWG/JuQ4rRQvV2yjeZ4BH05Gp3n3Psr3PS8vngeObzGqTBohGGyPT
+         Y/9GEaEVOuhlAe1ipCshqTHFKMsW80hdZv4YdKlXgPpgRGOD1+C4hP0XCWZA1k/4NKci
+         gAZw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=39ISXlBQ7czPag2uENPoK8JGtgBrIZ8KN18jtbxWzOw=;
+        b=DCQZ+0udj40LzjwL4O15JxFK4ckIV0fdjJ+iFbBa7aACHYqV27CCAdKEHqbTBX6N05
+         Np7Og/+YKOPhn/W8HIM1SMEfSQw8PCBaT8J7bwoKERE+lwT5xOzEXe+mUDmB1fZfHoLZ
+         7TKABuJRBRoY70iKTiQierVrMJhLDx0OlgdE3V2K1kjjImaFpNoBrVo6zLMBnCAQg6QU
+         beVHLidmeSCX/dErsZPktSHFNIWU+O85llzKsdXhf6Q8bL+uthJooJ9JQtF5TJ3ci+2F
+         WUoQGFTjI4VEsJ8MViPb+2VekBMxsIOtG2g/TJRrafrJv8FKZp1b+pPl0K2YVWxWoAHP
+         Ucww==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=fsqFpuLj;
+       spf=pass (google.com: domain of jose.valenzuela@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=jose.valenzuela@galilea.cl
+Return-Path: <jose.valenzuela@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id d3sor28551540plo.52.2019.04.05.07.52.59
+        for <soporte@galilea.cl>
+        (Google Transport Security);
+        Fri, 05 Apr 2019 07:52:59 -0700 (PDT)
+Received-SPF: pass (google.com: domain of jose.valenzuela@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=fsqFpuLj;
+       spf=pass (google.com: domain of jose.valenzuela@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=jose.valenzuela@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=39ISXlBQ7czPag2uENPoK8JGtgBrIZ8KN18jtbxWzOw=;
+        b=fsqFpuLj+eFNNOTIPGqhpBPyj068jg5ADCOFZB2Ci8oQY/XbpB+biRC+pxz7gCinJH
+         0VTAhuC/FYEUn5fSL3z5Dz72dJRD3VgFbPRG9hdyVTUEERz4USQPnQbACPLdnFuonPpe
+         6cneWmrsD+aoP4EdxnxpBzeWeET2SZfetQuvD09Pk2kPWmqPKol3Uc5OnqqpXo0rljYG
+         QhL+Sf72xLWm63ibt8/9M5IYkHGtda0vSOI0XRCtkpbvAAkJ2zeqMJ7XbnL9gGTWorzs
+         KI9Ha9zTmDz8NHxFZO0Br5yZGIph0ZhPYix7HvIluH8JaVaYaLxeEp9q8B/BJ+kDSf1w
+         GlnQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=39ISXlBQ7czPag2uENPoK8JGtgBrIZ8KN18jtbxWzOw=;
+        b=dVPxnjeaytwVFtQ3vSScI6ODLgyIPj9WwEb7TfFQ6ekNswXbBx5QOxTr2ISI0VB+IX
+         WbKCNqk+0Sq+chHDpuXTNbo6d1mctXya3MRGtSOudu5kB0QkCyp5WW2oaotROfgnhZhf
+         D+6aPM3tQW9qEuptvjkVC4tswdwf2c5bI7+pMdJq1QHixwujyr81lf2YMsGelvLSJdHh
+         ih1pw/QXCU7rbh6zyeKBY645Itbq76FRwIVg7F6GCwckErF8Vv0JiTM7AdlrrDlqIjoK
+         MdK4lYxhN7U8+n8L4XQUvm3Wpn3ewpM9rl8LJ/QISCg0tRYqcgXQ6ObwHX4mSXPisKRN
+         ilyQ==
+X-Gm-Message-State: APjAAAU0ZsNhY7VKNjobNCObVNo+VdQlyHLTyn0BuNoZD4+U4ccc8K4I
+	oQjFoq9D0hiuoeuca/om1mT4f+dM9ELJyDs1h1+kURw+
+X-Google-Smtp-Source: APXvYqwwBN6CZarYYV2j6oHd6A1eAEYSmUGVkrEdVu4hDgY8TBIDO4+DkedETgrCe/B0gGsAmzU+TAk0oCSXBaWGCZ4=
+X-Received: by 2002:a17:902:248:: with SMTP id 66mr12937974plc.286.1554475978888;
+ Fri, 05 Apr 2019 07:52:58 -0700 (PDT)
+MIME-Version: 1.0
+From: JOSE LUIS VALENZUELA TORO <jose.valenzuela@galilea.cl>
+Date: Fri, 5 Apr 2019 11:52:46 -0300
+Message-ID: <CAGy9r5ONfKGe-QDkqQ3QUOTJ9WkxXmCM2X=nDd1VzsGrxnnKCw@mail.gmail.com>
+Subject: Equipo Nuevo Control de Calidad - Rancagua
+To: ROBERTO ANTONIO VASQUEZ MEJIAS <roberto.vasquez@galilea.cl>, sistema ticket <soporte@galilea.cl>,
+	=?UTF-8?Q?Williams_Caroca_Olgu=C3=ADn?= <williams.carocaolguin@gmail.com>
+Cc: Joaquin Gonzalo Ortubia Cornejo <joaquin.ortubia@galilea.cl>
+Content-Type: multipart/alternative; boundary="00000000000088aec80585c9a4e7"
+
+--00000000000088aec80585c9a4e7
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Estimad@
+
+El d=C3=ADa de hoy ingreso como Control de Calidad, a la ciudad de los Ranc=
+agua
+el Sr. Williams Patricio Caroca Olgu=C3=ADn  RUT: 19.423.469-4, por lo
+necesitar=C3=A1 contar con el equipo PC + creaci=C3=B3n de su cuenta de cor=
+reo de la
+empresa y acceso a sistema JDE y Bi Publisher
+
+Atento a sus comentarios
+
+
+
+*Jos=C3=A9 Luis Valenzuela Toro*
+
+Jefe Departamento de Calidad
+
+Celular: +56 -957484882
+
+03 Oriente # 1424 - Talca
+
+Fijo: (71) 2 514 496
+
+www.galilea.cl
+
+--00000000000088aec80585c9a4e7
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Estimad@</div><div><br></div><div>El d=C3=ADa de hoy =
+ingreso como Control de Calidad, a la ciudad de los Rancagua el Sr. William=
+s Patricio Caroca Olgu=C3=ADn=C2=A0 RUT: 19.423.469-4, por lo necesitar=C3=
+=A1 contar con el equipo PC + creaci=C3=B3n de su cuenta de correo de la em=
+presa y=C2=A0<span class=3D"gmail-il">acceso</span>=C2=A0a sistema JDE y Bi=
+ Publisher</div><div><br></div><div>Atento a sus comentarios</div><br class=
+=3D"gmail-Apple-interchange-newline"><div><div dir=3D"ltr" class=3D"gmail_s=
+ignature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div dir=3D"l=
+tr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><di=
+v dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr=
+"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><p st=
+yle=3D"margin-bottom:0.0001pt;line-height:normal;background-image:initial;b=
+ackground-position:initial;background-repeat:initial"><br></p><table border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:collaps=
+e"><tbody><tr style=3D"height:104.25pt"><td width=3D"189" valign=3D"top" st=
+yle=3D"width:5cm;padding:0cm 5.4pt;height:104.25pt"><p style=3D"margin:0cm =
+0cm 0.0001pt;text-align:justify"><span style=3D"font-size:11pt;font-family:=
+Calibri,sans-serif"><img width=3D"206" height=3D"101" src=3D"https://mail.g=
+oogle.com/mail/u/0/?ui=3D2&amp;ik=3D05ad01358c&amp;view=3Dfimg&amp;th=3D164=
+8452ea6fcb42c&amp;attid=3D0.0.1&amp;disp=3Demb&amp;realattid=3D112d82d3cedb=
+2249_0.1&amp;attbid=3DANGjdJ9Hv-xZURjs2eLhF9Lifbvv71bIoSchzI2cFwE_z3YMeKdb7=
+LJzOtShvKhrvIDwidrG8h8UG7PP7cPXVUFv8uKUEUKdPF3sIC9sEZ4f9biBikgllUDxooKtuFY&=
+amp;sz=3Dw412-h202&amp;ats=3D1531236191661&amp;rm=3D1648452ea6fcb42c&amp;at=
+sh=3D1"><br></span><u></u></p></td><td width=3D"335" valign=3D"top" style=
+=3D"width:251.35pt;padding:0cm 5.4pt;height:104.25pt"><font face=3D"Arial, =
+sans-serif"><b>Jos=C3=A9 Luis Valenzuela Toro</b></font><br><p style=3D"mar=
+gin:0cm 0cm 0.0001pt"><span style=3D"font-family:Arial,sans-serif;color:rgb=
+(127,127,127)">Jefe Departamento de Calidad</span><u></u></p><p style=3D"ma=
+rgin:0cm 0cm 0.0001pt;line-height:14.65pt"><span style=3D"font-family:Arial=
+,sans-serif">Celular: +56 -957484882</span><u></u></p><p style=3D"margin:0c=
+m 0cm 0.0001pt;line-height:14.65pt"><span style=3D"font-family:Arial,sans-s=
+erif">03 Oriente # 1424 - Talca</span></p><p style=3D"margin:0cm 0cm 0.0001=
+pt"><span style=3D"font-family:Arial,sans-serif">Fijo: (71) 2 514 496</span=
+><u></u></p><p style=3D"margin:0cm 0cm 0.0001pt"><span style=3D"font-family=
+:Arial,sans-serif"><a href=3D"http://www.galilea.cl/" style=3D"color:rgb(17=
+,85,204)" target=3D"_blank"><span style=3D"color:rgb(5,99,193)">www.galilea=
+.cl</span></a></span></p></td></tr></tbody></table></div></div></div></div>=
+</div></div></div></div></div></div></div></div></div></div></div></div></d=
+iv></div></div></div></div></div>
+
+--00000000000088aec80585c9a4e7--

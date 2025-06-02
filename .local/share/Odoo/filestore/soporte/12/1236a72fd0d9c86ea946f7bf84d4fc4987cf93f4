@@ -1,0 +1,96 @@
+Delivered-To: soporte@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp3567137otp;
+        Mon, 8 Apr 2019 06:33:07 -0700 (PDT)
+X-Received: by 2002:a05:6512:248:: with SMTP id b8mr15402321lfo.140.1554730387280;
+        Mon, 08 Apr 2019 06:33:07 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554730387; cv=none;
+        d=google.com; s=arc-20160816;
+        b=YtlhQF212ueNrqqgZhOsCKC+72S4GQS61Hu4GCVthFcVhrPDePIt/UVbKmBRlH0+hk
+         xHTi5uLkzj2IhdW33q9WEkNybNR/vIfTQIHhu20dPJmb37AKWRCiwmvDSzK6ABRav6L6
+         FeRb3NYOUjmK4mP52bkJ1MQW0OHuiUYNBGsHVDdn064LYFjAcgmAZqhbIfQjyszJPqLH
+         neZbvMJL827o35pbejPjBF667O+QWucfq8M14Y74vvJitotOpzwuS7pK2D9ZcD6EH/U8
+         g/DGYpAITh43Z/1zvMczRlzZdSUK2XKlhf2zUbi7sejm/vN6/iqUdaUy6ObHFiR9Sbop
+         PBqA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=T2iI/aDtQcJG0RDfkn99K/YlVz33jqI8+/GORAfBUIs=;
+        b=DqRCY3p/15v91QRQ/Un0asIKG1JQckEBwv6vyk3EIhlTUT2WvVGKBOwXzLUzR1FixT
+         m+hvTj1sojHDU4VgIZ3B6FbA76gvmrd11uHvobrvr6IP8WvowIdc46IFltRjQiv3nfps
+         pGdALxp13dJMEX/JQFZd5AHWyUy5i5ehwS5htBwGMCyWdJUrEQc8r0xZh3ACc9dDusO/
+         6cGcb28BAfd/cFYEzXoJ+Dtukcu69sKHAsvfTlbylb9CSKbJKI3u446syxlLzOIuOUi5
+         hB4KcYCmrCjFKZdnzcmnOtcqrFDOa1yxSGCqUenOo/+wicpVl0D+RnonnE8BgloSunxw
+         zCHw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=NGomlj6j;
+       spf=pass (google.com: domain of natalia.quintana@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=natalia.quintana@galilea.cl
+Return-Path: <natalia.quintana@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id j4sor7854623lfh.52.2019.04.08.06.33.07
+        for <soporte@galilea.cl>
+        (Google Transport Security);
+        Mon, 08 Apr 2019 06:33:07 -0700 (PDT)
+Received-SPF: pass (google.com: domain of natalia.quintana@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=NGomlj6j;
+       spf=pass (google.com: domain of natalia.quintana@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=natalia.quintana@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=T2iI/aDtQcJG0RDfkn99K/YlVz33jqI8+/GORAfBUIs=;
+        b=NGomlj6jWpqje+BqELgU8/KGr8T5veTQgQhpOI4kWC/7cI5YiNGB9ycbbr+IjBQ12l
+         T38Aow70F9Gt5mrWj/pzPEQqm6rk2FcPBswtUeUMHSPjUEj89/49W5nIDbquTMzKlADs
+         qO0XW/3eBMrKDiaKjWHyEe2Ha+hC/Yd9hfuKDekwL4mWUZfXTmV0myL56JHFr38RQy4+
+         zqpSsrmzOvdeSBEi4Pr/0WXWGprxJgGydAW1q1cd3el5w1sz1iF8LMz7qHZq1L27KahF
+         KYOUmR914x+YntnLlBK90JaNgCn9jneGdNVB5gtQKayoS+U/lKqMKPa/eHhpkmqygaMC
+         IjTQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=T2iI/aDtQcJG0RDfkn99K/YlVz33jqI8+/GORAfBUIs=;
+        b=EPau3uvYh67Xf2Gk29WrV6JDVxOC0p6f2yXTf7Mj6+vmBmGaoMjYy6Ru5joMp4WlBY
+         sBEAmxb0gydbuDxWMH21RTPzjkAWo0Rm+eefPS6ZSm170aul1JZm12RbK+yHxq9QrLOF
+         NBGO6aGIDwXIbknh/fqmrZjYk+sKEHseDBicM7YQsfAKlR+ouX+LUfp1NwJ5LIdojz3n
+         v7srOz8HuBvs+ZsIBHPHb+uphTMNHSwiTsfngOLqLJWdRGzTP30GJdgLVsEf7XQRxVqb
+         +noDbAyqg2WXsVrPEL1aH260XgXqPBJE2Au+kTaeayAVfQ0oUVh+yJRlk/e+XBYVlyU/
+         SEYg==
+X-Gm-Message-State: APjAAAUoAyN+uL8jwA/HCQg4NwdfW7JR8Qvq3pHltfkl9vT/h/xSC5ZY
+	wuq2vXtGZdn28R+HSSdG+OLZBgdcPeidTwBFO1Z7WHLEi7I=
+X-Google-Smtp-Source: APXvYqz1dGCNFHTPf4DqcMx+NGxUQlT3IM7XpmKIfvsSoJB4CHQvTYs5Iphug7P+G9sYwVCXJhcLi+Dn4e8mENtAiTY=
+X-Received: by 2002:ac2:5205:: with SMTP id a5mr1230800lfl.102.1554730386688;
+ Mon, 08 Apr 2019 06:33:06 -0700 (PDT)
+MIME-Version: 1.0
+From: Natalia Angelica Quintana Salas <natalia.quintana@galilea.cl>
+Date: Mon, 8 Apr 2019 09:32:55 -0400
+Message-ID: <CAFfQ4UYb=vAA3MB4iaXJdiKvNsc+hNsY9=x0DBi2wqPY29fawA@mail.gmail.com>
+Subject: =?UTF-8?Q?Configuraci=C3=B3n_impresora?=
+To: Sistema Ticket <soporte@galilea.cl>
+Content-Type: multipart/alternative; boundary="0000000000006ba3b3058604e089"
+
+--0000000000006ba3b3058604e089
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Buen d=C3=ADa,junto con saludar, agradecer=C3=A9 me puedan ayudar con la
+configuraci=C3=B3n de una impresora en obra Lomas Verde.
+
+Atte.,
+
+--=20
+*Natalia Quintana Salas/ Depto. Prevenci=C3=B3n de Riesgos*
+*Constructora Pehuenche Limitada (+56-9) 68399464*
+*Brisas del Junquillar/Huertos de Escuadr=C3=B3n/Lomas Verdes*
+
+--0000000000006ba3b3058604e089
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Buen d=C3=ADa,junto con saludar, agradecer=C3=A9 me puedan=
+ ayudar con la configuraci=C3=B3n de una impresora en obra Lomas Verde.<div=
+><br></div><div>Atte.,<br clear=3D"all"><div><br></div>-- <br><div dir=3D"l=
+tr" class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=
+=3D"ltr"><i><b>Natalia Quintana Salas/ Depto. Prevenci=C3=B3n de Riesgos</b=
+></i><div><i>Constructora Pehuenche Limitada (+56-9) 68399464</i></div><div=
+><i>Brisas del Junquillar/Huertos de Escuadr=C3=B3n/Lomas Verdes</i></div><=
+div><br><div><br></div></div></div></div></div></div>
+
+--0000000000006ba3b3058604e089--

@@ -1,0 +1,198 @@
+Delivered-To: sistematicket@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp2015779otp;
+        Tue, 2 Apr 2019 12:30:38 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqzwD6Aep89baWTkO+rJHbyujgDxHxS4N7qf1++8M+zY37oz5iSY87WJWWeyTwfFcEH4+7J/
+X-Received: by 2002:aed:3762:: with SMTP id i89mr60945354qtb.311.1554233438400;
+        Tue, 02 Apr 2019 12:30:38 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554233438; cv=none;
+        d=google.com; s=arc-20160816;
+        b=OJiyIQ+ezoWUwFrLxhIF5R2PuytHXxROsuRgmJAofgSmKkvm5JYLH77Pd4A7mACAra
+         zIgaSZ2n/n9Sd+goyApLJUXvUhtMZaN8xA+NDg3s6VAc21a8mxYuhMup9+AGPcfqyLX0
+         JVay6797Eh2gOys7TdqGBQQWh8YebfASw4FCpA8KIZpKDHL9MwpNnWfHqUBUOz+xn7zA
+         jA4w7PlohHwiQMm6s+rsIf3dxYe5pxV6YvYcQF1aBHSHK7GAznc1wVe8gNDSfqAX4zep
+         KoPIUtn7+ZZIuA/KxoN02y33qI9QgUjaOCWCZEun34C0yP6cgeNnhcDl/M8udVGWYTFV
+         Vk3Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=references:in-reply-to:from:organization:to:message-id:date:subject
+         :cc:mime-version;
+        bh=SvHnfF+8sDHXO31SL3ka92ox7cgd/+VPPKrJYjUJ/hk=;
+        b=oJZfvk7+4JgD2hq99aOx8c89Kun2BGkdddXpuIqapuHa9YEwmL0u1PGDBKkQPnMsv4
+         sRrP8jNYGqA6mQ1i0gsEBxRe3Tjq5xmSeJgsaPUha4Zmg7T5HiHOzkHDOmy0Elle32GA
+         BuaI/wFveuw8R1iZMX8nnhHfiVEb1J+XsMHAWuxCfHvne/Dh5BbPLEgUW4W8zyyyqEA2
+         PrXoUkyEYS8f8wAK1C16NxSyR/gX/B8d/qbd11JrL2C9+8PDCNhXwMD+E891ZEkJJn3y
+         ViEX6ejS94imu1SO//t0gLyYLyXdTDHDPnTwPKhSJe4PKph13hp0EQHYJdNd6pi+P8a3
+         zy0A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       spf=softfail (google.com: domain of transitioning soporte@galilea.cl does not designate 200.54.96.106 as permitted sender) smtp.mailfrom=soporte@galilea.cl
+Return-Path: <soporte@galilea.cl>
+Received: from otrs.galilea.cl ([200.54.96.106])
+        by mx.google.com with ESMTP id h12si193279qtb.51.2019.04.02.12.30.38;
+        Tue, 02 Apr 2019 12:30:38 -0700 (PDT)
+Received-SPF: softfail (google.com: domain of transitioning soporte@galilea.cl does not designate 200.54.96.106 as permitted sender) client-ip=200.54.96.106;
+Authentication-Results: mx.google.com;
+       spf=softfail (google.com: domain of transitioning soporte@galilea.cl does not designate 200.54.96.106 as permitted sender) smtp.mailfrom=soporte@galilea.cl
+Received: by otrs.galilea.cl (Postfix, from userid 48)
+	id B8ABF100569; Tue,  2 Apr 2019 16:30:37 -0300 (-03)
+MIME-Version: 1.0
+CC: Sistema Ticket <sistematicket@galilea.cl>
+Subject: Re: [Ticket#1030400] problema de cambio de estado
+X-Powered-BY: OTRS (https://otrs.com/)
+X-Mailer: OTRS Mail Service (5.0.33)
+Date: Tue, 2 Apr 2019 16:30:37 -0300
+Message-ID: <1554233437.920716.261507321@otrs.galilea.cl>
+To: Andres Orellana Ortiz <andres.orellana@galilea.cl>
+Organization: Galilea S.A.
+From: Ticket Soporte <soporte@galilea.cl>
+In-Reply-To: <CAJfSM1wuVH0x4_3tkegUc5FmbA8z5+HrLLr_FjL-tptCb7g10g@mail.gmail.com>
+References: <CAJfSM1wuVH0x4_3tkegUc5FmbA8z5+HrLLr_FjL-tptCb7g10g@mail.gmail.com>
+Content-Type: multipart/alternative;
+ boundary="----------=_1554233437-28764-21"
+
+This is a multi-part message in MIME format...
+
+------------=_1554233437-28764-21
+Content-Type: text/plain; charset="utf-8"
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+Estimado(a)=C2=A0Andres Orellana Ortiz,
+
+Listo. problema resuelto.
+
+Atentamente,
+Fernando=C2=A0de la Fuente
+
+Sistema de Ticket=C2=A0
+Procesos y Tecnolog=C3=ADa.
+Galilea S.A.
+E-mail: [1]soporte@galilea.cl; [2]sistemas@galilea.cl; [3]equipos@galilea.c=
+l;
+[4]http://otrs.galilea.cl/otrs/customer.pl
+
+02/04/2019 - 14:50 - Andres Orellana Ortiz escribi=C3=B3:    Estimados,=C2=
+=A0
+ junto con saludar, favor solicito de su ayuda tengo la sgte oc=C2=A0551139=
+ que no
+puedo hacer que cambie de todo EP adjunto imagen=C2=A0
+
+ ATTE
+ Andres=C2=A0Orellana Ortiz=C2=A0
+
+ Administrativo
+Constructora Pehuenche Ltda
+Obra=C2=A0Brisas de Junquillar     +56993201782
+
+
+
+[1] mailto:soporte@galilea.cl
+[2] mailto:sistemas@galilea.cl
+[3] mailto:equipos@galilea.cl
+[4] http://otrs.galilea.cl/otrs/customer.pl
+
+------------=_1554233437-28764-21
+Content-Type: text/html; charset="utf-8"
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3Dutf-8"/></head><body style=3D"font-family:Geneva,Helvetic=
+a,Arial,sans-serif; font-size: 12px;">Estimado(a)&nbsp;Andres Orellana Orti=
+z,<br />
+<br />
+Listo. problema resuelto.<br />
+<br />
+<br />
+Atentamente,<br />
+Fernando&nbsp;de la Fuente<br />
+<br />
+<strong>Sistema de Ticket&nbsp;</strong><br />
+<strong>Procesos y Tecnolog=C3=ADa.<br />
+Galilea S.A.<br />
+E-mail: <a href=3D"mailto:soporte@galilea.cl" target=3D"_blank">soporte@gal=
+ilea.cl</a>; <a href=3D"mailto:sistemas@galilea.cl" target=3D"_blank">siste=
+mas@galilea.cl</a>; <a href=3D"mailto:equipos@galilea.cl" target=3D"_blank"=
+>equipos@galilea.cl</a>;<br />
+<a href=3D"http://otrs.galilea.cl/otrs/customer.pl" target=3D"_blank">http:=
+//otrs.galilea.cl/otrs/customer.pl</a></strong><br />
+<br />
+&nbsp;<br />
+<br />
+02/04/2019 - 14:50 - Andres Orellana Ortiz escribi=C3=B3:
+<div style=3D"border:none;border-left:solid blue 1.5pt;padding:0cm 0cm 0cm =
+4.0pt" type=3D"cite">
+<div>
+<div>
+<div>Estimados,&nbsp;</div>
+
+<div>junto con saludar, favor solicito de su ayuda tengo la sgte oc&nbsp;55=
+1139 que no puedo hacer que cambie de todo EP adjunto imagen&nbsp;</div>
+
+<div>&nbsp;</div>
+&nbsp;
+
+<div>
+<div class=3D"gmail_signature">
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0px 0px 0px 40px;border:none;padding:0px">&nbsp;</div>
+ATTE</div>
+
+<div>Andres&nbsp;Orellana Ortiz&nbsp;</div>
+</div>
+</div>
+</div>
+Administrativo<br />
+Constructora Pehuenche Ltda<br />
+Obra&nbsp;Brisas de Junquillar
+<div>
+<div>
+<div>
+<div>
+<div>+56993201782</div>
+</div>
+</div>
+</div>
+</div>
+
+<div>
+<div>
+<div>
+<div>
+<div style=3D"margin:0px 0px 0px 40px;border:none;padding:0px">&nbsp;</div>
+
+<div style=3D"margin:0px 0px 0px 40px;border:none;padding:0px">&nbsp;</div>
+
+<div style=3D"margin:0px 0px 0px 40px;border:none;padding:0px">&nbsp;</div>
+
+<div>
+<div>
+<div>
+<div style=3D"font-size:12.8px">
+<p>&nbsp;</p>
+</div>
+
+<div style=3D"font-size:12.8px">
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></body></html>=
+
+------------=_1554233437-28764-21--

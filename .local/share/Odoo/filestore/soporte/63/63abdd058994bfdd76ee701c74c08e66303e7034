@@ -1,0 +1,200 @@
+Delivered-To: soporte@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp596251otp;
+        Fri, 5 Apr 2019 09:21:23 -0700 (PDT)
+X-Received: by 2002:a63:6581:: with SMTP id z123mr12543987pgb.243.1554481282920;
+        Fri, 05 Apr 2019 09:21:22 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554481282; cv=none;
+        d=google.com; s=arc-20160816;
+        b=bIPFyhlef592VoX5p+JTleTyZae/pzxpQoo7E9KF/K9Dk4uH0mQc9BgqPtimXcFIGT
+         1/YhmZbXl6Y+KZlC7sWr2OAXKxXivDiQxHTE4IRmupjQDMAT85WS7OP/nMw3o7WHuV1j
+         PS5RVS6ga+Ihmkt3EWiPhqcRqNiAiN0XtTx80VzTHGRnaurHToMgp9S+PwydkHzzmhn0
+         80cXaw6+n8/lKz7ww0AR3GIfbGT0ik8ToTm7O8mznqXS/5G1WD8zxLMd9b/c0qC+l+CV
+         GXV2C+hjATlc8SXUImwJ3L5IXjnYXH8XAGyrvhvpAnQDGnh45AokCOBLqKyhBgVmmHpD
+         SR6A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=y23rXc0Nm+Mu9rcIh8yeyHXYUH3T2rDoKd4/hD1c4yE=;
+        b=OiCyg2HYBkrHTouBw+aPxdz3sdZSyx+cAhCaEGp8NFyFLgFsC0jM7Tbcv+4/5nX34S
+         ZJRgWCxL3KTdtdBEvwsubT5ZWYo65qDkiy0Z8yOIPlF5cxLX7AbLyuk84D3JO/SD4+X5
+         g6evJKRMUZHT7nVrO6wy/GJfh7v47DmPB6SalUrtLogwmaW8wCh1tuJgmYLXzzDJRrOA
+         kl0VooHObW0sWl2o4PdIEMVsTsMxlFV8kPTLuGqGqp3jtg9WIX063kyXLhXgxO5n/9oC
+         V7d8Vb+DuD7mqPBzbTzCtA4QEZ1BVV0SZ2h1/pEuSIiyiGoDnYLN+o3rMOcdrtL45Vc7
+         svoQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=GxjVM3sB;
+       spf=pass (google.com: domain of sergio.urrutia@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=sergio.urrutia@galilea.cl
+Return-Path: <sergio.urrutia@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id e23sor8181728pgv.49.2019.04.05.09.21.22
+        for <soporte@galilea.cl>
+        (Google Transport Security);
+        Fri, 05 Apr 2019 09:21:22 -0700 (PDT)
+Received-SPF: pass (google.com: domain of sergio.urrutia@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=GxjVM3sB;
+       spf=pass (google.com: domain of sergio.urrutia@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=sergio.urrutia@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=y23rXc0Nm+Mu9rcIh8yeyHXYUH3T2rDoKd4/hD1c4yE=;
+        b=GxjVM3sBfEF1cfq5WeTnLXtXWNlnu7NRHkeoay3f7RHbLM0krRO+LbZod5sXTEzY3b
+         PSbbEe0TqMKpqfTAZxK1HQlraJotE3KCEJDFGauMlM2v8gmmAupyKkmhRqNzEECQJPOd
+         /rKnUQCBuutYZXJyAqscugb2eR3BSSZUg0eEa0fuODd3DhAQm9+VicuFL57uvd7bNmfq
+         9aAiufxVeBt0iRy509j6pYbnl0mQ76eTw4V67jegfkHQo+YD6OVc/faW/wCV8ZirCE6Q
+         iI9fEAvX78z75yvgoTJoXhEXTMeQeJOoZa5iaPFs0kNfgwFKfbpaOFW+JSMu8sUFCThi
+         6aLQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=y23rXc0Nm+Mu9rcIh8yeyHXYUH3T2rDoKd4/hD1c4yE=;
+        b=MaHYL7ibUiZiuPbnEhR0yvqQGji/166kuarjQsoIhbikyYl96dOKGn6fMUCxtQa5n0
+         19RAZlO7P8K8Q2JYX2RDs6XVgu0B/UayrgoHNwGi1wm2YBCbQkfXkfs4BkbQT3vf+EYs
+         ujUg7utwxPilne70Jom9u3hL7waZdkHgWPEMGtQu+3JZNREep/Vu9pDw9+BL4KlZ7q7U
+         t5nby4ZJ+zy4D0wLeHGu2tEVLc+3M/lNHCivoV9lZyj6maG9JwsdYx8+wAMuhvkcRJpc
+         bFLdqGlNsyB5F/zFeBT34CxdX7ye+zDtvAwZSX/pwGkGcjDOp4PbEYUAkEL0Dje2oojt
+         sb8w==
+X-Gm-Message-State: APjAAAULmnRkswfX7GWMkIwqABnKqwdE1iNp3/2TnEP5FFWB5F7xD+Hi
+	7SgzHbDCWLOh1T0ltVttQ+tIZfCup04cn43KC/8BCfD13QmqSw==
+X-Google-Smtp-Source: APXvYqx5Ayijy4qhJUiZYt3kNkrWpSQ+Werr9/qShIuwj/I5OmvKxK85bw6E4tUe3ba9i/XyXk2HOGmQTB02jR3Xr4U=
+X-Received: by 2002:a63:360e:: with SMTP id d14mr12807117pga.188.1554481281779;
+ Fri, 05 Apr 2019 09:21:21 -0700 (PDT)
+MIME-Version: 1.0
+From: SERGIO URRUTIA <sergio.urrutia@galilea.cl>
+Date: Fri, 5 Apr 2019 13:21:11 -0300
+Message-ID: <CAEE9phT0hga2qD3cbR3eXzx_YYY3rdpupei99xfEtPnwik+krw@mail.gmail.com>
+Subject: Sin acceso a Carpeta contabilidad
+To: Sistema Ticket <soporte@galilea.cl>
+Content-Type: multipart/related; boundary="0000000000009eb8c30585cae0d8"
+
+--0000000000009eb8c30585cae0d8
+Content-Type: multipart/alternative; boundary="0000000000009eb8c00585cae0d7"
+
+--0000000000009eb8c00585cae0d7
+Content-Type: text/plain; charset="UTF-8"
+
+Estimados:
+
+Junto con saludar solicito ayuda porque no tengo acceso a carpeta
+contabilidad 192.168.0.31 usuario: conta  password: cc1020
+
+atte
+
+
+
+*Sergio Urrutia Avila*
+
+Contabilidad | Analista Contable.
+
+Celular: +56990605279
+
+Fijo: (71) 2514478
+
+www.galilea.cl
+
+--0000000000009eb8c00585cae0d7
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Estimados:<div><br></div><div>Junto con saludar solicito a=
+yuda porque no tengo acceso a carpeta contabilidad 192.168.0.31 usuario: co=
+nta=C2=A0 password: cc1020</div><div><br></div><div>atte=C2=A0<br clear=3D"=
+all"><div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmai=
+l_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><=
+div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=
+=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><table border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"border-collapse:collapse"><tbody><tr styl=
+e=3D"height:104.25pt"><td width=3D"189" valign=3D"top" style=3D"width:5cm;p=
+adding:0cm 5.4pt;height:104.25pt"><p style=3D"margin:0cm 0cm 0.0001pt;text-=
+align:justify"><span style=3D"font-size:11pt;font-family:Calibri,sans-serif=
+"><img width=3D"206" height=3D"101" src=3D"cid:image001.png@01D3D565.28D2E7=
+80"><br><br></span><u></u></p></td><td width=3D"335" valign=3D"top" style=
+=3D"width:251.35pt;padding:0cm 5.4pt;height:104.25pt"><font face=3D"Arial, =
+sans-serif"><b>Sergio Urrutia Avila</b></font><br><p style=3D"margin:0cm 0c=
+m 0.0001pt"><span style=3D"font-family:Arial,sans-serif;color:rgb(127,127,1=
+27)">Contabilidad | Analista Contable.</span><u></u></p><p style=3D"margin:=
+0cm 0cm 0.0001pt;line-height:14.65pt"><span style=3D"font-family:Arial,sans=
+-serif">Celular: +56990605279</span><u></u></p><p style=3D"margin:0cm 0cm 0=
+.0001pt"><span style=3D"font-family:Arial,sans-serif">Fijo: (71) 2514478</s=
+pan><u></u></p><p style=3D"margin:0cm 0cm 0.0001pt"><span style=3D"font-fam=
+ily:Arial,sans-serif"><a href=3D"http://www.galilea.cl/" style=3D"color:rgb=
+(17,85,204)" target=3D"_blank"><span style=3D"color:rgb(5,99,193)">www.gali=
+lea.cl</span></a></span></p></td></tr></tbody></table></div></div></div></d=
+iv></div></div></div></div></div></div></div></div></div></div></div></div>
+
+--0000000000009eb8c00585cae0d7--
+
+--0000000000009eb8c30585cae0d8
+Content-Type: image/png; name="image001.png"
+Content-Disposition: inline; filename="image001.png"
+Content-Transfer-Encoding: base64
+Content-ID: <112d82d3cedb2249_0.1>
+X-Attachment-Id: 112d82d3cedb2249_0.1
+
+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
+--0000000000009eb8c30585cae0d8--

@@ -1,0 +1,87 @@
+Delivered-To: soporte@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp1796756otp;
+        Tue, 2 Apr 2019 08:51:45 -0700 (PDT)
+X-Received: by 2002:a1c:9c03:: with SMTP id f3mr4327706wme.67.1554220304986;
+        Tue, 02 Apr 2019 08:51:44 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554220304; cv=none;
+        d=google.com; s=arc-20160816;
+        b=aMrcaK4nVJTwQ2E0wZftYfnFb1fzJpnpLbObo4LMXiI09H0l9rG+LrDJrgE0uBB9vm
+         eQjQ2EPmMWiijit7R8VQvdfNlo14Fjvh6bwbp03/Gjxm0lsEUfUOUofDTQCaODojZNu2
+         xfjnKrRzoEKKyf2CvTb+b39uIjfMgAOffTIusN44emDR88exl1Jvv+FsxvihRDuPoPXE
+         QOObaTKmn0aUXw6Zn+nOxNAj6hST2S3fUdTUgJgV4Vu71W6wI9HcIipwpw4J3dbyKfUt
+         uRiK2J4uK/F0H0Sja6THJTrP5FBpo8Ch4AG2PYQ5adMSu7zNplj5Jt8aTH3RzEMU0U24
+         MD0Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=Vrvp7rqH5Ws25pbXaxKNAdsrSLUHov53yaQErWWhOik=;
+        b=xL3cCOESYbYXf8b/DZ3MzbBVrbSZmCu92W71c6jYoVhN6uBPRdOu3fERxE4Tm2lQCd
+         BkWyr68/gsFp0ZeFd/xMMGJuhbiDpZY9VqT06+txxHa13E0BI/zH9rNncIHYt8mS9mQ+
+         OdOkBFigVKFySUZSyiSTqVO4EW8h0WuanY7FxDr0wxl8R/UcSlYpzo+NV8ixNmbrnOX2
+         Lctr6qrYQPkvI0oCXBBU0hFoPLEQa9aUHS+7GqCr/atGAxmuLyqSXWZYpHs9nqHoRlNu
+         OMUVWeNf2KMk1JTsKNMBQaLU4BXK4Bfnbrm6xatRz3PjQqk+2QFmaAmhy5W979EeCCVa
+         AV3A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=SeqFBsMa;
+       spf=pass (google.com: domain of federico.stuven@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=federico.stuven@galilea.cl
+Return-Path: <federico.stuven@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id o14sor9582801wrp.44.2019.04.02.08.51.44
+        for <soporte@galilea.cl>
+        (Google Transport Security);
+        Tue, 02 Apr 2019 08:51:44 -0700 (PDT)
+Received-SPF: pass (google.com: domain of federico.stuven@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=SeqFBsMa;
+       spf=pass (google.com: domain of federico.stuven@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=federico.stuven@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=Vrvp7rqH5Ws25pbXaxKNAdsrSLUHov53yaQErWWhOik=;
+        b=SeqFBsMaSa9YNtT4M5QitgIU/0gDFFLWxNGIrV97EyT+urirhW7yB2Pra9d1LMUiSV
+         m43fPHGvCi4u2DK3+r+MJuhZxDDpHQIhnOxsULOt3FQv1tfz6JZOpj4xGrgx3yPuOeAI
+         jk/sAawXpO2x7vZPt+VYs0xFmnZNa2mMqrdSCYKkD+rYmE7K980ouQ6JlNF+/f9Dxh8G
+         2QduItvDRKWEjsX+BlBCsZumAXV7gdFXc2MAQK295aVoVgqns20LMgOnkfinmeelRNxR
+         OZIfhznjoKD/5+LMjxCFLNtkLI1DHXurEIbyvsObPyOQ5UvJfd07//soDYdhyUsK21wt
+         cRyQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=Vrvp7rqH5Ws25pbXaxKNAdsrSLUHov53yaQErWWhOik=;
+        b=WTYnIGRxEPUg9WHi7BIYJdvoG9ROZauAquB/0/ZUwYanHP7jpItjpDsUsHwp+f5MT0
+         uj9YUPE1zu29cscG+Ve6oyAc2agmO+nFymzugATGpybGLDZrQCffrrEjxSxfJsaar3AX
+         +FI2dkQWSjzUNGSzi99vRGmQ3HiVfOpx3JM5xGmZFhfByRkdUwQbNc90PnUMOnjlnElq
+         TnsoRWG8ddYbButnDo3bNTbsXr42DUu/kJVNN/FPiGyoyunmpWaVDIcdfLbkxj/E1anH
+         jmSWbnYpp9psDhOOc83QHgxvKMhVA1IqtQ4UGOAZ3aXX5uCq3HEV4hlKhJ4VT6rV7YJZ
+         IpMg==
+X-Gm-Message-State: APjAAAWoeq03K+jfxPk0oib3uwH7VW0y+szsezAMVhRoI7rzE1NGNbeV
+	gLQ30PWyiZswJChFRO8vBylLF8yAhNL9xxamMYLUSc9JOk2efg==
+X-Google-Smtp-Source: APXvYqzWrdy6fb+rmUq5u7gycCrkgCRRJy0psSeSh2+M8BH3C90x3ER7v7JDf3lnHG06aqNnChJaaBjC6DV2RbGwZ9U=
+X-Received: by 2002:a5d:4f11:: with SMTP id c17mr24120913wru.34.1554220304536;
+ Tue, 02 Apr 2019 08:51:44 -0700 (PDT)
+MIME-Version: 1.0
+From: Federico Stuven Araya <federico.stuven@galilea.cl>
+Date: Tue, 2 Apr 2019 12:51:32 -0300
+Message-ID: <CAEjJuE+DZHAempS6mP82N2yLwzMqqnfJNC=Otsmww2Bw19fzVg@mail.gmail.com>
+Subject: desbloqueo sitio
+To: Sistema Ticket <soporte@galilea.cl>
+Content-Type: multipart/alternative; boundary="00000000000027a0e105858e1dc2"
+
+--00000000000027a0e105858e1dc2
+Content-Type: text/plain; charset="UTF-8"
+
+Estimados,
+Favor desblqouear sitio: " https://www.glasstech.cl/productos/muros-cortina/
+"
+
+Agradecido.
+
+--00000000000027a0e105858e1dc2
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"ltr">Estimados,<div>Favor desblqouear sitio: &=
+quot;=C2=A0<a href=3D"https://www.glasstech.cl/productos/muros-cortina/">ht=
+tps://www.glasstech.cl/productos/muros-cortina/</a> &quot;=C2=A0</div><div>=
+<br></div><div>Agradecido.</div></div></div>
+
+--00000000000027a0e105858e1dc2--

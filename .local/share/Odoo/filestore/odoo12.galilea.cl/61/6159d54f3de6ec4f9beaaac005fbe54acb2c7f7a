@@ -1,0 +1,101 @@
+Delivered-To: soporte@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp884157otp;
+        Fri, 5 Apr 2019 14:28:57 -0700 (PDT)
+X-Received: by 2002:a67:be0a:: with SMTP id x10mr9788369vsq.128.1554499737239;
+        Fri, 05 Apr 2019 14:28:57 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554499737; cv=none;
+        d=google.com; s=arc-20160816;
+        b=oQ5RrcBHjflIFUWNcbKS4yE0wiuPJyJEhNQN19LPiEtY3KV9pJ8RJZKtaa3uLvlnt1
+         YFvTx5s7uz6kcCDxKrp2nSgY4L0zogrh7NKZitEhuFVVnYmKhTP5rGvfDEFg+i8mGWXt
+         JkoR2qgjdmm3ObdP1vhgRfM2JOUFNHj62uu9KDJaQS0uCfcRFPDwdYZhu2wvSgxA9YMd
+         O+DXKoLWIzkLNjZY2+zRhU0GwcJ2RRoUyxV0k5e+lGq15dmTjCGvtT5de70ZloC5jCd6
+         e5YWUVYmVl0ufgH18FT5juSNEx6VT9kbCvXCQ0CWU54N6Vf0Le11z58X/oEhNB7YY5rp
+         Fwvg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=xuDvMQcS/TldoYtwEtdiEKaGtiWIqmk29UxpU60SQRY=;
+        b=jtY2zTwj0BFvsAi3fMwW0I2tsFJ7eaQxFM7AYD7jOHQyOesvh0a6Y9nhm0A61ZhW4X
+         76UGu78Ej++MaOyG2zRyGD2WWoI3ubKYcFLmnl0wfNA8wtg8IdHTNDmT1eyYtGYfXJvu
+         K47N6WDaxv8ZYxZTqSbymsyWuEz09WmkM6kUVOoRwn3azn6YxkS+4tb5mXGcHfJ+mz1i
+         0iUw+oEyst4OAJsC1H92leUEyWoIF6wtzilu2N4D7yK1qC+3/vCKtx05FLY6WaN8W3Nj
+         PQ9kmu0VAOJJuGV25LGLbLRyKpWecllDYUY9V07Vpr1EYk65N70jyUD/SCBLdGWV5OlR
+         BeCw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=Q0gs9aCm;
+       spf=pass (google.com: domain of jose.mora@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=jose.mora@galilea.cl
+Return-Path: <jose.mora@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id t130sor15007596vsc.54.2019.04.05.14.28.57
+        for <soporte@galilea.cl>
+        (Google Transport Security);
+        Fri, 05 Apr 2019 14:28:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of jose.mora@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=Q0gs9aCm;
+       spf=pass (google.com: domain of jose.mora@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=jose.mora@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=xuDvMQcS/TldoYtwEtdiEKaGtiWIqmk29UxpU60SQRY=;
+        b=Q0gs9aCmzQk996ttnLI1dsdRMrAj4SoZyUJj108Qm38NKezLMInRGrVlJw7cQOHS1V
+         SbWQ3U01Pb4pWjSsx4FRlV4BM8faG7GgyBHX57VINwppLZWAOWeqAMtwJPgD1gRAhugk
+         CSgKyQhIyV89mr9XOf8t9W9FJpRu3EjR5jk1i0av1RK1ShG0qXivc1HV9JRd+eoET50Y
+         ceNBj8V7zh7dMN6XbrdmftvU+pz4PgYGrDVEh+9UFPan8Y5o1e2Y1GHglZWGksZRWtKW
+         7EHKeeI4wQhXsq1A3xwjPYq9pBMz1Yfna9Z8Un8dWeays1sARPpPsGnAy1WJoj8i9UJN
+         KUkg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=xuDvMQcS/TldoYtwEtdiEKaGtiWIqmk29UxpU60SQRY=;
+        b=PwKZaUjNt8zFE7WnZn7qFUR/d8LpD3IXeFHtk5g7ePHNlgMBP/2O0WT64TwcVw4vn+
+         kY+3waft52xPpbmPvSDMzvpjuddGNzkMleUDrdliS1cQxKHt8IcsDORVJJwQORH6wGNH
+         8RjxjZtidP0Ie2fRQJuxgrs9CcImFCZS1vf8H6JbYPisHIUaAAj8SZdiL0nMapCcx/j/
+         i4VJKUJWI87QKN7kR9ty6ngMmnhXcFb3JhyYLE6FKaPmfPUvwAe6bul4qAUt7A1A6BkV
+         HW4kxICb9l6o0FgDZigXVkTrpeXX2PA8OZ4YfLy1hwkM5NIUy6GVLX7WgwsVC78phDY8
+         H93w==
+X-Gm-Message-State: APjAAAVciJ2Uh4ve5x1S2HTLKqjOFEUruNlGGsds1YhKfPD3yNOU0kWN
+	g8gE/gCTaYCJMxQH7eR3eEPahF9MZyLcn4k5dK/O+5Um61o=
+X-Google-Smtp-Source: APXvYqwkN8kUztz1FisQBE6sPNL72cxX8J8T80jG1mTHkVV1Z4Wh5J3o9+F54PopFFiWnDU20MZE7vAQAjRngQzno9w=
+X-Received: by 2002:a67:e28d:: with SMTP id g13mr2045559vsf.121.1554499736715;
+ Fri, 05 Apr 2019 14:28:56 -0700 (PDT)
+MIME-Version: 1.0
+From: Jose Alejandro Mora Regla <jose.mora@galilea.cl>
+Date: Fri, 5 Apr 2019 18:28:46 -0300
+Message-ID: <CAGj5ndODzN-ZKSgxHjOSpqfFnidz6qez4HA7m7mOwwz6Nw1oig@mail.gmail.com>
+Subject: =?UTF-8?Q?Solicitud_Modificaci=C3=B3n_Estado_de_Pago=2E?=
+To: Sistema Ticket <soporte@galilea.cl>
+Content-Type: multipart/alternative; boundary="0000000000009c53510585cf2c38"
+
+--0000000000009c53510585cf2c38
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*Estimados:*
+
+Se solicita favor de estado de pago de don Patricio Rojas (N=C2=B0 552593).
+
+
+Quedo Atento a confirmaci=C3=B3n.
+
+
+
+--=20
+Sin otro particular, se despide atte...
+
+--0000000000009c53510585cf2c38
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><b>Estimados:</b><div><br></div><div>Se solicita favor de =
+estado de pago de don Patricio Rojas (N=C2=B0 552593).</div><div><br></div>=
+<div><br></div><div>Quedo Atento a confirmaci=C3=B3n.</div><div><br></div><=
+div><br clear=3D"all"><div><br></div>-- <br><div dir=3D"ltr" class=3D"gmail=
+_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div d=
+ir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div>Sin otro p=
+articular, se despide atte...</div><div><br></div><div><br></div><div><br><=
+/div><div><img src=3D"https://docs.google.com/uc?export=3Ddownload&amp;id=
+=3D1l0iBwvTEKj6ZrvO_gNAyhEJYjFD16NRq&amp;revid=3D0B6ffgCx1p1kkZHhzcnUzTUNkb=
+HBtSHBUbTRrVitMYzRnblp3PQ" width=3D"420" height=3D"111"></div></div></div><=
+/div></div></div></div></div></div></div></div></div>
+
+--0000000000009c53510585cf2c38--

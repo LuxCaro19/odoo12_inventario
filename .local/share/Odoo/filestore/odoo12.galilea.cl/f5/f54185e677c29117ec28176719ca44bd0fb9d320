@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PYVOBJECT//NONSGML Version 1//EN
+BEGIN:VEVENT
+UID:20200117T132223Z - 8407@soporte
+DTSTART:20200204T000000
+DTEND:20200204T235959
+ATTENDEE:MAILTO:christian.valdebenito@galilea.cl
+ATTENDEE:MAILTO:francisco.castro@galilea.cl
+ATTENDEE:MAILTO:jonatan.zapata@galilea.cl
+ATTENDEE:MAILTO:nicolas.guzman@galilea.cl
+CREATED:20200117T132223Z
+SUMMARY:Normalizar red cablada e instalación ptz Polo de Machalí
+END:VEVENT
+END:VCALENDAR

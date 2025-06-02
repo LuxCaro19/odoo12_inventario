@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PYVOBJECT//NONSGML Version 1//EN
+BEGIN:VEVENT
+UID:20200122T125004Z - 31193@soporte
+DTSTART:20200128T080000
+DTEND:20200130T180000
+ATTENDEE:MAILTO:rvasquez@galilea.cl
+ATTENDEE:MAILTO:hector.parra@galilea.cl
+ATTENDEE:MAILTO:pablo.espinoza@galilea.cl
+CREATED:20200122T125004Z
+DESCRIPTION:Trabajo de mantención preventiva Sala ventas y Obras de las ci
+ udades de San Carlos Chillan y Los Ángeles
+SUMMARY:Mantención Preventiva Chillan//LosÁngeles
+BEGIN:VALARM
+ACTION:AUDIO
+DESCRIPTION:1 día(s)
+TRIGGER;related=START:P1D
+END:VALARM
+END:VEVENT
+END:VCALENDAR

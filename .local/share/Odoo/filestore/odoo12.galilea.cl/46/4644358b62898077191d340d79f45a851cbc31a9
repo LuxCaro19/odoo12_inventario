@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<EnvioDTE xmlns="http://www.sii.cl/SiiDte" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sii.cl/SiiDte EnvioDTE_v10.xsd" version="1.0">
+<SetDTE ID="_DTE33_0000113569_78246760-3_01122017161238">
+<Caratula version="1.0">
+	<RutEmisor>96874160-8</RutEmisor>
+	<RutEnvia>18182104-3</RutEnvia>
+	<RutReceptor>78246760-3</RutReceptor>
+	<FchResol>2009-12-30</FchResol>
+	<NroResol>209</NroResol>
+	<TmstFirmaEnv>2017-12-01T16:12:38</TmstFirmaEnv>
+	<SubTotDTE>
+		<TpoDTE>33</TpoDTE>
+		<NroDTE>1</NroDTE>
+	</SubTotDTE>
+</Caratula>
+<DTE version="1.0">
+	<Documento ID="F113569T33">
+		<Encabezado>
+			<IdDoc>
+				<TipoDTE>33</TipoDTE>
+				<Folio>113569</Folio>
+				<FchEmis>2017-11-30</FchEmis>
+				<TpoTranVenta>1</TpoTranVenta>
+			</IdDoc>
+			<Emisor>
+				<RUTEmisor>96874160-8</RUTEmisor>
+				<RznSoc>Louisiana Pacific Chile S A</RznSoc>
+				<GiroEmis>FAB, ELAB, MANUFACT, IMPORT, EXPORT, Y DISTRIB. DEMAT. DE CONSTRUC</GiroEmis>
+				<Acteco>514320</Acteco>
+				<DirOrigen>Avda. Santa Clara N&amp;amp;deg;85, Piso 8, Ciudad Empresarial</DirOrigen>
+				<CmnaOrigen>Huechuraba</CmnaOrigen>
+				<CiudadOrigen>Santiago</CiudadOrigen>
+				<CdgVendedor>SJARA</CdgVendedor>
+			</Emisor>
+			<Receptor>
+				<RUTRecep>78246760-3</RUTRecep>
+				<CdgIntRecep>78246760-3</CdgIntRecep>
+				<RznSocRecep>CONSTRUCTORA PEHUENCHE LTDA.</RznSocRecep>
+				<GiroRecep>Construcci&amp;amp;oacute;n</GiroRecep>
+				<CorreoRecep>sii_prod_gali@smtp.suiteelectronica.com; carol.moraga@lpchile.cl; jgomez@galilea</CorreoRecep>
+				<DirRecep>3 Oriente, 3 y 4 Norte N&amp;amp;deg; 1424</DirRecep>
+				<CmnaRecep>Talca</CmnaRecep>
+				<CiudadRecep>Talca</CiudadRecep>
+				<CiudadPostal>Talca</CiudadPostal>
+			</Receptor>
+			<Totales>
+				<MntNeto>3011148</MntNeto>
+				<MntExe>0</MntExe>
+				<TasaIVA>19</TasaIVA>
+				<IVA>572118</IVA>
+				<MntTotal>3583266</MntTotal>
+			</Totales>
+		</Encabezado>
+		<Detalle>
+			<NroLinDet>1</NroLinDet>
+			<CdgItem>
+				<TpoCodigo>PRODUCTO</TpoCodigo>
+				<VlrCodigo>PT-SPA-G111-H</VlrCodigo>
+			</CdgItem>
+			<NmbItem>LP Smart Panel H 1a. Cal.1.22x4.88 mts.x11.1 mm.</NmbItem>
+			<DscItem>PT-SPA-G111-H</DscItem>
+			<QtyItem>98</QtyItem>
+			<UnmdItem>C/U</UnmdItem>
+			<PrcItem>30726</PrcItem>
+			<MontoItem>3011148</MontoItem>
+		</Detalle>
+		<Referencia>
+			<NroLinRef>1</NroLinRef>
+			<TpoDocRef>801</TpoDocRef>
+			<FolioRef>453869</FolioRef>
+			<FchRef>2017-11-23</FchRef>
+		</Referencia><Referencia>
+			<NroLinRef>2</NroLinRef>
+			<TpoDocRef>52</TpoDocRef>
+			<FolioRef>71290</FolioRef>
+			<FchRef>2017-11-30</FchRef>
+		</Referencia>
+	<TED version="1.0">
+<DD>
+<RE>96874160-8</RE>
+<TD>33</TD>
+<F>113569</F>
+<FE>2017-11-30</FE>
+<RR>78246760-3</RR>
+<RSR>CONSTRUCTORA PEHUENCHE LTDA.</RSR>
+<MNT>3583266</MNT>
+<IT1>LP Smart Panel H 1a. Cal.1.22x4.88 mts.x</IT1>
+<CAF version="1.0">
+<DA>
+<RE>96874160-8</RE>
+<RS>LOUISIANA PACIFIC CHILE S A</RS>
+<TD>33</TD>
+<RNG>
+<D>113111</D>
+<H>114110</H>
+</RNG>
+<FA>2017-11-23</FA>
+<RSAPK>
+<M>wuT5UvWr4WKqvwDcj0QXfq5LwnrYRoxMJXTNqahz56DVJrW4t4c2/NlKCbdtxleaMdclTsQyrXIIDSFWxr5khw==</M>
+<E>Aw==</E>
+</RSAPK>
+<IDK>300</IDK>
+</DA>
+<FRMA algoritmo="SHA1withRSA">K49ENpzkcUR95FKuzXLEvBTuVk64yhk/p8UyYonUGiXro0SCE9DjLmvM8fqweL9DwAe/A+3Qu+4VL4QxE8HXuA==</FRMA>
+</CAF>
+<TSTED>2017-12-01T16:12:38</TSTED>
+</DD>
+<FRMT algoritmo="SHA1withRSA">V+oFjr4p/6Wyc5tn2To5G3syFeRMSIvzbk2O4fKoD2ZbOmA0uG5YWLT1vJE16m4zGOlKUcGPM/jU6rRKR6Nm+w==</FRMT>
+</TED><TmstFirma>2017-12-01T16:12:38</TmstFirma></Documento>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI="#F113569T33"><Transforms><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>M6lg3stDoGTugYyuNoTfoGNDbbk=</DigestValue></Reference></SignedInfo><SignatureValue>bcCJdfu7uxSxe4A6JiSmKP+1bkwMq9EcNRA/pb1im28LEC2plqxOHFHrjujXlcopAQip1Qt+eCH2
+65nTo5vDZD3ERzXTe9Wj9L0RoLKCNcLNEje3pYJPdFZUwLnWIQCnDrnwVf1lBVF7i59WAMhI68hB
+EYnSs8C5NoJNIJYClWI=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>r+H8gJ/nl83IuzRks8Yno0umhRAAntV4emU1JZEcG1FGCFSqrOlLjuyvR1ExwMzWsI7EoabMH6LX
+6MzpTPkF+Rb6OHYf4+ESGtmLMLwPF/SDYHc0OxpFPg5S4yMyIH/5yRgBgypLm6P1O3o2HZObHWsW
+5lraDOhohikHr4BHsQs=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIGPzCCBSegAwIBAgIKWNeTWwAAAAh1kTANBgkqhkiG9w0BAQUFADCB0jELMAkGA1UEBhMCQ0wx
+HTAbBgNVBAgTFFJlZ2lvbiBNZXRyb3BvbGl0YW5hMREwDwYDVQQHEwhTYW50aWFnbzEUMBIGA1UE
+ChMLRS1DRVJUQ0hJTEUxIDAeBgNVBAsTF0F1dG9yaWRhZCBDZXJ0aWZpY2Fkb3JhMTAwLgYDVQQD
+EydFLUNFUlRDSElMRSBDQSBGSVJNQSBFTEVDVFJPTklDQSBTSU1QTEUxJzAlBgkqhkiG9w0BCQEW
+GHNjbGllbnRlc0BlLWNlcnRjaGlsZS5jbDAeFw0xNzA3MjQyMDMyNTlaFw0yMDA3MjMyMDMyNTla
+MIHCMQswCQYDVQQGEwJDTDEZMBcGA1UECBMQREUgTEEgQVJBVUNBTklBIDEPMA0GA1UEBxMGQ2F1
+dGluMSUwIwYDVQQKExxMb3Vpc2lhbmEgUGFjaWZpYyBDaGlsZSBTLkEuMRMwEQYDVQQLEwpJbmR1
+c3RyaWFsMSQwIgYDVQQDDBtDYXJvbCBMdXogWWHDsWV6ICBDb250cmVyYXMxJTAjBgkqhkiG9w0B
+CQEWFmp1YW4ubW9yYWdhQGxwY2hpbGUuY2wwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAK/h
+/ICf55fNyLs0ZLPGJ6NLpoUQAJ7VeHplNSWRHBtRRghUqqzpS47sr0dRMcDM1rCOxKGmzB+i1+jM
+6Uz5BfkW+jh2H+PhEhrZizC8Dxf0g2B3NDsaRT4OUuMjMiB/+ckYAYMqS5uj9Tt6Nh2Tmx1rFuZa
+2gzoaIYpB6+AR7ELAgMBAAGjggKnMIICozA9BgkrBgEEAYI3FQcEMDAuBiYrBgEEAYI3FQiC3IMv
+hZOMZoXVnReC4twnge/sPGGBy54UhqiCWAIBZAIBBDAdBgNVHQ4EFgQUBgngPWrRh5esTQ3uWN9o
+rtQf7WowCwYDVR0PBAQDAgTwMB8GA1UdIwQYMBaAFHjhPp/SErN6PI3NMA5Ts0MpB7NVMD4GA1Ud
+HwQ3MDUwM6AxoC+GLWh0dHA6Ly9jcmwuZS1jZXJ0Y2hpbGUuY2wvZWNlcnRjaGlsZWNhRkVTLmNy
+bDA6BggrBgEFBQcBAQQuMCwwKgYIKwYBBQUHMAGGHmh0dHA6Ly9vY3NwLmVjZXJ0Y2hpbGUuY2wv
+b2NzcDAjBgNVHREEHDAaoBgGCCsGAQQBwQEBoAwWCjE4MTgyMTA0LTMwIwYDVR0SBBwwGqAYBggr
+BgEEAcEBAqAMFgo5NjkyODE4MC01MIIBTQYDVR0gBIIBRDCCAUAwggE8BggrBgEEAcNSBTCCAS4w
+LQYIKwYBBQUHAgEWIWh0dHA6Ly93d3cuZS1jZXJ0Y2hpbGUuY2wvQ1BTLmh0bTCB/AYIKwYBBQUH
+AgIwge8egewAQwBlAHIAdABpAGYAaQBjAGEAZABvACAARgBpAHIAbQBhACAAUwBpAG0AcABsAGUA
+LgAgAEgAYQAgAHMAaQBkAG8AIAB2AGEAbABpAGQAYQBkAG8AIABlAG4AIABmAG8AcgBtAGEAIABw
+AHIAZQBzAGUAbgBjAGkAYQBsACwAIABxAHUAZQBkAGEAbgBkAG8AIABoAGEAYgBpAGwAaQB0AGEA
+ZABvACAAZQBsACAAQwBlAHIAdABpAGYAaQBjAGEAZABvACAAcABhAHIAYQAgAHUAcwBvACAAdABy
+AGkAYgB1AHQAYQByAGkAbzANBgkqhkiG9w0BAQUFAAOCAQEAsgfuY9BjD/KC+b6b3Lw6weVL8Oh3
+vtAD//2V2X7mDyL5v8GBvLu8lIQLztR98gcPMYdMwgqud9r0ztOz/p1LkTY1zhjL8xOUHZwxmTxD
+6IGEyyJ+//uzpViqNRfufdBl2GGgZgqrG3zpmy2oFtNJLlbnl88jiRIuv4qcAE18YdgeUXpAZRkR
+YBdLrq0jOpUc+3XSyGYvEayULLVl2Yi7TZhWN6hTYCtyt7UchCbMsTz/XXu+iOs4U3L5hk/6QSkL
+1I+KhN2nMhAB0i4e/5dKl0DpRHmLWkhRAk3JS27efHc9K+KKNwGbDl3Dw3zhWeqXq8WkxzBVZKeF
+Fre+canQ2A==</X509Certificate></X509Data></KeyInfo></Signature></DTE>
+</SetDTE>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI="#_DTE33_0000113569_78246760-3_01122017161238"><Transforms><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>kUSvHw+1JDeqkVCwcFoyDq5Kx5Y=</DigestValue></Reference></SignedInfo><SignatureValue>IqH7xTu1FqdtC+b94iOZ5ZBu2mwDctpj7Uwmb2g9YMZKhryZVB2W2kHwQTkug+DAotcpD5jYzVDG
+RTnR+rh4MTR4YBDavDe67c4YQjE8LVwh8/lye1BM70uzNYWUPMRaWm+vZLxV9nywEWSCczaWRpev
+Hh6uY+ecErV7Saod+QU=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>r+H8gJ/nl83IuzRks8Yno0umhRAAntV4emU1JZEcG1FGCFSqrOlLjuyvR1ExwMzWsI7EoabMH6LX
+6MzpTPkF+Rb6OHYf4+ESGtmLMLwPF/SDYHc0OxpFPg5S4yMyIH/5yRgBgypLm6P1O3o2HZObHWsW
+5lraDOhohikHr4BHsQs=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIGPzCCBSegAwIBAgIKWNeTWwAAAAh1kTANBgkqhkiG9w0BAQUFADCB0jELMAkGA1UEBhMCQ0wx
+HTAbBgNVBAgTFFJlZ2lvbiBNZXRyb3BvbGl0YW5hMREwDwYDVQQHEwhTYW50aWFnbzEUMBIGA1UE
+ChMLRS1DRVJUQ0hJTEUxIDAeBgNVBAsTF0F1dG9yaWRhZCBDZXJ0aWZpY2Fkb3JhMTAwLgYDVQQD
+EydFLUNFUlRDSElMRSBDQSBGSVJNQSBFTEVDVFJPTklDQSBTSU1QTEUxJzAlBgkqhkiG9w0BCQEW
+GHNjbGllbnRlc0BlLWNlcnRjaGlsZS5jbDAeFw0xNzA3MjQyMDMyNTlaFw0yMDA3MjMyMDMyNTla
+MIHCMQswCQYDVQQGEwJDTDEZMBcGA1UECBMQREUgTEEgQVJBVUNBTklBIDEPMA0GA1UEBxMGQ2F1
+dGluMSUwIwYDVQQKExxMb3Vpc2lhbmEgUGFjaWZpYyBDaGlsZSBTLkEuMRMwEQYDVQQLEwpJbmR1
+c3RyaWFsMSQwIgYDVQQDDBtDYXJvbCBMdXogWWHDsWV6ICBDb250cmVyYXMxJTAjBgkqhkiG9w0B
+CQEWFmp1YW4ubW9yYWdhQGxwY2hpbGUuY2wwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAK/h
+/ICf55fNyLs0ZLPGJ6NLpoUQAJ7VeHplNSWRHBtRRghUqqzpS47sr0dRMcDM1rCOxKGmzB+i1+jM
+6Uz5BfkW+jh2H+PhEhrZizC8Dxf0g2B3NDsaRT4OUuMjMiB/+ckYAYMqS5uj9Tt6Nh2Tmx1rFuZa
+2gzoaIYpB6+AR7ELAgMBAAGjggKnMIICozA9BgkrBgEEAYI3FQcEMDAuBiYrBgEEAYI3FQiC3IMv
+hZOMZoXVnReC4twnge/sPGGBy54UhqiCWAIBZAIBBDAdBgNVHQ4EFgQUBgngPWrRh5esTQ3uWN9o
+rtQf7WowCwYDVR0PBAQDAgTwMB8GA1UdIwQYMBaAFHjhPp/SErN6PI3NMA5Ts0MpB7NVMD4GA1Ud
+HwQ3MDUwM6AxoC+GLWh0dHA6Ly9jcmwuZS1jZXJ0Y2hpbGUuY2wvZWNlcnRjaGlsZWNhRkVTLmNy
+bDA6BggrBgEFBQcBAQQuMCwwKgYIKwYBBQUHMAGGHmh0dHA6Ly9vY3NwLmVjZXJ0Y2hpbGUuY2wv
+b2NzcDAjBgNVHREEHDAaoBgGCCsGAQQBwQEBoAwWCjE4MTgyMTA0LTMwIwYDVR0SBBwwGqAYBggr
+BgEEAcEBAqAMFgo5NjkyODE4MC01MIIBTQYDVR0gBIIBRDCCAUAwggE8BggrBgEEAcNSBTCCAS4w
+LQYIKwYBBQUHAgEWIWh0dHA6Ly93d3cuZS1jZXJ0Y2hpbGUuY2wvQ1BTLmh0bTCB/AYIKwYBBQUH
+AgIwge8egewAQwBlAHIAdABpAGYAaQBjAGEAZABvACAARgBpAHIAbQBhACAAUwBpAG0AcABsAGUA
+LgAgAEgAYQAgAHMAaQBkAG8AIAB2AGEAbABpAGQAYQBkAG8AIABlAG4AIABmAG8AcgBtAGEAIABw
+AHIAZQBzAGUAbgBjAGkAYQBsACwAIABxAHUAZQBkAGEAbgBkAG8AIABoAGEAYgBpAGwAaQB0AGEA
+ZABvACAAZQBsACAAQwBlAHIAdABpAGYAaQBjAGEAZABvACAAcABhAHIAYQAgAHUAcwBvACAAdABy
+AGkAYgB1AHQAYQByAGkAbzANBgkqhkiG9w0BAQUFAAOCAQEAsgfuY9BjD/KC+b6b3Lw6weVL8Oh3
+vtAD//2V2X7mDyL5v8GBvLu8lIQLztR98gcPMYdMwgqud9r0ztOz/p1LkTY1zhjL8xOUHZwxmTxD
+6IGEyyJ+//uzpViqNRfufdBl2GGgZgqrG3zpmy2oFtNJLlbnl88jiRIuv4qcAE18YdgeUXpAZRkR
+YBdLrq0jOpUc+3XSyGYvEayULLVl2Yi7TZhWN6hTYCtyt7UchCbMsTz/XXu+iOs4U3L5hk/6QSkL
+1I+KhN2nMhAB0i4e/5dKl0DpRHmLWkhRAk3JS27efHc9K+KKNwGbDl3Dw3zhWeqXq8WkxzBVZKeF
+Fre+canQ2A==</X509Certificate></X509Data></KeyInfo></Signature></EnvioDTE>

@@ -1,0 +1,149 @@
+Delivered-To: redes@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp1550376otp;
+        Sat, 6 Apr 2019 06:32:22 -0700 (PDT)
+X-Received: by 2002:a0c:9dde:: with SMTP id p30mr15054293qvf.103.1554557542113;
+        Sat, 06 Apr 2019 06:32:22 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554557542; cv=none;
+        d=google.com; s=arc-20160816;
+        b=QTGmHXwYKlHTaYS1TYawh7nBMUZ6UGoI6OMNjIlXZEGI/veMkaSWWZytM35v3IwQs2
+         okmd7zjeyz8ZlBQ5BqXFD1DpyCkMGzQrAAp8FciRkvd+0pfNFDZXjIbgcv2EHw8s7hji
+         GET3n7kwgtCUClQSjbn2/d9yv39kEijAMwDVAail3EFtJMq+lrmsXni0AMQms4JvS7iY
+         Jbw5ynexqMOZDIxSEAudPqDwLdDoRiOcLmH9lxoRz5GAIOdQF48UYI6dCnevPe5ugUYK
+         /0OwGitdIPTtfiY1KomRUQaXDrTuqIBQ9EGhZCUBr+ZhtpMtAnmy7qD6OoAbOcDMQgzj
+         0TEA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:date:message-id:subject:to:from:dkim-signature;
+        bh=eEI+RG2cH+A6uq6lT91stPr0496w80iFQLLAksKj4pY=;
+        b=xgbNY8ESpmzByKhdi2Ho0jb05/A3fwAiyOZGDamxL0yTA+k/uUR8carA8BtyScP+Zw
+         gyxFDNfzpnILDnwtaoBP19pPFniYpA9QCps9OhbRyuMbhyMdlpv02ggaUzsCvZUtBsvc
+         g9jpaikOcmCorsNcvUkQhWp53x7u5Qj+U8HeNAMSbvlGYSTbXwRQMpKskrWGobACy8+g
+         3VhQa/vv3DclcMQFYb5cefTRu/gJi8oXfNG5I1m6+gRWr9DglGy23UVqbRW8ov59/mmM
+         AFe0W11psd6AHXUTlwg6XRKiMgDfw3xtP5m3qfedBDsG6o5ycHctsQgOgaSqMKiNpXnU
+         M5XQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=Sksuag0k;
+       spf=pass (google.com: best guess record for domain of postmaster@mail-sor-f65.google.com designates 209.85.220.65 as permitted sender) smtp.helo=mail-sor-f65.google.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id 54sor24893133qvg.8.2019.04.06.06.32.21
+        for <redes@galilea.cl>
+        (Google Transport Security);
+        Sat, 06 Apr 2019 06:32:22 -0700 (PDT)
+Received-SPF: pass (google.com: best guess record for domain of postmaster@mail-sor-f65.google.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=Sksuag0k;
+       spf=pass (google.com: best guess record for domain of postmaster@mail-sor-f65.google.com designates 209.85.220.65 as permitted sender) smtp.helo=mail-sor-f65.google.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=from:to:subject:message-id:date:mime-version;
+        bh=eEI+RG2cH+A6uq6lT91stPr0496w80iFQLLAksKj4pY=;
+        b=Sksuag0krs3KbtnvlOhr1gwhLKVQpZWzJozhLvSMsNDyuV5MtQ1Ne6bNso3cRAxxge
+         pBBrkwbGCKmjetY/hingPdRrinChlJ47GqlOoNxXbI5YVLo/f/IscxQfccP30UwN/bA3
+         jAPQ36ljwwObmPQbrA1mGzXXSagDtrBUQUD1grupAnrHGEUhnCDJwTc1pZsnXpfndlsT
+         Cxc3keTAZ29mih9YuGDmI13lJ/FWwalwXx3w5/s+Nx5nuw6BZ9YKxUqfpDQaEQk2kqOy
+         ac3If66VndpopBlalYe6bruUM/8EFOkt6ETBgWC0uleXkhHw/CYDalR95AB816eOsBS3
+         EWCw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:from:to:subject:message-id:date:mime-version;
+        bh=eEI+RG2cH+A6uq6lT91stPr0496w80iFQLLAksKj4pY=;
+        b=ZGsnFYlVcSlaKo5ePP1o4fUCQLmz0HTrmzIc2U2Jn2MF+toKlbA1QjdOA8spNBK71Z
+         UiwlH14Xi62IC53fGkUeKI5RZNJSq2iEh9gpjfOVp2htUred1TEq0hBnXXmos7GfltMh
+         yNMWZrHDab2cp4EEc/eHSFkYmvBv/phYbkO5ow+Zz9czOTYJmnj518MEkIao1tfoPqnN
+         a9cW3YMjRwQezmgXBlUijplX7NYFC9l6WFgMUG/T8hrGjkDL+1pG3XFW0OPNXfdb1sn5
+         s4DTo0ra05xrochMdZ1OqngXYdH8kMJOYFTKSoAoKlbq0nxYb0TrofGvruFP0sPp7q+8
+         Z9BQ==
+X-Gm-Message-State: APjAAAUWeYNMXtzU7HHqtFHRkNm3A8Gq3EZSYnq0+7VTKEY4BkMKN7o6
+	LLud9xkKoenE+SsaKbldJ+PcxZ6w
+X-Google-Smtp-Source: APXvYqyVP0ZicFyyR1P6ge89TlZdc/VM0j2H/A1xnkGEPY+XV+ua/P5G3ar3AFpqBlohL2dv19iN6g==
+X-Received: by 2002:a0c:9973:: with SMTP id i48mr15607010qvd.9.1554557541418;
+        Sat, 06 Apr 2019 06:32:21 -0700 (PDT)
+Return-Path: <>
+Received: from [127.0.0.1] ([200.54.241.130])
+        by smtp.gmail.com with ESMTPSA id 50sm3121655qtq.7.2019.04.06.06.32.20
+        for <redes@galilea.cl>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 06 Apr 2019 06:32:20 -0700 (PDT)
+From: unmsgsa@gmail.com
+Content-Type: multipart/alternative;
+ boundary="----sinikael-?=_1-15545575397400.51953738405773"
+To: redes@galilea.cl
+Subject: UNMS notifications (6 Apr 2019 10:32) 
+Message-ID: <b7df1a2c-2c2c-c5a8-0037-a7ba5b930e78@f372878a2cb6>
+X-Mailer: nodemailer (2.6.0; +http://nodemailer.com/;
+ SMTP/2.7.2[client:2.12.0])
+Date: Sat, 06 Apr 2019 13:32:19 +0000
+MIME-Version: 1.0
+
+------sinikael-?=_1-15545575397400.51953738405773
+Content-Type: text/plain
+Content-Transfer-Encoding: 7bit
+
+Hi admin,
+
+you may want to see the following report on recent outages
+(6 Apr 2019 10:32, latest first):
+
+
+VillaGalileaRancagua has disconnected from UNMS at 10:31.
+SantaBlanca has disconnected from UNMS at 10:31.
+
+
+For login into UNMS proceed to: https://unms.galilea.cl
+
+UNMS
+
+------sinikael-?=_1-15545575397400.51953738405773
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UNMS notifications</title>
+  </head>
+  <body>
+    <div>
+      <p style=3D"padding: 0.3em">
+        Hi admin,
+      </p>
+      <p style=3D"padding: 0.3em">
+        you may want to see the following report on recent outages from 6 =
+Apr 2019 10:32. Latest outages are first:
+      </p>
+      <p style=3D"padding: 0.3em">
+       =20
+       =20
+          <a href=3D"https://unms.galilea.cl/devices/erouter/4069506e-ddc0-=
+45bb-842b-b0729738eb7a/interfaces">VillaGalileaRancagua</a>
+         =20
+            has been <span style=3D"color: #ff3516">disconnected</span> =
+from UNMS at 10:31.
+         =20
+          <br />
+       =20
+          <a href=3D"https://unms.galilea.cl/devices/erouter/203b7501-4413-=
+424d-81a5-89ee5eb73d3e/interfaces">SantaBlanca</a>
+         =20
+            has been <span style=3D"color: #ff3516">disconnected</span> =
+from UNMS at 10:31.
+         =20
+          <br />
+       =20
+       =20
+      </p>
+      <p style=3D"padding: 0.3em">
+        For login into UNMS =
+proceed to: https://unms.galilea.cl
+      </p>
+      <p style=3D"padding: 0=
+.3em">
+        UNMS
+      </p>
+    </div>
+  </body>
+</html>
+
+------sinikael-?=_1-15545575397400.51953738405773--

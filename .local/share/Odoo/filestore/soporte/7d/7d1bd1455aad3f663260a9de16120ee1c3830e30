@@ -1,0 +1,104 @@
+Delivered-To: sistemas@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp3672146otp;
+        Mon, 8 Apr 2019 08:07:36 -0700 (PDT)
+X-Received: by 2002:a6b:b28f:: with SMTP id b137mr13661706iof.226.1554736055970;
+        Mon, 08 Apr 2019 08:07:35 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554736055; cv=none;
+        d=google.com; s=arc-20160816;
+        b=mo6+JSkg7FVY8EZmQaksWU2roCXujGrE+Sj1mgSfoY2dCSr0HbJv5k14BIQv71eLQc
+         LRWDNYE5cXejjBs8pQYDzKpLrHTR04lnCGTMVfNKXFI1WGQNSEIM1NH2TQXuLq8aPVIQ
+         N1EroduUNlKj/L8s5H1RP1ZIYIEm14fjID7z6sCc1XC5PqT+SrHW4cLrMifPTTPEp2bt
+         gaBxWG79ZmUj4ecYZ2vG4pwXEQSde9Q3tG3n+X8j6R6bvnQ29NzeGcrMoYYy6Dis/wjy
+         27tzOSRnDmLgWgtekohTCKdoL7TnxYj4RO1U95/WQy+pq/aTfsXrEbSpxxvBbyNCVygh
+         HAJQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=83KvQZW73eaj4MH/DK9WtR8Rr5p4i4Rc3e59faC1T9s=;
+        b=MiU0lNJ0nTWuEjkFKn8aPl1ePIQSFrfAlpfBUwHbmkoE9wVlpSrvt8DIhCUrhNO9bB
+         KOF6PCh3s4q0bFbA36Za+y+cYT2azIZbSLi+I5EEn81QnV1RkoGJrrRz3gdsJE6JFlJA
+         8VRDACQ7uxziubMOg14AUd7Jfk9vGqLF5wTxPHVNmWTST222I96vLAaxbuWPmFcIX9Jb
+         9h527FX2t1Dc2CsMR1a5YphkQn2qYpS379Qwk9ZPXknmY1rnu1h9YDeSyMj/zNRqmoP5
+         uvkoQfBGa7LsnGefmUOplEJqE/Wch9hOGX/Z4MmnKrC2FWucgtLE9RGF8YAV/XbV+gss
+         haxw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=dqfgguCc;
+       spf=pass (google.com: domain of pablo.zuniga@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=pablo.zuniga@galilea.cl
+Return-Path: <pablo.zuniga@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id q6sor18675093ios.3.2019.04.08.08.07.35
+        for <sistemas@galilea.cl>
+        (Google Transport Security);
+        Mon, 08 Apr 2019 08:07:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of pablo.zuniga@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=dqfgguCc;
+       spf=pass (google.com: domain of pablo.zuniga@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=pablo.zuniga@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=83KvQZW73eaj4MH/DK9WtR8Rr5p4i4Rc3e59faC1T9s=;
+        b=dqfgguCcyZfTLfkLxpgSuYGrFTISlN7DPUbSJ5LBYLsKbQJfHvw+r6N6ir9tWedFs1
+         n2b2L1WZHy981+lETBC1KIrgZmJ4yTu2qALz9V/7sZzTSO2mwWV0BemKs5gL9E2z/Raj
+         j40ZsTLGATP4gABYbS44Ds0QkmEHAq/Ra4uOervmWDaFV3MbB2gymXNjerupWPW3UrEy
+         bC3hMJFBaxzueRiVYQyUcXkScclIpJOTXidotu/oI6fEQmIbkqJ5YHNgFIRKrOSXr9yu
+         OPBIvsoOYCjuGsydo8+3caCy2c64X04QsvS5U3RB/V1uC5U4Z62vo0iYTtpzq7z2Qi4C
+         9ybQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=83KvQZW73eaj4MH/DK9WtR8Rr5p4i4Rc3e59faC1T9s=;
+        b=QZUPoyHvQ/OWVFaMqcTP3OG8hVOtFc5mvhzTY6V6u+Vc9XhTNKZOtYruZMPklAXT7R
+         yrJCi+ngEKbCxkyKAcoxUAJImu6kQwITsyxM0zQDWyzDiAIwA+DmP0sQVUkTO3XfOiPz
+         UQaeSCq4lZ8sd6+dzKZTsys1tXByMuBZIy4eTahXINMs9/RO1iZEFFRou8faMJP7G8St
+         sfKLFY8Mjko6xDfD2F5gohtNb1dAptDeszdXe8m6T0s6TpdAUn5SspDObVAD11Md1LAr
+         7FHY0U/zCGo/xg+fe2IGEb15JI1WN51iN28XXAauKsK1NrcUAmIsblGoIMy4lAPL2vHJ
+         81kA==
+X-Gm-Message-State: APjAAAV2iAgSOKc0RkBf/m/9CAxpvYX7oE1tylwcPDvcc/S5eu0COgdp
+	OpzZXffBuLYoxtgSC6SgjamUI8crOS2QW1ISoUEDnpap12I=
+X-Google-Smtp-Source: APXvYqxH7py7Mz8xNWeCa9pk3PDN0vD9PWy6Rm5wQoGLJIUibGbX7DGOoyShLEgeJMLQvAZxi9H82O4tJiidfVa6VZs=
+X-Received: by 2002:a02:76cc:: with SMTP id z195mr22017247jab.127.1554736055119;
+ Mon, 08 Apr 2019 08:07:35 -0700 (PDT)
+MIME-Version: 1.0
+From: PABLO ZUNIGA LIRA <pablo.zuniga@galilea.cl>
+Date: Mon, 8 Apr 2019 11:07:23 -0400
+Message-ID: <CAFi7grZuootXjXF6uR_C0Cu0g0AojetPedY=z3H5HPrN9WBm3w@mail.gmail.com>
+Subject: =?UTF-8?Q?Creaci=C3=B3n_Obra_Sitema?=
+To: Ticket Sistema <sistemas@galilea.cl>
+Content-Type: multipart/alternative; boundary="000000000000490d620586063260"
+
+--000000000000490d620586063260
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Estimad@s
+
+Solicito crear Obra Altos Tejas Verdes (Edificio)
+Talca
+
+Muchas gracias!
+
+--=20
+*Pablo Z=C3=BA=C3=B1iga Lira*| Coordinador de Proyectos | +56 (9) 963 427 0=
+8|
+*GALILEA S. A.*| 3 Oriente N=C2=BA 1424, Talca| +56 (71) 2 514 463| ww
+<http://www.galilea.cl/>w.galilea.cl <http://www.galilea.cl/>
+
+--000000000000490d620586063260
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Estimad@s<div><br></div><div>Solicito crear Obra Altos Tej=
+as Verdes (Edificio)</div><div>Talca</div><div><br></div><div>Muchas gracia=
+s!<br clear=3D"all"><div><br></div>-- <br><div dir=3D"ltr" class=3D"gmail_s=
+ignature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=
+=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr"><div><div dir=3D"ltr">=
+<div style=3D"font-size:12.8px"><font size=3D"2"><b><font face=3D"tahoma,sa=
+ns-serif">Pablo Z=C3=BA=C3=B1iga Lira</font></b>| Coordinador de Proyectos =
+| +56 (9) 963 427 08|<br></font></div><font size=3D"2"><b>GALILEA S. A.</b>=
+| 3 Oriente N=C2=BA 1424, Talca| +56 (71) 2 514 463|=C2=A0<a href=3D"http:/=
+/www.galilea.cl/" style=3D"color:rgb(17,85,204)" target=3D"_blank">ww</a></=
+font><a href=3D"http://www.galilea.cl/" style=3D"font-size:small;color:rgb(=
+17,85,204)" target=3D"_blank">w.galilea.cl</a></div></div></div></div></div=
+></div></div></div></div></div></div></div>
+
+--000000000000490d620586063260--

@@ -1,0 +1,189 @@
+Delivered-To: soporte@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp1768922otp;
+        Tue, 2 Apr 2019 08:24:23 -0700 (PDT)
+X-Received: by 2002:a6b:e705:: with SMTP id b5mr31414336ioh.73.1554218663019;
+        Tue, 02 Apr 2019 08:24:23 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554218663; cv=none;
+        d=google.com; s=arc-20160816;
+        b=hBI7n5igfVFXeG6xs3TsAe1pxAYtk+NEKpY5sBqAjaTFzsBJ3PNbf2f0mJelXyjMAg
+         DtEa/tPNpQv7Hvz+3TwHGL8G4/Vegy3GDwOLwAuvPJLafZNmuc5GLOqHda2iNX2IaOLj
+         Q2gIRZ9QcNLJm2B2dpFWpHe72XI9a0gOVf1ez53MYkqavHPUimeTVCdw6Nj6BPsPEsPb
+         /kVOYDM5jHDqero9LR+CbUcsDHw4FoyJ2VdqcAsMWRhqXqIUGFi8SYKlVoItN+2soIde
+         MaRXLmFsekyhqH8t8F6brrlRtv6TKYvYTU3OqxuCSaYOR8PxPXSgubKX3ZYalAX24lFX
+         60kA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=ntoRu4kKKf+FShH210SWMX+xuTCXUC41V0a9pyJZTx4=;
+        b=Hii4rNJPJlDIVvmJKm+4l0M2RE09TnQXa+Y74k3qTn3B6p5825m44P/KX3NSdLvjhU
+         zEhrf4LWP2IooPF6zKaeRz7v7JfT7W8JmhlNeZdl1xw9m06HaDpnwpGJgYNyOhc34aew
+         CCog2M+QwL+Rr5viW6bKyoMI4AoCmWmuKkZ91Mm8OK+8P1t03wIMJntGF6Ox/TYYkU9v
+         dFWGPGHZQTTkUpdPiZFPcEP3C49fluWY6uGpMZBR0Dxdi/iB8gSAQvaGAXY2nwXMo4Rz
+         w/gNLmJwWdHzyxP4veMQMmuOFS0fwQACkxpUoyYQMqRBC4S0DicCRT8ePUJu7u9GqMDa
+         LIew==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=fWG6Al9F;
+       spf=pass (google.com: domain of ignacia.williams@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=ignacia.williams@galilea.cl
+Return-Path: <ignacia.williams@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a2sor7988703ioq.33.2019.04.02.08.24.22
+        for <soporte@galilea.cl>
+        (Google Transport Security);
+        Tue, 02 Apr 2019 08:24:23 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ignacia.williams@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=fWG6Al9F;
+       spf=pass (google.com: domain of ignacia.williams@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=ignacia.williams@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to;
+        bh=ntoRu4kKKf+FShH210SWMX+xuTCXUC41V0a9pyJZTx4=;
+        b=fWG6Al9Fiuk2XhXzstpF5QBOhaRslIGImjyIOwlJ+aixFnyIFKkvrQIKAfzxoebkT9
+         awfvKIS+f0/2FpVVUomXGcv3rQEtb/Mn9JVB1XFbJFNXk6o4nOmRdmk/rZpweakrNweI
+         ZqeiJO/I5XPqYuBO2ZVZPgOuJFL73hePkp+RSbrdQcKFC1dJnMh50vBh+L+1RojyL4UQ
+         MH6W5FTKvaRxjWNLOsWkk9bnJTS5fxxY/txAx30owgrTkNpwMRCT3ub3NeBgj828/dof
+         Ba/JZdLi5j3TaQmLLsg0le53tooLDt1mnjylbTPKsz4jo5C9f9R3iU16TyZ1FKoxkjij
+         ZWPg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to;
+        bh=ntoRu4kKKf+FShH210SWMX+xuTCXUC41V0a9pyJZTx4=;
+        b=ANea/Jhus5/A18bD3sYhVyJ6PvYlhpy0YnKoNDWpe/1I4X0AgtGZDLP1+49u6aJCX0
+         9O9bvSmPp95gZS0y7badhFEcQT1kZd7MHp1y4kVr6NPhUbSOI1slFQ3lgBmknN8RaUZp
+         BQzQYF5d0H9uJKyiP1nRibQHz6KwPSNQBsbpnExyUh4QnbkI42o11KEjbWkKftkfIpCm
+         hEDUmUU7IzB5jkij0q0NSP7lZ2cX6YcmwGWIcocOjdEWOiCnUwVUeYyFFH7hZnJUl5UU
+         f+hnV6+Lz/IfIofZ1SwNuWNqiHLJsRk5tNT2eFarZ1t5QxkbAy67VtVbg13MfH7hVSz2
+         /CMQ==
+X-Gm-Message-State: APjAAAV2HIFrJqVZqzbaI84hz4u5fNHK8Eju64eBL60SvgHvuPkbisLu
+	PrUwym4twCM2GqXthihevUF4tzEAVfrNC4SEfLpjb19jeUg=
+X-Google-Smtp-Source: APXvYqytRGyd/k8qdzKxdm35vnssW4/2WhLT1yI6d+uB007R0EnBHd7MTEJS/xUWV055wzIiEvbVGg/+xEs3pcoQs28=
+X-Received: by 2002:a5d:88ce:: with SMTP id i14mr128709iol.103.1554218662579;
+ Tue, 02 Apr 2019 08:24:22 -0700 (PDT)
+MIME-Version: 1.0
+References: <CADHnh=xo9GDsoZRDkXAX29bzQhRXTyPF-WhZ5djhT3xTxmF=+A@mail.gmail.com>
+ <1554217603.117545.373169619@otrs.galilea.cl>
+In-Reply-To: <1554217603.117545.373169619@otrs.galilea.cl>
+From: =?UTF-8?Q?Mar=C3=ADa_Ignacia_Williams_Vald=C3=A9s?= <ignacia.williams@galilea.cl>
+Date: Tue, 2 Apr 2019 12:24:12 -0300
+Message-ID: <CADHnh=zMauOSfhgbyPCb8GgbWshT5Wz-JnJRUxkh2AuJAd9VYQ@mail.gmail.com>
+Subject: =?UTF-8?Q?Re=3A_=5BTicket=231030334=5D_Modificaci=C3=B3n_Informe_=22Tiempos_?=
+	=?UTF-8?Q?de_Escrituraci=C3=B3n=22?=
+To: Ticket Soporte <soporte@galilea.cl>
+Content-Type: multipart/alternative; boundary="0000000000004997dd05858dbb6d"
+
+--0000000000004997dd05858dbb6d
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Revisado,
+
+Muchas Gracias
+
+Saludos
+
+El mar., 2 abr. 2019 a las 12:06, Ticket Soporte (<soporte@galilea.cl>)
+escribi=C3=B3:
+
+> Estimado(a) Mar=C3=ADa Ignacia Williams Vald=C3=A9s,
+>
+> C=C3=B3digo de proyecto agregado. Por favor, revisar.
+>
+>
+> Atentamente,
+> Guillermo Argando=C3=B1a
+>
+> *Sistema de Ticket *
+>
+>
+>
+> *Procesos y Tecnolog=C3=ADa. Galilea S.A. E-mail: soporte@galilea.cl
+> <soporte@galilea.cl>; sistemas@galilea.cl <sistemas@galilea.cl>;
+> equipos@galilea.cl <equipos@galilea.cl>;
+> http://otrs.galilea.cl/otrs/customer.pl
+> <http://otrs.galilea.cl/otrs/customer.pl>*
+>
+>
+>
+> 01/04/2019 - 17:10 - Mar=C3=ADa Ignacia Williams Vald=C3=A9s escribi=C3=
+=B3:
+> Estimados,
+>
+> Favor su ayuda con lo siguiente:
+> Necesitamos incluir el c=C3=B3digo de proyecto en el informe "Tiempos de
+> Escrituraci=C3=B3n" ubicado en la carpeta Control de Gesti=C3=B3n en BIP.
+>
+> Saludos,
+>
+>
+> --
+>
+
+
+--
+
+--0000000000004997dd05858dbb6d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Revisado,=C2=A0<div><br></div><div>Muchas Gracias=C2=A0</d=
+iv><div><br></div><div>Saludos</div></div><br><div class=3D"gmail_quote"><d=
+iv dir=3D"ltr" class=3D"gmail_attr">El mar., 2 abr. 2019 a las 12:06, Ticke=
+t Soporte (&lt;<a href=3D"mailto:soporte@galilea.cl">soporte@galilea.cl</a>=
+&gt;) escribi=C3=B3:<br></div><blockquote class=3D"gmail_quote" style=3D"ma=
+rgin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:=
+1ex"><u></u><div style=3D"font-family:Geneva,Helvetica,Arial,sans-serif;fon=
+t-size:12px">Estimado(a)=C2=A0Mar=C3=ADa Ignacia Williams Vald=C3=A9s,<br>
+<br>
+C=C3=B3digo de proyecto agregado. Por favor, revisar.<br>
+<br>
+<br>
+Atentamente,<br>
+Guillermo=C2=A0Argando=C3=B1a<br>
+<br>
+<strong>Sistema de Ticket=C2=A0</strong><br>
+<strong>Procesos y Tecnolog=C3=ADa.<br>
+Galilea S.A.<br>
+E-mail: <a href=3D"mailto:soporte@galilea.cl" target=3D"_blank">soporte@gal=
+ilea.cl</a>; <a href=3D"mailto:sistemas@galilea.cl" target=3D"_blank">siste=
+mas@galilea.cl</a>; <a href=3D"mailto:equipos@galilea.cl" target=3D"_blank"=
+>equipos@galilea.cl</a>;<br>
+<a href=3D"http://otrs.galilea.cl/otrs/customer.pl" target=3D"_blank">http:=
+//otrs.galilea.cl/otrs/customer.pl</a></strong><br>
+<br>
+=C2=A0<br>
+<br>
+01/04/2019 - 17:10 - Mar=C3=ADa Ignacia Williams Vald=C3=A9s escribi=C3=B3:
+<div style=3D"border-top:none;border-right:none;border-bottom:none;border-l=
+eft:1.5pt solid blue;padding:0cm 0cm 0cm 4pt" type=3D"cite">
+<div>Estimados,=C2=A0
+<div>=C2=A0</div>
+
+<div>Favor su ayuda con lo siguiente:=C2=A0</div>
+
+<div>Necesitamos incluir el c=C3=B3digo de proyecto en el informe &quot;Tie=
+mpos de Escrituraci=C3=B3n&quot; ubicado en la carpeta Control de Gesti=C3=
+=B3n en BIP.</div>
+
+<div>=C2=A0</div>
+
+<div>Saludos,=C2=A0</div>
+
+<div>=C2=A0
+<div>=C2=A0</div>
+--
+
+<div class=3D"gmail-m_-741961942405838130gmail_signature">
+<div><img alt=3D"" src=3D"https://docs.google.com/uc?export=3Ddownload&amp;=
+id=3D139tsG8NL5Nj_7gJW1DdCkI7LKpJKtNXN&amp;revid=3D0B4KdQGMlWCCwZzFzVFE1a21=
+mMURBM1IvMnZjQ2FqVWkxY2xNPQ"></div>
+</div>
+</div>
+</div>
+</div></div></blockquote></div><br clear=3D"all"><div><br></div>-- <br><div=
+ dir=3D"ltr" class=3D"gmail_signature"><div dir=3D"ltr"><img src=3D"https:/=
+/docs.google.com/uc?export=3Ddownload&amp;id=3D139tsG8NL5Nj_7gJW1DdCkI7LKpJ=
+KtNXN&amp;revid=3D0B4KdQGMlWCCwZzFzVFE1a21mMURBM1IvMnZjQ2FqVWkxY2xNPQ"></di=
+v></div>
+
+--0000000000004997dd05858dbb6d--

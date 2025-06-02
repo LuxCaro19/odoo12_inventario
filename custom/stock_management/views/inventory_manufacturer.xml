@@ -1,0 +1,62 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="component_manufacturer_list">
+      <field name="name">Fabricantes de Componentes</field>
+      <field name="model">component.manufacturer</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="id"/>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="maintenance_manufacturer_form">
+      <field name="name">component.manufacturer.form</field>
+      <field name="model">component.manufacturer</field>
+      <field name="arch" type="xml">
+        <form string = "Fabricante">
+          <sheet>
+            <group>
+              <field name="name"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="component_manufacturer_action_window">
+      <field name="name">Registro de fabricantes</field>
+      <field name="res_model">component.manufacturer</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+
+    <record model="ir.actions.server" id="component_manufacturer_action_server">
+      <field name="name">manufacturer server</field>
+      <field name="model_id" ref="model_component_manufacturer"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+
+    <!-- actions -->
+
+    <menuitem name="Fabricantes de Componentes Informáticos"
+              id="component_manufacturer"
+              parent="menu_component_management"
+              action="component_manufacturer_action_window" sequence="3"/>
+              
+  </data>
+</odoo>

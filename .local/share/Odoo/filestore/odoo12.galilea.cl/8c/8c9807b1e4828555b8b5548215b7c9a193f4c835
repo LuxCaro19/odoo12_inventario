@@ -1,0 +1,327 @@
+Delivered-To: soporte@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp639939otp;
+        Fri, 5 Apr 2019 10:04:03 -0700 (PDT)
+X-Received: by 2002:a6b:3ec3:: with SMTP id l186mr9170904ioa.255.1554483843535;
+        Fri, 05 Apr 2019 10:04:03 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554483843; cv=none;
+        d=google.com; s=arc-20160816;
+        b=U2QD6c/eH3pIqrfhgH+kZG0JZg2tGtuO7J+Y+7kop2x473BHwJZy24F7Pvm8KZFl9I
+         dMWZovZ3q52KOL77WIB+09leAI/Xpa7e6Gy4l1rpxHj8aeLN39HxiwxyIGHbPYaWv+BI
+         swv5A73QbUQvFtlQluj4kz4TzcqH1Rc8gWKKmFJwXAb0hbJG17ZNi+3f7A+KPpfftrw2
+         n35y/QNRUXZxhu10SkREYkR2SobY8ZOeeHtFey8SXXwTY03sCTXI4zVkTfBYgybLfcy9
+         0ziyRPNZdLn/+gEgCAb1MoS/vbIIiVKPSB0+RadfdWEPEgunnkyg57RZ3hi9ADR4cMMO
+         GqjQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=7IJRsl1j152rQ8PpzcdX4qATC9cszDJVrXaT1QsOl+U=;
+        b=ppTcnm2KimPAp3FrP8sI6DjbzCnJI0H0+T72Ri48wXL1AdQLJKUS9TnlKBofY90RGl
+         zdyS34aqgcK68+CE6y961dJ366UOOL5ZDeo+fvftCr9cxqmaevuHpk7f3R/kxzAd3Ho2
+         T1rX5wozeCSJ9G1yZwxpG5qzygrdZU6w2fcWhUoP3lr3bjt/HY9SXEuajHGfVAzc48xQ
+         jE++U+BqX1EImWewoEY+VgDvAEqsOL38hI3oB+R050v2mM17DiM3J0VUDE3IJs24H5nS
+         fBHXvaDO5OR9e3bdrZOMvjcIQUHMkx62DGpVjU7CmXBlCYrBetji4XPlcWOZxwFgaYS/
+         KJGQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=cm8PrgQG;
+       spf=pass (google.com: domain of ramiro.meyer@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=ramiro.meyer@galilea.cl
+Return-Path: <ramiro.meyer@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id k12sor4417806itl.34.2019.04.05.10.04.03
+        for <soporte@galilea.cl>
+        (Google Transport Security);
+        Fri, 05 Apr 2019 10:04:03 -0700 (PDT)
+Received-SPF: pass (google.com: domain of ramiro.meyer@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=cm8PrgQG;
+       spf=pass (google.com: domain of ramiro.meyer@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=ramiro.meyer@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+         :cc;
+        bh=7IJRsl1j152rQ8PpzcdX4qATC9cszDJVrXaT1QsOl+U=;
+        b=cm8PrgQGlre5PR8Zvn8OOodMkz7XbJcAXSAAV7v/IMzPOhVq/VJjvkhPFKeU4RkDGB
+         GIA8pCjQwUwEhuTq+hUXnY5fgtpJvAfiNXlWq8oHHBju1ZZ6dQ+OhnyMuSFi0pHoLdyo
+         B6/9W6WkaoC2E+WaqJkZq3GGO1UMGd6zYLSRQn0xNVHbVm4hp1qr+I5Yl+Krlcg7TRtu
+         guDQ1h3diku1nImg8um/oRvXEWxmkHh3GHEmPfOqPu05WV3G4GiLNRSHk2CCNkuQycX0
+         SvIodlaUZo3VMwrCtgMly67XovoctwNI7jxsNE11X7wr5hKzieGLSrQt664t5v8fxkwJ
+         LYkw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+         :message-id:subject:to:cc;
+        bh=7IJRsl1j152rQ8PpzcdX4qATC9cszDJVrXaT1QsOl+U=;
+        b=GbWwmT6daEo4TXz8tNpDNc516riNL9A4AMsoWQ7OP5wmtdgFwP2DST1XtiJivuCeyc
+         SPSslMBItJUwwTsLrWaotW3+Sdsjvjf4vDFjRKxuhG3K+WM6MW13HiuJ2/VmTbM/pFua
+         lRO2T8meNfR7tmwKX0AOouARhQBpi32WtI8eQs3s4XDDjBj+hZKKjnwYEM4Nv9HTR6Wo
+         WrzEkUMTdmNaGXYtkskEtxq5/yUMu2xLODzhkwtwAl9RhZrityA1b07g1KoywPlQEWwU
+         yxmGxWIYkX35M3ByaqJlFWEK3LU00Fc+UwwAJxahjsbCjkQYXBN354meb+i3Umvyy7UT
+         /zUA==
+X-Gm-Message-State: APjAAAV1jse1o2wR+DWa15kYi925LGPZewRPwXY5lRqYDwyCoRXwMoVl
+	Az7JFeKgxe0NlOQH6zsKXTC8FZhlE7gmSjkeSXDnCb0P
+X-Google-Smtp-Source: APXvYqyW7KlN4hPK2UCK18wP75hcz5rto3AyOr3PhS7+GQbnv0SxnvhZnj2GKTCW4NynQgDCnY1ZktABzQI5P+LWSTc=
+X-Received: by 2002:a02:5144:: with SMTP id s65mr6846147jaa.27.1554483843169;
+ Fri, 05 Apr 2019 10:04:03 -0700 (PDT)
+MIME-Version: 1.0
+References: <750645125202294.1554482512.424840211868286-openerp-190-website.support.ticket@soporte>
+In-Reply-To: <750645125202294.1554482512.424840211868286-openerp-190-website.support.ticket@soporte>
+From: RAMIRO MEYER CALVETE <ramiro.meyer@galilea.cl>
+Date: Fri, 5 Apr 2019 13:57:31 -0300
+Message-ID: <CAHyjKnJYSpUb3qUEVBtD_QZ=09URcVgKidxPfPko2cxng4zGEg@mail.gmail.com>
+Subject: Fwd: Ingreso Constructor Residente Cumbres de las Rastras
+To: Jorge Felix Baeza Ubilla <jorge.baeza@galilea.cl>
+Cc: Sistema Ticket <soporte@galilea.cl>
+Content-Type: multipart/related; boundary="000000000000489ddf0585cb79c8"
+
+--000000000000489ddf0585cb79c8
+Content-Type: multipart/alternative; boundary="000000000000489ddd0585cb79c7"
+
+--000000000000489ddd0585cb79c7
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Gracias.
+
+Les pido copiar siempre al Subgerente de producci=C3=B3n.
+
+Atte
+
+
+*Ramiro Meyer Calvete*
+
+Subgerente de RRHH
+
+www.galilea.cl
+
+
+---------- Forwarded message ---------
+De: Galilea <sistematicket@galilea.cl>
+Date: vie., 5 abr. 2019 a las 13:41
+Subject: Ingreso Constructor Residente Cumbres de las Rastras
+To: <ramiro.meyer@galilea.cl>
+
+
+Equipo para Jaime Andr=C3=A9s Estrada Soto, Constructor Residente de Cumbre=
+s de
+las Rastras, Talca. Esta listo para ser entregado.
+
+------------------------------
+*Ver ticket online:* aqu=C3=AD
+<http://odoo12.galilea.cl:8069/support/portal/ticket/view/1844901852>
+
+*N=C3=BAmero de ticket:* 189
+
+*Categor=C3=ADa del ticket:* Soporte t=C3=A9cnico
+
+*Descripci=C3=B3n del ticket:*
+
+Estimad@s:
+
+El lunes 9 de abril ingresa a la empresa Constructor Residente de Cumbres
+de las Rastras, Talca
+
+Nombre: Jaime Andr=C3=A9s Estrada Soto
+Rut: 15.400.498-k
+
+Esto para efecto de creaci=C3=B3n de cuentas y asignaci=C3=B3n de herramien=
+tas de
+trabajo.
+
+Copio a Jorge Baeza para que est=C3=A9 al tanto de cuando est=C3=A9 todo, y=
+ si falta
+algo se lo pidan.
+
+Se les pide hacer el mayor de los esfuerzos para tener todo para el d=C3=AD=
+a de
+su ingreso.
+
+Atte
+
+
+*Ramiro Meyer Calvete*
+
+Subgerente de RRHH
+
+www.galilea.cl
+
+--000000000000489ddd0585cb79c7
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Gracias.<div><br></div><div>Les pido copiar siempre al Sub=
+gerente de producci=C3=B3n.</div><div><br></div><div>Atte</div><div><br cle=
+ar=3D"all"><div><div dir=3D"ltr" class=3D"gmail_signature" data-smartmail=
+=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D"ltr"><div dir=3D"ltr=
+"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div =
+style=3D"text-align:left"><table border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" style=3D"border-collapse:collapse"><tbody><tr style=3D"height:104.25=
+pt"><td width=3D"189" valign=3D"top" style=3D"width:5cm;padding:0cm 5.4pt;h=
+eight:104.25pt"><p style=3D"margin:0cm 0cm 0.0001pt;font-size:12pt;font-fam=
+ily:&quot;Times New Roman&quot;,serif;text-align:justify"><span style=3D"fo=
+nt-size:11pt;font-family:Calibri,sans-serif"><img border=3D"0" width=3D"206=
+" height=3D"101" src=3D"cid:image001.png@01D3D244.A32757B0"><br></span><u><=
+/u><u></u></p></td><td width=3D"335" valign=3D"top" style=3D"width:251.35pt=
+;padding:0cm 5.4pt;height:104.25pt"><font face=3D"Arial, sans-serif"><span =
+style=3D"font-size:16px"><b>Ramiro Meyer Calvete</b></span></font><br><p st=
+yle=3D"margin:0cm 0cm 0.0001pt;font-size:12pt;font-family:&quot;Times New R=
+oman&quot;,serif"><span style=3D"font-family:Arial,sans-serif;color:rgb(127=
+,127,127)">Subgerente de RRHH</span><u></u></p><p style=3D"margin:0cm 0cm 0=
+.0001pt;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif;line-h=
+eight:14.65pt"><a href=3D"http://www.galilea.cl/" style=3D"font-family:Aria=
+l,sans-serif;font-size:12pt;color:rgb(17,85,204)" target=3D"_blank"><span s=
+tyle=3D"color:rgb(5,99,193)">www.galilea.cl</span></a><br></p></td></tr></t=
+body></table></div></div></div></div></div></div></div></div></div></div></=
+div><br><br><div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr=
+">---------- Forwarded message ---------<br>De: <strong class=3D"gmail_send=
+ername" dir=3D"auto">Galilea</strong> <span dir=3D"ltr">&lt;<a href=3D"mail=
+to:sistematicket@galilea.cl">sistematicket@galilea.cl</a>&gt;</span><br>Dat=
+e: vie., 5 abr. 2019 a las 13:41<br>Subject: Ingreso Constructor Residente =
+Cumbres de las Rastras<br>To:  &lt;<a href=3D"mailto:ramiro.meyer@galilea.c=
+l">ramiro.meyer@galilea.cl</a>&gt;<br></div><br><br><p style=3D"margin:0px =
+0 1rem 0;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Ver=
+dana,Arial,sans-serif">
+                </p><p>Equipo para=C2=A0<span style=3D"font-family:Arial,He=
+lvetica,sans-serif;font-size:small;font-variant-ligatures:initial;font-vari=
+ant-caps:initial;font-weight:initial;text-align:inherit">Jaime Andr=C3=A9s =
+Estrada Soto,=C2=A0</span><span style=3D"font-family:Arial,Helvetica,sans-s=
+erif;font-size:small;font-variant-ligatures:initial;font-variant-caps:initi=
+al;font-weight:initial;text-align:inherit">Constructor Residente de Cumbres=
+ de las Rastras, Talca. Esta listo para ser entregado.</span></p>
+                <p></p><hr style=3D"margin:1rem 0 1rem 0;border-top-color:r=
+gba(0,0,0,0.1);border-top-style:solid;border-top-width:1px;border-left-widt=
+h:0px;border-bottom-width:0px;border-right-width:0px;overflow-y:visible;ove=
+rflow-x:visible;height:0px;box-sizing:content-box">
+                    <b style=3D"font-weight:bolder">Ver ticket online:</b> =
+<a href=3D"http://odoo12.galilea.cl:8069/support/portal/ticket/view/1844901=
+852" style=3D"text-decoration:none;background-color:transparent;color:rgb(1=
+24,123,173)" target=3D"_blank">aqu=C3=AD</a><br><p style=3D"margin:0px 0 1r=
+em 0;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana=
+,Arial,sans-serif"></p><p style=3D"margin:0px 0 1rem 0;font-size:13px;font-=
+family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif">
+                <b style=3D"font-weight:bolder">N=C3=BAmero de ticket:</b> =
+189<br></p><p style=3D"margin:0px 0 1rem 0;font-size:13px;font-family:&quot=
+;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif">
+                <b style=3D"font-weight:bolder">Categor=C3=ADa del ticket:<=
+/b> Soporte t=C3=A9cnico<br></p><p style=3D"margin:0px 0 1rem 0;font-size:1=
+3px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-seri=
+f">
+                <b style=3D"font-weight:bolder">Descripci=C3=B3n del ticket=
+:</b><br></p><p style=3D"margin:0px 0 1rem 0;font-size:13px;font-family:&qu=
+ot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif">
+                </p><div dir=3D"ltr"><div dir=3D"ltr"><font color=3D"#00000=
+0">Estimad@s:</font></div><div dir=3D"ltr"><font color=3D"#000000"><br></fo=
+nt></div><div dir=3D"ltr"><font color=3D"#000000">El lunes 9 de abril ingre=
+sa a la empresa Constructor Residente de Cumbres de las Rastras, Talca</fon=
+t></div><div dir=3D"ltr"><font color=3D"#000000"><br></font></div><div dir=
+=3D"ltr"><font color=3D"#000000">Nombre: Jaime Andr=C3=A9s Estrada Soto</fo=
+nt></div><div dir=3D"ltr"><font color=3D"#000000">Rut: 15.400.498-k</font><=
+/div><div dir=3D"ltr"><font color=3D"#000000"><br></font></div><div dir=3D"=
+ltr"><font color=3D"#000000">Esto para efecto de creaci=C3=B3n de cuentas y=
+ asignaci=C3=B3n de herramientas de trabajo.</font></div><div dir=3D"ltr"><=
+font color=3D"#000000"><br></font></div><div dir=3D"ltr"><font color=3D"#00=
+0000">Copio a Jorge Baeza para que est=C3=A9 al tanto de cuando est=C3=A9 t=
+odo, y si falta algo se lo pidan.</font></div><div><br></div><div><font col=
+or=3D"#000000">Se les pide hacer el mayor de los esfuerzos para tener todo =
+para el d=C3=ADa de su ingreso.=C2=A0</font></div><div><font color=3D"#0000=
+00"><br></font></div><div dir=3D"ltr"><font color=3D"#000000">Atte</font></=
+div><div><div dir=3D"ltr" data-smartmail=3D"gmail_signature"><div dir=3D"lt=
+r"><div><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"=
+><div dir=3D"ltr"><div dir=3D"ltr"><div style=3D"text-align:left"><table bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-collapse:col=
+lapse"><tbody><tr style=3D"height:104.25pt"><td width=3D"189" valign=3D"top=
+" style=3D"width:5cm;padding:0cm 5.4pt;height:104.25pt"><p style=3D"margin:=
+0cm 0cm 0.0001pt;font-size:12pt;font-family:&quot;Times New Roman&quot;,ser=
+if;text-align:justify"><span style=3D"font-size:11pt;font-family:Calibri,sa=
+ns-serif"><img border=3D"0" width=3D"206" height=3D"101"><br></span><u></u>=
+<u></u></p></td><td width=3D"335" valign=3D"top" style=3D"width:251.35pt;pa=
+dding:0cm 5.4pt;height:104.25pt"><font face=3D"Arial, sans-serif"><span sty=
+le=3D"font-size:16px"><b>Ramiro Meyer Calvete</b></span></font><br><p style=
+=3D"margin:0cm 0cm 0.0001pt;font-size:12pt;font-family:&quot;Times New Roma=
+n&quot;,serif"><span style=3D"font-family:Arial,sans-serif;color:rgb(127,12=
+7,127)">Subgerente de RRHH</span><u></u></p><p style=3D"margin:0cm 0cm 0.00=
+01pt;font-size:12pt;font-family:&quot;Times New Roman&quot;,serif;line-heig=
+ht:14.65pt"><a href=3D"http://www.galilea.cl/" style=3D"font-family:Arial,s=
+ans-serif;font-size:12pt;color:rgb(17,85,204)" target=3D"_blank"><span styl=
+e=3D"color:rgb(5,99,193)">www.galilea.cl</span></a><br></p></td></tr></tbod=
+y></table></div></div></div></div></div></div></div></div></div></div></div=
+></div>
+
+           =20
+            <p></p></div></div></div>
+
+--000000000000489ddd0585cb79c7--
+
+--000000000000489ddf0585cb79c8
+Content-Type: image/png; name="image001.png"
+Content-Disposition: inline; filename="image001.png"
+Content-Transfer-Encoding: base64
+Content-ID: <>
+X-Attachment-Id: 
+
+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
+--000000000000489ddf0585cb79c8--

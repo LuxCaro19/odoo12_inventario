@@ -1,0 +1,133 @@
+--Problemas PV
+select zaCALLQ as obra_pv, mcdl01 as nombre_obra, cmhbarea as obra, 
+concat( SUBSTR(famcu,0,8),'0000') as proyecto, cmdl01 as nombre_proyecto,
+smhbplan as plan, lmLCC01 as etapa,
+substr(trim(faasid),5,4) as lote, proddta.to_date_from_jde(smusd20) as fecha_entrega,
+zadoco as caso, 
+proddta.to_date_from_jde(zaeftb) as fecha_solicitud, 
+proddta.to_date_from_jde(zaend) as fecha_cierre, zastaw as linea_activa, zaCLST as estado,
+zanumb as equipo, zaissue as descripcion_problema, zajc01 as cod_prob1, p1.drdl02 as prob1
+from proddta.F1755
+left join proddta.f0005 p1 on trim(zajc01)=trim(p1.drky) and trim(p1.drsy)='17' and trim(p1.drrt)='01'
+left join proddta.F1201 on zanumb=fanumb
+left join proddta.F44H101 on cmhbmcus=concat(SUBSTR(famcu,0,8),'0000')
+left join proddta.f0006 on trim(cmhbarea)=trim(mcmcu)
+left join proddta.f44h501 on substr(trim(faasid),5,4)=trim(smhblot) and cmhbmcus=smhbmcus and smACTVSEQ= '1'
+left join proddta.f44H201 on lmmcu=smmcu
+where zastaw = '2' 
+and (cmhbarea not in ('119','136','137','153','161','163') or cmhbarea is null)
+and (zaCALLQ not in ('119','136','137','153','161','163') or zaCALLQ is null)
+and proddta.to_date_from_jde(zaeftb) >= :Inicio and proddta.to_date_from_jde(zaeftb) <= :Fin
+and p1.drdl02 is not null
+
+union
+
+select zaCALLQ as obra_pv, mcdl01 as nombre_obra, cmhbarea as obra, 
+concat( SUBSTR(famcu,0,8),'0000') as proyecto, cmdl01 as nombre_proyecto,
+smhbplan as plan, lmLCC01 as etapa,
+substr(trim(faasid),5,4) as lote, proddta.to_date_from_jde(smusd20) as fecha_entrega,
+zadoco as caso, 
+proddta.to_date_from_jde(zaeftb) as fecha_solicitud, 
+proddta.to_date_from_jde(zaend) as fecha_cierre, zastaw as linea_activa, zaCLST as estado,
+zanumb as equipo, zaissue as descripcion_problema, zajc02 as cod_prob2, p2.drdl02 as prob2
+from proddta.F1755
+left join proddta.f0005 p2 on trim(zajc02)=trim(p2.drky) and trim(p2.drsy)='17' and trim(p2.drrt)='02'
+left join proddta.F1201 on zanumb=fanumb
+left join proddta.F44H101 on cmhbmcus=concat(SUBSTR(famcu,0,8),'0000')
+left join proddta.f0006 on trim(cmhbarea)=trim(mcmcu)
+left join proddta.f44h501 on substr(trim(faasid),5,4)=trim(smhblot) and cmhbmcus=smhbmcus and smACTVSEQ= '1'
+left join proddta.f44H201 on lmmcu=smmcu
+where zastaw = '2' 
+and (cmhbarea not in ('119','136','137','153','161','163') or cmhbarea is null)
+and (zaCALLQ not in ('119','136','137','153','161','163') or zaCALLQ is null)
+and proddta.to_date_from_jde(zaeftb) >= :Inicio and proddta.to_date_from_jde(zaeftb) <= :Fin
+and p2.drdl02 is not null
+union
+
+select zaCALLQ as obra_pv, mcdl01 as nombre_obra, cmhbarea as obra, 
+concat( SUBSTR(famcu,0,8),'0000') as proyecto, cmdl01 as nombre_proyecto,
+smhbplan as plan, lmLCC01 as etapa,
+substr(trim(faasid),5,4) as lote, proddta.to_date_from_jde(smusd20) as fecha_entrega,
+zadoco as caso, 
+proddta.to_date_from_jde(zaeftb) as fecha_solicitud, 
+proddta.to_date_from_jde(zaend) as fecha_cierre, zastaw as linea_activa, zaCLST as estado,
+zanumb as equipo, zaissue as descripcion_problema, zajc03 as cod_prob3, p3.drdl02 as prob3
+from proddta.F1755
+left join proddta.f0005 p3 on trim(zajc03)=trim(p3.drky) and trim(p3.drsy)='17' and trim(p3.drrt)='03'
+left join proddta.F1201 on zanumb=fanumb
+left join proddta.F44H101 on cmhbmcus=concat(SUBSTR(famcu,0,8),'0000')
+left join proddta.f0006 on trim(cmhbarea)=trim(mcmcu)
+left join proddta.f44h501 on substr(trim(faasid),5,4)=trim(smhblot) and cmhbmcus=smhbmcus and smACTVSEQ= '1'
+left join proddta.f44H201 on lmmcu=smmcu
+where zastaw = '2' 
+and (cmhbarea not in ('119','136','137','153','161','163') or cmhbarea is null)
+and (zaCALLQ not in ('119','136','137','153','161','163') or zaCALLQ is null)
+and proddta.to_date_from_jde(zaeftb) >= :Inicio and proddta.to_date_from_jde(zaeftb) <= :Fin
+and p3.drdl02 is not null
+union
+
+select zaCALLQ as obra_pv, mcdl01 as nombre_obra, cmhbarea as obra, 
+concat( SUBSTR(famcu,0,8),'0000') as proyecto, cmdl01 as nombre_proyecto,
+smhbplan as plan, lmLCC01 as etapa,
+substr(trim(faasid),5,4) as lote, proddta.to_date_from_jde(smusd20) as fecha_entrega,
+zadoco as caso, 
+proddta.to_date_from_jde(zaeftb) as fecha_solicitud, 
+proddta.to_date_from_jde(zaend) as fecha_cierre, zastaw as linea_activa, zaCLST as estado,
+zanumb as equipo, zaissue as descripcion_problema, zajc04 as cod_prob4, p4.drdl02 as prob4
+from proddta.F1755
+left join proddta.f0005 p4 on trim(zajc04)=trim(p4.drky) and trim(p4.drsy)='17' and trim(p4.drrt)='04'
+left join proddta.F1201 on zanumb=fanumb
+left join proddta.F44H101 on cmhbmcus=concat(SUBSTR(famcu,0,8),'0000')
+left join proddta.f0006 on trim(cmhbarea)=trim(mcmcu)
+left join proddta.f44h501 on substr(trim(faasid),5,4)=trim(smhblot) and cmhbmcus=smhbmcus and smACTVSEQ= '1'
+left join proddta.f44H201 on lmmcu=smmcu
+where zastaw = '2' 
+and (cmhbarea not in ('119','136','137','153','161','163') or cmhbarea is null)
+and (zaCALLQ not in ('119','136','137','153','161','163') or zaCALLQ is null)
+and proddta.to_date_from_jde(zaeftb) >= :Inicio and proddta.to_date_from_jde(zaeftb) <= :Fin
+and p4.drdl02 is not null
+union
+
+select zaCALLQ as obra_pv, mcdl01 as nombre_obra, cmhbarea as obra, 
+concat( SUBSTR(famcu,0,8),'0000') as proyecto, cmdl01 as nombre_proyecto,
+smhbplan as plan, lmLCC01 as etapa,
+substr(trim(faasid),5,4) as lote, proddta.to_date_from_jde(smusd20) as fecha_entrega,
+zadoco as caso, 
+proddta.to_date_from_jde(zaeftb) as fecha_solicitud, 
+proddta.to_date_from_jde(zaend) as fecha_cierre, zastaw as linea_activa, zaCLST as estado,
+zanumb as equipo, zaissue as descripcion_problema, zajc05 as cod_prob5, p5.drdl02 as prob5
+from proddta.F1755
+left join proddta.f0005 p5 on trim(zajc05)=trim(p5.drky) and trim(p5.drsy)='17' and trim(p5.drrt)='05'
+left join proddta.F1201 on zanumb=fanumb
+left join proddta.F44H101 on cmhbmcus=concat(SUBSTR(famcu,0,8),'0000')
+left join proddta.f0006 on trim(cmhbarea)=trim(mcmcu)
+left join proddta.f44h501 on substr(trim(faasid),5,4)=trim(smhblot) and cmhbmcus=smhbmcus and smACTVSEQ= '1'
+left join proddta.f44H201 on lmmcu=smmcu
+where zastaw = '2' 
+and (cmhbarea not in ('119','136','137','153','161','163') or cmhbarea is null)
+and (zaCALLQ not in ('119','136','137','153','161','163') or zaCALLQ is null)
+and proddta.to_date_from_jde(zaeftb) >= :Inicio and proddta.to_date_from_jde(zaeftb) <= :Fin
+and p5.drdl02 is not null
+union
+
+select zaCALLQ as obra_pv, mcdl01 as nombre_obra, cmhbarea as obra, 
+concat( SUBSTR(famcu,0,8),'0000') as proyecto, cmdl01 as nombre_proyecto,
+smhbplan as plan, lmLCC01 as etapa,
+substr(trim(faasid),5,4) as lote, proddta.to_date_from_jde(smusd20) as fecha_entrega,
+zadoco as caso, 
+proddta.to_date_from_jde(zaeftb) as fecha_solicitud, 
+proddta.to_date_from_jde(zaend) as fecha_cierre, zastaw as linea_activa, zaCLST as estado,
+zanumb as equipo, zaissue as descripcion_problema, zajc06 as cod_prob6, p6.drdl02 as prob6
+from proddta.F1755
+left join proddta.f0005 p6 on trim(zajc06)=trim(p6.drky) and trim(p6.drsy)='17' and trim(p6.drrt)='06'
+left join proddta.F1201 on zanumb=fanumb
+left join proddta.F44H101 on cmhbmcus=concat(SUBSTR(famcu,0,8),'0000')
+left join proddta.f0006 on trim(cmhbarea)=trim(mcmcu)
+left join proddta.f44h501 on substr(trim(faasid),5,4)=trim(smhblot) and cmhbmcus=smhbmcus and smACTVSEQ= '1'
+left join proddta.f44H201 on lmmcu=smmcu
+where zastaw = '2' 
+and (cmhbarea not in ('119','136','137','153','161','163') or cmhbarea is null)
+and (zaCALLQ not in ('119','136','137','153','161','163') or zaCALLQ is null)
+and proddta.to_date_from_jde(zaeftb) >= :Inicio and proddta.to_date_from_jde(zaeftb) <= :Fin
+and p6.drdl02 is not null
+order by obra, nombre_proyecto, fecha_solicitud;

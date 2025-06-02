@@ -1,0 +1,187 @@
+Delivered-To: soporte@galilea.cl
+Received: by 2002:a05:6830:200b:0:0:0:0 with SMTP id e11csp415851otp;
+        Wed, 3 Apr 2019 08:11:30 -0700 (PDT)
+X-Received: by 2002:a05:6102:25a:: with SMTP id a26mr526695vsq.187.1554304290741;
+        Wed, 03 Apr 2019 08:11:30 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1554304290; cv=none;
+        d=google.com; s=arc-20160816;
+        b=PJQFqY5UsOzw4DzuOfpfRt5g6lEgd46S6Mdoo6MZDb6RpAee5UbQ95sLsfA1AigDd8
+         WsBNddJpcrNFiQwjndtVG2zexcFxwuOCfy0WmRWfXvwT6u9YZ0h3XiAUqSyQ+cBZRIrX
+         c9JSmQqtD8QsEC5OeIYa3+AENSv5UQcLhduXWDamPmvUFmriIl1g5gHYhiX5BYoTCVd/
+         sjUsAVpu6DYm/BQQk++DF9rXsdmdwNJvdlVdS5NExwS85C79NKlRyU72p13Xh7J8M6Nd
+         a1QnbXi1YaYrDTLemHBp4VLDObzJiQ8hA+uOfeavyKNfF25mMNu8nE95krjFfQjszdM8
+         5lPw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=e6aa3w5dW55gmRvvUfBaE1yUROu5QuXPK3saza/8ZjY=;
+        b=UnY//kA2e0ntBbcNpehK3tI9lFy3zygWouhZvjvWrfxumuQd0nbsyyK3L8VDfE6k3h
+         GdFs02kR3ZEX2IdhLIrUyVvjrod1E9SlN1y+g3W/08pS/1QZHj+Nx/KdpI1QjNhESgYx
+         jbm6rNJIb6rGln0iseMZEZPb5sSwgpk7/NdSF+Wr22lGJmQyQ8HJ/C7wEhJA0yHG9DUD
+         ks6vvuuRwnCP/2XFx4hNL1ErrPZl1P7biM7PPPkCYSZWgojrDcSiJk1sdOK2f/rR5Yv8
+         Dj22uIOaFJh0ia07KAwh4DhTuX9tsOHQ+3wconccgj732dlPuCrBvaRfp+WqUJHNoZOa
+         UuVA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=DaDsDlc1;
+       spf=pass (google.com: domain of pablo.espinoza@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=pablo.espinoza@galilea.cl
+Return-Path: <pablo.espinoza@galilea.cl>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id v137sor10606276vsc.53.2019.04.03.08.11.30
+        for <soporte@galilea.cl>
+        (Google Transport Security);
+        Wed, 03 Apr 2019 08:11:30 -0700 (PDT)
+Received-SPF: pass (google.com: domain of pablo.espinoza@galilea.cl designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@galilea.cl header.s=google header.b=DaDsDlc1;
+       spf=pass (google.com: domain of pablo.espinoza@galilea.cl designates 209.85.220.41 as permitted sender) smtp.mailfrom=pablo.espinoza@galilea.cl
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=galilea.cl; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=e6aa3w5dW55gmRvvUfBaE1yUROu5QuXPK3saza/8ZjY=;
+        b=DaDsDlc1hYzVE9O6+7oIAuy29Gfb/ptImxSxlYFagvocfS5PeJYTGz6gB+tkokMD+s
+         Z9apfUgHAqsizDamy2FY1IOQLKsnu+5pQX5sj0bsM8ROhxBSQfkKO+jxFNHOsqyMmnyv
+         o2d+879FzdyTkuoln5sOjLFRc4oh0MgyIPvJAm0JZxIOcWqOLXHo30Ji/lnKGJK9K2uc
+         4OhsU+qwgGZ+cMliugj8U3BmXF3zIexUFpcQJMk3RG9ZlXz76vp8kAPNWpDT735plLXF
+         7RDCgSGk/DMBC++utO+kp59GERUWpVTFZsbuXwqu6DtpTuEoazpFl9DeDqIU/buCraGp
+         8hJg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=e6aa3w5dW55gmRvvUfBaE1yUROu5QuXPK3saza/8ZjY=;
+        b=EijBisHNJUNjiQPEjWjqTPyzYp1pz+Tiaplqjtcmi2gfjBVh9TuxLutV83DBA/MBQk
+         wtmmywrkHJXg2dFJnRvt4UnTMRTdfFw/4kJ9SDXVQvHQnGIQW6dS7GSJfzC0sGEf7NsP
+         8Vtdu7JZkeY163Qh3OWxIKHwBcBLcUekmdyAY3AkxT8aP4NjsxYpRIGUU2glQwmyhme7
+         eYiUE5o8xidsOY6ey8OO5u9cG3Sp5NjYerrw1TTpujnLXQApfaMoKwcyzs5sRytuVMWa
+         jpRMvOpUIwd7UXIxm5Q8h2DLhrV2FtrMUCKpUJzCOwmRpx9YsLAZhYT3nLeJRX+5MeXT
+         w0MQ==
+X-Gm-Message-State: APjAAAUAy9pNKrnON5fvtMXcmLVzXSe5rOCLPt0CnDEvD3FB5N0067BE
+	Fk8tifMYfpVZeUbParorf0DRcIRMkUyTT1rA0S7wTUkYd/OuNQ==
+X-Google-Smtp-Source: APXvYqxC6teGAC54nGqXcQFhnGwtog2pr7cqgntD0Ef2AJowX7zlBVuq79em7P3tdQ9Ta3LkgQmptMuFotLZb5tfI/s=
+X-Received: by 2002:a67:fe95:: with SMTP id b21mr576091vsr.109.1554304289748;
+ Wed, 03 Apr 2019 08:11:29 -0700 (PDT)
+MIME-Version: 1.0
+From: Pablo Ignacio Espinoza Gonzalez <pablo.espinoza@galilea.cl>
+Date: Wed, 3 Apr 2019 12:11:18 -0300
+Message-ID: <CACB1r5oVZdm2DoBOHY56Zr_1P3q2YVXY3HjQgs_DxBNGRyvcFw@mail.gmail.com>
+Subject: Impresora Sandra Dupont
+To: Sistema Ticket <soporte@galilea.cl>
+Content-Type: multipart/related; boundary="00000000000010c5930585a1ab0e"
+
+--00000000000010c5930585a1ab0e
+Content-Type: multipart/alternative; boundary="00000000000010c5920585a1ab0d"
+
+--00000000000010c5920585a1ab0d
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Se instala impresora de sala de ventas Concepcion en equipo de vendedora
+Sandra Dupont.
+
+--=20
+
+
+
+*Pablo Ignacio Espinoza Gonz**=C3=A1lez*
+Soporte e infraestructura | Soporte T=C3=A9cnico
+
+www.galilea.cl
+
+--00000000000010c5920585a1ab0d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"ltr">Se instala impresora de sala de ventas Co=
+ncepcion en equipo de vendedora Sandra Dupont.<br clear=3D"all"><div><br></=
+div>-- <br><div dir=3D"ltr" class=3D"gmail_signature"><div dir=3D"ltr"><div=
+><div dir=3D"ltr"><div><div dir=3D"ltr"><table border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0" style=3D"border-collapse:collapse"><tbody><tr style=3D=
+"height:104.25pt"><td width=3D"189" valign=3D"top" style=3D"width:5cm;paddi=
+ng:0cm 5.4pt;height:104.25pt"><p style=3D"margin:0cm 0cm 0.0001pt;text-alig=
+n:justify"><span style=3D"font-size:11pt;font-family:Calibri,sans-serif"><i=
+mg width=3D"206" height=3D"101" src=3D"cid:112d82d3cedb2249_0.1"><br><br></=
+span><u></u></p></td><td width=3D"335" valign=3D"top" style=3D"width:251.35=
+pt;padding:0cm 5.4pt;height:104.25pt"><font face=3D"Arial, sans-serif"><b>P=
+ablo Ignacio Espinoza Gonz</b></font><b>=C3=A1lez</b><br><font color=3D"#7f=
+7f7f" face=3D"Arial, sans-serif">Soporte e infraestructura | Soporte=C2=A0T=
+=C3=A9cnico</font><p style=3D"margin:0cm 0cm 0.0001pt"><span style=3D"font-=
+family:Arial,sans-serif"><a href=3D"http://www.galilea.cl/" style=3D"color:=
+rgb(17,85,204)" target=3D"_blank"><span style=3D"color:rgb(5,99,193)">www.g=
+alilea.cl</span></a></span></p></td></tr></tbody></table></div></div></div>=
+</div></div></div></div></div>
+
+--00000000000010c5920585a1ab0d--
+
+--00000000000010c5930585a1ab0e
+Content-Type: image/png; name="image001.png"
+Content-Disposition: inline; filename="image001.png"
+Content-Transfer-Encoding: base64
+Content-ID: <112d82d3cedb2249_0.1>
+X-Attachment-Id: 112d82d3cedb2249_0.1
+
+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
+--00000000000010c5930585a1ab0e--

@@ -1,0 +1,15 @@
+echo *.zip>>.gitignore
+echo *.log>>.gitignore
+echo __pycache__/>>.gitignore
+echo *.pyc>>.gitignore
+echo *.pyo>>.gitignore
+echo *.swp>>.gitignore
+echo *.bak>>.gitignore
+echo *.tmp>>.gitignore
+echo .DS_Store>>.gitignore
+echo .vscode/>>.gitignore
+echo .idea/>>.gitignore
+echo node_modules/>>.gitignore
+echo odoo-venv/>>.gitignore
+echo .cache/>>.gitignore
+echo .local/>>.gitignore
