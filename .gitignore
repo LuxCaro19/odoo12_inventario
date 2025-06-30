@@ -1,15 +1,19 @@
-echo *.zip>>.gitignore
-echo *.log>>.gitignore
-echo __pycache__/>>.gitignore
-echo *.pyc>>.gitignore
-echo *.pyo>>.gitignore
-echo *.swp>>.gitignore
-echo *.bak>>.gitignore
-echo *.tmp>>.gitignore
-echo .DS_Store>>.gitignore
-echo .vscode/>>.gitignore
-echo .idea/>>.gitignore
-echo node_modules/>>.gitignore
-echo odoo-venv/>>.gitignore
-echo .cache/>>.gitignore
-echo .local/>>.gitignore
+# Ignorar archivos temporales y entornos virtuales
+__pycache__/
+*.pyc
+*.pyo
+*.log
+*.zip
+*.bak
+.DS_Store
+.idea/
+.vscode/
+node_modules/
+.env/
+.venv/
+.cache/
+.local/
+odoo-venv/
+
+# NO ignores los archivos XML ni Python reales del proyecto
+# (Quita reglas generales como *.xml o *.py si las tienes en otro lado)
