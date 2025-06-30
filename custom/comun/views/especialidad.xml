@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="comun.especialidad_list">
+          <field name="name">especialidad_comun_list</field>
+          <field name="model">comun.especialidad</field>
+          <field name="arch" type="xml">
+              <tree>
+                  <field name="id"/>
+                  <field name="nombre"/>
+              </tree>
+          </field>
+        </record>
+
+        <record model="ir.ui.view" id="comun.especialidad_form">
+          <field name="name">liquidacion_form</field>
+          <field name="model">comun.especialidad</field>
+          <field name="arch" type="xml">
+              <form>
+                  <group col="4">
+                      <!--<field name="codigo" colspan="2"/>-->
+                      <field name="nombre" colspan="2"/>
+                  </group>
+              </form>
+          </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="comun.especialidad_action_window">
+            <field name="name">Especialidades</field>
+            <field name="res_model">comun.especialidad</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data  noupdate="0">
+    <record id="group_vendedor" model="res.groups">
+        <field name="name">Vendedor</field>
+        <field name="category_id" ref="base.module_category_galilea_s.a."/>
+    </record>
+    <record id="group_ejecutiva_piloto" model="res.groups">
+        <field name="name">Ejecutiva Piloto</field>
+        <field name="category_id" ref="base.module_category_galilea_s.a."/>
+    </record>
+  </data>
+</odoo>

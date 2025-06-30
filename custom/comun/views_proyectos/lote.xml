@@ -1,0 +1,98 @@
+<odoo>
+    <data>
+<!--    <record model="ir.ui.view" id="comun_old.lote_list">
+          <field name="name">comun_lote_list</field>
+          <field name="model">comun_old.lote</field>
+          <field name="arch" type="xml">
+              <tree>
+              </tree>
+          </field>
+        </record>-->
+
+        <record model="ir.ui.view" id="comun.lote_form">
+            <field name="name">comun_lote_form</field>
+            <field name="model">comun.lote</field>
+            <field name="arch" type="xml">
+                <form create="false">
+                    <group col="4">
+                        <field name="proyecto_state" colspan="4" readonly="1" invisible="1"/>
+                        <field name="proyecto_id" colspan="4" default="default_proyecto_id" readonly="1"
+                               domain="[('id','=', parent.id)]"/>
+                        <field name="plan_id" colspan="2" domain="[('proyecto_id','=', parent.id)]"/>
+                        <field name="etapa" colspan="2" domain="[('proyecto_id','=', parent.id)]"/>
+                        <!--<field name="modelo_id" colspan="2" domain="[('id','in', parent.modelo_ids[0][2])]"/>-->
+                        <field name="numero" colspan="2" />
+                        <field name="piloto" colspan="2" />
+                        <field name="sitio_vacio" colspan="2" />
+                        <field name="fecha_rm_real" colspan="2" />
+                        <field name="fecha_proyectada_escritura" colspan="2" />
+                    </group>
+                    <group col="4">
+                        <separator string="Superficie M2" colspan="4"/>
+                        <field name="superficie_base" readonly="1" colspan="2" />
+                        <field name="superficie_adicional" colspan="2" />
+                        <field name="superficie_total" colspan="2" />
+                    </group>
+                    <field name="flag_tiene_promesa_generada" invisible="1"/>
+                    <field name="plan_modelo_tipo_modelo_clave" invisible="1"/>
+                    <group col="4" attrs="{'invisible':[('plan_modelo_tipo_modelo_clave', '=', 'MFE')]}">
+                        <separator string="Deslindes" colspan="4"/>
+                        <field name="deslinde_norte" attrs="{'readonly':[('flag_tiene_promesa_generada', '=', True)]}" colspan="2" />
+                        <field name="deslinde_sur" attrs="{'readonly':[('flag_tiene_promesa_generada', '=', True)]}" colspan="2" />
+                        <field name="deslinde_oriente" attrs="{'readonly':[('flag_tiene_promesa_generada', '=', True)]}" colspan="2" />
+                        <field name="deslinde_poniente" attrs="{'readonly':[('flag_tiene_promesa_generada', '=', True)]}" colspan="2" />
+                    </group>
+
+                    <group col="4">
+                        <separator string="Detalle" colspan="4"/>
+                        <notebook>
+                            <page string="Adicionales">
+                                <group col="4">
+                                    <field name="detalle_adicional_lote_ids" nolabel="1"
+                                           context="{'default_lote_id' : id}">
+                                        <tree editable="inline">
+                                            <field name="lote_id" default="default_lote_id" invisible="1"/>
+                                            <field name="detalle_adicional_id" domain="[('plan_id', '=', parent.plan_id)]"/>
+                                            <!--<field name="adicional_id" domain="[('id', 'in', parent.adicionales[0][2])]"/>-->
+                                            <field name="precio" readonly="True"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Historial">
+                                <group col="4">
+                                    <field name="historial_ids" nolabel="1">
+                                        <tree delete="0" create="0" editable="0" default_order="fecha DESC">
+                                            <field name="fecha" readonly="1"/>
+                                            <field name="proceso" readonly="1"/>
+                                            <field name="estado" readonly="1"/>                                            
+                                            <field name="etapa" readonly="1"/>
+                                            <field name="numero" readonly="1"/>
+                                            <field name="modelo" readonly="1"/>
+                                            <field name="precio" readonly="1"/>                                            
+                                            <field name="orientacion" readonly="1"/>
+                                            <field name="piloto" readonly="1"/>
+                                            <field name="sitio_vacio" readonly="1"/>
+                                            <field name="adicionales" readonly="1"/>
+                                            <field name="superficie_adicional" readonly="1"/>
+                                            <field name="superficie_total" readonly="1"/>
+                                            <field name="usuario" readonly="1"/>
+                                            <field name="boton_ver_negocio" readonly="1"/>
+                                            <!-- <field name="proyecto_state" readonly="1"/> -->
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="comun.lote_action_window">
+            <field name="name">Adicionales Proyecto</field>
+            <field name="res_model">comun.lote</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

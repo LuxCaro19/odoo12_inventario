@@ -1,0 +1,2 @@
+"id","name","group_id:id","model_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"manager_access_comun_parametro","Acceso Parametro","base.group_user","comun.model_comun_parametro","1","1","1","1"

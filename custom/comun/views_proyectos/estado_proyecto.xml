@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="comun.estado_proyecto_list">
+          <field name="name">comun_estado_proyecto_list</field>
+          <field name="model">comun.estado_proyecto</field>
+          <field name="arch" type="xml">
+              <tree>
+                  <field name="secuencia"/>
+                  <field name="codigo"/>
+                  <field name="descripcion"/>
+              </tree>
+          </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="comun.estado_proyecto_action_window">
+            <field name="name">Estados</field>
+            <field name="res_model">comun.estado_proyecto</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.server" id="comun.estado_action_server">
+            <field name="name">estado server</field>
+            <field name="model_id" ref="model_comun_estado_proyecto"/>
+            <field name="code">
+                action = {
+                "type": "ir.actions.act_window",
+                "view_mode": "tree",
+                "res_model": self._name,
+                }
+            </field>
+        </record>
+
+        <menuitem name="Estados"
+                  id="comun.menu_estado_proyecto"
+                  parent="comun.menu_configuracion"
+                  action="comun.estado_proyecto_action_window"
+                  groups="comun.group_sistemas"
+                  sequence="21"/>
+    </data>
+</odoo>

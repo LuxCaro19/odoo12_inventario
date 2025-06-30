@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data  noupdate="0">
+    <record id="group_jefe_calidad" model="res.groups">
+        <field name="name">Jefe de Calidad</field>
+        <field name="category_id" ref="base.module_category_galilea_s.a."/>
+    </record>
+    <record id="group_supervisor_calidad" model="res.groups">
+        <field name="name">Supervisor de Calidad</field>
+        <field name="category_id" ref="base.module_category_galilea_s.a."/>
+    </record>
+  </data>
+</odoo>

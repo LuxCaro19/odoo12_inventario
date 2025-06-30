@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="res_users_form_view" model="ir.ui.view">
+        <field name="name">res.users.form.view</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <field name="tz" position="after">
+                <field name="usuario_jde"/>
+                <field name="an8_jde"/>
+            </field>
+            <xpath expr="//page[@name='access_rights']" position="after">
+                <page string="Obras">
+                    <field name="obras_ids"/>
+                </page>
+            </xpath>
+
+              <xpath expr="//page[@name='access_rights']">
+                   <group string="Cargo Galilea S.A." >
+                     <field name="grupo_principal_id"/>
+                  </group>
+            </xpath>
+
+            <xpath expr="//page[@name='access_rights']" position="after">
+                <page string="Sucursales">
+                    <field name="sucursales_ids"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+<!--      <record id="user_groups_principal_view" model="ir.ui.view">-->
+<!--            <field name="name">res.users.groups</field>-->
+<!--            <field name="model">res.users</field>-->
+<!--            <field name="inherit_id" ref="base.view_users_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                &lt;!&ndash; dummy, will be modified by groups &ndash;&gt;-->
+<!--                <field name="grupo_principal_id"  position="after"/>-->
+<!--&lt;!&ndash;                <field name="grupos_id"  position="after"/>&ndash;&gt;-->
+<!--            </field>-->
+<!--        </record>-->
+
+
+</odoo>

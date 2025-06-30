@@ -1,0 +1,12 @@
+id,active,code,name,numbercall,interval_number,model_id,priority,doall,nextcall,interval_type,user_id/id,state
+ir_cron.sincroniza_contratista,True,model.sincroniza_contratistas(),Sincronizar Contratistas,-1,1,comun.contratista,5,False,2018-05-04 00:00:00,Hours,base.user_root,code
+ir_cron.sincronizar_obras,True,model.sincronizar_obras(),Sincronizar Obras,-1,1,comun.obra,5,False,2018-05-04 02:00:00,Days,base.user_root,code
+ir_cron.sincroniza_especialidade,True,model.sincroniza_especialidad(),Sincroniza Especialidades,1,1,comun.contratista,5,True,2018-05-04 03:00:00,Days,base.user_root,code
+ir_cron.sincroniza_bancos,True,model.sincronizar_bancos(),Sincroniza Bancos,1,1,res.partner,5,True,2018-05-04 03:00:00,Days,base.user_root,code
+ir_cron.sincroniza_proyectos,True,model.sincronizar_proyectos(),Sincroniza Proyectos,-1,2,comun.proyecto,5,False,2018-05-04 03:00:00,Days,base.user_root,code
+ir_cron.sincroniza_proyectos_jde,True,model.sincronizar_proyectos_jde(),Sincroniza Proyectos JDE,-1,1,comun.proyecto,5,False,2018-05-04 03:00:00,Days,base.user_root,code
+ir_cron.sincroniza_etapas_jde,True,model.sincroniza_etapas(),Sincroniza Etapas,-1,1,comun.etapa,1,False,2018-05-04 03:00:00,Days,base.user_root,code
+ir_cron.sincroniza_presupuestos,True,model.sincronizar_presupuestos(),Sincroniza Presupuestos,-1,1,comun.partida,1,False,2018-05-04 03:00:00,Days,base.user_root,code
+ir_cron.sincroniza_fecha_rm,False,model.sincroniza_fechas_rm_real(),Sincroniza Fechas RM ,-1,6,comun.lote,10,False,2018-05-04 03:00:00,Hours,base.user_root,code
+ir_cron.aviso_fecha_rm_comercial,False,model.aviso_gerencia_comercial_fechas_rm(),Aviso comercial fecha RM ,-1,1,comun.lote,1,False,2018-05-04 18:00:00,Days,base.user_root,code
+ir_cron.sincroniza_codigo_buk,False,model.sincronizar_usuarios_buk(),Sincroniza codigos de usuarios buk ,-1,4,res.partner,1,False,2018-05-04 18:00:00,Days,base.user_root,code

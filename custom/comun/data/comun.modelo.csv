@@ -1,0 +1,19 @@
+id,codigo,nombre,tipo_modelo_codigo,ampliado_plano
+modelo.2,CAI,CAIQUEN,1,False
+modelo.3,CAIA,CAIQUEN AMPLIADA,1,True
+modelo.4,CAIP,CAIQUEN PLUS,1,True
+modelo.5,CAIV,CAIQUEN VULNERABLE,1,False
+modelo.6,CAI2,CAIQUEN 2 DORMITORIOS,1,False
+modelo.7,CALB,CALAN BASE,2,False
+modelo.8,CALG,CALAN GRANDE,2,False
+modelo.12,COR,CORMORAN,1,False
+modelo.13,EST,ESTACIONAMIENTO,2,False
+modelo.18,PANB,PANGUE BASE,2,False
+modelo.19,PANG,PANGUE GRANDE,2,False
+modelo.22,TOR,TORCAZA,1,False
+modelo.23,TRA,TRARO,1,False
+
+
+
+
+

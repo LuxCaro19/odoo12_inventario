@@ -1,0 +1,219 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="comun.proyecto_list">
+          <field name="name">comun_proyecto_list</field>
+          <field name="model">comun.proyecto</field>
+          <field name="arch" type="xml">
+              <tree create="false" edit="false">
+                  <field name="codigo"/>
+                  <field name="nombre"/>
+                  <field name="alias"/>
+                  <field name="obra_id"/>
+                  <field name="tipo_modelo_id"/>
+                  <field name="diferencia_promedio_r2_rm" colspan="2" groups="comun.group_jefe_sucursal,comun.group_vendedor,comun.group_administrativo_sucursal,comun.group_subgerente_comercial,comun.group_gerente_comercial,comun.group_sistemas"/>
+                  <field name="tipo_para_aviso_escrituracion" readonly="1" colspan="2" groups="comun.group_jefe_sucursal,comun.group_vendedor,comun.group_administrativo_sucursal,comun.group_subgerente_comercial,comun.group_gerente_comercial,comun.group_sistemas"/>
+                  <field name="state"/>
+              </tree>
+          </field>
+        </record>
+
+        <record model="ir.ui.view" id="comun.proyecto_form">
+            <field name="name">comun_proyecto_form</field>
+            <field name="model">comun.proyecto</field>
+            <field name="arch" type="xml">
+                <form create="false">
+                    <header>
+                        <field name="state" colspan="2" widget="statusbar" align="right"/>
+                    </header>
+                    <div class="oe_button_box" name="button_box" colspan="4" style="margin-top:5px;">
+                        <button name="action_crear_adjunto"
+                                type="object"
+                                class="oe_stat_button"
+                                string="Subir Brochure"
+                                icon="fa-arrow-circle-up"
+                                context="{'archivo':'BRO'}"
+                                states="PR,CM,CA" groups="comun.group_gerente,comun.group_sistemas,comun.group_gerente_comercial,comun.group_subgerente_comercial">
+                        </button>
+                        <button name="action_crear_adjunto"
+                                type="object"
+                                class="oe_stat_button"
+                                string="Subir Excel"
+                                icon="fa-arrow-circle-up"
+                                context="{'archivo':'ECP'}"
+                                states="PR,CA" groups="comun.group_proyectos,comun.group_sistemas">
+                        </button>
+                        <button name="action_crear_adjunto"
+                                type="object"
+                                class="oe_stat_button"
+                                string="Subir Plano"
+                                icon="fa-arrow-circle-up"
+                                context="{'archivo':'PLA'}"
+                                states="PR,CM,CA" groups="comun.group_proyectos,comun.group_sistemas">
+                        </button>
+                    </div>
+
+                    <group>
+                        <div colspan="4" align="right">
+                            <button name="action_proyecto"
+                              type="object" icon="fa-check"
+                              string="Confirmar Creación" class="oe_highlight"
+                              groups="comun.group_gerente_comercial,comun.group_sistemas" colspan="2"
+                              states="CR"/>
+                            <button name="action_comercial"
+                              type="object" icon="fa-check"
+                              string="Envíar a Comercial" class="oe_highlight"
+                              groups="comun.group_proyectos,comun.group_sistemas" colspan="2"
+                              states="PR"/>
+                            <button name="action_cargar"
+                              type="object" icon="fa-check"
+                              string="Iniciar Carga JDE" class="oe_highlight"
+                              groups="comun.group_subgerente_comercial,comun.group_sistemas" colspan="2"
+                              states="CM"/>
+                            <button name="action_sincroniza_proyecto_completo_manual"
+                              type="object" icon="fa-upload"
+                              string="Sincronizar Proyecto" class="oe_highlight"
+                              groups="comun.group_subgerente_comercial,comun.group_sistemas" colspan="2"
+                              states="CA"/>
+                        </div>
+                    </group>
+
+                    <group col="4">
+                        <field name="id" colspan="4" invisible="1" readonly="1"/>
+                        <field name="es_gerente_comercial" colspan="4" invisible="1" readonly="1"/>
+                        <field name="es_coordinador_proyectos" colspan="4" invisible="1" readonly="1"/>
+                        <field name="modelo_ids" colspan="4" invisible="1" readonly="1"/>
+                        <field name="nombre" colspan="2" attrs="{'readonly':['|',('state', '!=', 'CR'), ('es_gerente_comercial', '=', False)]}"/>
+                        <field name="codigo" colspan="2" readonly="1"/>
+                        <field name="nombre_comercial" colspan="2" groups="comun.group_subgerente_comercial,comun.group_gerente_comercial,comun.group_sistemas"/>
+                        <field name="alias" colspan="2" attrs="{'readonly':['|',('state', '!=', 'CR'), ('es_gerente_comercial', '=', False)]}"/>
+                        <field name="obra_id" colspan="2" attrs="{'readonly':['|',('state', '!=', 'CR'), ('es_gerente_comercial', '=', False)]}"/>
+                        <field name="tipo_modelo_id" colspan="2" attrs="{'readonly':[('state', 'not in', 'CR,PR')]}"/>
+                        <field name="constructora_empresa_id" colspan="2" attrs="{'readonly':[('state', '!=', 'PR')]}"/>
+                        <field name="inmobiliaria_empresa_id" colspan="2" attrs="{'readonly':[('state', '!=', 'PR')]}"/>
+                        <field name="fecha_carga" colspan="2" readonly="1"/>
+                        <field name="dias_inicio_escrituracion" invisible="1" groups="comun.group_subgerente_comercial,comun.group_gerente_comercial,comun.group_sistemas" colspan="2"/>
+                        <field name="diferencia_promedio_r2_rm" colspan="2" groups="comun.group_subgerente_comercial,comun.group_gerente_comercial,comun.group_sistemas"/>
+                        <field name="no_informar_fechas" colspan="2" groups="comun.group_subgerente_comercial,comun.group_gerente_comercial,comun.group_sistemas"/>
+                        <field name="tipo_para_aviso_escrituracion" readonly="1" colspan="2" groups="comun.group_subgerente_comercial,comun.group_gerente_comercial,comun.group_sistemas"/>
+                        <field name="plazo_vencimiento_promesa" colspan="2" groups="comun.group_gerente_comercial,comun.group_sistemas"/>
+                    </group>
+
+                    <group col="2" states="PR,CA" groups="comun.group_proyectos,comun.group_sistemas">
+                        <button name="action_cargar_excel" type="object" colspan="2"
+                                class="oe_stat_button" string="Procesar Archivo de Carga" icon="fa-upload"/>
+                    </group>
+
+                    <group col="4">
+                        <separator string="Resumen" colspan="4"/>
+                        <field name="tabla_resumen_html" nolabel="1" colspan="4"/>
+                    </group>
+
+                    <group col="4">
+                        <separator string="Detalle" colspan="4"/>
+
+                        <notebook>
+                            <page string="Lotes">
+                                <group col="4">
+                                    <field name="lote_ids" nolabel="1" context="{'default_proyecto_id' : id}">
+                                        <tree decoration-info="cargado=='True'" create="0">
+                                            <field name="cargado" invisible="1" readonly="1"/>
+                                            <field name="numero" readonly="1"/>
+                                            <field name="plan_modelo_id" readonly="1"/>
+                                            <field name="etapa" readonly="1"/>
+                                            <field name="superficie_total" readonly="1"/>
+                                            <field name="precio_base" readonly="1" invisible="1"/>
+                                            <field name="precio_adicionales" readonly="1"/>
+                                            <field name="precio" readonly="1"/>
+                                            <field name="orientacion" readonly="1"/>
+                                            <field name="adicionales" readonly="1"/>
+                                            <field name="piloto" readonly="1"/>
+                                            <field name="sitio_vacio" readonly="1"/>
+                                            <field name="estado_venta" readonly="1"/>
+                                            <field string="Fecha RM real" name="fecha_rm_real" readonly="1"/>
+                                            <field string="Fecha RM proyectada" name="fecha_rm_proyectada"/>
+                                            <field string="Fecha Escrituracion proyectada" name="fecha_proyectada_escritura"  readonly="True"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+
+                            <page string="Plan">
+                                <group col="4">
+                                    <button name="action_agregar_plan" align="right"
+                                        type="object" icon="fa-plus"
+                                        string="Agregar Plan" class="oe_highlight"
+                                        groups="comun.group_subgerente_comercial,comun.group_proyectos,comun.group_sistemas" colspan="2"
+                                        states="PR,CM"
+                                    />
+                                    <button name="action_ajustar_plan" align="left"
+                                        type="object" icon="fa-plus"
+                                        string="Ajustar Plan" class="oe_highlight"
+                                        groups="comun.group_subgerente_comercial,comun.group_sistemas" colspan="2"
+                                        states="CA"
+                                    />
+                                </group>
+                                <group col="4">
+                                    <field name="plan_ids" nolabel="1" context="{'default_proyecto_id' : id}">
+                                        <tree decoration-info="cargado=='True'" create="0">
+                                            <field name="cargado" invisible="1" readonly="1"/>
+                                            <field name="proyecto_state" invisible="1"/>
+                                            <field name="es_comercial" invisible="1"/>
+                                            <field name="proyecto_id" readonly="1" default="default_proyecto_id" invisible="1"/>
+                                            <field name="modelo_id" readonly="1" domain="[('tipo_modelo_id', '=', parent.tipo_modelo_id)]"/>
+                                            <field name="metros_cuadrados" readonly="1"/>
+                                            <field name="metros_cuadrados_utiles" readonly="1"/>
+                                            <field name="precio_uf" readonly="1"/>
+                                            <field name="vivienda_social" readonly="1"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Documentos">
+                                <group col="4">
+                                    <field name="ir_attachment_ids" nolabel="1" context="{ 'bin_size': 'true' }">
+                                        <tree create="false">
+                                            <field name="create_date" widget="date" readonly="True"/>
+                                            <field name="tipo_de_adjunto" readonly="True"/>
+                                            <field name="name" readonly="True"/>
+                                            <field name="datas_fname" invisible="1" readonly="True"/>
+                                             <field name="datas" widget="binary" filename="datas_fname" readonly="True"/>
+                                            <field name="version" readonly="True" style="width:2px;"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Etapas">
+                                <group col="4">
+                                    <field name="detalleetapa_ids" nolabel="1">
+                                        <tree create="false" delete="0" editable="inline">
+                                            <field name="etapa_codigo" readonly="True"/>
+                                            <field name="habilitada" readonly="True"/>
+                                            <field string="Fecha RM proyectada" name="fecha_rm_proyectada"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </group>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="comun.proyecto_action_window">
+            <field name="name">Proyectos</field>
+            <field name="res_model">comun.proyecto</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Proyectos"
+                  id="comun.menu_proyecto"
+                  parent="comun.menu_proyecto_principal"
+                  action="comun.proyecto_action_window"
+                  groups="comun.group_fiscalia,comun.group_gerente_comercial,comun.group_subgerente_comercial,comun.group_proyectos,comun.group_sistemas"
+                  sequence="11"/>
+    </data>
+</odoo>

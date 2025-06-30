@@ -1,0 +1,27 @@
+<odoo>
+  <data>
+      <menuitem name="Proyecto" id="comun.menu_root" web_icon="comun,static/description/icon_proyectos.png"/>
+
+      <menuitem name="Proyectos" id="comun.menu_proyecto_principal"
+                parent="comun.menu_root"
+                groups="comun.group_fiscalia,comun.group_gerente_comercial,comun.group_subgerente_comercial,comun.group_proyectos,comun.group_subgerente,comun.group_sistemas"
+                sequence="10"/>
+
+      <menuitem name="Configuración" id="comun.menu_configuracion"
+                parent="comun.menu_root"
+                groups="comun.group_sistemas,comun.group_gerente_comercial,comun.group_subgerente_comercial"
+                sequence="20"/>
+
+      <menuitem name="Obra" id="comun.menu_obra"
+                action="comun.obra_action_window"
+                parent="comun.menu_configuracion"
+                groups="comun.group_sistemas"
+                sequence="28"/>
+
+      <menuitem name="Empresa" id="comun.menu_empresa"
+                action="comun.empresa_action_window"
+                parent="comun.menu_configuracion"
+                groups="comun.group_sistemas"
+                sequence="29"/>
+  </data>
+</odoo>

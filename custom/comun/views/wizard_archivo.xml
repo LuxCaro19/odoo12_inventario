@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="comun.view_wizard_archivo_form">
+            <field name="name">Adjunto</field>
+            <field name="model">comun.wizard_archivo</field>
+            <field name="arch" type="xml">
+                <form>
+                    <!--<label for="nombre" class="oe_edit_only"/>-->
+                    <!--<h1>-->
+                    <field name="nombre" invisible="1"/>
+                    <!--</h1>-->
+                    <group>
+                        <group col="4">
+                            <field name="modulo" colspan="4" invisible="1" default="default_modulo"/>
+                            <field name="filter_by" colspan="4" invisible="1" default="default_filter_by"/>
+                            <field name="tipo_documento" colspan="4" domain="[('modulo', '=', modulo), ('codigo', 'not in', filter_by)]"/>
+                            <!--domain="[('modulo', '=', modulo), ('filter_by', 'not in', filter_by)]"-->
+                            <field name="nombre_archivo" invisible="1" colspan="4"/>
+                            <field name="archivo" filename="nombre_archivo" colspan="4"/>
+                            <field name="res_name" default="default_res_name" invisible="1" colspan="4"/>
+                            <field name="res_model" default="default_res_model" invisible="1" colspan="4"/>
+                            <field name="res_id" default="default_res_id" invisible="1" colspan="4"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="action_crear_documento" string="Guardar"
+                                class="oe_highlight"
+                                type="object"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="comun.wizard_archivo_action_window">
+            <field name="name">Adjuntos</field>
+            <field name="res_model">comun.wizard_archivo</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,5 @@
+id,codigo,descripcion,secuencia
+dp_estado_1,CR,Creado,1
+dp_estado_2,PR,Cargado,2
+dp_estado_3,CM,Valorizado,3
+dp_estado_4,CA,Generado,4

@@ -1,0 +1,30 @@
+<odoo>
+    <record model="ir.ui.view" id="edit_proyecto_inherit_comun_proyecto">
+            <field name="model">comun.lote</field>
+            <field name="inherit_id" ref="comun.proyecto_form" />
+            <field name="groups_id" eval="[(6, 0, [ref('comun.group_fiscalia')])]"/>
+            <field name="arch" type="xml">
+                <field name="nombre_comercial" position="attributes">
+                    <attribute name="readonly">True</attribute>
+                </field>
+                <field name="nombre" position="attributes">
+                    <attribute name="readonly">True</attribute>
+                </field>
+                <field name="alias" position="attributes">
+                    <attribute name="readonly">True</attribute>
+                </field>
+                <field name="obra_id" position="attributes">
+                    <attribute name="readonly">True</attribute>
+                </field>
+                <field name="tipo_modelo_id" position="attributes">
+                    <attribute name="readonly">True</attribute>
+                </field>
+                <field name="constructora_empresa_id" position="attributes">
+                    <attribute name="readonly">True</attribute>
+                </field>
+                <field name="inmoviliaria_empresa_id" position="attributes">
+                    <attribute name="readonly">True</attribute>
+                </field>
+            </field>
+    </record>
+</odoo>

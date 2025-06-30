@@ -1,0 +1,84 @@
+<odoo>
+    <data>
+        <!-- Vista de Obra -->
+        <record model="ir.ui.view" id="comun.obra_list">
+            <field name="name">Obras</field>
+            <field name="model">comun.obra</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id"/>
+                    <field name="nombre"/>
+                    <field name="codigo"/>
+                    <field name="sucursal_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="comun.obra_form">
+            <field name="name">Obra</field>
+            <field name="model">comun.obra</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group col="4">
+                        <field name="nombre" colspan="2"/>
+                        <field name="codigo" colspan="2"/>
+                        <field name="sucursal_id" colspan="2"/>
+                    </group>
+                    <notebook>
+                        <page string="Usuarios">
+                            <field name="users_ids"/>
+                        </page>
+                        <page string="Contratistas">
+                            <field name="contratistas_ids" nolabel="1">
+                                <tree create="0" delete="0">
+                                    <field name="id" readonly="1"/>
+                                    <field name="nombre" readonly="1"/>
+                                    <field name="rut" readonly="1"/>
+                                    <field name="an8" readonly="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Servicios Basicos">
+                            <field name="servicio_basico_ids" nolabel="">
+                                <tree create="1" delete="1" editable="top">
+                                    <field name="tipo_servicio"></field>
+                                    <field name="proveedor_id"></field>
+                                    <field name="empresa_id"></field>
+                                    <field name="numero_servicio"></field>
+                                    <field name="tipo_documento"></field>
+                                    <field name="descripcion"></field>
+                                    <field name="especificacion"></field>
+                                    <field name="direccion"></field>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="comun.obra_action_window">
+            <field name="name">Obras</field>
+            <field name="res_model">comun.obra</field>
+            <field name="view_mode">tree,form,kanban</field>
+        </record>
+
+        <!-- server action to the one above -->
+        <record model="ir.actions.server" id="comun.obra_action_server">
+            <field name="name">estado_de_pago obra server</field>
+            <field name="model_id" ref="model_comun_obra"/>
+            <field name="code">
+                action = {
+                "type": "ir.actions.act_window",
+                "view_mode": "tree,form",
+                "res_model": self._name,
+                }
+            </field>
+        </record>
+
+        <!-- actions -->
+        <!--<menuitem name="Obras" id="comun.menu_obra" parent="comun.menu_configuracion"-->
+        <!--action="comun.obra_action_window" groups="base.group_system"/>-->
+    </data>
+</odoo>

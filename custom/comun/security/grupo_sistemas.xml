@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data  noupdate="0">
+    <record id="group_sistemas" model="res.groups">
+        <field name="name">Sistemas</field>
+        <field name="category_id" ref="base.module_category_galilea_s.a."/>
+    </record>
+    <record id="group_subge_proctecnol" model="res.groups">
+        <field name="name">Subgerente Procesos y Tecnologias</field>
+        <field name="category_id" ref="base.module_category_galilea_s.a."/>
+    </record>
+  </data>
+</odoo>

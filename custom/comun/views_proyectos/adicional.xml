@@ -1,0 +1,68 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="comun.adicional_list">
+          <field name="name">comun_adicional_list</field>
+          <field name="model">comun.adicional</field>
+          <field name="arch" type="xml">
+              <tree>
+                  <field name="codigo"/>
+                  <field name="nombre"/>
+                  <field name="tipo_modelo_id"/>
+                  <field name="tipo_adicional"/>
+                  <field name="modelo_precio"/>
+                  <field name="precio"/>
+              </tree>
+          </field>
+        </record>
+
+        <record model="ir.ui.view" id="comun.adicional_form">
+            <field name="name">comun_adicional_form</field>
+            <field name="model">comun.adicional</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group col="4">
+                        <field name="id" invisible="1" colspan="4"/>
+                        <field name="es_gerente_comercial" invisible="1" colspan="4"/>
+                        <field name="codigo" colspan="4" attrs="{'readonly':[('es_gerente_comercial', '=', True)]}"/>
+                        <field name="nombre" colspan="2" attrs="{'readonly':[('es_gerente_comercial', '=', True)]}"/>
+                        <field name="tipo_modelo_id" colspan="2" attrs="{'readonly':[('es_gerente_comercial', '=', True)]}"/>
+                        <field name="tipo_adicional" colspan="2" attrs="{'readonly':[('es_gerente_comercial', '=', True)]}"/>
+                         <field name="modelo_precio" colspan="2"/>
+                        <field name="precio" colspan="2" attrs="{'invisible':[('modelo_precio', '=', True)]}"/>
+                    </group>
+                    <group col="4" attrs="{'invisible':[('modelo_precio', '=', False)]}">
+                        <notebook>
+                             <page string="Modelos">
+                                <group col="4">
+                                    <field name="adicional_modelo_ids" nolabel="1" context="{'default_adicional_id' : id}">
+                                        <tree editable="inline">
+                                            <field name="adicional_id" default="default_lote_id" invisible="1"/>
+                                            <field name="modelo_id" domain="[('tipo_modelo_id', '=', parent.tipo_modelo_id)]"/>
+                                            <!--<field name="piso"/>-->
+                                            <field name="precio"/>
+                                            <!--<field name="precio" attrs="{'invisible':[('piso', '!=', 'N')]}"/>-->
+                                            <!--<field name="multiplicador" attrs="{'invisible':[('piso', '=', 'N')]}"/>-->
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="comun.adicional_action_window">
+            <field name="name">Adicionales</field>
+            <field name="res_model">comun.adicional</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Adicionales"
+                  id="comun.menu_adicional"
+                  parent="comun.menu_configuracion"
+                  action="comun.adicional_action_window"
+                  groups="comun.group_sistemas,comun.group_gerente_comercial"
+                  sequence="24"/>
+    </data>
+</odoo>

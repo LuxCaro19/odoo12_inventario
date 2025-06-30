@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="comun.wizard_ajustar_plan_form">
+            <field name="name">comun_wizard_ajustar_plan_form</field>
+            <field name="model">comun.ajustar_plan</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group col="4">
+                        <field name="proyecto_id" default="default_proyecto_id" readonly="1" colspan="4"/>
+                        <field name="plan_id" domain="[('proyecto_id', '=', proyecto_id)]" colspan="4"/>
+                        <field name="precio_actual" colspan="4" string="Precio Actual" readonly="1"/>
+                        <field name="precio" colspan="4"/>
+                    </group>
+
+                    <footer>
+                        <button name="action_ajustar_plan" string="Ajustar Precio del Plan"
+                                class="oe_highlight"
+                                type="object"/>
+                        <span class="or_cancel">
+                            <button special="cancel" style="margin-left:5px;"
+                                string="Cancelar"
+                                type="object"
+                                class="oe_link_oe_inline"/>
+                        </span>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="comun.wizard_ajustar_plan_action_window">
+            <field name="name">Ajustar Precio del Plan</field>
+            <field name="res_model">comun.ajustar_plan</field>
+            <field name="target">new</field>
+            <field name="view_mode">form</field>
+        </record>
+    </data>
+</odoo>

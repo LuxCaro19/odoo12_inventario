@@ -1,0 +1,6 @@
+id,active,perm_create,perm_unlink,perm_write,perm_read,domain_force,groups/id,name,model_id/id
+ir_rule.filtro_contratista_por_obra,True,False,False,True,True,"[('obras_ids','in', [g.id for g in user.obras_ids])] ",comun.group_constructores,Filtra contratistas seg�n las obras de cada usuario,comun.model_comun_contratista
+ir_rule_obra_filtro,True,False,False,False,True,"[('users_ids', 'in', user.id)]","comun.group_presupuestos,comun.group_constructores,comun.group_visitador,comun.group_subgerente,comun.group_jefe_logistica,comun.group_administrativo_obra,comun.group_jefe_obra,comun.group_visitador",Filtro Obra,comun.model_comun_obra
+ir_rule_sucursal_jefe_sucursal,True,False,False,False,True,"[('users_ids', 'in', user.id)]",comun.group_jefe_sucursal,Filtro Sucursal Jefe de Sucursal,comun.model_comun_sucursal
+ir_rule.filtro_proyectos,True,False,False,True,True,"[('obra_id', 'in', [o.id for o in user.obras_ids])]",comun.group_proyectos,Filtra proyectos según obras del encargado de proyectos,comun.model_comun_proyecto
+rule_vendedor_js_adminsitrativo,True,True,True,True,True,"[('obra_id.sucursal_id.users_ids', 'in', [user.id])]","comun.group_vendedor,comun.group_administrativo_sucursal,comun.group_jefe_sucursal",Proyectos solo de su sucursal,comun.model_comun_proyecto

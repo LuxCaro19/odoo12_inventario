@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="comun.tipo_modelo_list">
+          <field name="name">comun_tipo_modelo_list</field>
+          <field name="model">comun.tipo_modelo</field>
+          <field name="arch" type="xml">
+              <tree>
+                  <field name="codigo"/>
+                  <field name="nombre"/>
+                  <field name="clave"/>
+              </tree>
+          </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="comun.tipo_modelo_action_window">
+            <field name="name">Tipos de Modelos</field>
+            <field name="res_model">comun.tipo_modelo</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Tipos de Modelo"
+                  id="comun.menu_tipo_modelo"
+                  parent="comun.menu_configuracion"
+                  action="comun.tipo_modelo_action_window"
+                  groups="comun.group_sistemas"
+                  sequence="22"/>
+    </data>
+</odoo>

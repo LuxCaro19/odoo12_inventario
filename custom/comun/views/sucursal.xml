@@ -1,0 +1,57 @@
+<odoo>
+    <data>
+        <!-- Vista de Obra -->
+        <record model="ir.ui.view" id="comun.sucursal_list">
+            <field name="name">Sucursales</field>
+            <field name="model">comun.sucursal</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id"/>
+                    <field name="nombre"/>
+                    <field name="codigo"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="comun.sucursal_form">
+            <field name="name">Sucursal</field>
+            <field name="model">comun.sucursal</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group col="4">
+                        <field name="nombre" colspan="2"/>
+                        <field name="codigo" colspan="2"/>
+                    </group>
+                    <notebook>
+                        <page string="Usuarios">
+                            <field name="users_ids"/>
+                        </page>
+                        <page string="Contactos">
+                            <field name="partners_ids"/>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="comun.sucursal_action_window">
+            <field name="name">Sucursales</field>
+            <field name="res_model">comun.sucursal</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- server action to the one above -->
+        <record model="ir.actions.server" id="comun.sucursal_action_server">
+            <field name="name">comun sucursal server</field>
+            <field name="model_id" ref="model_comun_sucursal"/>
+            <field name="code">
+                action = {
+                "type": "ir.actions.act_window",
+                "view_mode": "tree,form",
+                "res_model": self._name,
+                }
+            </field>
+        </record>
+    </data>
+</odoo>

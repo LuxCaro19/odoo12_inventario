@@ -1,0 +1,49 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="comun.wizard_habilitar_etapa_form">
+            <field name="name">comun_wizard_habilitar_etapa_form</field>
+            <field name="model">comun.habilitar_etapa</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group col="4">
+                        <field name="proyecto_id" domain="[('state', '=', 'CA')]" default="default_proyecto_id" colspan="4"
+                               options="{'no_create': True,'no_quick_create':True,'no_create_edit':True,'no_open': True,}"/>
+                        <field name="detalleetapa_id" domain="[('proyecto_id', '=', proyecto_id), ('habilitada', '=', False)]" colspan="4"
+                                options="{'no_create': True,'no_quick_create':True,'no_create_edit':True,'no_open': True,}"/>
+                        <field name="fecha_rm_proyectada" string="Fecha RM Proyectada" colspan="4"/>
+                    </group>
+                    <group col="4" attrs="{'invisible':[('proyecto_id', '=', False)]}">
+                        <h4 colspan="4">Etapas del Proyecto</h4>
+                        <field name="tabla_etapas" nolabel="1" colspan="4"/>
+                    </group>
+
+                    <footer>
+                        <button name="action_habilitar_etapa" string="Habilitar Etapa"
+                                class="oe_highlight"
+                                type="object"/>
+                        <span class="or_cancel">
+                            <button special="cancel" style="margin-left:5px;"
+                                string="Cancelar"
+                                type="object"
+                                class="oe_link_oe_inline"/>
+                        </span>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="comun.wizard_habilitar_etapa_action_window">
+            <field name="name">Habilitar Etapas para Venta</field>
+            <field name="res_model">comun.habilitar_etapa</field>
+            <field name="target">new</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <menuitem name="Habilitar Etapa"
+                  id="comun.menu_wizard_habilitar_etapa"
+                  parent="comun.menu_proyecto_principal"
+                  action="comun.wizard_habilitar_etapa_action_window"
+                  groups="comun.group_subgerente_comercial"
+                  sequence="14"/>
+    </data>
+</odoo>

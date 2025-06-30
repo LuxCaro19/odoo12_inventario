@@ -1,0 +1,6 @@
+id,nombre,valor,descripcion,modulo
+dp_parametro.1,liberador,52268,AN8 LIBERADOR ENRIQUE VERGARA,cmn.proyecto
+dp_parametro.2,retiene_rm,1,retiene si rm es inferior a fecha de plan,cobranza.plan_pago
+dp_parametro.3,dias_rm_mas_escrituracion,90,Dias por defecto para iniciar el proceso de escritura despues del RM,comun.proyecto
+dp_parametro.4,considerar_adic_orientacion,False,Flag para considerar o no la orientación como adicional,comun.proyecto
+dp_parametro.5,buk_users_api_key,api-key,Api Key para acceder a la información de los usuarios en la api de buk,res.partner

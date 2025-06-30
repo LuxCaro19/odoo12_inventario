@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="comun.empresa_list">
+            <field name="name">empresa_comun_list</field>
+            <field name="model">comun.empresa</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="codigo"/>
+                    <field name="codigo_jde"/>
+                    <field name="tipo_empresa"/>
+                    <field name="constructora_defecto"/>
+                    <field name="inmobiliaria_defecto"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="comun.empresa_action_window">
+            <field name="name">Empresas</field>
+            <field name="res_model">comun.empresa</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

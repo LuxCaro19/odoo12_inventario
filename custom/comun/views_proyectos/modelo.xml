@@ -1,0 +1,88 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="comun.modelo_list">
+          <field name="name">comun_modelo_list</field>
+          <field name="model">comun.modelo</field>
+          <field name="arch" type="xml">
+              <tree>
+                  <field name="codigo"/>
+                  <field name="nombre"/>
+                  <field name="tipo_modelo_id"/>
+                  <field name="ampliado_plano"/>
+                  <field name="tipo_modelo_clave"/>
+              </tree>
+          </field>
+        </record>
+
+         <record model="ir.ui.view" id="comun.modelo_form">
+            <field name="name">comun_modelo_form</field>
+            <field name="model">comun.modelo</field>
+            <field name="arch" type="xml">
+                <form>
+                     <div class="oe_button_box" name="button_box" colspan="4" style="margin-top:5px;">
+                        <button name="action_crear_adjunto"
+                                type="object"
+                                class="oe_stat_button"
+                                string="Subir Brochure"
+                                icon="fa-arrow-circle-up"
+                                context="{'archivo':'BRO'}"
+                                groups="comun.group_sistemas,comun.group_gerente,comun.group_gerente_comercial,comun.group_subgerente_comercial">
+                        </button>
+                    </div>
+                    <group col="4">
+                        <field name="codigo" colspan="2"/>
+                        <field name="nombre" colspan="2"/>
+                        <field name="tipo_modelo_id" colspan="2"/>
+                        <field name="ampliado_plano" colspan="2"/>
+                        <field name="tipo_modelo_clave" colspan="2"/>
+                    </group>
+
+                    <group col="4">
+                        <notebook>
+                            <page string="Proyectos">
+                                <group col="4">
+                                    <field name="plan_ids" nolabel="1">
+                                        <tree>
+                                            <field name="proyecto_id" readonly="1"/>
+                                            <field name="metros_cuadrados" readonly="1"/>
+                                            <field name="precio_uf" readonly="1"/>
+                                            <field name="cantidad_lotes" readonly="1"/>
+                                            <field name="total_lotes" readonly="1"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Documentos">
+                                <group col="4">
+                                    <field name="documento_ids" nolabel="1">
+                                        <tree create="false">
+                                            <field name="create_date" widget="date" readonly="True"/>
+                                            <field name="tipo_de_adjunto" readonly="True"/>
+                                            <field name="name" readonly="True"/>
+                                            <field name="datas_fname" invisible="1" readonly="True"/>
+                                             <field name="datas" widget="binary" filename="datas_fname" readonly="True"/>
+                                            <field name="version" readonly="True" style="width:2px;"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="comun.modelo_action_window">
+            <field name="name">Modelos</field>
+            <field name="res_model">comun.modelo</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Modelos"
+                  id="comun.menu_modelo"
+                  parent="comun.menu_configuracion"
+                  action="comun.modelo_action_window"
+                  groups="comun.group_sistemas"
+                  sequence="23"/>
+    </data>
+</odoo>

@@ -1,0 +1,10 @@
+id,nombre,codigo,constructora_defecto,inmobiliaria_defecto,tipo_empresa
+empresa.1,GALILEA S.A.,1,False,True,2
+empresa.2,SANTA LAURA LTDA.,2,False,False,2
+empresa.3,GALILEA SAN PEDRO S.A.,3,False,False,2
+empresa.4,CONSTRUCTORA PEHUENCHE LTDA.,4,True,False,1
+empresa.5,LIRCAY S.A.,5,False,False,1
+empresa.6,INMOB.GALILEA CENTRO SPA,6,False,False,2
+empresa.7,CONSTR.GALILEA CENTRO SPA,7,False,False,1
+
+

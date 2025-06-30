@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="comun.etapa_list">
+          <field name="name">comun_etapa_list</field>
+          <field name="model">comun.etapa</field>
+          <field name="arch" type="xml">
+              <tree>
+                  <field name="codigo"/>
+                  <field name="nombre"/>
+              </tree>
+          </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="comun.etapa_action_window">
+            <field name="name">Etapas</field>
+            <field name="res_model">comun.etapa</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Etapa"
+                  id="comun.menu_etapa"
+                  parent="comun.menu_configuracion"
+                  action="comun.etapa_action_window"
+                  groups="comun.group_sistemas"
+                  sequence="28"/>
+    </data>
+</odoo>

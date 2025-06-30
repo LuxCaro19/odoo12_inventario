@@ -1,0 +1,30 @@
+id,codigo,descripcion,nombre,modulo
+tipo_documento.1,RM,Recepción Municipal,Recepción Municipal,escritura
+tipo_documento.2,R2,Recepción de Calidad,Recepción de Calidad,escritura
+tipo_documento.3,PDC,Promesa de Compra Venta,Promesa de Compra,escritura
+tipo_documento.4,ICC,Informe Cuenta Corriente,Cuenta Corriente,escritura
+tipo_documento.5,CI,Copia carnet de Identidad,Carnet de Identidad,escritura
+tipo_documento.6,CS,Cartón Subsidio,Cartón Subsidio,escritura
+tipo_documento.7,CCA,Comprobante Cuenta de Ahorro,Cuenta Ahorro,escritura
+tipo_documento.8,DJ,Declaración Jurada Artículo 75,Declaración Jurada Art. 75,escritura
+tipo_documento.9,BE,Borrador Escritura,Borrador Escritura,escritura
+tipo_documento.10,E,Escritura,Escritura,escritura
+tipo_documento.11,F30,F30,F30,retencion
+tipo_documento.12,FIN,Finiquito,Finiquito,retencion
+tipo_documento.13,FAC,Factura,Factura,escritura
+tipo_documento.14,LIQ,Liquidación,Liquidación,escritura
+tipo_documento.15,COTI,Cotización,Cotización,escritura
+tipo_documento.16,DECSM,Declaración soltería o Matrimonio,Declaración estado Civil,escritura
+tipo_documento.17,INSC,Inscripción registro de Propiedades,Inscripción,escritura
+tipo_documento.18,CERTH,Certificado de Hipoteca,Certificado de Hipoteca,escritura
+tipo_documento.19,GRYPR,Gravámenes y Prohibiciones,Gravámenes y Prohibiciones,escritura
+tipo_documento.20,CAL,Certificado Antiguedad Laboral,Certificado Antiguedad Laboral,escritura
+tipo_documento.21,OCG,Orden de Compra de Garantía,Orden de Compra de Garantía,retencion
+tipo_documento.22,EF,Escritura Firmada,Escritura Firmada,escritura
+tipo_documento.23,EXEF,Excel Facturación,Excel Facturación,escritura
+tipo_documento.24,PLA,Plano,Plano,desarrolloproyectos
+tipo_documento.25,OTRE,Otros,Otros,escritura
+tipo_documento.26,ECP,Excel Carga de Proyectos,Carga Proyectos,desarrolloproyectos
+tipo_documento.27,PDCPRO,Promesa de Compra Venta Protocolizada,Promesa de Compra Venta Protocolizada,escritura
+tipo_documento.28,PERMED,Permiso de Edificación,Permiso de Edificación,escritura
+tipo_documento.29,CCC,Comprobante de Carta Certificada,Comprobante de Carta Certificada,escritura

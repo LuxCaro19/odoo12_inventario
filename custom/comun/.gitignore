@@ -1,0 +1,5 @@
+*.pyc
+<<<<<<< HEAD
+=======
+*.pyo
+>>>>>>> e01b9deef5f680ee2bf51b55a626adaa055e0da7

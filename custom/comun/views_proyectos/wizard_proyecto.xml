@@ -1,0 +1,48 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="comun.wizard_proyecto_form">
+            <field name="name">comun_wizard_proyecto_form</field>
+            <field name="model">comun.wizard_proyecto</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group col="4">
+                        <field name="obra_id" colspan="4"/>
+                        <field name="nombre" colspan="4"/>
+                        <field name="alias" colspan="4"/>
+                        <field name="tipo_modelo_id" widget="radio" colspan="4"/>
+                        <field name="inmobiliaria_empresa_id" colspan="4" domain="[('tipo_empresa', '=', '2')]"/>
+                        <field name="constructora_empresa_id" colspan="4" domain="[('tipo_empresa', '=', '1')]"/>
+                        <field name="plazo_vencimiento_promesa" colspan="4" groups="comun.group_gerente_comercial,comun.group_sistemas"/>
+                        <field name="es_52_bis" colspan="4"/>
+                    </group>
+
+                    <footer>
+                        <button name="action_crear_proyecto" string="Crear Proyecto"
+                                class="oe_highlight"
+                                type="object"/>
+                        <span class="or_cancel">
+                            <button special="cancel" style="margin-left:5px;"
+                                string="Cancelar"
+                                type="object"
+                                class="oe_link_oe_inline"/>
+                        </span>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="comun.wizard_proyecto_action_window">
+            <field name="name">Crear Proyecto</field>
+            <field name="res_model">comun.wizard_proyecto</field>
+            <field name="target">new</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <menuitem name="Crear Proyecto"
+                  id="comun.menu_wizard_proyecto"
+                  parent="comun.menu_proyecto_principal"
+                  action="comun.wizard_proyecto_action_window"
+                  groups="comun.group_gerente_comercial"
+                  sequence="12"/>
+    </data>
+</odoo>

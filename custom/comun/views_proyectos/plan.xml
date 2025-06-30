@@ -1,0 +1,148 @@
+<odoo>
+    <data>
+<!--        <record model="ir.ui.view" id="comun_old.plan_list">
+          <field name="name">comun_plan_list</field>
+          <field name="model">comun_old.plan</field>
+          <field name="arch" type="xml">
+              <tree>
+                  <field name="codigo"/>
+                  <field name="nombre"/>
+                  <field name="tipo_plan_id"/>
+              </tree>
+          </field>
+        </record>-->
+
+        <record model="ir.ui.view" id="comun.plan_form">
+            <field name="name">comun_plan_form</field>
+            <field name="model">comun.plan</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group col="4">
+                        <field name="proyecto_state" invisible="1"/>
+                        <field name="es_comercial" invisible="1"/>
+                        <field name="proyecto_id" colspan="4" default="default_proyecto_id" readonly="1"
+                               domain="[('id','=', parent.id)]"/>
+                        <field name="modelo_id" colspan="4" domain="[('tipo_modelo_id', '=', parent.tipo_modelo_id)]" readonly="1"/>
+                        <field name="precio_uf" attrs="{'readonly':[('proyecto_state', '!=', 'CM')]}" colspan="2"/>
+                        <field name="metros_cuadrados" readonly="1" colspan="2"/>
+                        <field name="vivienda_social" colspan="2" attrs="{'readonly':[('proyecto_state', '!=', 'CM')]}"/>
+                        <field name="metros_cuadrados_utiles" attrs="{'readonly':[('parent.es_coordinador_proyectos', '=', False)]}"/>
+                        <field name="tipo_modelo_id" colspan="2" invisible="1"/>
+                        <field name="modelo_tipo_modelo_clave" colspan="2" invisible="1" />
+                    </group>
+
+                    <group col="4">
+                        <notebook>
+                            <page string="Adicionales" attrs="{'invisible':[('modelo_tipo_modelo_clave', '=', 'MFE')]}">
+                                <group col="4">
+                                    <field name="detalle_adicional_ids" nolabel="1"  context="{'default_plan_id' : id}">
+                                        <tree editable="0" delete="0" create="0" >
+                                            <field name="proyecto_state" invisible="1"/>
+                                            <field name="es_comercial" invisible="1"/>
+                                            <field name="plan_id" default="default_plan_id" invisible="1"/>
+                                            <!--<field name="adicional_id" domain="[('tipo_modelo_id', '=', parent.tipo_modelo_id)]"/>-->
+                                            <field name="adicional_id" readonly="1"/>
+                                            <!--<field name="precio" readonly="1"/>-->
+                                            <field name="precio_promedio" attrs="{'invisible':[('adicional_tipo_modelo_clave', '!=', 'MFE')]}"/>
+                                            <field name="precio" attrs="{'readonly':['|',('proyecto_state', '!=', 'CM'), ('es_comercial', '=', False)]}"/>
+                                            <field name="adicional_tipo_modelo_clave" invisible="1"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+
+                            <page string="Ubicación" attrs="{'invisible':[('modelo_tipo_modelo_clave', '=', 'MFC')]}">
+                                <group col="4">
+                                    <field name="ubicacion_adicional_ids" nolabel="1"  context="{'default_plan_id' : id}">
+                                        <tree editable="0" delete="0" create="0" default_order="adicional_codigo">
+                                            <field name="proyecto_state" invisible="1"/>
+                                            <field name="es_comercial" invisible="1"/>
+                                            <field name="plan_id" default="default_plan_id" invisible="1"/>
+                                            <!--<field name="adicional_id" domain="[('tipo_modelo_id', '=', parent.tipo_modelo_id)]"/>-->
+                                            <field name="adicional_id" readonly="1"/>
+                                            <!--<field name="precio" readonly="1"/>-->
+                                            <field name="precio_promedio" attrs="{'invisible':[('adicional_tipo_modelo_clave', '!=', 'MFE')]}"/>
+                                            <field name="precio" attrs="{'readonly':['|',('proyecto_state', '!=', 'CM'), ('es_comercial', '=', False)]}"/>
+                                            <field name="adicional_tipo_modelo_clave" invisible="1"/>
+                                            <field name="adicional_codigo" invisible="1"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+
+                            <!--<page string="Orientación" attrs="{'invisible':[('modelo_tipo_modelo_clave', '=', 'MFC')]}">
+                                <group col="4">
+                                    <field name="orientacion_adicional_ids" nolabel="1"  context="{'default_plan_id' : id}">
+                                        <tree editable="0" delete="0" create="0" default_order="adicional_codigo">
+                                            <field name="proyecto_state" invisible="1"/>
+                                            <field name="es_comercial" invisible="1"/>
+                                            <field name="plan_id" default="default_plan_id" invisible="1"/>
+                                            &lt;!&ndash;<field name="adicional_id" domain="[('tipo_modelo_id', '=', parent.tipo_modelo_id)]"/>&ndash;&gt;
+                                            <field name="adicional_id" readonly="1"/>
+                                            &lt;!&ndash;<field name="precio" readonly="1"/>&ndash;&gt;
+                                            <field name="precio_promedio" attrs="{'invisible':[('adicional_tipo_modelo_clave', '!=', 'MFE')]}"/>
+                                            <field name="precio" attrs="{'readonly':['|',('proyecto_state', '!=', 'CM'), ('es_comercial', '=', False)]}"/>
+                                            <field name="adicional_tipo_modelo_clave" invisible="1"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>-->
+                            <page string="Historial">
+                                <group col="4">
+                                    <field name="historial_ids" nolabel="1">
+                                        <tree delete="0" create="0" editable="0">
+                                            <field name="usuario" readonly="1"/>
+                                            <field name="fecha" readonly="1"/>
+                                            <field name="plan_id" readonly="1"/>
+                                            <field name="metros_cuadrados_plan" readonly="1"/>
+                                            <field name="precio_uf_plan" readonly="1"/>
+                                            <field name="vivienda_social" readonly="1"/>
+                                            <field name="proyecto_state" readonly="1"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>
+                    </group>
+                    <group col="4" attrs="{'invisible':[('modelo_tipo_modelo_clave', '!=', 'MFE')]}">
+                                    <field name="modelo_tipo_modelo_clave" invisible="1"/>
+                                    <field name="monto_adicionales" string='Suma Precio Adicional' colspan="2" readonly="1"
+                                                groups="comun.group_subgerente_comercial"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="comun.plan_form_2">
+            <field name="name">comun_plan_form_2</field>
+            <field name="model">comun.plan</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group col="4">
+                        <field name="proyecto_state" invisible="1"/>
+                        <field name="es_comercial" invisible="1"/>
+                        <field name="proyecto_id" colspan="4" default="default_proyecto_id" readonly="1"/>
+                        <field name="modelo_id" colspan="4" domain="[('tipo_modelo_id', '=', tipo_modelo_id)]"/>
+                        <field name="precio_uf" attrs="{'readonly':[('proyecto_state', '!=', 'CM')]}" colspan="2"/>
+                        <field name="metros_cuadrados" colspan="2"/>
+                        <field name="vivienda_social" colspan="2"/>
+                        <field name="tipo_modelo_id" colspan="2" invisible="1" default="default_tipo_modelo_id"/>
+                    </group>
+                    <footer>
+                        <button name="action_agregar" align="right"
+                                type="object" icon="fa-plus"
+                                string="Agregar" class="oe_highlight"
+                                colspan="2" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="comun.plan_action_window">
+            <field name="name">Planes</field>
+            <field name="res_model">comun.plan</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
