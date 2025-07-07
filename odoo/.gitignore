@@ -38,3 +38,16 @@ setup/win32/static/postgresql*.exe
 /man/
 /share/
 /src/
+
+addons/payment_stripe/tests/test_stripe.py
+
+
+custom/odoapps/
+custom/serpent/
+custom/website_support/
+custom/mantencion/
+.vscode/
+.cache/
+*.pyc
+__pycache__/
+
